@@ -2,13 +2,15 @@ import './App.css';
 import Navbar from './components/navbar/Navbar';
 import BuyNow from './components/buynow/BuyNow';
 import Footer from './components/footer/Footer';
+import Home from './components/home/Home';
 
 function App() {
   return (
    <div>
-    <Navbar/>
     <BuyNow/>
-    <Footer/>
+    <Navbar/>
+    <Home/>
+    {/* <Footer/> */}
    </div>
   );
 }
