@@ -29,13 +29,16 @@ a:hover{
     width: 180px;
     height: 80px;
   }
-.nav-links {
+.nav-linksss {
   display: flex;
   column-gap: 20px;
   list-style: none;
+  text-decoration: none;
+  margin-bottom: 0px;
 }
-.nav-links a {
+.nav-linksss a {
   transition: all 0.2s linear;
+  text-decoration: none;
 }
 .search-icon {
   color: var(--white);
@@ -121,7 +124,7 @@ a:hover{
   .nav {
     padding: 15px 50px 15px 20px;
   }
-  .nav-links {
+  .nav-linksss {
     font-size: var(--heading);
     position: fixed;
     top: 0;
@@ -138,7 +141,7 @@ a:hover{
     transition: all 0.4s ease;
     z-index: 100;
   }
-  .openNav .nav-links {
+  .openNav .nav-linksss {
     left: 0;
   }
   .navOpenBtn {
@@ -165,23 +168,23 @@ a:hover{
     position: relative;
   }
   
-  .dropdown-toggle {
+  .dropdown-togglele {
     color: var(--white);
     text-decoration: none;
     font-size: var(--small);
     position: relative;
   }
   
-  .dropdown-toggle:hover {
+  .dropdown-togglele:hover {
     color: var(--yellow);
   }
   
-  .dropdown-toggle .uil {
+  .dropdown-togglele .uil {
     margin-left: 5px;
     transition: transform 0.3s ease;
   }
   
-  .dropdown-toggle:hover .uil {
+  .dropdown-togglele:hover .uil {
     transform: rotate(180deg);
   }
   

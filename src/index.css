@@ -92,6 +92,10 @@
   margin: 4rem 0;
 }
 
+.spany{
+  color: var(--yellow);
+}
+
 body{
   background-color: var(--black);
   color: var(--white);

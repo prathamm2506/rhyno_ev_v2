@@ -1,97 +1,119 @@
-import React, { useState } from 'react';
-import './Homeslider.css'; // Assuming you have the CSS file in the same directory
-import IMG1 from '../../assets/product8.png'
+import React, { useState } from "react";
+import "./Homeslider.css"; // Assuming you have the CSS file in the same directory
 
 const Homeslider = () => {
-  const [menuActive, setMenuActive] = useState(false);
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const toggleMenu = () => {
-    setMenuActive(!menuActive);
-  };
-
-  const changeSlide = (index) => {
-    setActiveSlide(index);
-  };
-
-  const images = [
-    IMG1,
-    IMG1,
-    IMG1,
-    IMG1,
-    IMG1,
-  ];
-
   return (
-    <>
-      <header>
-        <a href="#" className="brand">Space</a>
-        <div className={`menu-btn ${menuActive ? 'active' : ''}`} onClick={toggleMenu}></div>
-        <div className={`navigation ${menuActive ? 'active' : ''}`}>
-          <div className="navigation-items">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Explore</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
+    <div>
+      <div className="container-fluid">
+        <div className="row">
+          {/* <div className="col-md-12 navbar">
+				<a href="index.html" className="logo navbar-brand text-white offset-md-2">Logo</a>
+				<ul className="nav">
+					<li className="nav-item active"><a href="#" className="nav-link">Home</a></li>
+					<li className="nav-item"><a href="#" className="nav-link">About Us</a></li>
+					<li className="nav-item"><a href="#" className="nav-link">Portfolio</a></li>
+					<li className="nav-item"><a href="#" className="nav-link">Contact Us</a></li>
+				</ul>
+			</div> */}
+
+          <div
+            id="carouselExampleIndicators"
+            className="carousel slide"
+            data-ride="carousel"
+          >
+            <ol className="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                className="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="3"
+              ></li>
+            </ol>
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <div className="info">
+                  <h1>
+                    LET'S ELEVATE YOUR RIDE EXPERIENCE WITH <span className="spany">RHYNO</span> WHERE
+                    SUPERIORITY MEETS <span className="spany">COMFORT</span>
+                  </h1>
+                  {/* <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </p> */}
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="info">
+                  <h1>
+                    LET'S ELEVATE YOUR RIDE EXPERIENCE WITH <span className="spany">RHYNO</span> WHERE
+                    SUPERIORITY MEETS <span className="spany">STYLE</span>
+                  </h1>
+                  {/* <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </p> */}
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="info">
+                  <h1>
+                    LET'S ELEVATE YOUR RIDE EXPERIENCE WITH <span className="spany">RHYNO</span> WHERE
+                    SUPERIORITY MEETS <span className="spany">ELEGANCE</span>
+                  </h1>
+                  {/* <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </p> */}
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="info">
+                  <h1>
+                    LET'S ELEVATE YOUR RIDE EXPERIENCE WITH <span className="spany">RHYNO</span> WHERE
+                    SUPERIORITY MEETS <span className="spany">MINIMILISM</span>
+                  </h1>
+                  {/* <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  </p> */}
+                </div>
+              </div>
+            </div>
+            <a
+              className="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="sr-only">Previous</span>
+            </a>
+            <a
+              className="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="sr-only">Next</span>
+            </a>
           </div>
         </div>
-      </header>
-
-      <section className="home">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            decoding="async"
-            className={`img-slide ${activeSlide === index ? 'active' : ''}`}
-            src={image}
-            alt={`Slide ${index + 1}`}
-          />
-        ))}
-
-        <div className={`content ${activeSlide === 0 ? 'active' : ''}`}>
-          <h1>USSF-44.<br/><span>Mission</span></h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#">Read More</a>
-        </div>
-        <div className={`content ${activeSlide === 1 ? 'active' : ''}`}>
-          <h1>STARSHIP UPDATE.<br/><span>Rocket</span></h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#">Read More</a>
-        </div>
-        <div className={`content ${activeSlide === 2 ? 'active' : ''}`}>
-          <h1>INTELSAT.<br/><span>G-31MISSION</span></h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#">Read More</a>
-        </div>
-        <div className={`content ${activeSlide === 3 ? 'active' : ''}`}>
-          <h1>NASA ASTRONAUTS.<br/><span>THE MOON</span></h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#">Read More</a>
-        </div>
-        <div className={`content ${activeSlide === 4 ? 'active' : ''}`}>
-          <h1>Space Travel.<br/><span>Rocket</span></h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a href="#">Read More</a>
-        </div>
-
-        <div className="media-icons">
-          <a href="#"><i className="fab fa-facebook-f"></i></a>
-          <a href="#"><i className="fab fa-instagram"></i></a>
-          <a href="#"><i className="fab fa-twitter"></i></a>
-        </div>
-        
-        <div className="slider-navigation">
-          {images.map((_, index) => (
-            <div
-              key={index}
-              className={`nav-btn ${activeSlide === index ? 'active' : ''}`}
-              onClick={() => changeSlide(index)}
-            ></div>
-          ))}
-        </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 };
 

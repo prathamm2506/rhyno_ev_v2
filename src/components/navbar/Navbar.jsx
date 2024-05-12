@@ -32,7 +32,7 @@ const Navbar = () => {
       
       <img src={Logo} alt="" className="logo" />
 
-      <ul className="nav-links">
+      <ul className="nav-linksss">
         <i className="fa-solid fa-xmark navCloseBtn" onClick={closeNav} id="nav-toggler"></i>
         <li><a href="#">Home</a></li>
         <li
@@ -40,7 +40,7 @@ const Navbar = () => {
           onMouseEnter={toggleProducts}
           onMouseLeave={toggleProducts}
         >
-          <a href="#" className="dropdown-toggle">Products <i className={`uil ${isProductsOpen ? 'uil-angle-up' : 'uil-angle-down'}`}></i></a>
+          <a href="#" className="dropdown-togglele">Products <i className={`uil ${isProductsOpen ? 'uil-angle-up' : 'uil-angle-down'}`}></i></a>
           {/* Products Dropdown */}
           {isProductsOpen && (
             <ul className="dropdown">
