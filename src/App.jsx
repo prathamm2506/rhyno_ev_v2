@@ -37,7 +37,7 @@ function App() {
     <Carousel Data={CarouselData} TextData={CarouselTextData} />
     </div>
     {/* <Product/> */}
-    {/* <Footer/> */}
+    <Footer/>
    </div>
   );
 }

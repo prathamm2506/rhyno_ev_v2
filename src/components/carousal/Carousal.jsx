@@ -62,7 +62,7 @@ const Carousel = ({ Data, TextData }) => {
       },
     },
     left: {
-      x: '-6rem',
+      x: '-10rem',
       opacity: 1,
       filter: 'brightness(40%)',
       scale: 1,
@@ -76,7 +76,7 @@ const Carousel = ({ Data, TextData }) => {
     },
     right: {
       backgroundImage: 'url(' + Data[RightId] + ')',
-      x: '6rem',
+      x: '10rem',
       opacity: 1,
       filter: 'brightness(40%)',
       scale: 1,
