@@ -95,7 +95,7 @@
 
 @media (max-width:900px) {
 	#carouselExampleIndicators{
-		height: 100vh;
+		height: 120vh;
 	}
 	#carouselExampleIndicators .carousel-inner .carousel-item{
 		background-position: center;
