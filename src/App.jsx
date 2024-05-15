@@ -31,7 +31,7 @@ function App() {
     <Navbar/>
     {/* <Home/> */}
     {/* <Compare/> */}
-    {/* <Homeslider/> */}
+    <Homeslider/>
     {/* <div className="megadivmain">
       <h1>Our Products</h1>
     <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
