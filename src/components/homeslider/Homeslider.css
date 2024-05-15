@@ -12,16 +12,16 @@
 	width: 100%;
 	/* background: #000; */
 }
-#carouselExampleIndicators .carousel-inner:before{
+/* #carouselExampleIndicators .carousel-inner:before{
 	position: absolute;
-	content: '';
+	content: ''; */
 	/* background: rgba(0, 0, 0, 0.45); */
-	top: 0;
+	/* top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
 	z-index: 1;
-}
+} */
 #carouselExampleIndicators .carousel-inner .carousel-item{
 	position: relative;
 	height: 100%;
@@ -95,7 +95,7 @@
 
 @media (max-width:900px) {
 	#carouselExampleIndicators{
-		height: 120vh;
+		height: 100vh;
 	}
 	#carouselExampleIndicators .carousel-inner .carousel-item{
 		background-position: center;
