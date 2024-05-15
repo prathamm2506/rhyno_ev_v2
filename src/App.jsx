@@ -28,7 +28,7 @@ function App() {
   return (
    <div>
     {/* <BuyNow/> */}
-    {/* <Navbar/> */}
+    <Navbar/>
     {/* <Home/> */}
     {/* <Compare/> */}
     {/* <Homeslider/> */}
