@@ -112,9 +112,27 @@ margin: 0 auto;
     font-size: var(--para);
 }
 
+@media (max-width:1300px) {
+    .ft-paddiv{
+        width: 90%;
+    }
+}
+
 @media (max-width:1000px){
     .ft-paddiv{
         width: 90%;
+    }
+}
+
+@media (max-width:950px) {
+    .ft-links{
+        gap: 2rem;
+    }
+}
+
+@media (max-width:888px){
+    .ft-paddiv{
+        width: 95%;
     }
 }
 
@@ -128,5 +146,22 @@ margin: 0 auto;
     }
     .ft-lets{
         width: 100%;
+    }
+    .ft-links{
+        gap: 0;
+    }
+    .ft-mails{
+        width: 100%;
+    }
+}
+
+@media (max-width:750px) {
+    .ft-maindiv{
+        width: 100%;
+        padding: 1.2rem;
+    }
+    .ft-paddiv{
+        width: 100%;
+        margin: 0;
     }
 }
