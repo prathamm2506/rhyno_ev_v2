@@ -29,25 +29,25 @@
 	background: url('../../assets/product8.png') no-repeat;
 	background-size: 50% 90%;
 	background-position: right bottom;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 }
 #carouselExampleIndicators .carousel-inner .carousel-item:nth-child(2){
 	background: url('../../assets/product8.png') no-repeat;
 	background-size: 50% 90%;
 	background-position: right bottom;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 }
 #carouselExampleIndicators .carousel-inner .carousel-item:nth-child(3){
 	background: url('../../assets/product8.png') no-repeat;
 	background-size: 50% 90%;
 	background-position: right bottom;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 }
 #carouselExampleIndicators .carousel-inner .carousel-item:nth-child(4){
 	background: url('../../assets/product8.png') no-repeat;
 	background-size: 50% 90%;
 	background-position: right bottom;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 }
 
 #carouselExampleIndicators .carousel-inner .carousel-item .info{
