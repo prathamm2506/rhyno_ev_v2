@@ -10,7 +10,6 @@ const Footer = () => {
   return (
     <div>
       <div className="ft-maindiv">
-        <div className="ft-paddiv">
           <h2>Let's connect and collaborate</h2>
           <div className="ft-links">
             <div className="ft-mails">
@@ -44,7 +43,6 @@ const Footer = () => {
               {/* </Link> */}
           </div>
           <p>Copyright &copy; 2024 RHYNO Wheels Private Limited. All Rights Reserved.</p>
-        </div>
       </div>
     </div>
   );

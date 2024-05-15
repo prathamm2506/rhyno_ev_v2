@@ -28,7 +28,7 @@ function App() {
   return (
    <div>
     {/* <BuyNow/> */}
-    <Navbar/>
+    {/* <Navbar/> */}
     {/* <Home/> */}
     {/* <Compare/> */}
     {/* <Homeslider/> */}
@@ -37,7 +37,7 @@ function App() {
     <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
     {/* </div> */}
     {/* <Product/> */}
-    {/* <Footer/> */}
+    <Footer/>
    </div>
   );
 }
