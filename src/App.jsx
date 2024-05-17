@@ -32,10 +32,10 @@ function App() {
     {/* <Home/> */}
     {/* <Compare/> */}
     <Homeslider/>
-    {/* <div className="megadivmain">
+    <div className="megadivmain">
       <h1>Our Products</h1>
-    <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
-    {/* </div> */}
+    <Carousel Data={CarouselData} TextData={CarouselTextData} />
+    </div>
     {/* <Product/> */}
     <Footer/>
    </div>

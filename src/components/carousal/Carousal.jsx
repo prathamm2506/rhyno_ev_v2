@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import './Carousal.css';
 
@@ -7,6 +7,18 @@ const Carousel = ({ Data, TextData }) => {
   const [CenterId, setCenterId] = useState(0);
   const [LeftId, setLeftId] = useState(Data.length - 1);
   const [RightId, setRightId] = useState(1);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const updateScreenWidth = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateScreenWidth);
+    return () => {
+      window.removeEventListener('resize', updateScreenWidth);
+    };
+  }, []);
 
   const nextBtn = () => {
     if (LeftId === Data.length - 1) {
@@ -47,6 +59,9 @@ const Carousel = ({ Data, TextData }) => {
     }
   };
 
+  const isSmallScreen = screenWidth <= 686;
+  const isVerySmallScreen = screenWidth <= 440;
+
   const variants = {
     center: {
       x: '0rem',
@@ -62,7 +77,7 @@ const Carousel = ({ Data, TextData }) => {
       },
     },
     left: {
-      x: '-10rem',
+      x: isVerySmallScreen ? '-3rem' : isSmallScreen ? '-6rem' : '-10rem',
       opacity: 1,
       filter: 'brightness(40%)',
       scale: 1,
@@ -76,7 +91,7 @@ const Carousel = ({ Data, TextData }) => {
     },
     right: {
       backgroundImage: 'url(' + Data[RightId] + ')',
-      x: '10rem',
+      x: isVerySmallScreen ? '3rem' : isSmallScreen ? '6rem' : '10rem',
       opacity: 1,
       filter: 'brightness(40%)',
       scale: 1,
@@ -88,12 +103,12 @@ const Carousel = ({ Data, TextData }) => {
       },
     },
     rightHidden: {
-      x: '8rem',
+      x: isVerySmallScreen ? '3rem' : isSmallScreen ? '6rem' : '8rem',
       scale: 0,
       opacity: 0,
     },
     leftHidden: {
-      x: '-8rem',
+      x: isVerySmallScreen ? '-3rem' : isSmallScreen ? '-6rem' : '-8rem',
       scale: 0,
       opacity: 0,
     },

@@ -47,4 +47,57 @@
     position: relative;
     top: 80%;
   }
+
+  @media (max-width:836px) {
+    .carousel-content1{
+      width: 25rem;
+      height: 25rem;
+    }
+    .carousel-item1{
+      width: 25rem;
+      height: 25rem;
+    }
+    .carousel-btns1 button{
+      padding: 8px 10px;
+      width: 4rem;
+    }
+  }
+
+  @media (max-width:756px) {
+    .carousel-content1{
+      width: 20rem;
+      height: 20rem;
+    }
+    .carousel-item1{
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  /* @media (max-width:704px) {
+    .carousel-text1{
+      top: 52%;
+    }
+  } */
+
+  @media (max-width:686px) {
+    .carousel-content1{
+      width: 15rem;
+      height: 15rem;
+    }
+    .carousel-item1{
+      width: 15rem;
+      height: 15rem;
+    }
+  }
   
+  /* @media (max-width:480px) {
+    .carousel-content1{
+      width: 12rem;
+      height: 12rem;
+    }
+    .carousel-item1{
+      width: 12rem;
+      height: 12rem;
+    }
+  } */
