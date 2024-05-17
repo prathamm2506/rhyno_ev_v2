@@ -70,6 +70,8 @@ const Carousel = ({ Data, TextData }) => {
       zIndex: '5',
       filter: 'brightness(100%)',
       backgroundImage: 'url(' + Data[CenterId] + ')',
+      // backgroundSize:'50%',
+      backgroundColor:'#bababa',
       boxShadow: '0px 0px 30px 0px rgba(0,0,0,0.3)',
       transition: {
         type: 'spring',
@@ -82,6 +84,8 @@ const Carousel = ({ Data, TextData }) => {
       filter: 'brightness(40%)',
       scale: 1,
       backgroundImage: 'url(' + Data[LeftId] + ')',
+      // backgroundSize:'80%',
+      backgroundColor:'#bababa',
       zIndex: '4',
       boxShadow: 'unset',
       transition: {
@@ -91,9 +95,11 @@ const Carousel = ({ Data, TextData }) => {
     },
     right: {
       backgroundImage: 'url(' + Data[RightId] + ')',
+      // backgroundSize:'50%',
       x: isVerySmallScreen ? '3rem' : isSmallScreen ? '6rem' : '10rem',
       opacity: 1,
       filter: 'brightness(40%)',
+      backgroundColor:'#bababa',
       scale: 1,
       boxShadow: 'unset',
       zIndex: '3',
