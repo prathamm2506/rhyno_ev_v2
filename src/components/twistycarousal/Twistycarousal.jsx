@@ -37,7 +37,7 @@ const Twistycarousel = () => {
   };
 
   return (
-    <section>
+    <section className='section'>
       <div className="container1">
         <div className="col">
           <ul className="circle-container" ref={circleContainerRef}>
@@ -46,24 +46,6 @@ const Twistycarousel = () => {
                 <a
                   href="#"
                   className={current === index ? 'active1' : ''}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleClick(index);
-                  }}
-                >
-                  {index + 1}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="col">
-          <ul className="number">
-            {[...Array(n)].map((_, index) => (
-              <li key={index}>
-                <a
-                  href="#"
-                  className={current === index ? 'active' : ''}
                   onClick={(e) => {
                     e.preventDefault();
                     handleClick(index);
