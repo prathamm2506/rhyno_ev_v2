@@ -1,11 +1,41 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { motion, useTransform, useViewportScroll } from "framer-motion"; // Add this import statement
+import { useSwipeable } from 'react-swipeable';
 import './Twistycarousal.css'; // Make sure to include the styles in a separate CSS file
 
 const Twistycarousel = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useViewportScroll();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect if the screen size is mobile
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+  };
+
+  // Listen for resize events
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], ["200%", "-130%"]);
+
+  // Swipeable handlers
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      // Swipe left logic
+    },
+    onSwipedRight: () => {
+      // Swipe right logic
+    },
+  });
+
   const n = 6;
   const [current, setCurrent] = useState(0);
   const circleContainerRef = useRef(null);
-  const sectionRef = useRef(null);
+  // const sectionRef = useRef(null);
 
   const texts = [
     'Text for item 1',
@@ -18,12 +48,13 @@ const Twistycarousel = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sectionPosition = sectionRef.current.offsetTop;
-      const scrollPosition = window.scrollY + window.innerHeight * .6;
-      const isComponentInView = scrollPosition >= sectionPosition && scrollPosition < sectionPosition + sectionRef.current.offsetHeight;
+      const sectionPosition = targetRef.current.offsetTop;
+      const sectionHeight = targetRef.current.offsetHeight;
+      const scrollPosition = window.scrollY + window.innerHeight * 0.6;
+      const isComponentInView = scrollPosition >= sectionPosition && scrollPosition < sectionPosition + sectionHeight;
 
       if (isComponentInView) {
-        const scrollIndex = Math.floor((scrollPosition - sectionPosition) / (window.innerHeight / 4)) % n;
+        const scrollIndex = Math.floor(((scrollPosition - sectionPosition) / sectionHeight) * n);
         setCurrent(scrollIndex);
       }
     };
@@ -47,7 +78,7 @@ const Twistycarousel = () => {
   }, [current, n]);
 
   return (
-    <section ref={sectionRef} className='section'>
+    <section ref={targetRef} className='section'>
       <div className="container1">
         <div className="text-container">
           <div className="text-box">
