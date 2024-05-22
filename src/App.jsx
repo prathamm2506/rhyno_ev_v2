@@ -11,6 +11,7 @@ import IMG1 from './assets/Product1.png'
 import IMG2 from './assets/Product2.png'
 import IMG3 from './assets/product3.png'
 import Twistycarousel from './components/twistycarousal/Twistycarousal';
+import CombinedCarousel from './components/combinedcarousel/CombinedCarousel';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
     </div>
     {/* <Product/> */}
     <Twistycarousel/>
+    {/* <CombinedCarousel/> */}
     <Footer/>
    </div>
   );
