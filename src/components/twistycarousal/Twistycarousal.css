@@ -48,8 +48,8 @@ h1 {
   font-size: var(--heading);
 }
 
-.section {
-  padding: 4em 0;
+p {
+  font-size: var(--para);
 }
 
 .container1 {
@@ -60,19 +60,21 @@ h1 {
   top: 0;
   height: 100vh;
   overflow: hidden;
+  padding: 1.2rem;
+  gap: 6rem;
 }
 
 .text-container {
-  max-width: 300px;
-  margin-right: 2em;
+  max-width: 800px;
 }
 
 .text-box {
-  border: 1px solid var(--light-grey);
   padding: 1em;
-  background-color: var(--light-grey);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  height: 400px;
+  text-align: justify;
 }
 
 .col {
@@ -97,10 +99,9 @@ h1 {
 .circle-container {
   display: block;
   border: 1px solid var(--light-grey);
-  margin: 2em auto;
   position: relative;
-  width: 15em;
-  height: 15em;
+  width: 22em; /* Reduced size */
+  height: 22em; /* Reduced size */
   border-radius: 100%;
 }
 
@@ -109,36 +110,36 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 4em;
-  height: 4em;
-  margin-top: -2em;
-  margin-left: -2em;
+  width: 5em; /* Adjusted size */
+  height: 5em; /* Adjusted size */
+  margin-top: -2.5em; /* Adjusted for reduced size */
+  margin-left: -2.5em; /* Adjusted for reduced size */
   text-align: center;
   transition: transform 1.5s cubic-bezier(0.310, 1.470, 0.475, 1.005);
 }
 
 .circle-container > *:nth-of-type(1) {
-  transform: rotate(630deg) translate(7.5em) rotate(-630deg);
+  transform: rotate(630deg) translate(11em) rotate(-630deg); /* Adjusted for reduced size */
 }
 
 .circle-container > *:nth-of-type(2) {
-  transform: rotate(690deg) translate(7.5em) rotate(-690deg);
+  transform: rotate(690deg) translate(11em) rotate(-690deg); /* Adjusted for reduced size */
 }
 
 .circle-container > *:nth-of-type(3) {
-  transform: rotate(750deg) translate(7.5em) rotate(-750deg);
+  transform: rotate(750deg) translate(11em) rotate(-750deg); /* Adjusted for reduced size */
 }
 
 .circle-container > *:nth-of-type(4) {
-  transform: rotate(810deg) translate(7.5em) rotate(-810deg);
+  transform: rotate(810deg) translate(11em) rotate(-810deg); /* Adjusted for reduced size */
 }
 
 .circle-container > *:nth-of-type(5) {
-  transform: rotate(870deg) translate(7.5em) rotate(-870deg);
+  transform: rotate(870deg) translate(11em) rotate(-870deg); /* Adjusted for reduced size */
 }
 
 .circle-container > *:nth-of-type(6) {
-  transform: rotate(930deg) translate(7.5em) rotate(-930deg);
+  transform: rotate(930deg) translate(11em) rotate(-930deg); /* Adjusted for reduced size */
 }
 
 /* Circle Container Link Styles */
@@ -165,12 +166,10 @@ h1 {
   background: var(--yellow);
 }
 
-/* .active1 {
-  background: var(--yellow) !important;
-  transform: scale(1.1);
-} */
-
-.section{
-position: relative;
-height: 300vh;
+.section {
+  position: relative;
+  height: 300vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
