@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Navbar.css'; // Import the CSS file
 import Logo from "../../assets/Logo.png";
 import { Link } from 'react-router-dom';
-
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
   const [isSearchOpen, setSearchOpen] = useState(false);
@@ -30,9 +30,9 @@ const Navbar = () => {
 
   return (
     <nav className={`nav ${isSearchOpen ? 'openSearch' : ''} ${isNavOpen ? 'openNav' : ''}`}>
-      
-      <img src={Logo} alt="" className="logo" />
-
+      <Link to="/">
+        <img src={Logo} alt="" className="logo" />
+      </Link>
       <ul className="nav-linksss">
         <i className="fa-solid fa-xmark navCloseBtn" onClick={closeNav} id="nav-toggler"></i>
         <li><Link to="/">Home</Link></li>
@@ -45,11 +45,22 @@ const Navbar = () => {
           {/* Products Dropdown */}
           {isProductsOpen && (
             <ul className="dropdown">
-              <li><a href="#">SE03</a></li>
-              <li><a href="#">SE03 MAX</a></li>
-              <li><a href="#">SE03 LITE</a></li>
+              <li>
+                <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
+                  SE03
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
+                  SE03 MAX
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
+                  SE03 LITE
+                </ScrollLink>
+              </li>
             </ul>
-            
           )}
         </li>
         <li><a href="/Compare">Compare</a></li>

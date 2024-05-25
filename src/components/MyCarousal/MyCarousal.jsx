@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
-import './Slider.css'; // Import the CSS file
+import './Slider.css';
 
 const Slider = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const countOfPages = 3;
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const switchPages = (newPage) => {
     setCurrentPage(newPage);
@@ -25,8 +27,31 @@ const Slider = () => {
     }
   };
 
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current - touchEndX.current > 50) {
+      goToNextPage();
+    }
+
+    if (touchStartX.current - touchEndX.current < -50) {
+      goToPreviousPage();
+    }
+  };
+
   return (
-    <section className="slider-pages">
+    <section
+      className="slider-pages"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <button className="nav-button left-button" onClick={goToPreviousPage}>◀</button>
       <button className="nav-button right-button" onClick={goToNextPage}>▶</button>
 
@@ -40,7 +65,7 @@ const Slider = () => {
           <div className="slider-page--skew">
             <div className="slider-page__content">
               <h1 className="slider-page__title">
-                SE03 
+                SE03
               </h1>
               <h2 className="slider-page__description">Short description of specific bike model </h2>
             </div>

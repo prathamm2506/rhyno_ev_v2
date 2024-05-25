@@ -40,7 +40,7 @@ function App() {
     <Navbar/>
     <Homeslider/>
     <div className="megadivmain">
-      <h1>Our Products</h1>
+      <h1 id="ourProducts">Our Products</h1>
       <MyCarousal/>
     {/* <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
     </div>
