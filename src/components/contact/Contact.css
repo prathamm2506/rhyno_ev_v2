@@ -44,7 +44,7 @@
 
 .ct-linksdiv{
     display: flex;
-    gap: 20%;
+    gap: 15%;
 }
 
 .ct-links1{
@@ -83,6 +83,9 @@
 }
 
 @media (max-width:1200px){
+    /* .c-maindiv{
+        margin-top: 5rem;
+    } */
     .ct-boxy{
         width: 100%;
         margin: 0 0 15rem;

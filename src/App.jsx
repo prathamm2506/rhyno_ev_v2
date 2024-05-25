@@ -14,6 +14,8 @@ import Twistycarousel from './components/twistycarousal/Twistycarousal';
 import CombinedCarousel from './components/combinedcarousel/CombinedCarousel';
 import ResponsiveCard from './components/responsivecards/ResponsiveCards';
 import ResponsiveCards from './components/responsivecards/ResponsiveCards';
+import About from './components/about/About';
+import Contact from './components/contact/Contact';
 
 
 function App() {
@@ -37,17 +39,19 @@ function App() {
    <div>
     <BuyNow/>
     <Navbar/>
-    <Homeslider/>
-    <div className="megadivmain">
+    {/* <Homeslider/> */}
+    {/* <div className="megadivmain">
       <h1>Our Products</h1>
     <Carousel Data={CarouselData} TextData={CarouselTextData} />
-    </div>
-    <div className="lapscreencomp">
+    </div> */}
+    {/* <div className="lapscreencomp">
     <Twistycarousel/>
-    </div>
-    <div className="mobilescreencomp">
+    </div> */}
+    {/* <div className="mobilescreencomp">
     <ResponsiveCards/>
-    </div>
+    </div> */}
+    {/* <About/> */}
+    <Contact/>
     <Footer/>
    </div>
   );
