@@ -52,7 +52,7 @@ const Navbar = () => {
             
           )}
         </li>
-        <li><a href="#">Compare</a></li>
+        <li><a href="/Compare">Compare</a></li>
         <li><Link to='/AboutUs'>About Us</Link></li>
         <li><Link to='/ContactUs'>Contact Us</Link></li>
       </ul>

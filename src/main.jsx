@@ -9,6 +9,8 @@ import Navbar from './components/navbar/Navbar.jsx'
 import BuyNow from './components/buynow/BuyNow.jsx'
 import Footer from './components/footer/Footer.jsx'
 import BackToTop from './components/backtotop/BackToTop.jsx'
+import Compare from './components/compare/Compare.jsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
@@ -19,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/' element={<App/>}/>
       <Route path='/ContactUs' element={<ContactUs/>}/>
       <Route path='/AboutUs' element={<AboutUs/>}/>
+      <Route path='/Compare' element={<Compare/>}/>
     </Routes>
     <Footer/>
     <BackToTop/>

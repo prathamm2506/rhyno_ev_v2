@@ -13,12 +13,8 @@
 .di-coveredin{
     max-width: 100%;
     display: flex;
-    /* flex-direction: row; */
-    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
-    /* gap: 40px; */
-    /* margin-top: 4rem; */
 }
 
 .coverdinin{
@@ -34,6 +30,19 @@
 
 .di-partone{
     width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.di-partone:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .di-partone img{
@@ -54,10 +63,6 @@
     text-align: justify;
 }
 
-.di-coveredin1{
-    margin-top: 4rem;
-}
-
 .h1h1{
     font-size: 55px;
     text-align: center;
@@ -68,69 +73,7 @@
 @media (max-width:1000px) {
     .h1h1{
         width: 90%;
-
     }
-}
-
-.di-whyus{
-    max-width: 1440px;
-    width: 100%;
-    margin: 4rem auto;
-    display: flex;
-    padding: 1rem;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-}
-
-.di-boxone{
-    max-width: 320px;
-    height: 450px;
-    position: relative;
-    width: 100%;
-    background: linear-gradient(149.69deg,#0a7aff 0%,#56ccf2 80.18%);
-    border-radius: 1rem;
-    padding: 2rem;
-    color: #fff;
-}
-
-.di-boxone:nth-child(2){
-    background: linear-gradient(150.5deg,#5cd6a8 0%,#7ee2c2 102.12%);
-}
-
-.di-boxone:nth-child(3){
-    background: linear-gradient(149.69deg,#6144f0 0%,#856df6 100%);
-}
-
-.di-boxone:nth-child(4){
-    background: linear-gradient(150.5deg,#e65f9f 0%,#ffa97e 102.12%);
-}
-
-.di-boxone img{
-    width: 90px;
-    height: 90px;
-    margin-bottom:1rem ;
-}
-
-.di-boxone h2{
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.di-boxone p{
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.di-boxone small{
-    font-size: 14px;
-    font-weight: 700;
-    position: absolute;
-    bottom: 10px;
-    right: auto;
-    left: auto;
 }
 
 @media (max-width:950px) {
@@ -165,7 +108,7 @@
 
 @media (max-width:710px) {
     .di-partone{
-        width:450px ;
+        width: 450px;
     }
     .coverdinin{
         justify-content: center;
