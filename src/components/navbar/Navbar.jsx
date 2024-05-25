@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Import the CSS file
 import Logo from "../../assets/Logo.png";
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -34,7 +35,7 @@ const Navbar = () => {
 
       <ul className="nav-linksss">
         <i className="fa-solid fa-xmark navCloseBtn" onClick={closeNav} id="nav-toggler"></i>
-        <li><a href="#">Home</a></li>
+        <li><Link to="/">Home</Link></li>
         <li
           className="dropdown-wrapper"
           onMouseEnter={toggleProducts}
@@ -52,8 +53,8 @@ const Navbar = () => {
           )}
         </li>
         <li><a href="#">Compare</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><Link to='/AboutUs'>About Us</Link></li>
+        <li><Link to='/ContactUs'>Contact Us</Link></li>
       </ul>
 
       <button className="search-icon btn btn-nav" id="searchIcon"><a href="https://wa.me/9023987528" target='_blank'> Order Now </a></button>

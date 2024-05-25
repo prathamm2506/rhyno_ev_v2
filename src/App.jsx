@@ -37,22 +37,22 @@ function App() {
   ];
   return (
    <div>
-    <BuyNow/>
-    <Navbar/>
-    {/* <Homeslider/> */}
+    {/* <BuyNow/> */}
+    {/* <Navbar/> */}
+    <Homeslider/>
     {/* <div className="megadivmain">
       <h1>Our Products</h1>
     <Carousel Data={CarouselData} TextData={CarouselTextData} />
     </div> */}
-    {/* <div className="lapscreencomp">
+    <div className="lapscreencomp">
     <Twistycarousel/>
-    </div> */}
-    {/* <div className="mobilescreencomp">
+    </div>
+    <div className="mobilescreencomp">
     <ResponsiveCards/>
-    </div> */}
-    <About/>
+    </div>
+    {/* <About/> */}
     {/* <Contact/> */}
-    <Footer/>
+    {/* <Footer/> */}
    </div>
   );
 }
