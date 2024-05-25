@@ -130,7 +130,7 @@
  }
 
  .js-scrolling__page-1 .slider-page--left .slider-page__content {
-     background: linear-gradient(100deg, rgba(253, 50, 50, 0.9), rgba(246, 47, 47, 0.6), rgba(37, 37, 37, 0.1)80%);
+    background: linear-gradient(100deg, rgba(253, 50, 50, 0.9), rgba(246, 47, 47, 0.6), rgba(37, 37, 37, 0.1) 80%);
  }
 
  .js-scrolling__page-1 .slider-page--left .slider-page__title {
@@ -152,7 +152,7 @@
  }
 
  .js-scrolling__page-2 .slider-page--right .slider-page__content {
-     background: linear-gradient(100deg, rgba(37, 37, 37, 0.1)30%, rgba(85, 78, 78, 0.6), rgba(174, 161, 161, 0.6));
+    background: linear-gradient(100deg, rgba(37, 37, 37, 0.1) 30%, rgba(85, 78, 78, 0.6), rgba(174, 161, 161, 0.6));
  }
 
  .js-scrolling__page-2 .slider-page--right .slider-page__title {
@@ -182,7 +182,7 @@
  }
 
  .js-scrolling__page-3 .slider-page--left .slider-page__content {
-     background: linear-gradient(100deg, rgb(24, 17, 240), rgba(44, 38, 241, 0.6), rgba(37, 37, 37, 0.1)80%);
+    background: linear-gradient(100deg, rgb(24, 17, 240), rgba(44, 38, 241, 0.6), rgba(37, 37, 37, 0.1) 80%);
  }
 
  .js-scrolling__page-3 .slider-page--left .slider-page__title {
@@ -401,7 +401,7 @@
      }
 
      .js-scrolling__page-1 .slider-page--left .slider-page__content {
-         background: linear-gradient(93deg, rgba(253, 50, 50, 0.9), rgba(246, 47, 47, 0.6), rgba(37, 37, 37, 0.1)77%);
+        background: linear-gradient(93deg, rgba(253, 50, 50, 0.9), rgba(246, 47, 47, 0.6), rgba(37, 37, 37, 0.1) 77%);
          margin-left: 3.3rem;
      }
 
@@ -438,7 +438,7 @@
      }
 
      .js-scrolling__page-3 .slider-page--left .slider-page__content {
-         background: linear-gradient(93deg, rgb(24, 17, 240), rgba(44, 38, 241, 0.6), rgba(37, 37, 37, 0.1)77%);
+        background: linear-gradient(93deg, rgb(24, 17, 240), rgba(44, 38, 241, 0.6), rgba(37, 37, 37, 0.1) 77%);
          margin-left: 3.3rem;
      }
 
