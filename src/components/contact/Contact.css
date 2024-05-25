@@ -83,9 +83,9 @@
 }
 
 @media (max-width:1200px){
-    /* .c-maindiv{
+    .c-maindiv{
         margin-top: 5rem;
-    } */
+    }
     .ct-boxy{
         width: 100%;
         margin: 0 0 15rem;
