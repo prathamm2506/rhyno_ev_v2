@@ -50,8 +50,8 @@ function App() {
     {/* <div className="mobilescreencomp">
     <ResponsiveCards/>
     </div> */}
-    {/* <About/> */}
-    <Contact/>
+    <About/>
+    {/* <Contact/> */}
     <Footer/>
    </div>
   );
