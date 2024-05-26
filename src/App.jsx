@@ -18,22 +18,7 @@ import MyCarousal from './components/MyCarousal/MyCarousal';
 
 
 function App() {
-  const CarouselData = [
-    IMG1,
-    IMG2,
-    IMG3,
-    IMG1,
-    IMG2,
-    IMG3,
-  ]
-  const CarouselTextData = [
-    'SE03',
-    'SE03 MAX',
-    'SE03 LITE',
-    'SE03',
-    'SE03 MAX',
-    'SE03 LITE',
-  ];
+  
   return (
    <div>
     <BuyNow/>
