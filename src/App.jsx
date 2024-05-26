@@ -50,7 +50,7 @@ function App() {
     <div className="mobilescreencomp">
     <ResponsiveCards/>
     </div>
-    <Footer/>
+    {/* <Footer/> */}
    </div>
   );
 }
