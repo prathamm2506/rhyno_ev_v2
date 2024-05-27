@@ -22,7 +22,7 @@ function App() {
   return (
    <div>
     <BuyNow/>
-    <Navbar/>
+    {/* <Navbar/> */}
     <Homeslider/>
     <div className="megadivmain">
       <h1 id="ourProducts">Our Products</h1>
