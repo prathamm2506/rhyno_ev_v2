@@ -15,27 +15,29 @@ import CombinedCarousel from './components/combinedcarousel/CombinedCarousel';
 import ResponsiveCard from './components/responsivecards/ResponsiveCards';
 import ResponsiveCards from './components/responsivecards/ResponsiveCards';
 import MyCarousal from './components/MyCarousal/MyCarousal';
+import Prodland from './components/prodland/Prodland';
 
 
 function App() {
   
   return (
    <div>
-    <BuyNow/>
+    {/* <BuyNow/> */}
     {/* <Navbar/> */}
-    <Homeslider/>
-    <div className="megadivmain">
+    {/* <Homeslider/> */}
+    {/* <div className="megadivmain">
       <h1 id="ourProducts">Our Products</h1>
-      <MyCarousal/>
+      <MyCarousal/> */}
     {/* <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
-    </div>
-    <div className="lapscreencomp">
+    {/* </div> */}
+    {/* <div className="lapscreencomp">
     <Twistycarousel/>
     </div>
     <div className="mobilescreencomp">
     <ResponsiveCards/>
-    </div>
+    </div> */}
     {/* <Footer/> */}
+    <Prodland/>
    </div>
   );
 }
