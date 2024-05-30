@@ -16,8 +16,20 @@ import ResponsiveCard from './components/responsivecards/ResponsiveCards';
 import ResponsiveCards from './components/responsivecards/ResponsiveCards';
 import MyCarousal from './components/MyCarousal/MyCarousal';
 
+import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
+import { useEffect } from 'react';
+
 
 function App() {
+
+  // useEffect(() => {
+  //   const tl = gsap.timeline();
+  //   tl.from('.navbar', { duration: 1, y: -100, opacity: 0, ease: 'power3.out' })
+  //     .from('.home-slider', { duration: 1, x: -100, opacity: 0, ease: 'power3.out' }, '-=0.5')
+  //     .from('.buy-now', { duration: 1, y: 100, opacity: 0, ease: 'power3.out' }, '-=0.5');
+  // }, []);
+
   const CarouselData = [
     IMG1,
     IMG2,
@@ -35,23 +47,23 @@ function App() {
     'SE03 LITE',
   ];
   return (
-   <div>
-    <BuyNow/>
-    <Navbar/>
-    <Homeslider/>
-    <div className="megadivmain">
-      <h1 id="ourProducts">Our Products</h1>
-      <MyCarousal/>
-    {/* <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
+    <div>
+      <BuyNow/>
+      <Navbar/>
+      <Homeslider/>
+      <div className="megadivmain">
+        <h1 id="ourProducts">Our Products</h1>
+        <MyCarousal />
+        {/* <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
+      </div>
+      <div className="lapscreencomp">
+        <Twistycarousel />
+      </div>
+      <div className="mobilescreencomp">
+        <ResponsiveCards />
+      </div>
+      <Footer />
     </div>
-    <div className="lapscreencomp">
-    <Twistycarousel/>
-    </div>
-    <div className="mobilescreencomp">
-    <ResponsiveCards/>
-    </div>
-    <Footer/>
-   </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Slider.css';
 
 const Slider = () => {
@@ -6,6 +6,7 @@ const Slider = () => {
   const countOfPages = 3;
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const intervalId = useRef(null);
 
   const switchPages = (newPage) => {
     setCurrentPage(newPage);
@@ -44,6 +45,20 @@ const Slider = () => {
       goToPreviousPage();
     }
   };
+
+  useEffect(() => {
+    const startAutoSlide = () => {
+      intervalId.current = setInterval(() => {
+        goToNextPage();
+      }, 5000); 
+    };
+
+    startAutoSlide();
+
+    return () => {
+      clearInterval(intervalId.current);
+    };
+  }, [currentPage]);
 
   return (
     <section

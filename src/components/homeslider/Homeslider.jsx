@@ -1,7 +1,36 @@
-import React, { useState } from "react";
-import "./Homeslider.css"; // Assuming you have the CSS file in the same directory
+import React, { useState, useEffect } from "react";
+import "./Homeslider.css";
+import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
 
 const Homeslider = () => {
+
+  
+  // useGSAP(() => {
+  //   gsap.from('.carousel-item', {
+  //     duration: 1,
+  //     y: -800,
+  //     x: 800,
+  //     opacity: 0,
+  //     scale: 0.7,
+  //     ease: 'power4.inout'
+  //   });
+  // })
+
+
+  //to start the carousel after intro animation is done
+  useEffect(() => {
+    setTimeout(() => {
+      initializeCarousel();
+    }, 0)
+    
+  }, []);
+
+  const initializeCarousel = () => {
+    $('#carouselExampleIndicators').carousel();
+  };
+
+
   return (
     <div>
       <div className="container-fluid">

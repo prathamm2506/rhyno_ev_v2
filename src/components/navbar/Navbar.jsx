@@ -1,10 +1,45 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Import the CSS file
 import Logo from "../../assets/Logo.png";
+import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
+
+  const tl = gsap.timeline();
+  useGSAP(() => {
+    tl.fromTo('.nav', {
+      delay: 1,
+      duration: 2,
+      y: "-100%",
+      opacity: 0,
+      ease: 'power2.out'
+    },
+      {
+        y: 0,
+        opacity: 1,
+        ease: 'power4.out'
+      })
+    .fromTo('.nav-linksss li', {
+      duration: 0.1,
+      y: "-30%",
+      opacity: 0,
+      scale: 0.5,
+      ease: 'power4.out',
+    },
+    {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      ease: 'power4.out',
+      stagger: {
+        amount: 1,
+      }
+    });
+  }, []);
+
   const [isSearchOpen, setSearchOpen] = useState(false);
   const [isNavOpen, setNavOpen] = useState(false);
   const [isProductsOpen, setProductsOpen] = useState(false); // New state for products dropdown
@@ -63,7 +98,7 @@ const Navbar = () => {
             </ul>
           )}
         </li>
-        <li><a href="/Compare">Compare</a></li>
+        <li><Link to="/Compare">Compare</Link></li>
         <li><Link to='/AboutUs'>About Us</Link></li>
         <li><Link to='/ContactUs'>Contact Us</Link></li>
       </ul>

@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 200px;
+  padding: 0 100px;
   background: var(--black);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -16,6 +16,7 @@ a {
   color: var(--white);
   text-decoration: none;
   font-size: var(--small);
+  padding: 10px 1px;
 }
 a:hover{
     color: var(--yellow);
@@ -101,7 +102,7 @@ a:hover{
 }
 @media screen and (max-width: 1800px) {
     .nav {
-      padding: 15px 70px;
+      padding: 5px 70px;
     }
   }
 
@@ -112,14 +113,25 @@ a:hover{
 }
 @media screen and (max-width: 950px) {
   .nav {
-    padding: 15px 50px;
+    padding: 5px 50px;
   }
   .search-box {
     right: 100px;
     max-width: 400px;
   }
 }
-@media screen and (max-width: 768px) {
+
+@media (max-width: 690px) {
+  .nav-linksss a {
+    font-size: 0.7rem;
+  }
+  .logo{
+    width: 145px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 595px) {
   .navOpenBtn,
   .navCloseBtn {
     display: block;
