@@ -22,48 +22,25 @@ import { useEffect } from 'react';
 
 
 function App() {
-
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
-  //   tl.from('.navbar', { duration: 1, y: -100, opacity: 0, ease: 'power3.out' })
-  //     .from('.home-slider', { duration: 1, x: -100, opacity: 0, ease: 'power3.out' }, '-=0.5')
-  //     .from('.buy-now', { duration: 1, y: 100, opacity: 0, ease: 'power3.out' }, '-=0.5');
-  // }, []);
-
-  const CarouselData = [
-    IMG1,
-    IMG2,
-    IMG3,
-    IMG1,
-    IMG2,
-    IMG3,
-  ]
-  const CarouselTextData = [
-    'SE03',
-    'SE03 MAX',
-    'SE03 LITE',
-    'SE03',
-    'SE03 MAX',
-    'SE03 LITE',
-  ];
+  
   return (
-    <div>
-      <BuyNow/>
-      <Navbar/>
-      <Homeslider/>
-      <div className="megadivmain">
-        <h1 id="ourProducts">Our Products</h1>
-        <MyCarousal />
-        {/* <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
-      </div>
-      <div className="lapscreencomp">
-        <Twistycarousel />
-      </div>
-      <div className="mobilescreencomp">
-        <ResponsiveCards />
-      </div>
-      <Footer />
+   <div>
+    <BuyNow/>
+    {/* <Navbar/> */}
+    <Homeslider/>
+    <div className="megadivmain">
+      <h1 id="ourProducts">Our Products</h1>
+      <MyCarousal/>
+    {/* <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
     </div>
+    <div className="lapscreencomp">
+    <Twistycarousel/>
+    </div>
+    <div className="mobilescreencomp">
+    <ResponsiveCards/>
+    </div>
+    {/* <Footer/> */}
+   </div>
   );
 }
 
