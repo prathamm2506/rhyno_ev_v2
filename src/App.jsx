@@ -15,6 +15,9 @@ import CombinedCarousel from './components/combinedcarousel/CombinedCarousel';
 import ResponsiveCard from './components/responsivecards/ResponsiveCards';
 import ResponsiveCards from './components/responsivecards/ResponsiveCards';
 import MyCarousal from './components/MyCarousal/MyCarousal';
+import Prodland from './components/prodland/Prodland';
+import Spec from './components/specs/Specs';
+import ColorPicker from './components/colorpicker/ColorPicker';
 
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
@@ -25,9 +28,10 @@ function App() {
   
   return (
    <div>
-    <BuyNow/>
+    {/* <BuyNow/> */}
     {/* <Navbar/> */}
     <Homeslider/>
+    {/* <Prodland/> */}
     <div className="megadivmain">
       <h1 id="ourProducts">Our Products</h1>
       <MyCarousal/>
@@ -40,6 +44,8 @@ function App() {
     <ResponsiveCards/>
     </div>
     {/* <Footer/> */}
+    {/* <Spec/> */}
+    {/* <ColorPicker/> */}
    </div>
   );
 }

@@ -11,6 +11,9 @@ import Footer from './components/footer/Footer.jsx'
 import BackToTop from './components/backtotop/BackToTop.jsx'
 import Compare from './components/compare/Compare.jsx'
 import PreLoader from './components/PreLoader/PreLoader.jsx';
+import SE03 from './routes/SE03.jsx'
+import SE03MAX from './routes/SE03MAX.jsx'
+import SE03LITE from './routes/SE03LITE.jsx'
 
 
 const Root = () => {
