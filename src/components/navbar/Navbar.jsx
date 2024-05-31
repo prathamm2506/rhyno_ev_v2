@@ -32,11 +32,11 @@ const Navbar = () => {
   return (
     <nav className={`nav ${isSearchOpen ? 'openSearch' : ''} ${isNavOpen ? 'openNav' : ''}`}>
       <Link to="/">
-        <img src={Logo} alt="" className="logo" />
+        <img src={Logo} alt="" className="logo" onClick={closeNav}/>
       </Link>
       <ul className="nav-linksss">
         <i className="fa-solid fa-xmark navCloseBtn" onClick={closeNav} id="nav-toggler"></i>
-        <li><Link to="/">Home</Link></li>
+        <li><Link to="/" onClick={closeNav}>Home</Link></li>
         <li
           className="dropdown-wrapper"
           onMouseEnter={toggleProducts}
@@ -48,25 +48,25 @@ const Navbar = () => {
             <ul className="dropdown">
               <li>
                 <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
-                  <Link to='/SE03'>SE03</Link>
+                  <Link to='/SE03' onClick={closeNav}>SE03</Link>
                 </ScrollLink>
               </li>
               <li>
                 <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
-                <Link to='/SE03MAX'>SE03 MAX</Link>
+                <Link to='/SE03MAX' onClick={closeNav}>SE03 MAX</Link>
                 </ScrollLink>
               </li>
               <li>
                 <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
-                <Link to='/SE03LITE'>SE03 LITE</Link>
+                <Link to='/SE03LITE' onClick={closeNav}>SE03 LITE</Link>
                 </ScrollLink>
               </li>
             </ul>
           )}
         </li>
-        <li><a href="/Compare">Compare</a></li>
-        <li><Link to='/AboutUs'>About Us</Link></li>
-        <li><Link to='/ContactUs'>Contact Us</Link></li>
+        <li><a href="/Compare" onClick={closeNav}>Compare</a></li>
+        <li><Link to='/AboutUs' onClick={closeNav}>About Us</Link></li>
+        <li><Link to='/ContactUs' onClick={closeNav}>Contact Us</Link></li>
       </ul>
 
       <button className="search-icon btn btn-nav" id="searchIcon"><a href="https://wa.me/9023987528" target='_blank'> Order Now </a></button>
