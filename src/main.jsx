@@ -33,10 +33,13 @@ const Root = () => {
           <BuyNow />
           <Routes>
             <Route path='/' element={<App />} />
-            <Route path='/ContactUs' element={<ContactUs />} />
-            <Route path='/AboutUs' element={<AboutUs />} />
-            <Route path='/Compare' element={<Compare />} />
             <Route path='*' element={<Navigate to="/" />} />
+            <Route path='/SE03' element={<SE03/>}/>
+            <Route path='/SE03MAX' element={<SE03MAX/>}/>
+            <Route path='/SE03LITE' element={<SE03LITE/>}/>
+            <Route path='/Compare' element={<Compare />} />
+            <Route path='/AboutUs' element={<AboutUs />} />
+            <Route path='/ContactUs' element={<ContactUs />} />
           </Routes>
           <Footer />
           <BackToTop />
