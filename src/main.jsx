@@ -10,6 +10,9 @@ import BuyNow from './components/buynow/BuyNow.jsx'
 import Footer from './components/footer/Footer.jsx'
 import BackToTop from './components/backtotop/BackToTop.jsx'
 import Compare from './components/compare/Compare.jsx'
+import SE03 from './routes/SE03.jsx'
+import SE03MAX from './routes/SE03MAX.jsx'
+import SE03LITE from './routes/SE03LITE.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -22,6 +25,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path='/ContactUs' element={<ContactUs/>}/>
       <Route path='/AboutUs' element={<AboutUs/>}/>
       <Route path='/Compare' element={<Compare/>}/>
+      <Route path='/SE03' element={<SE03/>}/>
+      <Route path='/SE03MAX' element={<SE03MAX/>}/>
+      <Route path='/SE03LITE' element={<SE03LITE/>}/>
     </Routes>
     <Footer/>
     <BackToTop/>

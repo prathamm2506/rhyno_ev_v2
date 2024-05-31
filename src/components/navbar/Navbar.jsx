@@ -47,17 +47,17 @@ const Navbar = () => {
             <ul className="dropdown">
               <li>
                 <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
-                  SE03
+                  <Link to='/SE03'>SE03</Link>
                 </ScrollLink>
               </li>
               <li>
                 <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
-                  SE03 MAX
+                <Link to='/SE03MAX'>SE03 MAX</Link>
                 </ScrollLink>
               </li>
               <li>
                 <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
-                  SE03 LITE
+                <Link to='/SE03LITE'>SE03 LITE</Link>
                 </ScrollLink>
               </li>
             </ul>
