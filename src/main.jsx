@@ -31,6 +31,7 @@ const Root = () => {
         <>
           <Navbar />
           <BuyNow />
+          <div style={{ paddingTop: '100px', paddingBottom: '50px' }}>
           <Routes>
             <Route path='/' element={<App />} />
             <Route path='*' element={<Navigate to="/" />} />
@@ -41,6 +42,7 @@ const Root = () => {
             <Route path='/AboutUs' element={<AboutUs />} />
             <Route path='/ContactUs' element={<ContactUs />} />
           </Routes>
+          </div>
           <Footer />
           <BackToTop />
         </>

@@ -1,92 +1,123 @@
-/* ComparisonTable.css */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+ 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/ 
 .main-container {
-    margin: 20px;
-    padding: 20px;
-  }
-  
-  .vehicle-section {
-    text-align: center;
-  }
-  
-  .vehicle-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .customize-button, .buy-button {
-    display: block;
-    margin: 10px auto;
-    width: 80%;
-    background-color: #F9ED32;
-    color: #252525;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-  }
-  
-  .table-container {
-    margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .table-container .MuiTableCell-root {
-    font-family: 'Calibri', sans-serif;
-    padding: 16px;
-  }
-  
-  .header-cell {
-    background-color: #252525;
-    color: #F9ED32;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-  
+  margin: 20px 20px;  
+  padding: 20px;
+   height: calc(100vh - 220px);  
+  overflow: auto;  
+}
+
+.table-container {
+  margin-top: 2px;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;  
+ }
+
+.table-container .MuiTableCell-root {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px; 
+  font-size: 1em;  
+  background-color: #2C2A2A;  
+  color: #FFFFFF;  
+  text-align: center;
+  border: 1px solid #FFFFFF; 
+}
+
+.header-cell {
+  background-color: #F9ED32;  
+  color: #000000;  
+  font-family: 'Poppins', sans-serif;
+  font-size: larger;  
+  font-weight: bold;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border: 1px solid #F9ED32;  
+}
+
+.spec-cell {
+  display: table-cell;
+  background-color: #F9ED32; 
+  color: #000000;  
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  border: 1px solid #F9ED32;  
+}
+@media (max-width: 590px) and (max-height: 900px) {
   .spec-cell {
-    background-color: #2C2A2A;
-    color: #F9ED32;
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
+      display: none;
+  }
+}
+.data-cell {
+  background-color: #2C2A2A;  
+  color: #FFFFFF;  
+  font-family: 'Lato', sans-serif;
+  border: 1px solid #F9ED32; 
+  transition: background-color 0.3s ease, color 0.3s ease;  
+}
+.table-container .MuiTableRow-root .spec-cell{
+color:yellow
+}
+.table-container .MuiTableRow-root .header-cell{
+  color:black;
+  background-color: #F9ED32;  
+   
+  font-weight: bold;
+  border: 2px solid black;
   }
   
-  .data-cell {
-    background-color: #373737;
-    color: #FFFFFF;
-    font-family: 'Lato', sans-serif;
-  }
-  
-  .table-container .MuiTableRow-root:hover {
-    background-color: #414141;
-    transition: background-color 0.3s ease;
-  }
-  
-  .calculator-section {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #202020;
-    color: #FAFAFA;
-    text-align: center;
-    border-radius: 8px;
-  }
-  
-  .calculator-heading {
-    font-family: 'Poppins', sans-serif;
-    color: #F9ED32;
-    margin-bottom: 20px;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .main-container {
+
+.table-container .MuiTableRow-root:hover .data-cell {
+  font-weight: bold;
+  background-color: #F9ED32;  
+  color: #000000;  
+  border: 1px solid black;
+}
+
+.calculator-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #202020;
+  color: #FAFAFA;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.calculator-heading {
+  font-family: 'Poppins', sans-serif;
+  color: #F9ED32;
+  margin-bottom: 20px;
+}
+
+ 
+@media (max-width: 768px) {
+  .main-container {
+      margin: 150px 10px 20px;  
       padding: 10px;
-    }
-  
-    .customize-button, .buy-button {
-      width: 100%;
-    }
   }
-  
+
+  .customize-button, .buy-button {
+      width: 100%;
+  }
+
+  .table-container .MuiTableCell-root {
+      padding: 16px;  
+      font-size: 0.9em;  
+  }
+
+  .header-cell {
+      font-size: 0.9em; 
+  }
+}
