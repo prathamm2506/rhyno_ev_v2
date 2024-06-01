@@ -14,45 +14,38 @@ import Twistycarousel from './components/twistycarousal/Twistycarousal';
 import CombinedCarousel from './components/combinedcarousel/CombinedCarousel';
 import ResponsiveCard from './components/responsivecards/ResponsiveCards';
 import ResponsiveCards from './components/responsivecards/ResponsiveCards';
-import About from './components/about/About';
-import Contact from './components/contact/Contact';
+import MyCarousal from './components/MyCarousal/MyCarousal';
+import Prodland from './components/prodland/Prodland';
+import Spec from './components/specs/Specs';
+import ColorPicker from './components/colorpicker/ColorPicker';
+
+import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
+import { useEffect } from 'react';
 
 
 function App() {
-  const CarouselData = [
-    IMG1,
-    IMG2,
-    IMG3,
-    IMG1,
-    IMG2,
-    IMG3,
-  ]
-  const CarouselTextData = [
-    'SE03',
-    'SE03 MAX',
-    'SE03 LITE',
-    'SE03',
-    'SE03 MAX',
-    'SE03 LITE',
-  ];
+  
   return (
    <div>
     {/* <BuyNow/> */}
     {/* <Navbar/> */}
     <Homeslider/>
-    {/* <div className="megadivmain">
-      <h1>Our Products</h1>
-    <Carousel Data={CarouselData} TextData={CarouselTextData} />
-    </div> */}
+    {/* <Prodland/> */}
+    <div className="megadivmain">
+      <h1 id="ourProducts">Our Products</h1>
+      <MyCarousal/>
+    {/* <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
+    </div>
     <div className="lapscreencomp">
     <Twistycarousel/>
     </div>
     <div className="mobilescreencomp">
     <ResponsiveCards/>
     </div>
-    {/* <About/> */}
-    {/* <Contact/> */}
     {/* <Footer/> */}
+    {/* <Spec/> */}
+    {/* <ColorPicker/> */}
    </div>
   );
 }

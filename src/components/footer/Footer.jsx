@@ -1,10 +1,10 @@
 import React from 'react';
 import './Footer.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const handleClick = () => {
-    window.scrollTo(0, 0); // Scrolls to the top of the page
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -31,16 +31,10 @@ const Footer = () => {
 
           <small>Quick Links</small>
           <div className="ft-quick">
-            {/* <Link to='/Privacy' onClick={handleClick}> */}
-              <li>Privacy Policy</li>
-            {/* </Link> */}
-            {/* <Link to='/Contact' onClick={handleClick}> */}
-              <li>Contact Us</li>
-              {/* </Link> */}
-            <li>Careers</li>
-            {/* <Link to='/Rentals' onClick={handleClick}> */}
-              <li>Rentals</li>
-              {/* </Link> */}
+            <li><Link to='/Privacy' onClick={handleClick}>Privacy Policy</Link></li>
+            <li><Link to='/ContactUs' onClick={handleClick}>Contact Us</Link></li>
+            <li><Link to='/Careers' onClick={handleClick}>Careers</Link></li>
+            <li><Link to='/Rentals' onClick={handleClick}>Rentals</Link></li>
           </div>
           <p>Copyright &copy; 2024 RHYNO Wheels Private Limited. All Rights Reserved.</p>
       </div>

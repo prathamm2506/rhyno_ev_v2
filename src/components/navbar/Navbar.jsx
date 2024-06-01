@@ -1,10 +1,45 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Import the CSS file
 import Logo from "../../assets/Logo.png";
+import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
 import { Link } from 'react-router-dom';
-
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
+
+  const tl = gsap.timeline();
+  useGSAP(() => {
+    tl.fromTo('.nav', {
+      delay: 1,
+      duration: 2,
+      y: "-100%",
+      opacity: 0,
+      ease: 'power2.out'
+    },
+      {
+        y: 0,
+        opacity: 1,
+        ease: 'power4.out'
+      })
+    .fromTo('.nav-linksss li', {
+      duration: 0.1,
+      y: "-30%",
+      opacity: 0,
+      scale: 0.5,
+      ease: 'power4.out',
+    },
+    {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      ease: 'power4.out',
+      stagger: {
+        amount: 1,
+      }
+    });
+  }, []);
+
   const [isSearchOpen, setSearchOpen] = useState(false);
   const [isNavOpen, setNavOpen] = useState(false);
   const [isProductsOpen, setProductsOpen] = useState(false); // New state for products dropdown
@@ -30,12 +65,12 @@ const Navbar = () => {
 
   return (
     <nav className={`nav ${isSearchOpen ? 'openSearch' : ''} ${isNavOpen ? 'openNav' : ''}`}>
-      
-      <img src={Logo} alt="" className="logo" />
-
+      <Link to="/">
+        <img src={Logo} alt="" className="logo" onClick={closeNav}/>
+      </Link>
       <ul className="nav-linksss">
         <i className="fa-solid fa-xmark navCloseBtn" onClick={closeNav} id="nav-toggler"></i>
-        <li><Link to="/">Home</Link></li>
+        <li><Link to="/" onClick={closeNav}>Home</Link></li>
         <li
           className="dropdown-wrapper"
           onMouseEnter={toggleProducts}
@@ -45,16 +80,27 @@ const Navbar = () => {
           {/* Products Dropdown */}
           {isProductsOpen && (
             <ul className="dropdown">
-              <li><a href="#">SE03</a></li>
-              <li><a href="#">SE03 MAX</a></li>
-              <li><a href="#">SE03 LITE</a></li>
+              <li>
+                <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
+                  <Link to='/SE03' onClick={closeNav}>SE03</Link>
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
+                <Link to='/SE03MAX' onClick={closeNav}>SE03 MAX</Link>
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
+                <Link to='/SE03LITE' onClick={closeNav}>SE03 LITE</Link>
+                </ScrollLink>
+              </li>
             </ul>
-            
           )}
         </li>
-        <li><a href="/Compare">Compare</a></li>
-        <li><Link to='/AboutUs'>About Us</Link></li>
-        <li><Link to='/ContactUs'>Contact Us</Link></li>
+        <li><Link to="/Compare" onClick={closeNav}>Compare</Link></li>
+        <li><Link to='/AboutUs' onClick={closeNav}>About Us</Link></li>
+        <li><Link to='/ContactUs' onClick={closeNav}>Contact Us</Link></li>
       </ul>
 
       <button className="search-icon btn btn-nav" id="searchIcon"><a href="https://wa.me/9023987528" target='_blank'> Order Now </a></button>
