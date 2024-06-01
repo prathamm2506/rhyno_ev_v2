@@ -61,13 +61,13 @@ const Slider = () => {
     clearInterval(intervalId.current);
   };
 
-  // useEffect(() => {
-  //   startAutoSlide();
+  useEffect(() => {
+    startAutoSlide();
 
-  //   return () => {
-  //     stopAutoSlide();
-  //   };
-  // }, [currentPage]);
+    return () => {
+      stopAutoSlide();
+    };
+  }, [currentPage]);
 
   const navigate = useNavigate();
   const handleButtonClick = (to) => {
