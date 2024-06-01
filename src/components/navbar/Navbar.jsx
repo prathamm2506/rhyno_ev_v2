@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css'; // Import the CSS file
 import Logo from "../../assets/Logo.png";
 import gsap from 'gsap';
@@ -8,37 +8,37 @@ import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
 
-  const tl = gsap.timeline();
-  useGSAP(() => {
-    tl.fromTo('.nav', {
-      delay: 1,
-      duration: 2,
-      y: "-100%",
-      opacity: 0,
-      ease: 'power2.out'
-    },
-      {
-        y: 0,
-        opacity: 1,
-        ease: 'power4.out'
-      })
-    .fromTo('.nav-linksss li', {
-      duration: 0.1,
-      y: "-30%",
-      opacity: 0,
-      scale: 0.5,
-      ease: 'power4.out',
-    },
-    {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      ease: 'power4.out',
-      stagger: {
-        amount: 1,
-      }
-    });
-  }, []);
+  // const tl = gsap.timeline();
+  // useGSAP(() => {
+  //   tl.fromTo('.nav', {
+  //     delay: 1,
+  //     duration: 2,
+  //     y: "-100%",
+  //     opacity: 0,
+  //     ease: 'power2.out'
+  //   },
+  //     {
+  //       y: 0,
+  //       opacity: 1,
+  //       ease: 'power4.out'
+  //     })
+  //   .fromTo('.nav-linksss li', {
+  //     duration: 0.1,
+  //     y: "-30%",
+  //     opacity: 0,
+  //     scale: 0.5,
+  //     ease: 'power4.out',
+  //   },
+  //   {
+  //     y: 0,
+  //     opacity: 1,
+  //     scale: 1,
+  //     ease: 'power4.out',
+  //     stagger: {
+  //       amount: 1,
+  //     }
+  //   });
+  // }, []);
 
   const [isSearchOpen, setSearchOpen] = useState(false);
   const [isNavOpen, setNavOpen] = useState(false);
@@ -63,10 +63,31 @@ const Navbar = () => {
     setProductsOpen(!isProductsOpen);
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      document.querySelector('.btn').classList.add('animate');
+    }, 6 * 300);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.querySelector('.nav').classList.add('animate');
+      setTimeout(() => {
+        document.querySelector('.logo').classList.add('animate');
+      }, 500);
+      const navLinks = document.querySelectorAll('.nav-linksss li');
+      navLinks.forEach((link, index) => {
+        setTimeout(() => {
+          link.classList.add('animate');
+        }, (index + 1) * 300);
+      });
+    }, 1);
+  }, []);
+
   return (
     <nav className={`nav ${isSearchOpen ? 'openSearch' : ''} ${isNavOpen ? 'openNav' : ''}`}>
       <Link to="/">
-        <img src={Logo} alt="" className="logo" onClick={closeNav}/>
+        <img src={Logo} alt="" className="logo" onClick={closeNav} />
       </Link>
       <ul className="nav-linksss">
         <i className="fa-solid fa-xmark navCloseBtn" onClick={closeNav} id="nav-toggler"></i>
@@ -82,17 +103,17 @@ const Navbar = () => {
             <ul className="dropdown">
               <li>
                 <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
-                  <Link to='/SE03' onClick={closeNav}>SE03</Link>
+                  SE03
                 </ScrollLink>
               </li>
               <li>
                 <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
-                <Link to='/SE03MAX' onClick={closeNav}>SE03 MAX</Link>
+                  SE03 MAX
                 </ScrollLink>
               </li>
               <li>
                 <ScrollLink to="ourProducts" smooth={true} duration={500} onClick={closeNav}>
-                <Link to='/SE03LITE' onClick={closeNav}>SE03 LITE</Link>
+                  SE03 LITE
                 </ScrollLink>
               </li>
             </ul>

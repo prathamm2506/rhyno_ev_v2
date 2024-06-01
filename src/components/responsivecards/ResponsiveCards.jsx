@@ -11,7 +11,7 @@ import IMG5 from '../../assets/tyre.png'
 
 const ResponsiveCard = () => {
   return (
-    <div style={{padding: '100px 0 0'}}>
+    <div style={{padding: '0.8rem 0 0'}}>
         {/* <div id="intern_pro" > */}
         {/* <div className="intern_pro" style={{padding: '70px 1rem'}}>
             <div className="intern_pro_img">

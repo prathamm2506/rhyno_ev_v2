@@ -30,6 +30,7 @@ const Root = () => {
       ) : (
         <>
           <Navbar />
+          {/* <BuyNow /> */}
           <BuyNow />
           <div style={{ paddingTop: '100px', paddingBottom: '50px' }}>
           <Routes>
