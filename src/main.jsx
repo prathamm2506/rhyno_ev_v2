@@ -30,7 +30,7 @@ const Root = () => {
       ) : (
         <>
           <Navbar />
-          <BuyNow />
+          {/* <BuyNow /> */}
           <Routes>
             <Route path='/' element={<App />} />
             <Route path='*' element={<Navigate to="/" />} />
