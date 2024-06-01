@@ -40,7 +40,6 @@
 
 .btn {
   margin-top: 20px;
-  /* margin-right:  1rem; */
   width: max-content;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -58,20 +57,21 @@
   text-shadow: none;
   border-radius: 3px;
   cursor: pointer;
-  opacity: 0.2;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
 }
 
-.btn:hover {
-  background-color: var(--yellow-hover);
+.btn.animate {
   opacity: 1;
-  transition: 0.4s;
+  transform: translateY(0);
 }
 
 .btn-nav {
   font-weight: 550;
   margin-top: 0;
   padding: 0.4rem 1rem;
-  opacity: 1;
 }
 
 .btn22 {
@@ -79,6 +79,30 @@
   top: 85%;
   left: 85%;
   z-index: 999;
+  opacity: 0.2;
+  margin-top: 20px;
+  width: max-content;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: var(--yellow);
+  font-size: var(--small);
+  line-height: 1.4;
+  padding: .7rem 1.2rem;
+  border: none;
+  /* background: #bdc3c7; */
+  color: var(--black);
+  /* padding: 11px 12px 8px; */
+  /* line-height: 22px; */
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn22:hover {
+  transition: 0.4s;
+  opacity: 1;
 }
 
 .btn22 a {

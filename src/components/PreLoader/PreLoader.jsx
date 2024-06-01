@@ -41,7 +41,7 @@ const PreLoader = ({ onComplete }) => {
                 ease: 'power2.inOut',
                 borderRadius: '45%',
                 onComplete: () => {
-                    onComplete();
+                    setTimeout(onComplete, 100);
                 }
             });
 

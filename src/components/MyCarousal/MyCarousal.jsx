@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import {useNavigate} from 'react-router-dom';
 import './Slider.css';
 
 const Slider = () => {
@@ -46,19 +47,32 @@ const Slider = () => {
     }
   };
 
-  useEffect(() => {
-    const startAutoSlide = () => {
-      intervalId.current = setInterval(() => {
-        goToNextPage();
-      }, 5000); 
-    };
+  const startAutoSlide = () => {
+    intervalId.current = setInterval(() => {
+      if (currentPage < countOfPages) {
+        switchPages(currentPage + 1);
+      } else {
+        switchPages(1);
+      }
+    }, 5000);
+  };
 
-    startAutoSlide();
+  const stopAutoSlide = () => {
+    clearInterval(intervalId.current);
+  };
 
-    return () => {
-      clearInterval(intervalId.current);
-    };
-  }, [currentPage]);
+  // useEffect(() => {
+  //   startAutoSlide();
+
+  //   return () => {
+  //     stopAutoSlide();
+  //   };
+  // }, [currentPage]);
+
+  const navigate = useNavigate();
+  const handleButtonClick = (to) => {
+    navigate(to);
+  };
 
   return (
     <section
@@ -78,11 +92,14 @@ const Slider = () => {
         </div>
         <div className="slider-page slider-page--left">
           <div className="slider-page--skew">
-            <div className="slider-page__content">
-              <h1 className="slider-page__title">
-                SE03
-              </h1>
+            <div 
+              className="slider-page__content"
+              onMouseEnter={stopAutoSlide}
+              onMouseLeave={startAutoSlide}
+            >
+              <h1 className="slider-page__title">SE03</h1>
               <h2 className="slider-page__description">Short description of specific bike model </h2>
+              <button className="button button-red" onClick={() => handleButtonClick("/SE03")}>know more</button>
             </div>
           </div>
         </div>
@@ -91,11 +108,14 @@ const Slider = () => {
       <article className={`js-scrolling__page js-scrolling__page-2 ${currentPage === 2 ? 'js-scrolling--active' : 'js-scrolling--inactive'}`}>
         <div className="slider-page slider-page--right">
           <div className="slider-page--skew">
-            <div className="slider-page__content">
-              <h1 className="slider-page__title">
-                SE03 MAX
-              </h1>
+            <div 
+              className="slider-page__content"
+              onMouseEnter={stopAutoSlide}
+              onMouseLeave={startAutoSlide}
+            >
+              <h1 className="slider-page__title">SE03 MAX</h1>
               <h2 className="slider-page__description">Short description of specific bike model </h2>
+              <button className="button button-black" onClick={() => handleButtonClick("/SE03MAX")}>know more</button>
             </div>
           </div>
         </div>
@@ -114,11 +134,14 @@ const Slider = () => {
         </div>
         <div className="slider-page slider-page--left">
           <div className="slider-page--skew">
-            <div className="slider-page__content">
-              <h1 className="slider-page__title">
-                SE03 Lite
-              </h1>
+            <div 
+              className="slider-page__content"
+              onMouseEnter={stopAutoSlide}
+              onMouseLeave={startAutoSlide}
+            >
+              <h1 className="slider-page__title">SE03 Lite</h1>
               <h2 className="slider-page__description">Short description of specific bike model </h2>
+              <button className="button button-blue" onClick={() => handleButtonClick("/SE03LITE")}>know more</button>
             </div>
           </div>
         </div>

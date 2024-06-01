@@ -6,24 +6,16 @@ import { useGSAP } from "@gsap/react";
 const Homeslider = () => {
 
   
-  // useGSAP(() => {
-  //   gsap.from('.carousel-item', {
-  //     duration: 1,
-  //     y: -800,
-  //     x: 800,
-  //     opacity: 0,
-  //     scale: 0.7,
-  //     ease: 'power4.inout'
-  //   });
-  // })
 
 
-  //to start the carousel after intro animation is done
   useEffect(() => {
+    // const carouselElement = document.getElementById("carouselExampleIndicators");
+    // carouselElement.classList.add("initial-load");
+
     setTimeout(() => {
+      // carouselElement.classList.remove("initial-load");
       initializeCarousel();
-    }, 0)
-    
+    }, 0);
   }, []);
 
   const initializeCarousel = () => {
