@@ -22,6 +22,7 @@
     "framer-motion": "^11.1.9",
     "gsap": "^3.12.5",
     "imagesloaded": "^5.0.0",
+    "intersection-observer": "^0.12.2",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -21,16 +21,22 @@ import ColorPicker from './components/colorpicker/ColorPicker';
 
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function App() {
-  
+
+  const [flag, setFlag ] = useState(false);
+  setTimeout(() => {
+    setFlag(true)
+}, 1000);
+
   return (
    <div>
     {/* <BuyNow/> */}
     {/* <Navbar/> */}
-    <Homeslider/>
+    <Homeslider/> 
+
     {/* <Prodland/> */}
     <div className="megadivmain">
       <h1 id="ourProducts">Our Products</h1>

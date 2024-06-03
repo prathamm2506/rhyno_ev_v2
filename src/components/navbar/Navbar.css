@@ -14,7 +14,7 @@
   justify-content: space-between;
   opacity: 0;
   transform: translateY(-100%);
-  transition: opacity 2s ease, transform 2s ease;
+  transition: opacity 0s ease, transform 1.5s ease;
 }
 
 .nav.animate {
@@ -24,7 +24,7 @@
 
 .logo {
   opacity: 0;
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotateZ(-5deg) scale(1.5);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -33,10 +33,15 @@
   transform: translateY(0);
 }
 
+.logo:hover {
+  transform: scale(1.2) rotateZ(3deg);
+  transition: transform 0.5s ease;
+}
+
 .nav-linksss li {
   opacity: 0;
-  transform: translateY(-50%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(-70%);
+  transition: opacity 0.5s ease, transform 0.5s ease-out;
 }
 
 .nav-linksss li.animate {
@@ -77,6 +82,35 @@ a:hover {
 .nav-linksss a {
   transition: all 0.2s linear;
   text-decoration: none;
+}
+
+.btn {
+  margin-top: 20px;
+  width: max-content;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: var(--yellow);
+  font-size: var(--small);
+  line-height: 1.4;
+  padding: .7rem 1.2rem;
+  border: none;
+  /* background: #bdc3c7; */
+  color: var(--black);
+  /* padding: 11px 12px 8px; */
+  /* line-height: 22px; */
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-70%);
+  transition: opacity 0.5s ease, transform 0.5s;
+}
+
+.btn.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .search-icon {

@@ -1,26 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./Homeslider.css";
-import gsap from 'gsap';
-import { useGSAP } from "@gsap/react";
 
 const Homeslider = () => {
 
-  
-
+  const [initialAnimation, setInitialAnimation] = useState(true);
 
   useEffect(() => {
-    // const carouselElement = document.getElementById("carouselExampleIndicators");
-    // carouselElement.classList.add("initial-load");
-
-    setTimeout(() => {
-      // carouselElement.classList.remove("initial-load");
+    const timer = setTimeout(() => {
+      setInitialAnimation(false);
       initializeCarousel();
-    }, 0);
-  }, []);
+    }, 2200);
 
-  const initializeCarousel = () => {
-    $('#carouselExampleIndicators').carousel();
-  };
+    const initializeCarousel = () => {
+      $('#carouselExampleIndicators').carousel();
+    };
+
+    return () => clearTimeout(timer);
+  }, []);
 
 
   return (
@@ -39,7 +35,7 @@ const Homeslider = () => {
 
           <div
             id="carouselExampleIndicators"
-            className="carousel slide"
+            className={`carousel slide `}
             data-ride="carousel"
           >
             <ol className="carousel-indicators">
@@ -61,7 +57,7 @@ const Homeslider = () => {
                 data-slide-to="3"
               ></li>
             </ol>
-            <div className="carousel-inner">
+            <div className={`carousel-inner ${initialAnimation ? 'initial-animation' : ''}`}>
               <div className="carousel-item active">
                 <div className="info">
                   <h1>

@@ -66,7 +66,7 @@ const Navbar = () => {
   useEffect(() => {
     setTimeout(() => {
       document.querySelector('.btn').classList.add('animate');
-    }, 6 * 300);
+    }, 1500);
   }, []);
 
   useEffect(() => {
@@ -74,13 +74,15 @@ const Navbar = () => {
       document.querySelector('.nav').classList.add('animate');
       setTimeout(() => {
         document.querySelector('.logo').classList.add('animate');
-      }, 500);
-      const navLinks = document.querySelectorAll('.nav-linksss li');
-      navLinks.forEach((link, index) => {
-        setTimeout(() => {
-          link.classList.add('animate');
-        }, (index + 1) * 300);
-      });
+      }, 400);
+      setTimeout(() => {
+        const navLinks = document.querySelectorAll('.nav-linksss li');
+        navLinks.forEach((link, index) => {
+          setTimeout(() => {
+            link.classList.add('animate');
+          }, (index + 1) * 200);
+        });
+      }, 400)
     }, 1);
   }, []);
 

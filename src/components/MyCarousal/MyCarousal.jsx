@@ -1,15 +1,21 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Slider.css';
 
 const Slider = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const [isSliderVisible, setIsSliderVisible] = useState(false);
   const countOfPages = 3;
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
   const intervalId = useRef(null);
+  const sliderRef = useRef(null);
 
   const switchPages = (newPage) => {
+    if (isFirstLoad) {
+      setIsFirstLoad(false);
+    }
     setCurrentPage(newPage);
   };
 
@@ -54,20 +60,49 @@ const Slider = () => {
       } else {
         switchPages(1);
       }
-    }, 5000);
+    }, 3000);
   };
 
   const stopAutoSlide = () => {
     clearInterval(intervalId.current);
+    intervalId.current = null;
   };
 
   useEffect(() => {
-    startAutoSlide();
-
+    if (isSliderVisible) {
+      startAutoSlide();
+    }
     return () => {
       stopAutoSlide();
     };
-  }, [currentPage]);
+  }, [isSliderVisible, currentPage]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsSliderVisible(true);
+            setIsFirstLoad(true);
+          } else {
+            setIsSliderVisible(false);
+            stopAutoSlide();
+          }
+        });
+      },
+      { threshold: 0.7 } // Trigger when 50% of the slider is visible
+    );
+
+    if (sliderRef.current) {
+      observer.observe(sliderRef.current);
+    }
+
+    return () => {
+      if (sliderRef.current) {
+        observer.unobserve(sliderRef.current);
+      }
+    };
+  }, []);
 
   const navigate = useNavigate();
   const handleButtonClick = (to) => {
@@ -76,6 +111,7 @@ const Slider = () => {
 
   return (
     <section
+      ref={sliderRef}
       className="slider-pages"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
@@ -84,7 +120,7 @@ const Slider = () => {
       <button className="nav-button left-button" onClick={goToPreviousPage}>◀</button>
       <button className="nav-button right-button" onClick={goToNextPage}>▶</button>
 
-      <article className={`js-scrolling__page js-scrolling__page-1 ${currentPage === 1 ? 'js-scrolling--active' : 'js-scrolling--inactive'}`}>
+      <article className={`js-scrolling__page js-scrolling__page-1 ${currentPage === 1 ? 'js-scrolling--active' : 'js-scrolling--inactive'}  ${isFirstLoad ? 'first-load-animation' : ''}`}>
         <div className="slider-page slider-page--right">
           <div className="slider-page--skew">
             <div className="slider-page__content"></div>
@@ -105,7 +141,7 @@ const Slider = () => {
         </div>
       </article>
 
-      <article className={`js-scrolling__page js-scrolling__page-2 ${currentPage === 2 ? 'js-scrolling--active' : 'js-scrolling--inactive'}`}>
+      <article className={`js-scrolling__page js-scrolling__page-2 ${currentPage === 2 ? 'js-scrolling--active' : 'js-scrolling--inactive'} ${isFirstLoad ? 'first-load-animation' : ''}`}>
         <div className="slider-page slider-page--right">
           <div className="slider-page--skew">
             <div 
@@ -126,7 +162,7 @@ const Slider = () => {
         </div>
       </article>
 
-      <article className={`js-scrolling__page js-scrolling__page-3 ${currentPage === 3 ? 'js-scrolling--active' : 'js-scrolling--inactive'}`}>
+      <article className={`js-scrolling__page js-scrolling__page-3 ${currentPage === 3 ? 'js-scrolling--active' : 'js-scrolling--inactive'} ${isFirstLoad ? 'first-load-animation' : ''}`}>
         <div className="slider-page slider-page--right">
           <div className="slider-page--skew">
             <div className="slider-page__content"></div>

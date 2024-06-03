@@ -188,6 +188,7 @@
 
  .js-scrolling__page-1 .slider-page--left .slider-page__content {
      background: linear-gradient(100deg, rgba(253, 50, 50, 0.9), rgba(246, 47, 47, 0.6), rgba(37, 37, 37, 0.1) 80%);
+     cursor: pointer;
  }
 
  .js-scrolling__page-1 .slider-page--left .slider-page__title {
@@ -210,6 +211,7 @@
 
  .js-scrolling__page-2 .slider-page--right .slider-page__content {
      background: linear-gradient(100deg, rgba(37, 37, 37, 0.1) 30%, rgba(85, 78, 78, 0.6), rgba(174, 161, 161, 0.6));
+     cursor: pointer;
  }
 
  .js-scrolling__page-2 .slider-page--right .slider-page__title {
@@ -241,6 +243,7 @@
 
  .js-scrolling__page-3 .slider-page--left .slider-page__content {
      background: linear-gradient(100deg, rgb(24, 17, 240), rgba(44, 38, 241, 0.6), rgba(37, 37, 37, 0.1) 80%);
+     cursor: pointer;
  }
 
  .js-scrolling__page-3 .slider-page--left .slider-page__title {
@@ -310,7 +313,7 @@
      }
 
      .button-black {
-        margin: 2rem -1.5rem 0rem 0rem;
+         margin: 2rem -1.5rem 0rem 0rem;
      }
 
      .button-blue {
@@ -394,7 +397,7 @@
      }
 
      .button-black {
-        margin: 3rem -1.1rem 0rem 0rem;
+         margin: 3rem -1.1rem 0rem 0rem;
      }
 
      .button-blue {
@@ -489,7 +492,7 @@
      }
 
      .button-black {
-        margin: 4.5rem 0.9rem 0rem 0rem;
+         margin: 4.5rem 0.9rem 0rem 0rem;
      }
 
      .button-blue {
@@ -582,15 +585,15 @@
      }
 
      .button-red {
-        margin: 0.5rem 2.5rem 0rem 0rem;
+         margin: 0.5rem 2.5rem 0rem 0rem;
      }
 
      .button-black {
-        margin: 4.5rem 0.9rem 0rem 0rem;
+         margin: 4.5rem 0.9rem 0rem 0rem;
      }
 
      .button-blue {
-        margin: 0.5rem 2.5rem 0rem 0rem;
+         margin: 0.5rem 2.5rem 0rem 0rem;
      }
 
      .js-scrolling__page-1 .slider-page--right .slider-page__content {
@@ -605,3 +608,57 @@
          margin-left: -2rem;
      }
  }
+
+
+
+
+
+ /* .first-load-animation .slider-page--right .slider-page__content {
+     animation: slideOut 1.5s ease-in-out forwards;
+ }
+
+ .first-load-animation .slider-page--left .slider-page__content {
+     animation: slideIn 1.5s ease-in-out forwards;
+ } */
+
+
+
+ /* .first-load-animation .slider-page__content {
+     animation: firstLoadAnim 0.7s ease forwards;
+ }
+
+ @keyframes firstLoadAnim {
+     0% {
+         transform: scale(1.4) skewX(var(--variable-skewX));
+     }
+
+     100% {
+         transform: scale(0.9) skewX(var(--variable-skewX));
+     }
+ } */
+
+
+
+ /* @keyframes slideIn {
+     from {
+         opacity: 0;
+         transform: translateX(-100%);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
+
+ @keyframes slideOut {
+     from {
+         opacity: 0;
+         transform: translateX(100%);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ } */
