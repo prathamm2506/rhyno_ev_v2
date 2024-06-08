@@ -18,6 +18,11 @@ import MyCarousal from './components/MyCarousal/MyCarousal';
 import Prodland from './components/prodland/Prodland';
 import Spec from './components/specs/Specs';
 import ColorPicker from './components/colorpicker/ColorPicker';
+import Sparkles from './components/Sparkles/Sparkles';
+import WhyRhynoHeding from './components/WhyRhynoHeading/WhyRhynoHeading'
+
+import OurProductTitle from './components/OurProductTitle/OurProductTitle';
+
 
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
@@ -26,33 +31,37 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [flag, setFlag ] = useState(false);
-  setTimeout(() => {
-    setFlag(true)
-}, 1000);
 
   return (
-   <div>
-    {/* <BuyNow/> */}
-    {/* <Navbar/> */}
-    <Homeslider/> 
-
-    {/* <Prodland/> */}
-    <div className="megadivmain">
-      <h1 id="ourProducts">Our Products</h1>
-      <MyCarousal/>
-    {/* <Carousel Data={CarouselData} TextData={CarouselTextData} /> */}
+    <div>
+      {/* <BuyNow/> */}
+      {/* <Navbar/> */}
+      <Homeslider />
+      <OurProductTitle />
+      {/* <Sparkles
+        // headingText="Have look to Our three core Products and specifictions"
+        background="transparent"
+        minSize={0.6}
+        maxSize={1.4}
+        particleDensity={100}
+        // className="sparkles-container"
+      /> */}
+      {/* <Prodland/> */}
+      <div className="megadivmain">
+        <h1 id="ourProducts">Our Products</h1>
+        <MyCarousal />
+      </div>
+      <WhyRhynoHeding />
+      <div className="lapscreencomp">
+        <Twistycarousel />
+      </div>
+      <div className="mobilescreencomp">
+        <ResponsiveCards />
+      </div>
+      {/* <Footer/> */}
+      {/* <Spec/> */}
+      {/* <ColorPicker/> */}
     </div>
-    <div className="lapscreencomp">
-    <Twistycarousel/>
-    </div>
-    <div className="mobilescreencomp">
-    <ResponsiveCards/>
-    </div>
-    {/* <Footer/> */}
-    {/* <Spec/> */}
-    {/* <ColorPicker/> */}
-   </div>
   );
 }
 

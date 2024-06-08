@@ -72,16 +72,16 @@
   }
   
   @keyframes slideIn {
-	from {
-	  opacity: 0;
-	  transform: translateX(-100%);
-	}
-	to {
-	  opacity: 1;
-	  transform: translateX(0);
-	}
-  }
-  
+    from {
+        opacity: 0;
+        transform: scale(0.1) translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
+}
+
   @keyframes slideOut {
 	from {
 	  opacity: 1;
@@ -94,18 +94,18 @@
   }
 
   .initial-animation .carousel-item.active {
-	animation: slideIn 1.7s ease-in-out forwards;
+	animation: slideIn 1.5s ease-in forwards;
   }
   
   .initial-animation .info h1,
   .initial-animation .info p {
 	opacity: 0;
-	animation: fadeIn 1.7s ease forwards;
+	animation: fadeIn 0.1s ease forwards;
   }
   
   .initial-animation .carousel-item.active .info h1,
   .initial-animation .carousel-item.active .info p {
-	animation: fadeIn 1s 1s ease-in-out forwards; 
+	animation: fadeIn 0.7s 1s ease-in-out forwards;
   }
 
 

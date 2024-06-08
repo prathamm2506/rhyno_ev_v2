@@ -4,8 +4,6 @@ import './Slider.css';
 
 const Slider = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
-  const [isSliderVisible, setIsSliderVisible] = useState(false);
   const countOfPages = 3;
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
@@ -13,9 +11,6 @@ const Slider = () => {
   const sliderRef = useRef(null);
 
   const switchPages = (newPage) => {
-    if (isFirstLoad) {
-      setIsFirstLoad(false);
-    }
     setCurrentPage(newPage);
   };
 
@@ -65,44 +60,14 @@ const Slider = () => {
 
   const stopAutoSlide = () => {
     clearInterval(intervalId.current);
-    intervalId.current = null;
   };
 
   useEffect(() => {
-    if (isSliderVisible) {
-      startAutoSlide();
-    }
+    startAutoSlide();
     return () => {
       stopAutoSlide();
     };
-  }, [isSliderVisible, currentPage]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsSliderVisible(true);
-            setIsFirstLoad(true);
-          } else {
-            setIsSliderVisible(false);
-            stopAutoSlide();
-          }
-        });
-      },
-      { threshold: 0.7 } // Trigger when 50% of the slider is visible
-    );
-
-    if (sliderRef.current) {
-      observer.observe(sliderRef.current);
-    }
-
-    return () => {
-      if (sliderRef.current) {
-        observer.unobserve(sliderRef.current);
-      }
-    };
-  }, []);
+  }, [currentPage]);
 
   const navigate = useNavigate();
   const handleButtonClick = (to) => {
@@ -120,7 +85,7 @@ const Slider = () => {
       <button className="nav-button left-button" onClick={goToPreviousPage}>◀</button>
       <button className="nav-button right-button" onClick={goToNextPage}>▶</button>
 
-      <article className={`js-scrolling__page js-scrolling__page-1 ${currentPage === 1 ? 'js-scrolling--active' : 'js-scrolling--inactive'}  ${isFirstLoad ? 'first-load-animation' : ''}`}>
+      <article className={`js-scrolling__page js-scrolling__page-1 ${currentPage === 1 ? 'js-scrolling--active' : 'js-scrolling--inactive'}`}>
         <div className="slider-page slider-page--right">
           <div className="slider-page--skew">
             <div className="slider-page__content"></div>
@@ -128,29 +93,29 @@ const Slider = () => {
         </div>
         <div className="slider-page slider-page--left">
           <div className="slider-page--skew">
-            <div 
+            <div
               className="slider-page__content"
               onMouseEnter={stopAutoSlide}
               onMouseLeave={startAutoSlide}
             >
               <h1 className="slider-page__title">SE03</h1>
-              <h2 className="slider-page__description">Short description of specific bike model </h2>
+              {/* <h2 className="slider-page__description">Short description of specific bike model </h2> */}
               <button className="button button-red" onClick={() => handleButtonClick("/SE03")}>know more</button>
             </div>
           </div>
         </div>
       </article>
 
-      <article className={`js-scrolling__page js-scrolling__page-2 ${currentPage === 2 ? 'js-scrolling--active' : 'js-scrolling--inactive'} ${isFirstLoad ? 'first-load-animation' : ''}`}>
+      <article className={`js-scrolling__page js-scrolling__page-2 ${currentPage === 2 ? 'js-scrolling--active' : 'js-scrolling--inactive'}`}>
         <div className="slider-page slider-page--right">
           <div className="slider-page--skew">
-            <div 
+            <div
               className="slider-page__content"
               onMouseEnter={stopAutoSlide}
               onMouseLeave={startAutoSlide}
             >
               <h1 className="slider-page__title">SE03 MAX</h1>
-              <h2 className="slider-page__description">Short description of specific bike model </h2>
+              {/* <h2 className="slider-page__description">Short description of specific bike model </h2> */}
               <button className="button button-black" onClick={() => handleButtonClick("/SE03MAX")}>know more</button>
             </div>
           </div>
@@ -162,7 +127,7 @@ const Slider = () => {
         </div>
       </article>
 
-      <article className={`js-scrolling__page js-scrolling__page-3 ${currentPage === 3 ? 'js-scrolling--active' : 'js-scrolling--inactive'} ${isFirstLoad ? 'first-load-animation' : ''}`}>
+      <article className={`js-scrolling__page js-scrolling__page-3 ${currentPage === 3 ? 'js-scrolling--active' : 'js-scrolling--inactive'}`}>
         <div className="slider-page slider-page--right">
           <div className="slider-page--skew">
             <div className="slider-page__content"></div>
@@ -170,13 +135,13 @@ const Slider = () => {
         </div>
         <div className="slider-page slider-page--left">
           <div className="slider-page--skew">
-            <div 
+            <div
               className="slider-page__content"
               onMouseEnter={stopAutoSlide}
               onMouseLeave={startAutoSlide}
             >
               <h1 className="slider-page__title">SE03 Lite</h1>
-              <h2 className="slider-page__description">Short description of specific bike model </h2>
+              {/* <h2 className="slider-page__description">Short description of specific bike model </h2> */}
               <button className="button button-blue" onClick={() => handleButtonClick("/SE03LITE")}>know more</button>
             </div>
           </div>

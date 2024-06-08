@@ -66,7 +66,7 @@ const Navbar = () => {
   useEffect(() => {
     setTimeout(() => {
       document.querySelector('.btn').classList.add('animate');
-    }, 1500);
+    }, 3500);
   }, []);
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const Navbar = () => {
       document.querySelector('.nav').classList.add('animate');
       setTimeout(() => {
         document.querySelector('.logo').classList.add('animate');
-      }, 400);
+      }, 300);
       setTimeout(() => {
         const navLinks = document.querySelectorAll('.nav-linksss li');
         navLinks.forEach((link, index) => {
@@ -83,7 +83,7 @@ const Navbar = () => {
           }, (index + 1) * 200);
         });
       }, 400)
-    }, 1);
+    }, 1700);
   }, []);
 
   return (
