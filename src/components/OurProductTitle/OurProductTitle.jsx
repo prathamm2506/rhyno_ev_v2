@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Img from "../../assets/10.png";
+import ImgC from "../../assets/10c.png";
 import Sparkles from '../Sparkles/Sparkles';
 import './OurProductTitle.css';
 
@@ -11,7 +13,7 @@ const OurProductTitle = () => {
 
     useEffect(() => {
         const img = new Image();
-        img.src = "src/assets/10.png";
+        img.src = {Img};
         img.onload = () => {
             setImageLoaded(true);
         };
@@ -23,14 +25,14 @@ const OurProductTitle = () => {
                 trigger: ".sparkles-container",
                 markers: false,
                 start: 'top 0%',
-                end: '+=300%',
+                end: '+=350%',
                 scrub: 4,
                 pin: true,
             },
         });
 
         scrollAnimation
-            .to(".scroll-wrap", { x: "-115%", ease: "power1.inOut" })
+            .to(".scroll-wrap", { x: "-120%", ease: "power1.inOut" })
             .to(".sparkles-container", { opacity: 0, ease: "power1.inOut" }, "<");
 
         return () => {
@@ -45,14 +47,14 @@ const OurProductTitle = () => {
                 background="transparent"
                 minSize={0.6}
                 maxSize={1.4}
-                particleDensity={100}
+                particleDensity={75}
                 className="sparkles-container"
             />
             <div className="scroll-wrap">
                 {imageLoaded ? (
-                    <img ref={imgRef} src="src/assets/10.png" className="img" alt="Bike img" loading="lazy" />
+                    <img ref={imgRef} src={Img} className="img" alt="Bike img" loading="lazy" />
                 ) : (
-                    <img ref={imgRef} src="src/assets/10c.png" className="img" alt="Loading..." loading="lazy" />
+                    <img ref={imgRef} src={ImgC} className="img" alt="Loading..." loading="lazy" />
                 )}
                 <h1 className="sparkles-heading">Have look to Our three core Products and specifictions</h1>
             </div>

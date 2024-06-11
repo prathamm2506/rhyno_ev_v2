@@ -66,7 +66,7 @@ const Navbar = () => {
   useEffect(() => {
     setTimeout(() => {
       document.querySelector('.btn').classList.add('animate');
-    }, 3500);
+    }, 1375);
   }, []);
 
   useEffect(() => {
@@ -80,10 +80,10 @@ const Navbar = () => {
         navLinks.forEach((link, index) => {
           setTimeout(() => {
             link.classList.add('animate');
-          }, (index + 1) * 200);
+          }, (index + 1) * 180);
         });
-      }, 400)
-    }, 1700);
+      }, 350)
+    },0);
   }, []);
 
   return (
