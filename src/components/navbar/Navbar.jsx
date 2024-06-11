@@ -44,6 +44,10 @@ const Navbar = () => {
   const [isNavOpen, setNavOpen] = useState(false);
   const [isProductsOpen, setProductsOpen] = useState(false); // New state for products dropdown
 
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   const toggleSearch = () => {
     setSearchOpen(!isSearchOpen);
     setNavOpen(false);
@@ -121,9 +125,9 @@ const Navbar = () => {
             </ul>
           )}
         </li>
-        <li><Link to="/Compare" onClick={closeNav}>Compare</Link></li>
-        <li><Link to='/AboutUs' onClick={closeNav}>About Us</Link></li>
-        <li><Link to='/ContactUs' onClick={closeNav}>Contact Us</Link></li>
+        <li><Link to="/Compare" onClick={() => { closeNav(); handleClick(); }}>Compare</Link></li>
+        <li><Link to='/AboutUs' onClick={() => { closeNav(); handleClick(); }}>About Us</Link></li>
+        <li><Link to='/ContactUs' onClick={() => { closeNav(); handleClick(); }}>Contact Us</Link></li>
       </ul>
 
       <button className="search-icon btn btn-nav" id="searchIcon"><a href="https://wa.me/9023987528" target='_blank'> Order Now </a></button>

@@ -1,30 +1,29 @@
-import React from "react";
-// import Sparkles2 from "../Sparkles2/Sparkles2";
-import "./WhyRhynoHeading.css";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { HeroHighlight, Highlight } from "../WhyRhynoHeadingBG/WhyRhynoHeadingBG";
 
-const WhyRhynoHeading = () => {
-  return (
-    <div className="sparkles-preview-container">
-      <h1 className="sparkles-preview-title">Aceternity</h1>
-      <div className="sparkles-preview-gradient-container">
-        <div className="gradient gradient-1"></div>
-        <div className="gradient gradient-2"></div>
-        <div className="gradient gradient-3"></div>
-        <div className="gradient gradient-4"></div>
-        <div className="sparkles-core-container">
-          {/* <Sparkles2
-            background="transparent"
-            minSize={0.4}
-            maxSize={1}
-            particleDensity={1200}
-            className="sparkles-preview-core"
-            particleColor="#FFFFFF"
-          /> */}
-        </div>
-        <div className="sparkles-preview-radial-gradient"></div>
-      </div>
-    </div>
-  );
+const HeroHighlightDemo = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
+
+    return (
+        <HeroHighlight>
+            <motion.h1
+                ref={ref}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: [20, -5, 0] } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
+                className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight lg:leading-relaxed text-center mx-auto px-2 xs:px-4"
+            >
+                <span className="block text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-8xl leading-relaxed whitespace-normal mb-2 sm:mb-4">
+                    What Makes Rhyno awesome
+                </span>
+                <Highlight className="text-white leading-relaxed text-base xs:text-lg sm:text-3xl md:text-4xl lg:text-5xl">
+                    Why you should buy it.
+                </Highlight>
+            </motion.h1>
+        </HeroHighlight>
+    );
 };
 
-export default WhyRhynoHeading;
+export default HeroHighlightDemo;

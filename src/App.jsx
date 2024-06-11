@@ -18,10 +18,7 @@ import MyCarousal from './components/MyCarousal/MyCarousal';
 import Prodland from './components/prodland/Prodland';
 import Spec from './components/specs/Specs';
 import ColorPicker from './components/colorpicker/ColorPicker';
-import Sparkles from './components/Sparkles/Sparkles';
 import WhyRhynoHeading from './components/WhyRhynoHeading/WhyRhynoHeading'
-import HeroHighlightDemo from './components/HeroHighlightDemo/HeroHighlightDemo';
-
 import OurProductTitle from './components/OurProductTitle/OurProductTitle';
 
 
@@ -55,8 +52,7 @@ function App() {
         <h1 id="ourProducts">Our Products</h1>
         <MyCarousal />
       </div>
-      {/* <WhyRhynoHeading /> */}
-      <HeroHighlightDemo />
+      <WhyRhynoHeading />
       <div className="lapscreencomp">
         <Twistycarousel />
       </div>

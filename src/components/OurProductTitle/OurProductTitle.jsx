@@ -32,8 +32,8 @@ const OurProductTitle = () => {
         });
 
         scrollAnimation
-            .to(".scroll-wrap", { x: "-120%", ease: "power1.inOut" })
-            .to(".sparkles-container", { opacity: 0, ease: "power1.inOut" }, "<");
+            .to(".scroll-wrap", { x: "-120%" })
+            .to(".sparkles-container", { opacity: 0 }, "<");
 
         return () => {
             scrollAnimation.kill();
