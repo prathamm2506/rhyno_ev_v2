@@ -34,19 +34,9 @@ function App() {
 
   return (
     <div>
-      {/* <BuyNow/> */}
-      {/* <Navbar/> */}
+
       <Homeslider />
       <OurProductTitle />
-      {/* <Sparkles
-        // headingText="Have look to Our three core Products and specifictions"
-        background="transparent"
-        minSize={0.6}
-        maxSize={1.4}
-        particleDensity={100}
-        // className="sparkles-container"
-      /> */}
-      {/* <Prodland/> */}
       <div className="megadivmain">
         <h1 id="ourProducts">Our Products</h1>
         <MyCarousal />
@@ -58,9 +48,6 @@ function App() {
       <div className="mobilescreencomp">
         <ResponsiveCards />
       </div>
-      {/* <Footer/> */}
-      {/* <Spec/> */}
-      {/* <ColorPicker/> */}
     </div>
   );
 }

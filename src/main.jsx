@@ -14,6 +14,7 @@ import PreLoader from './components/PreLoader/PreLoader.jsx';
 import SE03 from './routes/SE03.jsx'
 import SE03MAX from './routes/SE03MAX.jsx'
 import SE03LITE from './routes/SE03LITE.jsx'
+import Rentals from './routes/Rentals.jsx';
 
 
 const Root = () => {
@@ -40,6 +41,7 @@ const Root = () => {
             <Route path='/Compare' element={<Compare />} />
             <Route path='/AboutUs' element={<AboutUs />} />
             <Route path='/ContactUs' element={<ContactUs />} />
+            <Route path='/Rentals' element={<Rentals />} />
           </Routes>
           <Footer />
           <BackToTop />
