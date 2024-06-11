@@ -58,7 +58,7 @@ const Sparkles = ({
                             enable: false,
                             zIndex: 1,
                         },
-                        fpsLimit: 60,
+                        fpsLimit: 120,
                         interactivity: {
                             events: {
                                 onClick: {

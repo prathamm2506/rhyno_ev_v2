@@ -19,7 +19,8 @@ import Prodland from './components/prodland/Prodland';
 import Spec from './components/specs/Specs';
 import ColorPicker from './components/colorpicker/ColorPicker';
 import Sparkles from './components/Sparkles/Sparkles';
-import WhyRhynoHeding from './components/WhyRhynoHeading/WhyRhynoHeading'
+import WhyRhynoHeading from './components/WhyRhynoHeading/WhyRhynoHeading'
+import HeroHighlightDemo from './components/HeroHighlightDemo/HeroHighlightDemo';
 
 import OurProductTitle from './components/OurProductTitle/OurProductTitle';
 
@@ -30,14 +31,17 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-
-
+  const [sliderLoaded, setSliderLoaded] = useState(false);
+  setTimeout(() => {
+    setSliderLoaded(true);
+  },1420)
+  
   return (
     <div>
       {/* <BuyNow/> */}
       {/* <Navbar/> */}
       <Homeslider />
-      <OurProductTitle />
+      {sliderLoaded && <OurProductTitle />}
       {/* <Sparkles
         // headingText="Have look to Our three core Products and specifictions"
         background="transparent"
@@ -51,7 +55,8 @@ function App() {
         <h1 id="ourProducts">Our Products</h1>
         <MyCarousal />
       </div>
-      <WhyRhynoHeding />
+      {/* <WhyRhynoHeading /> */}
+      <HeroHighlightDemo />
       <div className="lapscreencomp">
         <Twistycarousel />
       </div>
