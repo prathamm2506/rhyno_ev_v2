@@ -16,7 +16,7 @@ const HeroHighlightDemo = () => {
                 className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight lg:leading-relaxed text-center mx-auto px-2 xs:px-4"
             >
                 <span className="block text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-8xl leading-relaxed whitespace-normal mb-2 sm:mb-4">
-                    Why Rhyno is awesome?
+                    What Makes Rhyno awesome
                 </span>
                 <Highlight className="text-white leading-relaxed text-base xs:text-lg sm:text-3xl md:text-4xl lg:text-5xl">
                     Why you should buy it.

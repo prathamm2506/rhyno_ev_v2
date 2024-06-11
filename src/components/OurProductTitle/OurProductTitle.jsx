@@ -25,14 +25,14 @@ const OurProductTitle = () => {
                 trigger: ".sparkles-container",
                 markers: false,
                 start: 'top 0%',
-                end: '+=500%',
+                end: '+=350%',
                 scrub: 4,
                 pin: true,
             },
         });
 
         scrollAnimation
-            .to(".scroll-wrap", { x: "-130%", ease: "power1.inOut" })
+            .to(".scroll-wrap", { x: "-120%", ease: "power1.inOut" })
             .to(".sparkles-container", { opacity: 0, ease: "power1.inOut" }, "<");
 
         return () => {

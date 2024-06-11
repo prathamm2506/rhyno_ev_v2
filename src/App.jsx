@@ -34,7 +34,7 @@ function App() {
   const [sliderLoaded, setSliderLoaded] = useState(false);
   setTimeout(() => {
     setSliderLoaded(true);
-  },1420)
+  },1410)
   
   return (
     <div>
