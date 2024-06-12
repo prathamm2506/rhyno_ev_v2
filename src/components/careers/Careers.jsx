@@ -1,12 +1,11 @@
 import React from 'react'
-import './Privacy.css'
 
-const Privacy = () => {
+const Careers = () => {
   return (
     <div>
       <div className="ap-maindiv">
         <div className="ap-textdiv">
-          <h1>Privacy Policy</h1>
+          <h1>Careers</h1>
           <p>
           Established in 2019 by an automotive engineer with a vision for sustainable and robust mobility solutions, RHYNO EV is not just a company; it's a collective effort of a dynamic team of young individuals passionately driving innovation in the electric vehicle industry. We believe in engineering solutions that solve problems.
           </p>
@@ -18,4 +17,4 @@ const Privacy = () => {
   )
 }
 
-export default Privacy
+export default Careers
