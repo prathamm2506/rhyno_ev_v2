@@ -23,7 +23,7 @@ const Numbers = () => {
                                 of employers believe that Professional Certificates strengthen a candidate’s job application
                             </div>
                         </div>
-                        <div className="uni_info border none">
+                        <div className="uni_info border11 none">
                             <div className="uni_persentage">
                                 90%
                             </div>
