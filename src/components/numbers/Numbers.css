@@ -64,4 +64,5 @@
 }
 .none{
     border: 0;
+    border-right: none;
 }
