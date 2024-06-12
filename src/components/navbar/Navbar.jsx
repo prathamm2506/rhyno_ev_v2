@@ -108,19 +108,19 @@ const Navbar = () => {
           {isProductsOpen && (
             <ul className="dropdown">
               <li>
-                <ScrollLink to="/SE03" smooth={true} duration={500} onClick={() => { closeNav(); handleClick(); }}>
+                <Link to="/SE03" smooth={true} duration={500} onClick={() => { closeNav(); handleClick(); }}>
                   SE03
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink to="/SE03MAX" smooth={true} duration={500} onClick={() => { closeNav(); handleClick(); }}>
+                <Link to="/SE03MAX" smooth={true} duration={500} onClick={() => { closeNav(); handleClick(); }}>
                   SE03 MAX
-                </ScrollLink>
+                </Link>
               </li>
               <li>
-                <ScrollLink to="/SE03LITE" smooth={true} duration={500} onClick={() => { closeNav(); handleClick(); }}>
+                <Link to="/SE03LITE" smooth={true} duration={500} onClick={() => { closeNav(); handleClick(); }}>
                   SE03 LITE
-                </ScrollLink>
+                </Link>
               </li>
             </ul>
           )}
