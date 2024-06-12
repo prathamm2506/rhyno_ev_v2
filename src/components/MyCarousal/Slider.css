@@ -14,11 +14,13 @@
      box-sizing: border-box;
      margin: 0;
      padding: 0;
+  scroll-behavior: smooth;
  }
 
  body {
      font-family: var(--font-family);
-     background-color: var(--color-body);
+  scroll-behavior: smooth;
+  background-color: var(--color-body);
  }
 
  .button {
