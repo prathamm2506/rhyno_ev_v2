@@ -15,6 +15,8 @@ import SE03 from './routes/SE03.jsx'
 import SE03MAX from './routes/SE03MAX.jsx'
 import SE03LITE from './routes/SE03LITE.jsx'
 import Rentals from './routes/Rentals.jsx';
+import PrivacyPolicy from './routes/PrivacyPolicy.jsx';
+import CareersPage from './routes/CareersPage.jsx';
 
 
 const Root = () => {
@@ -42,6 +44,8 @@ const Root = () => {
             <Route path='/AboutUs' element={<AboutUs />} />
             <Route path='/ContactUs' element={<ContactUs />} />
             <Route path='/Rentals' element={<Rentals />} />
+            <Route path='/Privacy' element={<PrivacyPolicy />} />
+            <Route path='/Careers' element={<CareersPage />} />
           </Routes>
           <Footer />
           <BackToTop />

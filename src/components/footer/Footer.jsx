@@ -31,9 +31,9 @@ const Footer = () => {
 
           <small>Quick Links</small>
           <div className="ft-quick">
-            <li><Link to='/#' onClick={handleClick}>Privacy Policy</Link></li>
+            <li><Link to='/Privacy' onClick={handleClick}>Privacy Policy</Link></li>
             <li><Link to='/ContactUs' onClick={handleClick}>Contact Us</Link></li>
-            <li><Link to='/#' onClick={handleClick}>Careers</Link></li>
+            <li><Link to='/Careers' onClick={handleClick}>Careers</Link></li>
             <li><Link to='/Rentals' onClick={handleClick}>Rentals</Link></li>
           </div>
           <p>Copyright &copy; 2024 RHYNO Wheels Private Limited. All Rights Reserved.</p>

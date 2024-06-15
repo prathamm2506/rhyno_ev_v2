@@ -26,6 +26,7 @@ import OurProducts from './components/OurProducts/OurProducts';
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
 import { useEffect, useState } from 'react';
+import Numbers from './components/numbers/Numbers';
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
       {/* <Footer/> */}
       {/* <Spec/> */}
       {/* <ColorPicker/> */}
+      <Numbers/>
     </div>
   );
 }
