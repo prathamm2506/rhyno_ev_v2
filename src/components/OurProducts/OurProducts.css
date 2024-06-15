@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 :root {
-    --item1-transform: translateX(-100%) translateY(-5%) scale(2.3);
+    --item1-transform: translateX(-120%) translateY(-10%) scale(2.3);
     --item1-filter: blur(30px);
     --item1-zIndex: 11;
     --item1-opacity: 0;
@@ -207,7 +205,7 @@
 
 /* next click */
 .carousel.next .item:nth-child(1) {
-    animation: transformFromPosition2 0.5s ease-in-out 1 forwards;
+    animation: transformFromPosition2 0.6s ease-in-out 1 forwards;
 }
 
 @keyframes transformFromPosition2 {
@@ -219,7 +217,7 @@
 }
 
 .carousel.next .item:nth-child(2) {
-    animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+    animation: transformFromPosition3 0.8s ease-in-out 1 forwards;
 }
 
 @keyframes transformFromPosition3 {
@@ -231,7 +229,7 @@
 }
 
 .carousel.next .item:nth-child(3) {
-    animation: transformFromPosition4 0.9s ease-in-out 1 forwards;
+    animation: transformFromPosition4 1s ease-in-out 1 forwards;
 }
 
 @keyframes transformFromPosition4 {
@@ -243,7 +241,7 @@
 }
 
 .carousel.next .item:nth-child(4) {
-    animation: transformFromPosition5 1.1s ease-in-out 1 forwards;
+    animation: transformFromPosition5 1.2s ease-in-out 1 forwards;
 }
 
 @keyframes transformFromPosition5 {
@@ -256,19 +254,19 @@
 
 /* previous */
 .carousel.prev .list .item:nth-child(5) {
-    animation: transformFromPosition4 0.5s ease-in-out 1 forwards;
+    animation: transformFromPosition4 0.6s ease-in-out 1 forwards;
 }
 
 .carousel.prev .list .item:nth-child(4) {
-    animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+    animation: transformFromPosition3 0.8s ease-in-out 1 forwards;
 }
 
 .carousel.prev .list .item:nth-child(3) {
-    animation: transformFromPosition2 0.9s ease-in-out 1 forwards;
+    animation: transformFromPosition2 1s ease-in-out 1 forwards;
 }
 
 .carousel.prev .list .item:nth-child(2) {
-    animation: transformFromPosition1 1.1s ease-in-out 1 forwards;
+    animation: transformFromPosition1 1.2s ease-in-out 1 forwards;
 }
 
 @keyframes transformFromPosition1 {
