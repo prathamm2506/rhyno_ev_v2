@@ -20,6 +20,7 @@ import Spec from './components/specs/Specs';
 import ColorPicker from './components/colorpicker/ColorPicker';
 import WhyRhynoHeading from './components/WhyRhynoHeading/WhyRhynoHeading'
 import OurProductTitle from './components/OurProductTitle/OurProductTitle';
+import OurProducts from './components/OurProducts/OurProducts';
 
 
 import gsap from 'gsap';
@@ -31,26 +32,19 @@ function App() {
   const [sliderLoaded, setSliderLoaded] = useState(false);
   setTimeout(() => {
     setSliderLoaded(true);
-  },1410)
-  
+  }, 1410)
+
   return (
     <div>
       {/* <BuyNow/> */}
       {/* <Navbar/> */}
       <Homeslider />
       {sliderLoaded && <OurProductTitle />}
-      {/* <Sparkles
-        // headingText="Have look to Our three core Products and specifictions"
-        background="transparent"
-        minSize={0.6}
-        maxSize={1.4}
-        particleDensity={100}
-        // className="sparkles-container"
-      /> */}
       {/* <Prodland/> */}
       <div className="megadivmain">
-        <h1 id="ourProducts">Our Products</h1>
-        <MyCarousal />
+        <h1 id="ourProducts">Products</h1>
+        <OurProducts />
+        {/* <MyCarousal /> */}
       </div>
       <WhyRhynoHeading />
       <div className="lapscreencomp">

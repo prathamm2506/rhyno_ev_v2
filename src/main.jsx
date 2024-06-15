@@ -18,7 +18,7 @@ import Rentals from './routes/Rentals.jsx';
 
 
 const Root = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
