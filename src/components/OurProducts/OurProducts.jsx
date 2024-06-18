@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Img2 from "../../assets/webp/Product2.webp";
-import Img1 from "../../assets/webp/Product1.webp";
-import Img3 from "../../assets/webp/product3.webp";
-import rightArrow from "../../assets/right-arrow.svg";
-import leftArrow from "../../assets/left-arrow.svg";
+import Img1 from '../../assets/webp/Product1.webp';
+import Img2 from '../../assets/webp/Product2.webp';
+import Img3 from '../../assets/webp/product3.webp';
+import rightArrow from '../../assets/right-arrow.svg';
+import leftArrow from '../../assets/left-arrow.svg';
 import './OurProducts.css';
 
 const OurProducts = () => {
@@ -12,11 +12,11 @@ const OurProducts = () => {
     const listRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isDetailOpen, setIsDetailOpen] = useState(false);
+    const navigate = useNavigate();
 
     const showSlider = (type) => {
         if (isAnimating) return;
         setIsAnimating(true);
-
         carouselRef.current.style.pointerEvents = 'none';
 
         carouselRef.current.classList.remove('next', 'prev');
@@ -29,72 +29,70 @@ const OurProducts = () => {
             carouselRef.current.classList.add('prev');
         }
 
+        carouselRef.current.classList.add('carousel-moving');
+
         setTimeout(() => {
             setIsAnimating(false);
             carouselRef.current.style.pointerEvents = 'auto';
+            carouselRef.current.classList.remove('carousel-moving');
         }, 2000);
-    }
+    };
 
     const handleMouseMove = (e) => {
-        const carouselRect = carouselRef.current.getBoundingClientRect();
-        const halfWidth = carouselRect.width * 0.37;
-    
-        // if (e.clientX > carouselRect.left + halfWidth) {
-        //     console.log(`Setting cursor to right arrow: url(${rightArrow}) 16 16, auto`);
-        //     carouselRef.current.style.cursor = `url(${rightArrow}) 16 16, auto`;
-        // } else {
-        //     console.log(`Setting cursor to left arrow: url(${leftArrow}) 16 16, auto`);
-        //     carouselRef.current.style.cursor = `url(${leftArrow}) 16 16, auto`;
-        // }
-    }
-    
+        const target = e.target;
+        if (target.closest('img')) {
+            carouselRef.current.style.cursor = `url(${rightArrow}) 16 16, auto`;
+        } else if (target.closest('.introduce')) {
+            carouselRef.current.style.cursor = `url(${leftArrow}) 16 16, auto`;
+        } else {
+            const carouselRect = carouselRef.current.getBoundingClientRect();
+            const halfWidth = carouselRect.width * 0.37;
+            if (e.clientX > carouselRect.left + halfWidth) {
+                carouselRef.current.style.cursor = `url(${rightArrow}) 16 16, auto`;
+            } else {
+                carouselRef.current.style.cursor = `url(${leftArrow}) 16 16, auto`;
+            }
+        }
+    };
 
     const handleClick = (e) => {
         if (isDetailOpen) return;
-
         const carouselRect = carouselRef.current.getBoundingClientRect();
-        const halfWidth = carouselRect.width * 0.37;
-
+        const halfWidth = carouselRect.width * 0.379;
         if (e.clientX > carouselRect.left + halfWidth) {
             showSlider('next');
         } else {
             showSlider('prev');
         }
-    }
+    };
 
     const handleSeeMoreClick = () => {
         carouselRef.current.classList.remove('next', 'prev');
         carouselRef.current.classList.add('showDetail');
         setIsDetailOpen(true);
-    }
+    };
 
     const handleBackClick = () => {
         carouselRef.current.classList.remove('showDetail');
         setTimeout(() => {
             setIsDetailOpen(false);
         }, 2000);
-    }
+    };
 
-    const navigate = useNavigate();
     const handleCheckout = (to) => {
-      navigate(to);
-      window.scrollTo(0, 0);
+        navigate(to);
+        window.scrollTo(0, 0);
     };
 
     useEffect(() => {
         const seeMoreButtons = carouselRef.current.querySelectorAll('.seeMore');
-        seeMoreButtons.forEach(button => {
+        seeMoreButtons.forEach((button) => {
             button.onclick = handleSeeMoreClick;
         });
     }, []);
 
     return (
-        <div
-            className="carousel"
-            ref={carouselRef}
-            onMouseMove={handleMouseMove}
-            onClick={handleClick}
-        >
+        <div className="carousel" ref={carouselRef} onMouseMove={handleMouseMove} onClick={handleClick}>
             <div className="list" ref={listRef}>
                 {products.map((product, index) => (
                     <div className="item" key={index}>
@@ -103,9 +101,7 @@ const OurProducts = () => {
                             <div className="title">OUR PRODUCT</div>
                             <div className="topic">{product.topic}</div>
                             <div className="des">{product.description}</div>
-                            <button className="seeMore">
-                                SEE MORE &#8599;
-                            </button>
+                            <button className="seeMore">SEE MORE &#8599;</button>
                         </div>
                         <div className="detail">
                             <div className="title">{product.detailTitle}</div>
@@ -119,7 +115,7 @@ const OurProducts = () => {
                                 ))}
                             </div>
                             <div className="checkout">
-                                <button onClick={() => {handleCheckout(product.nevigatTo)}} >CHECKOUT</button>
+                                <button onClick={() => handleCheckout(product.nevigatTo)}>CHECKOUT</button>
                             </div>
                         </div>
                     </div>

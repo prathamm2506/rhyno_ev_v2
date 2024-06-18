@@ -294,6 +294,7 @@
 
 .carousel.showDetail .list .item:nth-child(2) {
     width: 100%;
+    cursor: auto;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .introduce {
@@ -479,15 +480,18 @@
     filter: blur(130px);
 }
 
-.carousel .list .item img {
+.carousel-moving {
+    cursor: url("../../assets/right-arrow.svg"), auto !important;
+}
+
+.carousel .list .item img,
+.carousel .list .item .introduce {
     cursor: url("../../assets/right-arrow.svg"), auto;
-    z-index: 100;
 }
 
 .carousel .list .item .introduce {
     cursor: url("../../assets/left-arrow.svg"), auto;
 }
-
 
 
 @media screen and (max-width: 991px) {
