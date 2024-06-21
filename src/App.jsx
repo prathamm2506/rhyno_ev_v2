@@ -30,17 +30,17 @@ import Numbers from './components/numbers/Numbers';
 
 
 function App() {
-  const [sliderLoaded, setSliderLoaded] = useState(false);
-  setTimeout(() => {
-    setSliderLoaded(true);
-  }, 1410)
+  // const [sliderLoaded, setSliderLoaded] = useState(false);
+  // setTimeout(() => {
+  //   setSliderLoaded(true);
+  // }, 1410)
 
   return (
     <div>
       {/* <BuyNow/> */}
       {/* <Navbar/> */}
       <Homeslider />
-      {sliderLoaded && <OurProductTitle />}
+      {/* {sliderLoaded && <OurProductTitle />} */}
       {/* <Prodland/> */}
       <div className="megadivmain">
         <h1 id="ourProducts">Products</h1>

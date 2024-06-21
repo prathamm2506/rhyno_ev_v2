@@ -25,6 +25,26 @@
     --item5-opacity: 0;
 }
 
+/* .section {
+    min-height: 100vh;
+    transition: background-color 1s ease;
+  } */
+  
+  .dark-gray {
+    background-color: #333;
+  }
+  
+  .white {
+    background-color: #fff;
+  }
+  
+  /* Our Products specific styles */
+  #our-products {
+    position: relative;
+    z-index: 1;
+    transition: background-color 1s ease;
+  }
+
 
 /* carousel */
 .carousel {
@@ -37,7 +57,6 @@
     position: relative;
     font-family: Poppins;
     background-color: #F4F4F4;
-    cursor: url("../../assets/right-arrow.svg"), auto;
 }
 
 .carousel .list {
@@ -68,7 +87,7 @@
 }
 
 .carousel .list .item img {
-    width: 60%;
+    width: 50%;
     position: absolute;
     right: 0;
     top: 50%;
@@ -86,7 +105,7 @@
 .carousel .list .item:nth-child(2) .introduce {
     opacity: 1;
     pointer-events: auto;
-    width: 400px;
+    width: 335px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -290,11 +309,17 @@
     left: 100%;
     opacity: 0;
     pointer-events: none;
+    cursor: default;
+}
+
+.showDetail .list .item,
+.showDetail {
+  cursor: default !important;
 }
 
 .carousel.showDetail .list .item:nth-child(2) {
     width: 100%;
-    cursor: auto;
+    cursor: default;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .introduce {
@@ -304,6 +329,7 @@
 
 .carousel.showDetail .list .item:nth-child(2) img {
     right: 50%;
+    cursor: default;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail {
@@ -316,6 +342,7 @@
     transform: translateY(-50%);
     text-align: right;
     pointer-events: auto;
+    cursor: default;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail .title {
@@ -507,6 +534,11 @@
     .carousel.showDetail .list .item:nth-child(2) .detail .title {
         font-size: 2em;
     }
+
+    .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -548,6 +580,11 @@
         width: max-content;
         float: right;
     }
+
+    .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
 }
 
 
@@ -579,6 +616,15 @@
     .carousel .list .item:nth-child(2) .introduce .des {
         height: 80px;
     }
+
+    .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    #back {
+        margin-bottom: 1rem;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -608,5 +654,17 @@
 
     .carousel .list .item:nth-child(2) .introduce .des {
         height: 60px;
+    }
+
+    .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+
+    #back {
+        margin-bottom: 1rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        padding: 2px;
     }
 }

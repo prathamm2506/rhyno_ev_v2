@@ -44,7 +44,8 @@ const OurProducts = () => {
             carouselRef.current.style.cursor = `url(${rightArrow}) 16 16, auto`;
         } else if (target.closest('.introduce')) {
             carouselRef.current.style.cursor = `url(${leftArrow}) 16 16, auto`;
-        } else {
+        } 
+        else {
             const carouselRect = carouselRef.current.getBoundingClientRect();
             const halfWidth = carouselRect.width * 0.37;
             if (e.clientX > carouselRect.left + halfWidth) {
