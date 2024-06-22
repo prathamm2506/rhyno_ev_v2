@@ -312,7 +312,6 @@
     cursor: default;
 }
 
-.showDetail .list .item,
 .showDetail {
   cursor: default !important;
 }
