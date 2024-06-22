@@ -77,6 +77,10 @@ p {
   text-align: justify;
 }
 
+.text-box h1{
+  font-size: var(--heading);
+}
+
 .col {
   width: 100%;
 }
