@@ -57,7 +57,7 @@ function App() {
       {/* <Footer/> */}
       {/* <Spec/> */}
       {/* <ColorPicker/> */}
-      <Numbers/>
+      {/* <Numbers/> */}
     </div>
   );
 }
