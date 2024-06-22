@@ -318,7 +318,6 @@
 
 .carousel.showDetail .list .item:nth-child(2) {
     width: 100%;
-    cursor: default;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .introduce {
@@ -341,7 +340,6 @@
     transform: translateY(-50%);
     text-align: right;
     pointer-events: auto;
-    cursor: default;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail .title {
