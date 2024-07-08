@@ -12,7 +12,7 @@ const OurProducts = () => {
     const listRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isDetailOpen, setIsDetailOpen] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(1);
     const menuItemRefs = useRef([]);
     const navigate = useNavigate();
 
@@ -177,7 +177,7 @@ const products = [
         image: `${Img1}`,
         topic: 'GTX',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. This beast is ready to roar on the roads, providing an electrifying journey at every turn.',
-        detailTitle: 'SE03',
+        detailTitle: 'GTX',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. ',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -222,7 +222,7 @@ const products = [
         image: `${Img1}`,
         topic: 'GTX',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. This beast is ready to roar on the roads, providing an electrifying journey at every turn.',
-        detailTitle: 'SE03',
+        detailTitle: 'GTX',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. ',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
