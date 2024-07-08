@@ -3,19 +3,19 @@ import "./Homeslider.css";
 
 const Homeslider = () => {
 
-  const [initialAnimation, setInitialAnimation] = useState(true);
+  // const [initialAnimation, setInitialAnimation] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setInitialAnimation(false);
-      initializeCarousel();
-    }, 2200);
+    // const timer = setTimeout(() => {
+    //   setInitialAnimation(false);
+    //   initializeCarousel();
+    // }, 2200);
 
-    const initializeCarousel = () => {
+    // const initializeCarousel = () => {
       $('#carouselExampleIndicators').carousel();
-    };
+    // };
 
-    return () => clearTimeout(timer);
+    // return () => clearTimeout(timer);
   }, []);
 
 
@@ -57,7 +57,7 @@ const Homeslider = () => {
                 data-slide-to="3"
               ></li>
             </ol>
-            <div className={`carousel-inner ${initialAnimation ? 'initial-animation' : ''}`}>
+            <div className="carousel-inner">
               <div className="carousel-item active">
                 <div className="info">
                   <h1>

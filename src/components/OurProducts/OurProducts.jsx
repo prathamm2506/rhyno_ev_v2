@@ -12,12 +12,40 @@ const OurProducts = () => {
     const listRef = useRef(null);
     const [isAnimating, setIsAnimating] = useState(false);
     const [isDetailOpen, setIsDetailOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const menuItemRefs = useRef([]);
     const navigate = useNavigate();
+
+    const preloadImages = (imageArray) => {
+        imageArray.forEach((image) => {
+            const img = new Image();
+            img.src = image;
+        });
+    };
+
+    useEffect(() => {
+        preloadImages([Img1, Img2, Img3]);
+        // showSlider('prev');
+        // setTimeout(() => {
+        //     showSlider('next');
+        //     setTimeout(() => {
+        //         showSlider('next');
+        //     }, 1000);
+        // }, 1000);
+    }, []);
 
     const showSlider = (type) => {
         if (isAnimating) return;
         setIsAnimating(true);
         carouselRef.current.style.pointerEvents = 'none';
+
+        let newIndex;
+        if (type === 'next') {
+            newIndex = (currentIndex + 1) % 3;
+        } else {
+            newIndex = (currentIndex - 1 + 3) % 3;
+        }
+        setCurrentIndex(newIndex);
 
         carouselRef.current.classList.remove('next', 'prev');
         let items = listRef.current.children;
@@ -35,24 +63,16 @@ const OurProducts = () => {
             setIsAnimating(false);
             carouselRef.current.style.pointerEvents = 'auto';
             carouselRef.current.classList.remove('carousel-moving');
-        }, 2000);
+        }, 2000); 
     };
 
     const handleMouseMove = (e) => {
-        const target = e.target;
-        if (target.closest('img')) {
+        const carouselRect = carouselRef.current.getBoundingClientRect();
+        const halfWidth = carouselRect.width * 0.37;
+        if (e.clientX > carouselRect.left + halfWidth) {
             carouselRef.current.style.cursor = `url(${rightArrow}) 16 16, auto`;
-        } else if (target.closest('.introduce')) {
+        } else {
             carouselRef.current.style.cursor = `url(${leftArrow}) 16 16, auto`;
-        } 
-        else {
-            const carouselRect = carouselRef.current.getBoundingClientRect();
-            const halfWidth = carouselRect.width * 0.37;
-            if (e.clientX > carouselRect.left + halfWidth) {
-                carouselRef.current.style.cursor = `url(${rightArrow}) 16 16, auto`;
-            } else {
-                carouselRef.current.style.cursor = `url(${leftArrow}) 16 16, auto`;
-            }
         }
     };
 
@@ -75,9 +95,7 @@ const OurProducts = () => {
 
     const handleBackClick = () => {
         carouselRef.current.classList.remove('showDetail');
-        setTimeout(() => {
-            setIsDetailOpen(false);
-        }, 2000);
+        setIsDetailOpen(false);
     };
 
     const handleCheckout = (to) => {
@@ -92,40 +110,63 @@ const OurProducts = () => {
         });
     }, []);
 
+    useEffect(() => {
+        const activeItem = menuItemRefs.current[currentIndex];
+        const highlightBar = document.querySelector('.highlight-bar');
+        if (activeItem && highlightBar) {
+            highlightBar.style.top = `${activeItem.offsetTop + activeItem.offsetHeight / 2 - highlightBar.offsetHeight / 2}px`;
+        }
+    }, [currentIndex]);
+
     return (
-        <div className="carousel" ref={carouselRef} onMouseMove={handleMouseMove} onClick={handleClick}>
-            <div className="list" ref={listRef}>
-                {products.map((product, index) => (
-                    <div className="item" key={index}>
-                        <img src={product.image} alt={product.topic} />
-                        <div className="introduce">
-                            <div className="title">OUR PRODUCT</div>
-                            <div className="topic">{product.topic}</div>
-                            <div className="des">{product.description}</div>
-                            <button className="seeMore">SEE MORE &#8599;</button>
-                        </div>
-                        <div className="detail">
-                            <div className="title">{product.detailTitle}</div>
-                            <div className="des">{product.detailDescription}</div>
-                            <div className="specifications">
-                                {product.specifications.map((spec, index) => (
-                                    <div key={index}>
-                                        <p>{spec.name}</p>
-                                        <p>{spec.value}</p>
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="checkout">
-                                <button onClick={() => handleCheckout(product.nevigatTo)}>CHECKOUT</button>
-                            </div>
-                        </div>
+        <div className="prodContainer">
+            <div className="vertical-menu">
+                {['GTX', 'SE03 MAX', 'SE03 LITE'].map((item, index) => (
+                    <div
+                        key={index}
+                        className={`menu-item ${currentIndex === index ? 'active' : ''}`}
+                        onClick={() => setCurrentIndex(index)}
+                        ref={el => menuItemRefs.current[index] = el}
+                    >
+                        {item}
                     </div>
                 ))}
+                <div className="highlight-bar"></div>
             </div>
-            <div className="arrows">
-                <button id="back" onClick={handleBackClick}>
-                    See All &#8599;
-                </button>
+            <div className="carousel" ref={carouselRef} onMouseMove={handleMouseMove} onClick={handleClick}>
+                <div className="list" ref={listRef}>
+                    {products.map((product, index) => (
+                        <div className="item" key={index}>
+                            <img src={product.image} alt={product.topic} />
+                            <div className="introduce">
+                                <div className="title">Stay charge up <br/> with Rhyno's </div>
+                                <div className="topic">{product.topic}</div>
+                                <div className="des">{product.description}</div>
+                                <button className="seeMore">SEE MORE &#8599;</button>
+                            </div>
+                            <div className="detail">
+                                <div className="title">{product.detailTitle}</div>
+                                <div className="des">{product.detailDescription}</div>
+                                <div className="specifications">
+                                    {product.specifications.map((spec, index) => (
+                                        <div key={index}>
+                                            <p>{spec.name}</p>
+                                            <p>{spec.value}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="checkout">
+                                    <button onClick={() => handleCheckout(product.nevigatTo)}>CHECKOUT</button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="arrows">
+                    <button id="back" onClick={handleBackClick}>
+                        See All &#8599;
+                    </button>
+                </div>
             </div>
         </div>
     );
@@ -134,7 +175,7 @@ const OurProducts = () => {
 const products = [
     {
         image: `${Img1}`,
-        topic: 'SE03',
+        topic: 'GTX',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. This beast is ready to roar on the roads, providing an electrifying journey at every turn.',
         detailTitle: 'SE03',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. ',
@@ -148,7 +189,7 @@ const products = [
         nevigatTo: '/SE03',
     },
     {
-        image: `${Img2}`,
+        image: `${Img1}`,
         topic: 'SE03 MAX',
         description: 'This Rhyno is tuned for long drives and no thrills. Perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge.',
         detailTitle: 'SE03 MAX',
@@ -163,7 +204,7 @@ const products = [
         nevigatTo: '/SE03MAX',
     },
     {
-        image: `${Img3}`,
+        image: `${Img1}`,
         topic: 'SE03 LITE',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor',
         detailTitle: 'SE03 LITE',
@@ -179,7 +220,7 @@ const products = [
     },
     {
         image: `${Img1}`,
-        topic: 'SE03',
+        topic: 'GTX',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. This beast is ready to roar on the roads, providing an electrifying journey at every turn.',
         detailTitle: 'SE03',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. ',
@@ -193,7 +234,7 @@ const products = [
         nevigatTo: '/SE03',
     },
     {
-        image: `${Img2}`,
+        image: `${Img1}`,
         topic: 'SE03 MAX',
         description: 'This Rhyno is tuned for long drives and no thrills. Perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge.',
         detailTitle: 'SE03 MAX',
@@ -208,7 +249,7 @@ const products = [
         nevigatTo: '/SE03MAX',
     },
     {
-        image: `${Img3}`,
+        image: `${Img1}`,
         topic: 'SE03 LITE',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor',
         detailTitle: 'SE03 LITE',

@@ -25,29 +25,62 @@
     --item5-opacity: 0;
 }
 
-/* .section {
-    min-height: 100vh;
-    transition: background-color 1s ease;
-  } */
-  
-  .dark-gray {
-    background-color: #333;
-  }
-  
-  .white {
-    background-color: #fff;
-  }
-  
-  /* Our Products specific styles */
-  #our-products {
+
+
+
+
+.prodContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    background-color: #252525;
+}
+
+.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    color: #666;
+    border-left: #666 1px solid;
+    border-right: #666 1px solid;
+    width: 50px;
     position: relative;
+    margin: 0 3rem 0 5rem;
+}
+
+.menu-item {
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-item.active {
+    color: #caba24;
+}
+
+.highlight-bar {
+    position: absolute;
+    right: -2px;
+    width: 3px;
+    height: 50px;
+    background-color: #caba24;
+    transition: top 0.5s ease-in-out;
     z-index: 1;
-    transition: background-color 1s ease;
-  }
+}
+
+
 
 
 /* carousel */
 .carousel {
+    flex-grow: 1;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -56,7 +89,7 @@
     overflow: hidden;
     position: relative;
     font-family: Poppins;
-    background-color: #F4F4F4;
+    background-color: #252525;
 }
 
 .carousel .list {
@@ -89,7 +122,7 @@
 .carousel .list .item img {
     width: 50%;
     position: absolute;
-    right: 0;
+    right: 8%;
     top: 50%;
     transform: translateY(-50%);
     transition: right 1.5s;
@@ -99,7 +132,9 @@
     opacity: 0;
     transition: opacity 0s;
     pointer-events: none;
-    color: black;
+    color: white;
+    margin-left: -8%;
+    margin-top: 5%;
 }
 
 .carousel .list .item:nth-child(2) .introduce {
@@ -113,33 +148,40 @@
 }
 
 .carousel .list .item .introduce .title {
-    font-size: 2em;
-    font-weight: 500;
+    font-size: 1.7em;
+    font-weight: 400;
     line-height: 1em;
+    position: absolute;
+    top: -55%
 }
 
 .carousel .list .item .introduce .topic {
-    font-size: 4em;
+    font-size: 4.5em;
     font-weight: 500;
+    white-space: nowrap;
+    margin: 2rem 0 1rem 0;
 }
 
 .carousel .list .item .introduce .des {
     font-size: small;
-    color: #5559;
+    color: white;
+    width: 90%;
+    text-align: justify;
+    padding-right: 0.5rem;
 }
 
 .carousel .list .item .introduce .seeMore {
     font-family: Poppins;
-    margin-top: 0.6em;
-    padding: 5px 0;
+    font-size: medium;
+    margin-top: 1rem;
+    padding: 0.2rem 0;
     border: none;
-    outline: none; 
+    outline: none;
     /* border-bottom: 1px solid #555; */
     background-color: transparent;
     font-weight: bold;
     letter-spacing: 3px;
     transition: background 0.5s;
-    /* z-index: 100; */
 }
 
 .carousel .list .item .introduce .seeMore::after {
@@ -150,14 +192,12 @@
     display: block;
     left: 0;
     bottom: 0;
-    background-color: black;
+    background-color: white;
     transition: width 0.5s;
-    /* z-index: 100; */
 }
 
 .carousel .list .item .introduce .seeMore:hover::after {
     width: 100%;
-    /* z-index: 100; */
 }
 
 .carousel .list .item:nth-child(1) {
@@ -301,7 +341,7 @@
     opacity: 0;
     transition: opacity 0s;
     pointer-events: none;
-    color: black;
+    color: white;
 }
 
 .carousel.showDetail .list .item:nth-child(3),
@@ -313,7 +353,7 @@
 }
 
 .showDetail {
-  cursor: default !important;
+    cursor: default !important;
 }
 
 .carousel.showDetail .list .item:nth-child(2) {
@@ -344,6 +384,11 @@
 
 .carousel.showDetail .list .item:nth-child(2) .detail .title {
     font-size: 4em;
+}
+
+.carousel.showDetail .list .item:nth-child(2) .detail .des {
+    text-align: justify;
+    overflow: auto;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
@@ -458,7 +503,7 @@
     left: 50%;
     transform: translateX(-50%);
     border: none;
-    outline: none; 
+    outline: none;
     font-family: Poppins;
     font-weight: bold;
     letter-spacing: 3px;
@@ -466,7 +511,7 @@
     padding: 5px;
     margin-bottom: 3rem;
     transition: opacity 0.5s;
-    color: black;
+    color: white;
 }
 
 #back::after {
@@ -477,7 +522,7 @@
     display: block;
     left: 0;
     bottom: 10%;
-    background-color: black;
+    background-color: white;
     transition: width 0.5s;
 }
 
@@ -489,7 +534,7 @@
     width: 500px;
     height: 300px;
     content: '';
-    background-image: linear-gradient(70deg, #fff825, rgb(23, 23, 255));
+    /* background-image: linear-gradient(70deg, #fff825, rgb(23, 23, 255)); */
     position: absolute;
     border-radius: 20% 30% 80% 10%;
     filter: blur(150px);
@@ -508,20 +553,67 @@
     cursor: url("../../assets/right-arrow.svg"), auto !important;
 }
 
-.carousel .list .item img,
+/* .carousel .list .item img,
 .carousel .list .item .introduce {
     cursor: url("../../assets/right-arrow.svg"), auto;
 }
 
 .carousel .list .item .introduce {
     cursor: url("../../assets/left-arrow.svg"), auto;
+} */
+
+@media screen and (max-width: 1250px) {
+    .carousel .list .item:nth-child(2) .introduce {
+        width: 40%;
+    }
+
+    .carousel .list .item:nth-child(2) .introduce .topic {
+        font-size: 4em;
+    }
+
+    .carousel .list .item img {
+        right: 3%;
+    }
+
+    .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
+        overflow: auto;
+    }
 }
 
-
 @media screen and (max-width: 991px) {
+    .prodContainer {
+        height: 70%;
+    }
+
+    .vertical-menu {
+        width: 40px;
+        margin-left: 3rem;
+        margin-right: 1.5rem;
+    }
+
+    .menu-item {
+        font-size: 18px;
+    }
+
+    .highlight-bar {
+        width: 2px;
+    }
 
     .carousel .list .item {
         width: 90%;
+        margin-left: 2%;
+    }
+
+    .carousel .list .item:nth-child(2) .introduce {
+        width: 40%;
+    }
+
+    .carousel .list .item:nth-child(2) .introduce .topic {
+        font-size: 3.5em;
+    }
+
+    .carousel .list .item img {
+        right: 8%;
     }
 
     .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
@@ -529,7 +621,7 @@
     }
 
     .carousel.showDetail .list .item:nth-child(2) .detail .title {
-        font-size: 2em;
+        /* font-size: 2em; */
     }
 
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
@@ -539,6 +631,22 @@
 }
 
 @media screen and (max-width: 767px) {
+    .prodContainer {
+        height: 70%;
+    }
+
+    .vertical-menu {
+        width: 30px;
+    }
+
+    .menu-item {
+        font-size: 16px;
+    }
+
+    .highlight-bar {
+        width: 2px;
+        right: -4px;
+    }
 
     .carousel {
         height: 600px;
@@ -547,6 +655,7 @@
     .carousel .list .item {
         width: 100%;
         font-size: 10px;
+        margin-left: 3%;
     }
 
     .carousel .list {
@@ -554,7 +663,7 @@
     }
 
     .carousel .list .item:nth-child(2) .introduce {
-        width: 50%;
+        width: 40%;
     }
 
     .carousel .list .item img {
@@ -586,8 +695,12 @@
 
 
 @media screen and (max-width: 576px) {
-    .carousel {
-        height: 500px;
+    .vertical-menu {
+        margin-left: 2rem;
+    }
+
+    .carousel .list .item .introduce .seeMore {
+        font-size: small;
     }
 
     .carousel .list .item {
@@ -651,6 +764,10 @@
 
     .carousel .list .item:nth-child(2) .introduce .des {
         height: 60px;
+    }
+
+    .carousel .list .item .introduce .seeMore {
+        font-size: x-small;
     }
 
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
