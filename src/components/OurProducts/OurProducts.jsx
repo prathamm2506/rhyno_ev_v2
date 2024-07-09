@@ -25,13 +25,6 @@ const OurProducts = () => {
 
     useEffect(() => {
         preloadImages([Img1, Img2, Img3]);
-        // showSlider('prev');
-        // setTimeout(() => {
-        //     showSlider('next');
-        //     setTimeout(() => {
-        //         showSlider('next');
-        //     }, 1000);
-        // }, 1000);
     }, []);
 
     const showSlider = (type) => {
@@ -121,7 +114,7 @@ const OurProducts = () => {
     return (
         <div className="prodContainer">
             <div className="vertical-menu">
-                {['GTX', 'SE03 MAX', 'SE03 LITE'].map((item, index) => (
+                {['GTX', 'GTX MAX', 'GTX LITE'].map((item, index) => (
                     <div
                         key={index}
                         className={`menu-item ${currentIndex === index ? 'active' : ''}`}
@@ -139,7 +132,7 @@ const OurProducts = () => {
                         <div className="item" key={index}>
                             <img src={product.image} alt={product.topic} />
                             <div className="introduce">
-                                <div className="title">Stay charge up <br/> with Rhyno's </div>
+                                
                                 <div className="topic">{product.topic}</div>
                                 <div className="des">{product.description}</div>
                                 <button className="seeMore">SEE MORE &#8599;</button>
@@ -189,10 +182,10 @@ const products = [
         nevigatTo: '/SE03',
     },
     {
-        image: `${Img1}`,
-        topic: 'SE03 MAX',
+        image: `${Img2}`,
+        topic: 'GTX MAX',
         description: 'This Rhyno is tuned for long drives and no thrills. Perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge.',
-        detailTitle: 'SE03 MAX',
+        detailTitle: 'GTX MAX',
         detailDescription: 'This Rhyno is tuned for long drives and no thrills. Like all other variants, this machine comes with a fire-safe advanced LFP battery and all the other benefits of owning a Rhyno, along with a perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge. While it may not provide a thrilling ride, it promises a dependable and unwavering presence on the long stretches.',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -204,10 +197,10 @@ const products = [
         nevigatTo: '/SE03MAX',
     },
     {
-        image: `${Img1}`,
-        topic: 'SE03 LITE',
+        image: `${Img3}`,
+        topic: 'GTX LITE',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor',
-        detailTitle: 'SE03 LITE',
+        detailTitle: 'GTX LITE',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn.',
         specifications: [
             { name: 'Battery', value: '1.8 Kwh' },
@@ -234,10 +227,10 @@ const products = [
         nevigatTo: '/SE03',
     },
     {
-        image: `${Img1}`,
-        topic: 'SE03 MAX',
+        image: `${Img2}`,
+        topic: 'GTX MAX',
         description: 'This Rhyno is tuned for long drives and no thrills. Perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge.',
-        detailTitle: 'SE03 MAX',
+        detailTitle: 'GTX MAX',
         detailDescription: 'This Rhyno is tuned for long drives and no thrills. Like all other variants, this machine comes with a fire-safe advanced LFP battery and all the other benefits of owning a Rhyno, along with a perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge. While it may not provide a thrilling ride, it promises a dependable and unwavering presence on the long stretches.',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -249,10 +242,10 @@ const products = [
         nevigatTo: '/SE03MAX',
     },
     {
-        image: `${Img1}`,
-        topic: 'SE03 LITE',
+        image: `${Img3}`,
+        topic: 'GTX LITE',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor',
-        detailTitle: 'SE03 LITE',
+        detailTitle: 'GTX LITE',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn.',
         specifications: [
             { name: 'Battery', value: '1.8 Kwh' },
