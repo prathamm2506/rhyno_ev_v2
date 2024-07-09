@@ -1,18 +1,15 @@
 import React from 'react';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import IMG from "../../assets/GTX.png"
 import './GTX.css';
 
 const GTX = () => {
 
     const navigate = useNavigate();
 
-    const handleBookNowClick = () => {
-        
-    };
-
     const handleLearnMoreClick = () => {
         navigate('/SE03');
+        window.scrollTo(0, 0);
     };
 
     return (
@@ -20,7 +17,7 @@ const GTX = () => {
             <div className="things">
                 <h3 className="more-thrills-per">More thrills. Per second.</h3>
                 <div className="gtx">GTX</div>
-                <img className="side67-1-icon" alt="" src="./public/side67-1@2x.png" />
+                <img className="side67-1-icon" alt="" src={IMG} />
 
                 <div className="rectangle-parent">
                     <div className="group-child"></div>
@@ -40,7 +37,7 @@ const GTX = () => {
                         </span>
                     </span>
                 </p>
-                <button className="book-now" onClick={handleBookNowClick}>
+                <button className="book-now">
                     Book Now
                 </button>
                 <button className="learn-more" onClick={handleLearnMoreClick}>Learn more</button>
