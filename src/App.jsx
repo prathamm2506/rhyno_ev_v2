@@ -27,6 +27,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useState } from "react";
 import Numbers from "./components/numbers/Numbers";
+import Rotate from "./components/twistycarousal/Rotate";
 
 function App() {
   // const [sliderLoaded, setSliderLoaded] = useState(false);
@@ -50,7 +51,8 @@ function App() {
       </div>
       <WhyRhynoHeading />
       <div className="lapscreencomp">
-        <Twistycarousel />
+        {/* <Twistycarousel /> */}
+        <Rotate/>
       </div>
       <div className="mobilescreencomp">
         <ResponsiveCards />

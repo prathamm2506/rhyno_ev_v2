@@ -5,7 +5,7 @@ import Privacy from '../components/privacy/Privacy'
 const PrivacyPolicy = () => {
   return (
     <div>
-        <Privacy/>
+      <Privacy/>
       <BuyNow/>
     </div>
   )
