@@ -45,6 +45,7 @@ function App() {
 
       {/* {sliderLoaded && <OurProductTitle />} */}
       {/* <Prodland/> */}
+      <GTX />
       <div className="megadivmain">
         <h1 id="ourProducts">Products</h1>
         <OurProducts />

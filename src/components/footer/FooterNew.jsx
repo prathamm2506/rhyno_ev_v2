@@ -45,7 +45,7 @@ function FooterNew() {
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcb69222e5d61cc9af49db599119f82cf468dabe5fcbe71dc5eae2b9cfdf0db3?"
-                  className="w-full aspect-square"
+                  className="aspect-square"
                 />
               </div>
               <div className="flex-auto text-base tracking-wider leading-6 text-justify text-white capitalize">
