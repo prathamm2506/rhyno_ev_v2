@@ -28,6 +28,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useState } from "react";
 import Numbers from "./components/numbers/Numbers";
+import Rotate from "./components/twistycarousal/Rotate";
+import HomeNew from "./components/home/HomeNew";
 
 function App() {
   // const [sliderLoaded, setSliderLoaded] = useState(false);
@@ -39,8 +41,8 @@ function App() {
     <div>
       {/* <BuyNow/> */}
       {/* <Navbar/> */}
-      <Homeslider />
-      <GTX />
+      <HomeNew />
+
       {/* {sliderLoaded && <OurProductTitle />} */}
       {/* <Prodland/> */}
       <div className="megadivmain">
@@ -48,9 +50,10 @@ function App() {
         <OurProducts />
         {/* <MyCarousal /> */}
       </div>
-      <WhyRhynoHeading />
+      {/* <WhyRhynoHeading /> */}
       <div className="lapscreencomp">
-        <Twistycarousel />
+        {/* <Twistycarousel /> */}
+        <Rotate/>
       </div>
       <div className="mobilescreencomp">
         <ResponsiveCards />

@@ -18,6 +18,7 @@ import Rentals from './routes/Rentals.jsx';
 import PrivacyPolicy from './routes/PrivacyPolicy.jsx';
 import CareersPage from './routes/CareersPage.jsx';
 import ContactForm from './components/ContactForm/ContactForm.jsx';
+import FooterNew from './components/footer/FooterNew.jsx';
 
 
 const Root = () => {
@@ -34,7 +35,7 @@ const Root = () => {
       ) : (
         <>
           <Navbar />
-          <BuyNow />
+          {/* <BuyNow /> */}
           <Routes>
             <Route path='/' element={<App />} />
             <Route path='*' element={<Navigate to="/" />} />
@@ -50,6 +51,7 @@ const Root = () => {
           </Routes>
           <ContactForm />
           {/* <Footer /> */}
+          {/* <FooterNew /> */}
           <BackToTop />
         </>
       )}
