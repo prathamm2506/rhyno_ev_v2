@@ -551,14 +551,13 @@
     cursor: url("../../assets/right-arrow.svg"), auto !important;
 }
 
-/* .carousel .list .item img,
-.carousel .list .item .introduce {
+.carousel .list .item img {
     cursor: url("../../assets/right-arrow.svg"), auto;
 }
 
 .carousel .list .item .introduce {
     cursor: url("../../assets/left-arrow.svg"), auto;
-} */
+}
 
 @media screen and (max-width: 1250px) {
     .carousel .list .item:nth-child(2) .introduce {

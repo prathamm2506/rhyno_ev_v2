@@ -1,0 +1,173 @@
+.container {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    margin: 8rem 0 0 0;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-image: url('../../assets/photo10.png');
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    /* border-radius: 8px; */
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.input,
+.textarea {
+    margin-bottom: 2rem;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 90%;
+}
+
+.textarea {
+    height: 100px;
+}
+
+.button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.footer {
+    background-color: #111;
+    padding: 50px 100px;
+    height: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    height: 100%; 
+}
+
+.logo-container {
+    /* flex: 1; */
+    margin: 2rem;
+}
+
+.logoF {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 16px;
+    color: #ffcc00;
+}
+
+.contact-info {
+    margin: 2rem;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 1rem;
+}
+
+.company-links {
+    flex: 1;
+    margin: 2rem 1rem;
+}
+
+.link-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 1rem 0;
+}
+
+.subscribe-section {
+    flex: 1;
+    margin: 2rem;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.subscribe-input {
+    margin-bottom: 1.5rem;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.subscribe-button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-link {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 16px;
+}

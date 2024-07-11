@@ -22,6 +22,7 @@ import WhyRhynoHeading from "./components/WhyRhynoHeading/WhyRhynoHeading";
 import OurProductTitle from "./components/OurProductTitle/OurProductTitle";
 import OurProducts from "./components/OurProducts/OurProducts";
 import GTX from "./components/GTX/GTX";
+import Aboutus from "./components/Aboutus/Aboutus"
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -39,11 +40,10 @@ function App() {
       {/* <BuyNow/> */}
       {/* <Navbar/> */}
       <Homeslider />
-
+      <GTX />
       {/* {sliderLoaded && <OurProductTitle />} */}
       {/* <Prodland/> */}
       <div className="megadivmain">
-        <GTX />
         <h1 id="ourProducts">Products</h1>
         <OurProducts />
         {/* <MyCarousal /> */}
@@ -55,6 +55,7 @@ function App() {
       <div className="mobilescreencomp">
         <ResponsiveCards />
       </div>
+      <Aboutus/>
       {/* <Footer/> */}
       {/* <Spec/> */}
       {/* <ColorPicker/> */}

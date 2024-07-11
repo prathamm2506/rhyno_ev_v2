@@ -17,6 +17,7 @@ import SE03LITE from './routes/SE03LITE.jsx'
 import Rentals from './routes/Rentals.jsx';
 import PrivacyPolicy from './routes/PrivacyPolicy.jsx';
 import CareersPage from './routes/CareersPage.jsx';
+import ContactForm from './components/ContactForm/ContactForm.jsx';
 
 
 const Root = () => {
@@ -47,7 +48,8 @@ const Root = () => {
             <Route path='/Privacy' element={<PrivacyPolicy />} />
             <Route path='/Careers' element={<CareersPage />} />
           </Routes>
-          <Footer />
+          <ContactForm />
+          {/* <Footer /> */}
           <BackToTop />
         </>
       )}

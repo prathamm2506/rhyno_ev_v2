@@ -17,7 +17,7 @@ const GTX = () => {
             <div className="things">
                 <h3 className="more-thrills-per">More thrills. Per second.</h3>
                 <div className="gtx">GTX</div>
-                <img className="side67-1-icon" alt="" src={IMG} />
+                <img className="side67-1-icon" alt="GTX img" src={IMG} />
 
                 <div className="rectangle-parent">
                     <div className="group-child"></div>
