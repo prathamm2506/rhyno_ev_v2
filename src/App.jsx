@@ -28,6 +28,7 @@ import { useGSAP } from "@gsap/react";
 import { useEffect, useState } from "react";
 import Numbers from "./components/numbers/Numbers";
 import Rotate from "./components/twistycarousal/Rotate";
+import HomeNew from "./components/home/HomeNew";
 
 function App() {
   // const [sliderLoaded, setSliderLoaded] = useState(false);
@@ -39,7 +40,7 @@ function App() {
     <div>
       {/* <BuyNow/> */}
       {/* <Navbar/> */}
-      <Homeslider />
+      <HomeNew />
 
       {/* {sliderLoaded && <OurProductTitle />} */}
       {/* <Prodland/> */}
@@ -49,7 +50,7 @@ function App() {
         <OurProducts />
         {/* <MyCarousal /> */}
       </div>
-      <WhyRhynoHeading />
+      {/* <WhyRhynoHeading /> */}
       <div className="lapscreencomp">
         {/* <Twistycarousel /> */}
         <Rotate/>

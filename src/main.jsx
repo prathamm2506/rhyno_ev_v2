@@ -17,6 +17,7 @@ import SE03LITE from './routes/SE03LITE.jsx'
 import Rentals from './routes/Rentals.jsx';
 import PrivacyPolicy from './routes/PrivacyPolicy.jsx';
 import CareersPage from './routes/CareersPage.jsx';
+import FooterNew from './components/footer/FooterNew.jsx';
 
 
 const Root = () => {
@@ -33,7 +34,7 @@ const Root = () => {
       ) : (
         <>
           <Navbar />
-          <BuyNow />
+          {/* <BuyNow /> */}
           <Routes>
             <Route path='/' element={<App />} />
             <Route path='*' element={<Navigate to="/" />} />
@@ -47,7 +48,7 @@ const Root = () => {
             <Route path='/Privacy' element={<PrivacyPolicy />} />
             <Route path='/Careers' element={<CareersPage />} />
           </Routes>
-          <Footer />
+          <FooterNew />
           <BackToTop />
         </>
       )}
