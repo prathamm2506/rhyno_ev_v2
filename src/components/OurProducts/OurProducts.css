@@ -151,7 +151,7 @@
     font-weight: 400;
     line-height: 1em;
     position: absolute;
-    top: -55%
+    top: -55%;
 }
 
 .carousel .list .item .introduce .topic {
@@ -365,7 +365,7 @@
 }
 
 .carousel.showDetail .list .item:nth-child(2) img {
-    right: 55%;
+    right: 53%;
     cursor: default;
 }
 
@@ -383,6 +383,7 @@
 
 .carousel.showDetail .list .item:nth-child(2) .detail .title {
     font-size: 4em;
+    text-align: left;
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail .des {
@@ -412,18 +413,17 @@
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
     font-family: Poppins;
     background-color: var(--yellow);
-    margin-left: 5px;
     letter-spacing: 2px;
     font-weight: 600;
     border: none;
     outline: none;
     color: black;
     padding: 10px 15px;
+    margin: 2rem 0 0 0.2rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin-top: 1rem;
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 12px;
@@ -572,6 +572,10 @@
         right: 3%;
     }
 
+    .carousel.showDetail .list .item:nth-child(2) .detail {
+        margin: 1rem 1rem 1rem 0;
+    }
+
     .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
         overflow: auto;
     }
@@ -615,10 +619,6 @@
 
     .carousel.showDetail .list .item:nth-child(2) .detail .specifications {
         overflow: auto;
-    }
-
-    .carousel.showDetail .list .item:nth-child(2) .detail .title {
-        /* font-size: 2em; */
     }
 
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
@@ -672,6 +672,12 @@
         font-size: small;
     }
 
+    .carousel.showDetail .list .item:nth-child(2) .detail .title {
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+    }
+
     .carousel .list .item:nth-child(2) .introduce .des,
     .carousel.showDetail .list .item:nth-child(2) .detail .des {
         height: 100px;
@@ -717,16 +723,20 @@
     }
 
     .carousel .list .item:nth-child(2) .introduce .topic {
-        font-size: 3em;
+        font-size: 3.8em;
     }
 
     .carousel .list .item:nth-child(2) .introduce .des {
         height: 80px;
     }
 
+    .carousel.showDetail .list .item:nth-child(2) .detail .title {
+        font-size: 2rem;
+    }
+
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
         padding: 8px 12px;
-        font-size: 14px;
+        font-size: 10px;
     }
 
     #back {
@@ -756,11 +766,15 @@
     }
 
     .carousel .list .item:nth-child(2) .introduce .topic {
-        font-size: 2.5em;
+        font-size: 4em;
     }
 
     .carousel .list .item:nth-child(2) .introduce .des {
         height: 60px;
+    }
+
+    .carousel.showDetail .list .item:nth-child(2) .detail .title {
+        font-size: 1.8rem;
     }
 
     .carousel .list .item .introduce .seeMore {
@@ -769,11 +783,11 @@
 
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
         padding: 4px 6px;
-        font-size: 8px;
+        font-size: 10px;
     }
 
     #back {
-        margin-bottom: 1rem;
+        margin-bottom: 0;
         font-weight: bold;
         letter-spacing: 2px;
         padding: 2px;

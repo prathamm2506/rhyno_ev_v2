@@ -79,8 +79,6 @@
 .footer-content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
 }
 
 .logo-contact {
@@ -213,15 +211,11 @@
 
     .input,
     .textarea {
-        margin-bottom: 3.5rem;
+        margin-bottom: 3rem;
     }
 
     .form-container {
         width: 50%;
-    }
-
-    .logo-contact {
-        margin-right: 2rem;
     }
 
     .logoF {
@@ -247,6 +241,14 @@
     .address-container {
         text-align: center;
         align-self: center;
+    }
+
+    .link-list {
+        margin-top: 2rem;
+    }
+
+    .link-list li {
+        margin: 0.5rem 0;
     }
 
     .footer {
@@ -286,12 +288,12 @@
         align-items: center;
     }
 
-    .footer-link {
-        font-size: 13px
+    .footer-bottom p {
+        margin: 0.7rem 0;
     }
 
-    .logo-contact {
-        margin-bottom: 20px;
+    .footer-link {
+        font-size: 13px
     }
 
     .logoF {
