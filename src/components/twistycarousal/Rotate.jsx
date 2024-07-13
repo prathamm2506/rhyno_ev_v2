@@ -1,4 +1,9 @@
-import * as React from "react";
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useTransform, useViewportScroll } from "framer-motion"; // Add this import statement
+import { useSwipeable } from 'react-swipeable';
+import './Twistycarousal.css'; // Make sure to include the styles in a separate CSS file
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBatteryFull, faCar, faMapMarkerAlt, faSmile, faWrench } from '@fortawesome/free-solid-svg-icons';
 
 function Rotate() {
   const targetRef = useRef(null);
@@ -47,6 +52,13 @@ function Rotate() {
     'Range Prediction',
     'Extraordinary Experience',
     'Rugged and Simple design'
+  ];
+  const icons = [
+    faBatteryFull,
+    faCar,
+    faMapMarkerAlt,
+    faSmile,
+    faWrench
   ];
   useEffect(() => {
     const handleScroll = () => {
@@ -129,11 +141,29 @@ function Rotate() {
         </div>
         <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
           <div className="flex flex-col items-start text-white max-md:mt-10 max-md:max-w-full">
-            <img
+            {/* <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/7fd40152457ae5bdeb5b620171fe3ebbc1994ea5a98122a454e2d403b8230291?"
               className="self-end max-w-full aspect-[0.97] w-[600px] mr-3"
-            />
+            /> */}
+            <div className="col">
+          <ul className="circle-container" ref={circleContainerRef}>
+            {icons.map((icon,index) => (
+              <li key={index} className="item">
+                <a
+                  href="#"
+                  className={current === index ? 'active1' : ''}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrent(index);
+                  }}
+                >
+                  <FontAwesomeIcon icon={icon}/>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
             {/* <div className="flex gap-5 px-5 mt-64 max-md:flex-wrap max-md:mt-10">
               <div className="my-auto text-5xl font-black tracking-widest leading-[54.45px] max-md:text-4xl">
                 75%

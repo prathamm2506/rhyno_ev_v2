@@ -53,8 +53,8 @@ function App() {
       </div>
       {/* <WhyRhynoHeading /> */}
       <div className="lapscreencomp">
-        {/* <Twistycarousel /> */}
-        <Rotate/>
+        <Twistycarousel />
+        {/* <Rotate/> */}
       </div>
       <div className="mobilescreencomp">
         <ResponsiveCards />
