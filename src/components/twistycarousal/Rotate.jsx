@@ -98,8 +98,8 @@ function Rotate() {
 
   return (
     <div className='section' ref={targetRef}>
-      <div className="flex gap-5 max-md:flex-col max-md:gap-0 container1">
-        <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+      <div className="flex gap-5 max-md:flex-col max-md:gap-0 container1 px-10">
+        <div className="flex flex-col w-7/12 max-md:ml-0 max-md:w-full">
           <div className="flex flex-col grow px-5 mt-7 text-white max-md:mt-10 max-md:max-w-full">
             <div className="text-4xl font-extralight leading-[50px] tracking-[12.3px] max-md:max-w-full">
               WHAT MAKES RHYNO
@@ -107,14 +107,14 @@ function Rotate() {
             <div className="mt-32 text-4xl font-medium tracking-wider leading-10 text-yellow-500 max-md:mt-10 max-md:max-w-full">
               {headings[current]}
             </div>
-            <div className="shrink-0 mt-7 h-px bg-white border border-white border-solid max-md:max-w-full" />
+            <div className="shrink-0 mt-7 h-px w-10 bg-white border border-white border-solid" />
             <div className="mt-6 text-base leading-8 text-justify capitalize max-md:max-w-full">
               {texts[current]}
             </div>
           </div>
         </div>
         <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-          <div className="flex flex-col items-start text-white max-md:mt-10 max-md:max-w-full">
+          <div className="flex flex-col items-end text-white max-md:mt-10 max-md:max-w-full">
             {/* <div className="col"> */}
             <ul className="circle-container" ref={circleContainerRef}>
               {icons.map((icon, index) => (
