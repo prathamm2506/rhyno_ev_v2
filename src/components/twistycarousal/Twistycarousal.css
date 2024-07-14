@@ -9,8 +9,8 @@
   transition: background 400ms ease-in-out, transform 200ms ease;
 }
 
-.no-touch .circle-container a:hover,
-.no-touch .number li a:hover {
+.circle-container a:hover,
+.number li a:hover {
   background: var(--yellow);
 }
 
@@ -27,30 +27,7 @@
   transform: scale(1.1);
 }
 
-/* General Styles */
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
 
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-}
-
-h1 {
-  text-transform: uppercase;
-  font-size: var(--heading);
-}
-
-p {
-  font-size: var(--para);
-}
 
 .container1 {
   display: flex;
@@ -190,3 +167,4 @@ p {
 .item10x.hiddenx {
   display: none;
 } */
+
