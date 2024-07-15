@@ -174,3 +174,7 @@
   rotate: 30deg;
   /* transform: translateY(-50%) rotateZ(-5deg) scale(1.5); */
 }
+
+.color-yellow-main{
+  color: var(--yellow);
+}

@@ -1,26 +1,11 @@
-body {
-    margin: 0;
-    line-height: normal;
-}
-
-:root {
-    --font-inter: Inter;
-    --font-size-mid-8: 17.8px;
-    --color-white: #fff;
-    --br-9xs-6: 3.6px;
-}
-
-
 .more-thrills-per {
     margin: 0;
     position: absolute;
     top: 79px;
     left: calc(50% - 320px);
-    font-size: inherit;
+    font-size: var(--mega);
     letter-spacing: 0.02em;
     line-height: 120.18%;
-    font-weight: 400;
-    font-family: inherit;
     text-align: left;
 }
 
@@ -85,7 +70,7 @@ body {
     top: 222px;
     width: 156.4px;
     height: 35.5px;
-    font-size: 20.1px;
+    font-size: var(--para);
 }
 
 .gtx1 {
@@ -95,7 +80,6 @@ body {
     letter-spacing: 0.1em;
     line-height: 120.21%;
     font-weight: 900;
-    font-family: inherit;
 }
 
 .rs-102220- {
@@ -107,10 +91,10 @@ body {
     position: absolute;
     top: 566px;
     left: 193px;
-    font-size: var(--font-size-mid-8);
+    font-size: var(--para);
     letter-spacing: 0.08em;
     line-height: 120.21%;
-    color: #bdbdbd;
+    color: var(--light-grey);
 }
 
 .our-digital-display {
@@ -126,7 +110,7 @@ body {
     position: absolute;
     top: 397px;
     left: 193px;
-    font-size: 20px;
+    font-size: var(--para);
     letter-spacing: 0.01em;
     line-height: 133%;
     text-align: justify;
@@ -149,11 +133,10 @@ body {
 .learn-more {
     top: 630px;
     left: 400px;
-    font-size: var(--font-size-mid-8);
+    font-size: var(--para);
     letter-spacing: 0.08em;
     line-height: 120.21%;
-    font-family: var(--font-inter);
-    color: var(--color-white);
+    color: var(--white);
     text-align: center;
     display: inline-block;
 }
@@ -165,7 +148,7 @@ body {
     bottom: -2%;
     width: 0;
     height: 0.5px;
-    background-color: #fff;
+    background-color: var(--white);
     transition: width 0.5s;
 }
 
@@ -176,18 +159,17 @@ body {
 .book-now {
     top: 620px;
     left: 193px;
-    font-family: Poppins;
     background-color: var(--yellow);
     letter-spacing: 2px;
     font-weight: 600;
     border: none;
     outline: none;
-    color: black;
+    color: var(--black);
     padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: var(--para);
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 4px;
@@ -209,11 +191,10 @@ body {
 .layer-2 {
     width: 100%;
     position: relative;
-    background-color: #1a1a1a;
+    background-color: var(--black);
     height: 797px;
     overflow: hidden;
     text-align: center;
-    font-size: 41px;
+    font-size: var(--para);
     color: var(--color-white);
-    font-family: var(--font-inter);
 }

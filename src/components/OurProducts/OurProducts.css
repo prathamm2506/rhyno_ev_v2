@@ -34,7 +34,7 @@
     flex-direction: row;
     height: 100vh;
     width: 100%;
-    background-color: #252525;
+    background-color: var(--black);
 }
 
 .vertical-menu {
@@ -43,9 +43,9 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 0;
-    color: #666;
-    border-left: #666 1px solid;
-    border-right: #666 1px solid;
+    color: var(--dark-grey);
+    border-left: var(--dark-grey) 1px solid;
+    border-right: var(--dark-grey) 1px solid;
     width: 50px;
     position: relative;
     margin: 0 3rem 0 5rem;
@@ -62,7 +62,7 @@
 }
 
 .menu-item.active {
-    color: #caba24;
+    color: var(--yellow);
 }
 
 .highlight-bar {
@@ -70,7 +70,7 @@
     right: -2px;
     width: 3px;
     height: 50px;
-    background-color: #caba24;
+    background-color: var(--yellow);
     transition: top 0.5s ease-in-out;
     z-index: 1;
 }
@@ -88,8 +88,7 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
-    font-family: Poppins;
-    background-color: #252525;
+    background-color: var(--black);
 }
 
 .carousel .list {
@@ -170,7 +169,6 @@
 }
 
 .carousel .list .item .introduce .seeMore {
-    font-family: Poppins;
     font-size: medium;
     margin-top: 1rem;
     padding: 0.2rem 0;
@@ -411,13 +409,12 @@
 }
 
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
-    font-family: Poppins;
     background-color: var(--yellow);
     letter-spacing: 2px;
     font-weight: 600;
     border: none;
     outline: none;
-    color: black;
+    color: var(--black);
     padding: 10px 15px;
     margin: 2rem 0 0 0.2rem;
     text-align: center;
@@ -432,7 +429,7 @@
 }
 
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button:hover {
-    background-color: var(--yellow-hover);
+    background-color: var(--yellow);
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
 }
@@ -479,7 +476,6 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    font-family: monospace;
     border: 1px solid #5555;
     font-size: large;
     bottom: 20%;
@@ -503,7 +499,6 @@
     transform: translateX(-50%);
     border: none;
     outline: none;
-    font-family: Poppins;
     font-weight: bold;
     letter-spacing: 3px;
     background-color: transparent;

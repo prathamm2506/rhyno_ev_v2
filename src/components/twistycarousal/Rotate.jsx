@@ -104,7 +104,7 @@ function Rotate() {
             <div className="text-4xl font-extralight leading-[50px] tracking-[12.3px] max-md:max-w-full">
               WHAT MAKES <br /> <div className='flex flex-row gap-5'> RHYNO <div className='-rotate-12'><span className='awesome-rhyno'>Awesome ?</span></div></div>
             </div>
-            <div className="mt-20 text-4xl font-medium tracking-wider leading-10 text-yellow-500 max-md:mt-10 max-md:max-w-full">
+            <div className="mt-20 text-4xl font-medium tracking-wider leading-10 color-yellow-main max-md:mt-10 max-md:max-w-full">
               {headings[current]}
             </div>
             <div className="shrink-0 mt-7 h-px w-10 bg-white border border-white border-solid" />
