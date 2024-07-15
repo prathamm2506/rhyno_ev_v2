@@ -48,7 +48,7 @@ const SE03 = () => {
         maxSpeed={maxSpeed}
       />
       <Spec />
-      {/* <ColorPicker /> */}
+      <ColorPicker />
     </div>
   )
 }
