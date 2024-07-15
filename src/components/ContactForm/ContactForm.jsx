@@ -1,22 +1,44 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Logo from "../../assets/Logo.png"
 import './ContactForm.css';
+import { useNavigate } from 'react-router-dom';
+import emailjs from 'emailjs-com'
 
 const ContactForm = () => {
+    const form = useRef();
+
+ 
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_r6tppud', 'template_syhmdrq', form.current, 'dlfvxaLtJUSBW3FmH')
+    e.target.reset()
+    setLoading(true);
+
+    // Simulate a loading state for 2 seconds
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/SE03");
+    }, 2000);
+  };
     return (
         <div className="footer-container">
             <div className="contact-section">
                 <div className="form-container">
                     <h2 className="heading">Write to us in case of any query</h2>
-                    <form className="form">
+                    <form className="form" onSubmit={sendEmail} ref={form}>
                         <label for="name">Name</label>
-                        <input type="text" name="name" placeholder="Name" className="input" />
+                        <input type="text" name="name" placeholder="Name" className="input" required/>
                         <label for="email">Email</label>
-                        <input type="email" name="email" placeholder="Email" className="input" />
+                        <input type="email" name="email" placeholder="Email" className="input" required/>
                         <label for="phno">Phone No.</label>
-                        <input type="text" name="phno" placeholder="Phone Number" className="input" />
+                        <input type="text" name="phno" placeholder="Phone Number" className="input" required/>
                         <label for="msg">Message</label>
-                        <textarea placeholder="Message" name="msg" className="textarea"></textarea>
+                        <textarea placeholder="Message" name="msg" className="textarea" required></textarea>
                         <button type="submit" className="button">Submit</button>
                     </form>
                 </div>
