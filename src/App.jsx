@@ -22,7 +22,7 @@ import WhyRhynoHeading from "./components/WhyRhynoHeading/WhyRhynoHeading";
 import OurProductTitle from "./components/OurProductTitle/OurProductTitle";
 import OurProducts from "./components/OurProducts/OurProducts";
 import GTX from "./components/GTX/GTX";
-import Aboutus from "./components/Aboutus/Aboutus"
+import Aboutus from "./components/Aboutus/Aboutus";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -32,38 +32,33 @@ import Rotate from "./components/twistycarousal/Rotate";
 import HomeNew from "./components/home/HomeNew";
 
 function App() {
-  // const [sliderLoaded, setSliderLoaded] = useState(false);
-  // setTimeout(() => {
-  //   setSliderLoaded(true);
-  // }, 1410)
-
   return (
     <div>
-      {/* <BuyNow/> */}
-      {/* <Navbar/> */}
-      <HomeNew />
-
-      {/* {sliderLoaded && <OurProductTitle />} */}
-      {/* <Prodland/> */}
-      <GTX />
-      <div className="megadivmain">
-        <h1 id="ourProducts">Products</h1>
-        <OurProducts />
-        {/* <MyCarousal /> */}
+      <div className="snap-scroller-main">
+        <HomeNew />
       </div>
-      {/* <WhyRhynoHeading /> */}
-      <div className="lapscreencomp">
-        {/* <Twistycarousel /> */}
-        <Rotate/>
+      <div className="snap-scroller-main">
+        <GTX />
       </div>
-      <div className="mobilescreencomp">
-        <ResponsiveCards />
+      <div className="snap-scroller-main">
+        <div className="megadivmain">
+          <h1 id="ourProducts">Products</h1>
+          <OurProducts />
+        </div>
       </div>
-      <Aboutus/>
-      {/* <Footer/> */}
-      {/* <Spec/> */}
-      {/* <ColorPicker/> */}
-      {/* <Numbers/> */}
+      <div className="snap-scroller-main">
+        <div className="lapscreencomp">
+          <Rotate />
+        </div>
+      </div>
+      <div className="snap-scroller-main">
+        <div className="mobilescreencomp">
+          <ResponsiveCards />
+        </div>
+      </div>
+      <div className="snap-scroller-main">
+        <Aboutus />
+      </div>
     </div>
   );
 }
