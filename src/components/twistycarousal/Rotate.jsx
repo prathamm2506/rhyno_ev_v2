@@ -102,9 +102,9 @@ function Rotate() {
         <div className="flex flex-col w-7/12 max-md:ml-0 max-md:w-full">
           <div className="flex flex-col grow px-5 mt-7 text-white max-md:mt-10 max-md:max-w-full">
             <div className="text-4xl font-extralight leading-[50px] tracking-[12.3px] max-md:max-w-full">
-              WHAT MAKES RHYNO
+              WHAT MAKES <br /> <div className='flex flex-row gap-5'> RHYNO <div className='-rotate-12'><span className='awesome-rhyno'>Awesome ?</span></div></div>
             </div>
-            <div className="mt-32 text-4xl font-medium tracking-wider leading-10 text-yellow-500 max-md:mt-10 max-md:max-w-full">
+            <div className="mt-20 text-4xl font-medium tracking-wider leading-10 text-yellow-500 max-md:mt-10 max-md:max-w-full">
               {headings[current]}
             </div>
             <div className="shrink-0 mt-7 h-px w-10 bg-white border border-white border-solid" />
@@ -113,8 +113,8 @@ function Rotate() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-          <div className="flex flex-col items-end text-white max-md:mt-10 max-md:max-w-full">
+        <div className="flex flex-col ml-5 w-4/12 max-xl:w-4/12 max-md:ml-0 max-md:w-full">
+          <div className="flex flex-col items-center max-xl:items-start text-white max-md:mt-10 max-md:max-w-full">
             {/* <div className="col"> */}
             <ul className="circle-container" ref={circleContainerRef}>
               {icons.map((icon, index) => (

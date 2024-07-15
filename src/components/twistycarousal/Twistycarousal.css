@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
 /* CSS3 properties */
 .circle-container,
 .circle-container > * {
@@ -41,15 +42,11 @@
   gap: 6rem;
 }
 
-.text-container {
-  max-width: 800px;
-}
-
 .text-box {
   padding: 1em;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
+  /* max-width: 800px; */
   height: 400px;
   text-align: justify;
 }
@@ -168,3 +165,12 @@
   display: none;
 } */
 
+.awesome-rhyno{
+  font-family: "Carattere", cursive;
+  letter-spacing: normal;
+  color: var(--yellow);
+  font-size: 5.5rem;
+  /* transform: rotate45deg; */
+  rotate: 30deg;
+  /* transform: translateY(-50%) rotateZ(-5deg) scale(1.5); */
+}
