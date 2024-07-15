@@ -5,7 +5,6 @@ import './Twistycarousal.css'; // Make sure to include the styles in a separate 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBatteryFull, faCar, faMapMarkerAlt, faSmile, faWrench } from '@fortawesome/free-solid-svg-icons';
 
-
 const Twistycarousel = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useViewportScroll();
@@ -23,7 +22,7 @@ const Twistycarousel = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const x = useTransform(scrollYProgress, [0, 1], ["200%", "-130%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["100%", "-130%"]);
 
   // Swipeable handlers
   const handlers = useSwipeable({
@@ -38,7 +37,6 @@ const Twistycarousel = () => {
   const n = 5;
   const [current, setCurrent] = useState(0);
   const circleContainerRef = useRef(null);
-  // const sectionRef = useRef(null);
 
   const texts = [
     'Equipped with advanced Lithium Iron Phosphate (LFP) batteries, renowned for their safety features—eliminating the risk of fire. These batteries boast a broader temperature range, ideal for the diverse Indian climate. Our technology enhances Rhynos longevity, complemented by an Active Balancing Smart Battery Management System (BMS) for extended life and reduced maintenance. Each battery undergoes rigorous waterproofing tests according to IP76 standards. But it doesnt stop there—our technology goes the extra mile to ensure the batterys lasting durability. Connect with us to discover the thoughtful engineering behind our batteries!',
@@ -83,13 +81,16 @@ const Twistycarousel = () => {
   }, [n]);
 
   useEffect(() => {
-    const angle = 360 / n;
+    const angle = -220 / n;
     const wC = circleContainerRef.current.clientWidth;
 
     for (let i = 0; i < n; i++) {
-      const dist = Math.round(630 + angle * i - angle * current);
+      const dist = Math.round(200 + angle * i - angle * current);
       const item = document.querySelector(`.circle-container > .item:nth-of-type(${i + 1})`);
+      const isVisible = dist <= 280 && dist >= 110; // Check if within 180-degree arc
+      item.style.trasition = 'transform 0.3s ease, opacity 3s ease';
       item.style.transform = `rotate(${dist}deg) translate(${wC / 2}px) rotate(-${dist}deg)`;
+      item.style.opacity = isVisible ? 1 : 0; // Hide items out of the 180-degree arc
     }
   }, [current, n]);
 
@@ -104,7 +105,7 @@ const Twistycarousel = () => {
         </div>
         <div className="col">
           <ul className="circle-container" ref={circleContainerRef}>
-            {icons.map((icon,index) => (
+            {icons.map((icon, index) => (
               <li key={index} className="item">
                 <a
                   href="#"
@@ -114,7 +115,7 @@ const Twistycarousel = () => {
                     setCurrent(index);
                   }}
                 >
-                  <FontAwesomeIcon icon={icon}/>
+                  <FontAwesomeIcon icon={icon} />
                 </a>
               </li>
             ))}

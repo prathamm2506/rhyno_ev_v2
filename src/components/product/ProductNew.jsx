@@ -1,10 +1,6 @@
 import * as React from "react";
-import IMG1 from '../../assets/1mega.png'
-import IMG2 from '../../assets/111.png'
-import IMG3 from '../../assets/22.png'
-import IMG4 from '../../assets/33.png'
 
-function Product() {
+function ProductNew() {
   return (
     <div className="flex flex-col pb-8">
       <div className="flex z-10 flex-col self-end px-5 max-w-full text-white w-[689px]">
@@ -26,7 +22,7 @@ function Product() {
       </div>
       <img
         loading="lazy"
-        src={IMG1}
+        srcSet="..."
         className="mt-0 max-w-full aspect-[1.39] w-[531px]"
       />
       <div className="flex z-10 flex-col self-end -mt-36 max-w-full w-[654px] max-md:mr-2.5">
@@ -107,17 +103,17 @@ function Product() {
       <div className="flex z-10 gap-5 justify-between mt-0 ml-6 max-w-full w-[564px] max-md:flex-wrap">
         <img
           loading="lazy"
-          src={IMG2}
+          srcSet="..."
           className="shrink-0 aspect-[0.57] w-[72px]"
         />
         <img
           loading="lazy"
-          src={IMG3}
+          srcSet="..."
           className="shrink-0 max-w-full aspect-[0.83] w-[106px]"
         />
         <img
           loading="lazy"
-          src={IMG4}
+          srcSet="..."
           className="shrink-0 my-auto max-w-full aspect-[1.41] w-[150px]"
         />
         <div className="flex flex-col my-auto">
@@ -130,4 +126,4 @@ function Product() {
 }
 
 
-export default Product;
+export default ProductNew;

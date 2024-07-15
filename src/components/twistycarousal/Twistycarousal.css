@@ -9,8 +9,8 @@
   transition: background 400ms ease-in-out, transform 200ms ease;
 }
 
-.no-touch .circle-container a:hover,
-.no-touch .number li a:hover {
+.circle-container a:hover,
+.number li a:hover {
   background: var(--yellow);
 }
 
@@ -27,30 +27,7 @@
   transform: scale(1.1);
 }
 
-/* General Styles */
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
 
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-}
-
-h1 {
-  text-transform: uppercase;
-  font-size: var(--heading);
-}
-
-p {
-  font-size: var(--para);
-}
 
 .container1 {
   display: flex;
@@ -58,7 +35,7 @@ p {
   justify-content: center;
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 110vh;
   overflow: hidden;
   padding: 0 1.5rem;
   gap: 6rem;
@@ -102,11 +79,11 @@ p {
 /* Circle Container Styles */
 .circle-container {
   display: block;
-  border: 1px solid var(--light-grey);
+  border-left: 1px solid var(--light-grey);
   position: relative;
-  width: 22em; /* Reduced size */
-  height: 22em; /* Reduced size */
-  border-radius: 100%;
+  width: 25em; /* Reduced size */
+  height: 25em; /* Reduced size */
+  border-radius: 50%;
 }
 
 .circle-container > * {
@@ -119,7 +96,7 @@ p {
   margin-top: -2.5em; /* Adjusted for reduced size */
   margin-left: -2.5em; /* Adjusted for reduced size */
   text-align: center;
-  transition: transform 1.5s cubic-bezier(0.310, 1.470, 0.475, 1.005);
+  transition: transform 3s cubic-bezier(0.310, 1.470, 0.475, 1.005);
 }
 
 .circle-container > *:nth-of-type(1) {
@@ -172,8 +149,22 @@ p {
 
 .section {
   position: relative;
-  height: 300vh;
+  height: 400vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
+/* .item10x {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.item10x.visiblex {
+  opacity: 1;
+}
+
+.item10x.hiddenx {
+  display: none;
+} */
+
