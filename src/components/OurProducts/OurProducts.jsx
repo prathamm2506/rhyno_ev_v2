@@ -61,7 +61,7 @@ const OurProducts = () => {
 
     const handleMouseMove = (e) => {
         const carouselRect = carouselRef.current.getBoundingClientRect();
-        const halfWidth = carouselRect.width * 0.37;
+        const halfWidth = carouselRect.width * 0.3;
         if (e.clientX > carouselRect.left + halfWidth) {
             carouselRef.current.style.cursor = `url(${rightArrow}) 16 16, auto`;
         } else {

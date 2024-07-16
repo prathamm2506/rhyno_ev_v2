@@ -677,6 +677,7 @@
     .carousel.showDetail .list .item:nth-child(2) .detail .des {
         height: 100px;
         overflow: auto;
+        line-height: 1.5;
     }
 
     .carousel.showDetail .list .item:nth-child(2) .detail .checkout {
@@ -721,9 +722,9 @@
         font-size: 3.8em;
     }
 
-    .carousel .list .item:nth-child(2) .introduce .des {
+    /* .carousel .list .item:nth-child(2) .introduce .des {
         height: 80px;
-    }
+    } */
 
     .carousel.showDetail .list .item:nth-child(2) .detail .title {
         font-size: 2rem;
@@ -740,9 +741,9 @@
 }
 
 @media screen and (max-width: 400px) {
-    .carousel {
+    /* .carousel {
         height: 400px;
-    }
+    } */
 
     .carousel .list .item {
         font-size: 7px;
@@ -765,7 +766,7 @@
     }
 
     .carousel .list .item:nth-child(2) .introduce .des {
-        height: 60px;
+        height: 80px;
     }
 
     .carousel.showDetail .list .item:nth-child(2) .detail .title {
