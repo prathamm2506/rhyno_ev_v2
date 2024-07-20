@@ -16,16 +16,16 @@ const OurProducts = () => {
     const menuItemRefs = useRef([]);
     const navigate = useNavigate();
 
-    const preloadImages = (imageArray) => {
-        imageArray.forEach((image) => {
-            const img = new Image();
-            img.src = image;
-        });
-    };
+    // const preloadImages = (imageArray) => {
+    //     imageArray.forEach((image) => {
+    //         const img = new Image();
+    //         img.src = image;
+    //     });
+    // };
 
-    useEffect(() => {
-        preloadImages([Img1, Img2, Img3]);
-    }, []);
+    // useEffect(() => {
+    //     preloadImages([Img1, Img2, Img3]);
+    // }, []);
 
     const showSlider = (type) => {
         if (isAnimating) return;

@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 import Logo from "../../assets/Logo.png"
 import './ContactForm.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+
 import emailjs from 'emailjs-com'
 
 const ContactForm = () => {
@@ -25,6 +26,11 @@ const ContactForm = () => {
       navigate("/SE03");
     }, 2000);
   };
+
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  }
+
     return (
         <div className="footer-container">
             <div className="contact-section">
@@ -74,11 +80,11 @@ const ContactForm = () => {
                     <div className="company-links">
                         <p>Company</p>
                         <ul className="link-list">
-                            <li><a href="/AboutUs" className="link">About Us</a></li>
-                            <li><a href="/Careers" className="link">Careers</a></li>
-                            <li><a href="#faqs" className="link">FAQs</a></li>
-                            <li><a href="#teams" className="link">Teams</a></li>
-                            <li><a href="/ContactUs" className="link">Contact Us</a></li>
+                            <li><Link to="/AboutUs" className="link" onClick={handleClick}>About Us</Link></li>
+                            <li><Link to="/Careers" className="link" onClick={handleClick}>Careers</Link></li>
+                            <li><Link to="#faqs" className="link" onClick={handleClick}>FAQs</Link></li>
+                            <li><Link to="#teams" className="link" onClick={handleClick}>Teams</Link></li>
+                            <li><Link to="/ContactUs" className="link" onClick={handleClick}>Contact Us</Link></li>
                         </ul>
                     </div>
                     <div className="subscribe-section">
@@ -92,11 +98,11 @@ const ContactForm = () => {
                 <div className="footer-bottom">
                     <p>&copy; 2024 All Rights Reserved</p>
                     <ul className="footer-links">
-                        <li><a href="/Privacy" className="footer-link">Privacy Policy</a></li>
-                        <li><a href="#terms-of-use" className="footer-link">Terms of Use</a></li>
-                        <li><a href="#sales-and-refunds" className="footer-link">Sales and Refunds</a></li>
-                        <li><a href="#legal" className="footer-link">Legal</a></li>
-                        <li><a href="#site-map" className="footer-link">Site Map</a></li>
+                        <li><Link to="/Privacy" className="footer-link" onClick={handleClick}>Privacy Policy</Link></li>
+                        <li><Link to="#terms-of-use" className="footer-link" onClick={handleClick}>Terms of Use</Link></li>
+                        <li><Link to="#sales-and-refunds" className="footer-link" onClick={handleClick}>Sales and Refunds</Link></li>
+                        <li><Link to="#legal" className="footer-link" onClick={handleClick}>Legal</Link></li>
+                        <li><Link to="#site-map" className="footer-link" onClick={handleClick}>Site Map</Link></li>
                     </ul>
                 </div>
             </footer>
