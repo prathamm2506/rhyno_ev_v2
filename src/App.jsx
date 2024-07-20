@@ -41,7 +41,7 @@ function App() {
         <GTX />
       </div>
       <div className="snap-scroller-main">
-        <div className="megadivmain">
+        <div className="megadivmain h-screen">
           <h1 id="ourProducts">Products</h1>
           <OurProducts />
         </div>
