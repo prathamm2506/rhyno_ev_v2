@@ -132,7 +132,6 @@ const OurProducts = () => {
                         <div className="item" key={index}>
                             <img src={product.image} alt={product.topic} />
                             <div className="introduce">
-                                
                                 <div className="topic">{product.topic}</div>
                                 <div className="des">{product.description}</div>
                                 <button className="seeMore">SEE MORE &#8599;</button>

@@ -143,7 +143,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    transition: opacity 0.5s;
+    transition: opacity 1.3s;
 }
 
 .carousel .list .item .introduce .title {
@@ -617,6 +617,10 @@
         overflow: auto;
     }
 
+    .carousel.showDetail .list .item:nth-child(2) .detail .des {
+        height: 150px;
+    }
+
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
         padding: 8px 12px;
         font-size: 14px;
@@ -630,6 +634,7 @@
 
     .vertical-menu {
         width: 30px;
+        margin-left: 1.5rem;
     }
 
     .menu-item {
@@ -666,6 +671,7 @@
     .carousel.showDetail .list .item:nth-child(2) .detail {
         backdrop-filter: blur(10px);
         font-size: small;
+        width: 45%;
     }
 
     .carousel.showDetail .list .item:nth-child(2) .detail .title {
@@ -702,7 +708,7 @@
 
 @media screen and (max-width: 576px) {
     .vertical-menu {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 
     .carousel .list .item .introduce .seeMore {
@@ -735,6 +741,10 @@
 
     .carousel.showDetail .list .item:nth-child(2) .detail .title {
         font-size: 2rem;
+    }
+
+    .carousel.showDetail .list .item:nth-child(2) img  {
+        /* margin-top: -2rem; */
     }
 
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
