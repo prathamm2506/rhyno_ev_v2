@@ -87,7 +87,7 @@ const GTX = () => {
                     </p>
                     <div className="price">Starting at <span>Rs. 102,220/-</span></div>
                     <div className="buttons">
-                        <button className="book-now">Book Now</button>
+                        <button className="book-now"><a href="https://wa.me/9023987528" target='_blank'>Book Now</a></button>
                         <button className="learn-more" onClick={handleLearnMoreClick}>Learn more</button>
                     </div>
                 </div>

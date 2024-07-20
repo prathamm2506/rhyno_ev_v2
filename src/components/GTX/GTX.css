@@ -464,7 +464,7 @@
     }
 
     .title {
-        font-size: 3rem;
+        /* font-size: 3rem; */
     }
 
     .price {
@@ -498,7 +498,11 @@
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 4rem;
+    }
+
+    .badge {
+        font-size: 16px;
     }
 
     .vertical-text {
@@ -511,6 +515,9 @@
     .vertical-text {
         font-size: 7rem;
         right: -98%
+    }
+    .badge {
+        font-size: 14px;
     }
 }
 
