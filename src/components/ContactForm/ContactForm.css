@@ -77,6 +77,10 @@
     padding: 50px 100px;
 }
 
+.footer a{
+    text-decoration: none;
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -119,14 +123,13 @@
 }
 
 .address-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
     margin-bottom: 2rem;
 }
 
 .address-container p {
     font-size: 16px;
+    text-align: justify !important;
 }
 
 .company-links {

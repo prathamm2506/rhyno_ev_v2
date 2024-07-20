@@ -76,8 +76,7 @@ function FooterNew() {
           <div className="text-lg font-bold">Company</div>
           <div className="mt-9">About Us</div>
           <div className="mt-6">Careers</div>
-          <div className="mt-6">FAQs</div>
-          <div className="mt-5">Teams</div>
+          <div className="mt-6">Products</div>
           <div className="mt-6">Contact Us</div>
         </div>
         <div className="flex flex-col my-auto">

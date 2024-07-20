@@ -61,18 +61,18 @@ const ContactForm = () => {
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e125e873c698e0623af1c1449a551f7511863aba5f08f9820a82dfbeb791b3e?"
                                 className="aspect-square"
                             /> */}
-                            <p className='phoneNo'>📞 +91 9023 9875 28</p>
+                            <p className='phoneNo'><i class="fa-solid fa-headset mr-2"></i> +91 9023 9875 28</p>
 
                             {/* <img
                                 loading="lazy"
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcb69222e5d61cc9af49db599119f82cf468dabe5fcbe71dc5eae2b9cfdf0db3?"
                                 className="aspect-square"
                             /> */}
-                            <p className='email'>✉️ info@Rhyno.in</p>
+                            <p className='email'><i class="fa-regular fa-envelope mr-2"></i> info@Rhyno.in</p>
                         </div>
                         <div className="address-container">
-                            <p>Rhyno Wheels Private Limited,<br />
-                                UG Hostel Gate 2, Behind PDEU, Raisan,<br />
+                            <p>Rhyno Wheels Private Limited,
+                                UG Hostel Gate 2,<br /> Behind PDEU, Raisan,
                                 Gandhinagar, Gujarat
                             </p>
                         </div>
@@ -82,9 +82,9 @@ const ContactForm = () => {
                         <ul className="link-list">
                             <li><Link to="/AboutUs" className="link" onClick={handleClick}>About Us</Link></li>
                             <li><Link to="/Careers" className="link" onClick={handleClick}>Careers</Link></li>
-                            <li><Link to="#faqs" className="link" onClick={handleClick}>FAQs</Link></li>
-                            <li><Link to="#teams" className="link" onClick={handleClick}>Teams</Link></li>
                             <li><Link to="/ContactUs" className="link" onClick={handleClick}>Contact Us</Link></li>
+                            <li><Link to="/Privacy" className="link" onClick={handleClick}>Privacy Policy</Link></li>
+                            <li><Link to="/Rentals" className="link" onClick={handleClick}>Rentals</Link></li>
                         </ul>
                     </div>
                     <div className="subscribe-section">
@@ -98,11 +98,11 @@ const ContactForm = () => {
                 <div className="footer-bottom">
                     <p>&copy; 2024 All Rights Reserved</p>
                     <ul className="footer-links">
-                        <li><Link to="/Privacy" className="footer-link" onClick={handleClick}>Privacy Policy</Link></li>
-                        <li><Link to="#terms-of-use" className="footer-link" onClick={handleClick}>Terms of Use</Link></li>
-                        <li><Link to="#sales-and-refunds" className="footer-link" onClick={handleClick}>Sales and Refunds</Link></li>
+                        {/* <li><Link to="/Privacy" className="footer-link" onClick={handleClick}>Privacy Policy</Link></li>
+                        <li><Link to="#terms-of-use" className="footer-link" onClick={handleClick}>Rentals</Link></li> */}
+                        {/* <li><Link to="#sales-and-refunds" className="footer-link" onClick={handleClick}>Sales and Refunds</Link></li>
                         <li><Link to="#legal" className="footer-link" onClick={handleClick}>Legal</Link></li>
-                        <li><Link to="#site-map" className="footer-link" onClick={handleClick}>Site Map</Link></li>
+                        <li><Link to="#site-map" className="footer-link" onClick={handleClick}>Site Map</Link></li> */}
                     </ul>
                 </div>
             </footer>
