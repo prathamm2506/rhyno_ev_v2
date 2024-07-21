@@ -15,6 +15,7 @@ import Img8 from '../assets/pics/red/side.69.png';
 import Img9 from '../assets/pics/blue/side.73.png';
 import Img10 from '../assets/pics/blue/side.74.png';
 import Img11 from '../assets/pics/blue/side.75.png';
+import Img12 from '../assets/bf.png'
 
 const SE03MAX = () => {
   const mainImgsByColor = {
@@ -63,8 +64,7 @@ const SE03MAX = () => {
         motor={motor}
         maxSpeed={maxSpeed}
       />
-      <Spec/>
-      <ColorPicker/>
+      <Spec w="2000W" tops="65" range="120" battery="2.7" imges={Img12}/>
     </div>
   )
 }
