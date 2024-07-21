@@ -1,17 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Model_L1.css';
 
-const Model_L1 = ({ mainImg, sideImgs, productTitle, description, battery, motor, maxSpeed }) => {
+const Model_L1 = ({ mainImgsByColor, sideImgsByColor, productTitle, description, battery, motor, maxSpeed }) => {
+    const initialColor = mainImgsByColor && Object.keys(mainImgsByColor)[0] || 'defaultColor';
+
+    const [currentColor, setCurrentColor] = useState(initialColor);
+    const [currentMainImg, setCurrentMainImg] = useState(mainImgsByColor?.[initialColor] || '');
+    const [currentSideImgs, setCurrentSideImgs] = useState(sideImgsByColor?.[initialColor] || []);
+
+    useEffect(() => {
+        if (mainImgsByColor && sideImgsByColor) {
+            setCurrentMainImg(mainImgsByColor[currentColor]);
+            setCurrentSideImgs(sideImgsByColor[currentColor]);
+        }
+    }, [currentColor, mainImgsByColor, sideImgsByColor]);
+
+    const handleImageClick = (img) => {
+        setCurrentMainImg(img);
+    };
+
+    const handleColorChange = (color) => {
+        setCurrentColor(color);
+    };
+
+    if (!mainImgsByColor || !sideImgsByColor) {
+        return <div>Error: Image data is missing.</div>;
+    }
+
     return (
         <>
             <div className="model-container">
                 <div className="left-panel">
                     <div className="left-panel-placeholder">
-                        <img className="main-img" loading="lazy" alt="bike" src={mainImg} />
+                        <img className="main-img" loading="lazy" alt="bike" src={currentMainImg} />
                         <div className="mid-panel">
                             <div className="mid-panel-container">
-                                {sideImgs.map((img, index) => (
-                                    <div key={index} className={`side-img${index + 1}-wrapper`}>
+                                {currentSideImgs.map((img, index) => (
+                                    <div
+                                        key={index}
+                                        className={`side-img${index + 1}-wrapper`}
+                                        onClick={() => handleImageClick(img)}
+                                    >
                                         <img className={`side-img${index + 1}`} loading="lazy" alt="bike" src={img} />
                                     </div>
                                 ))}
@@ -89,14 +118,18 @@ const Model_L1 = ({ mainImg, sideImgs, productTitle, description, battery, motor
                                 </div>
                                 <div className="color">
                                     <div className="color-options">
-                                        <span className="color-options1">color options</span>
+                                        <span className="color-options1">Color Options</span>
                                     </div>
                                     <div className="color-palette">
                                         <div className="palette-container">
-                                            <span class="palette-container-child"></span>
-                                            <span class="palette-container-item"></span>
-                                            <span class="palette-container-inner"></span>
-                                            <span class="palette-container-child1"></span>
+                                            {Object.keys(mainImgsByColor).map((color, index) => (
+                                                <span
+                                                    key={index}
+                                                    className={`palette-container-child${index}`}
+                                                    style={{ backgroundColor: color }}
+                                                    onClick={() => handleColorChange(color)}
+                                                ></span>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>
@@ -113,6 +146,11 @@ const Model_L1 = ({ mainImg, sideImgs, productTitle, description, battery, motor
             </div>
         </>
     );
+};
+
+Model_L1.defaultProps = {
+    mainImgsByColor: {},
+    sideImgsByColor: {}
 };
 
 export default Model_L1;

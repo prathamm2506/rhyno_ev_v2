@@ -632,6 +632,13 @@
     position: relative;
     background-color: #1a15f2;
 }
+.palette-container-child0,
+.palette-container-inner {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    background-color: black;
+}
 
 .palette-container-child1,
 .palette-container-inner {
@@ -639,6 +646,22 @@
     width: 1.5rem;
     position: relative;
     background-color: red;
+}
+
+.palette-container-child2,
+.palette-container-inner {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    background-color: red;
+}
+
+.palette-container-child3,
+.palette-container-inner {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: relative;
+    background-color: blue;
 }
 
 .palette-container-child1 {
