@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Img1 from '../../assets/webp/Product1.webp';
-import Img2 from '../../assets/webp/Product2.webp';
-import Img3 from '../../assets/webp/product3.webp';
+import Img1 from '../../assets/webp/Product1.svg';
+import Img2 from '../../assets/webp/Product2.svg';
+import Img3 from '../../assets/webp/product3.svg';
 import rightArrow from '../../assets/right-arrow.svg';
 import leftArrow from '../../assets/left-arrow.svg';
 import './OurProducts.css';
@@ -15,17 +15,6 @@ const OurProducts = () => {
     const [currentIndex, setCurrentIndex] = useState(1);
     const menuItemRefs = useRef([]);
     const navigate = useNavigate();
-
-    // const preloadImages = (imageArray) => {
-    //     imageArray.forEach((image) => {
-    //         const img = new Image();
-    //         img.src = image;
-    //     });
-    // };
-
-    // useEffect(() => {
-    //     preloadImages([Img1, Img2, Img3]);
-    // }, []);
 
     const showSlider = (type) => {
         if (isAnimating) return;
