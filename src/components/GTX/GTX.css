@@ -214,7 +214,7 @@
     width: 100%;
     background-color: #252525;
     color: #fff;
-    padding: 3rem 5rem;
+    padding: 3rem 2rem 3rem 5rem;
     text-align: center;
     margin: 5rem auto;
 }
@@ -285,6 +285,11 @@
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
+    text-decoration: none;
+}
+
+.book-now-link:hover {
+    color: #000;
     text-decoration: none;
 }
 
@@ -403,6 +408,10 @@
 }
 
 @media (max-width: 992px) {
+    .gtx-container {
+        padding: 3rem 5rem;
+    }
+
     .header {
         font-size: 2rem;
     }
@@ -433,7 +442,7 @@
 
     .vertical-text {
         /* font-size: 1rem; */
-        right: -98%;
+        right: -97%;
         top: 8%;
     }
 }

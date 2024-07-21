@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 90vh;
     background-image: url('../../assets/photo10.png');
     background-size: cover;
     background-position: center bottom;
@@ -50,7 +50,7 @@
 
 .input,
 .textarea {
-    margin-bottom: 2rem;
+    margin-bottom: 2.3rem;
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -139,11 +139,11 @@
 
 .link-list {
     list-style-type: none;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
 }
 
 .link-list li {
-    margin: 1.5rem 0;
+    margin: 2rem 0;
 }
 
 .link {
@@ -285,7 +285,7 @@
 
     .input,
     .textarea {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
 
     .footer {
