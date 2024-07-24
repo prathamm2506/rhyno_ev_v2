@@ -1,0 +1,12 @@
+.animated-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.letter {
+  font-size: 3.5rem; 
+  display: inline-block; 
+  opacity: 0;
+}

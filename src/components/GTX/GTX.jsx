@@ -64,6 +64,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import IMG from '../../assets/GTX.png';
+import HeaderLamp from '../HeaderLamp/HeaderLamp';
 import './GTX.css';
 
 const GTX = () => {
@@ -76,13 +77,16 @@ const GTX = () => {
 
     return (
         <div className="gtx-container">
-            <h3 className="header">More thrills. Per second.</h3>
+            {/* <h3 className="header">More thrills. Per second.</h3> */}
+            {/* <div className="header"> */}
+                <HeaderLamp title="More Thrills. Per Second." />
+            {/* </div> */}
             <div className="gtx-content">
                 <div className="gtx-details">
                     <div className="badge">All New</div>
                     <h2 className="title">GTX</h2>
                     <p className="description">
-                        Our digital display keeps you informed with real-time range and fault indicators. 
+                        Our digital display keeps you informed with real-time range and fault indicators.
                         So you can enjoy your ride without anxiety about the remaining range.
                     </p>
                     <div className="price">Starting at <span>Rs. 102,220/-</span></div>

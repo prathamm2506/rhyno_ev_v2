@@ -37,14 +37,14 @@ const ContactForm = () => {
                 <div className="form-container">
                     <h2 className="heading">Write to us in case of any query</h2>
                     <form className="form" onSubmit={sendEmail} ref={form}>
-                        <label for="name">Name</label>
-                        <input type="text" name="name" placeholder="Name" className="input" required/>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" placeholder="Email" className="input" required/>
-                        <label for="phno">Phone No.</label>
-                        <input type="text" name="phno" placeholder="Phone Number" className="input" required/>
-                        <label for="msg">Message</label>
-                        <textarea placeholder="Message" name="msg" className="textarea" required></textarea>
+                        <label for="name">Name
+                            <input type="text" name="name" placeholder="Name" className="input" required /></label>
+                        <label for="email">Email
+                            <input type="email" name="email" placeholder="Email" className="input" required /></label>
+                        <label for="phno">Phone No
+                            <input type="text" name="phno" placeholder="Phone Number" className="input" required /></label>
+                        <label for="msg">Message
+                            <textarea placeholder="Message" name="msg" className="textarea" required></textarea></label>
                         <button type="submit" className="button">Submit</button>
                     </form>
                 </div>

@@ -22,17 +22,17 @@ import FooterNew from './components/footer/FooterNew.jsx';
 
 
 const Root = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
-  const handleLoadingComplete = () => {
-    setIsLoading(false);
-  };
+  // const handleLoadingComplete = () => {
+  //   setIsLoading(false);
+  // };
 
   return (
     <BrowserRouter>
-      {isLoading ? (
+      {/* {isLoading ? (
         <PreLoader onComplete={handleLoadingComplete} />
-      ) : (
+      ) : ( */}
         <>
           <Navbar />
           {/* <BuyNow /> */}
@@ -54,7 +54,7 @@ const Root = () => {
           {/* <FooterNew /> */}
           <BackToTop />
         </>
-      )}
+      {/* )} */}
     </BrowserRouter>
   );
 };

@@ -23,6 +23,7 @@ import OurProductTitle from "./components/OurProductTitle/OurProductTitle";
 import OurProducts from "./components/OurProducts/OurProducts";
 import GTX from "./components/GTX/GTX";
 import Aboutus from "./components/Aboutus/Aboutus";
+import HeaderLamp from "./components/HeaderLamp/HeaderLamp";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -42,7 +43,8 @@ function App() {
       </div>
       <div className="snap-scroller-main">
         <div className="megadivmain h-screen">
-          <h1 id="ourProducts">Products</h1>
+          {/* <h1 id="ourProducts">Products</h1> */}
+          <HeaderLamp title="Our Products" />
           <OurProducts />
         </div>
       </div>

@@ -27,6 +27,10 @@ const Model_L1 = ({ mainImgsByColor, sideImgsByColor, productTitle, description,
         return <div>Error: Image data is missing.</div>;
     }
 
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    };
+
     return (
         <>
             <div className="model-container">
@@ -127,7 +131,10 @@ const Model_L1 = ({ mainImgsByColor, sideImgsByColor, productTitle, description,
                                                     key={index}
                                                     className={`palette-container-child${index}`}
                                                     style={{ backgroundColor: color }}
-                                                    onClick={() => handleColorChange(color)}
+                                                    onClick={() => {
+                                                        handleColorChange(color);
+                                                        handleClick();
+                                                    }}
                                                 ></span>
                                             ))}
                                         </div>

@@ -144,7 +144,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    transition: opacity 1.3s;
+    transition: opacity 0.8s;
 }
 
 .carousel .list .item .introduce .title {
@@ -371,14 +371,14 @@
 
 .carousel.showDetail .list .item:nth-child(2) .detail {
     opacity: 1;
-    transition: opacity 3s;
+    transition: opacity 5.5s;
     width: 50%;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     text-align: right;
-    pointer-events: auto;
+    pointer-events: auto; 
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail .title {
