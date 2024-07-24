@@ -2,7 +2,7 @@
     width: 1200px;
     height: 100%;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: 2rem 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5rem;
+    gap: 2rem;
     align-items: flex-end;
 }
 
@@ -41,7 +41,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .spec-info2 .spec-inside{
