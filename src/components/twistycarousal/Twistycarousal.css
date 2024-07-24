@@ -12,7 +12,7 @@
 
 .circle-container a:hover,
 .number li a:hover {
-  background: var(--yellow);
+  background: var(--light-grey);
 }
 
 .circle-container a:active,
@@ -20,11 +20,11 @@
 .number li a:active,
 .number li a:focus {
   transform: scale(1.1);
-  background: var(--yellow);
+  background: var(--light-grey);
 }
 
 .active1 {
-  background: var(--yellow) !important;
+  background: var(--light-grey) !important;
   transform: scale(1.1);
 }
 
@@ -122,7 +122,8 @@
 
 /* Circle Container Link Styles */
 .circle-container a {
-  background: var(--dark-grey);
+  background: var(--black);
+  border: 1px solid var(--light-grey);
   border-radius: 100%;
   color: var(--white);
   display: table-cell;
@@ -141,7 +142,7 @@
 .circle-container a:focus,
 .circle-container a:hover {
   transform: scale(1.1);
-  background: var(--yellow);
+  background: var(--light-grey);
 }
 
 .section {
@@ -178,4 +179,12 @@
 
 .color-yellow-main{
   color: var(--yellow);
+}
+
+.icon-image{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
 }

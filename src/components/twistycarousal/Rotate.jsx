@@ -3,7 +3,14 @@ import { motion, useTransform, useScroll } from "framer-motion"; // Add this imp
 import { useSwipeable } from 'react-swipeable';
 import './Twistycarousal.css'; // Make sure to include the styles in a separate CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBatteryFull, faCar, faMapMarkerAlt, faSmile, faWrench } from '@fortawesome/free-solid-svg-icons';
+import { faCarBattery, faTriangleCircleSquare, faTachometerAltFast, faClockFour, faWrench } from '@fortawesome/free-solid-svg-icons';
+import { PiCarBatteryLight } from "react-icons/pi";
+import img1 from '../../assets/r1.png'
+import img2 from '../../assets/r2.png'
+import img3 from '../../assets/r3.png'
+import img4 from '../../assets/r4.png'
+import img5 from '../../assets/r5.png'
+
 
 function Rotate() {
   const targetRef = useRef(null);
@@ -53,12 +60,13 @@ function Rotate() {
     'Rugged and Simple design'
   ];
   const icons = [
-    faBatteryFull,
-    faCar,
-    faMapMarkerAlt,
-    faSmile,
-    faWrench
+    img1,
+    img2,
+    img3,
+    img4,
+    img5
   ];
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -127,7 +135,8 @@ function Rotate() {
                       setCurrent(index);
                     }}
                   >
-                    <FontAwesomeIcon icon={icon} />
+                    {/* <FontAwesomeIcon icon={icon} /> */}
+                    <img src={icon} alt={headings[index]} className="icon-image" />
                   </a>
                 </li>
               ))}
