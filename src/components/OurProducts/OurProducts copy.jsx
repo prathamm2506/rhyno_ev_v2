@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Img1 from '../../assets/webp/Product1.svg';
 import Img2 from '../../assets/webp/Product2.svg';
 import Img3 from '../../assets/webp/product3.svg';
-import rightArrow from './right-arrow.svg';
-import leftArrow from './left-arrow.svg';
+import rightArrow from '../../assets/right-arrow.svg';
+import leftArrow from '../../assets/left-arrow.svg';
 import './OurProducts.css';
 
 const OurProducts = () => {

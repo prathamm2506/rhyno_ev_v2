@@ -144,7 +144,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    transition: opacity 0.8s;
+    transition: opacity 1s;
 }
 
 .carousel .list .item .introduce .title {
@@ -527,11 +527,11 @@
     width: 92%;
 }
 
-.carousel::before {
+/* .carousel::before {
     width: 500px;
     height: 300px;
     content: '';
-    /* background-image: linear-gradient(70deg, #fff825, rgb(23, 23, 255)); */
+    background-image: linear-gradient(70deg, #fff825, rgb(23, 23, 255));
     position: absolute;
     border-radius: 20% 30% 80% 10%;
     filter: blur(150px);
@@ -544,19 +544,19 @@
 .carousel.showDetail::before {
     transform: translate(-100%, -50%) rotate(90deg);
     filter: blur(130px);
-}
+} */
 
 .carousel-moving {
     cursor: url("../../assets/right-arrow.svg"), auto !important;
 }
 
-.carousel .list .item img {
+/* .carousel .list .item img {
     cursor: url("../../assets/right-arrow.svg"), auto;
 }
 
 .carousel .list .item .introduce {
     cursor: url("../../assets/left-arrow.svg"), auto;
-}
+} */
 
 @media screen and (max-width: 1250px) {
     .carousel .list .item:nth-child(2) .introduce {
