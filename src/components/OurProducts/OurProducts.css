@@ -746,9 +746,9 @@
         font-size: 2rem;
     }
 
-    .carousel.showDetail .list .item:nth-child(2) img  {
-        /* margin-top: -2rem; */
-    }
+    /* .carousel.showDetail .list .item:nth-child(2) img  {
+        margin-top: -2rem;
+    } */
 
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
         padding: 8px 12px;
@@ -757,6 +757,7 @@
 
     #back {
         margin-bottom: 1rem;
+        cursor:
     }
 }
 

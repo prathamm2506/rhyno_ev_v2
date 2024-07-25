@@ -52,9 +52,11 @@ const OurProducts = () => {
         const carouselRect = carouselRef.current.getBoundingClientRect();
         const halfWidth = carouselRect.width * 0.3;
         if (e.clientX > carouselRect.left + halfWidth) {
-            carouselRef.current.style.cursor = `url(${rightArrow}) 16 16, auto`;
+            carouselRef.current.style.cursor = 'cell';
+            // `url(${rightArrow}) 16 16, auto`;
         } else {
-            carouselRef.current.style.cursor = `url(${leftArrow}) 16 16, auto`;
+            carouselRef.current.style.cursor = 'pointer';
+            // `url(${leftArrow}) 16 16, auto`;
         }
     };
 
