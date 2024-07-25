@@ -382,7 +382,8 @@
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail .title {
-    font-size: 4em;
+    font-size: 5rem;
+    font-weight: 600;
     text-align: left;
 }
 
@@ -403,7 +404,7 @@
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail .specifications div {
-    width: 105px;
+    /* width: 105px; */
     text-align: center;
     flex-shrink: 0;
 }

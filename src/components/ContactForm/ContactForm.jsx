@@ -56,18 +56,8 @@ const ContactForm = () => {
                             <img src={Logo} alt="Rhyno Logo" className="logoF" />
                         </div>
                         <div className="contact-container">
-                            {/* <img
-                                loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e125e873c698e0623af1c1449a551f7511863aba5f08f9820a82dfbeb791b3e?"
-                                className="aspect-square"
-                            /> */}
                             <p className='phoneNo'><i class="fa-solid fa-headset mr-2"></i> +91 9023 9875 28</p>
 
-                            {/* <img
-                                loading="lazy"
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcb69222e5d61cc9af49db599119f82cf468dabe5fcbe71dc5eae2b9cfdf0db3?"
-                                className="aspect-square"
-                            /> */}
                             <p className='email'><i class="fa-regular fa-envelope mr-2"></i> info@Rhyno.in</p>
                         </div>
                         <div className="address-container">
