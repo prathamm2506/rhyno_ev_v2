@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Img1 from '../../assets/webp/Product1.svg';
 import Img2 from '../../assets/webp/Product2.svg';
 import Img3 from '../../assets/webp/product3.svg';
-import rightArrow from './right-arrow.svg';
-import leftArrow from './left-arrow.svg';
+import rightArrow from '../../assets/right-arrow.svg';
+import leftArrow from '../../assets/left-arrow.svg';
 import './OurProducts.css';
 
 const OurProducts = () => {
@@ -52,11 +52,9 @@ const OurProducts = () => {
         const carouselRect = carouselRef.current.getBoundingClientRect();
         const halfWidth = carouselRect.width * 0.3;
         if (e.clientX > carouselRect.left + halfWidth) {
-            carouselRef.current.style.cursor = 'cell';
-            // `url(${rightArrow}) 16 16, auto`;
+            carouselRef.current.style.cursor = `url(${rightArrow}) 16 16, auto`;
         } else {
-            carouselRef.current.style.cursor = 'pointer';
-            // `url(${leftArrow}) 16 16, auto`;
+            carouselRef.current.style.cursor = `url(${leftArrow}) 16 16, auto`;
         }
     };
 
