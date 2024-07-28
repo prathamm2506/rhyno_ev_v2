@@ -27,14 +27,17 @@ import HeaderLamp from "./components/HeaderLamp/HeaderLamp";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Numbers from "./components/numbers/Numbers";
 import Rotate from "./components/twistycarousal/Rotate";
 import HomeNew from "./components/home/HomeNew";
+import useScrollSnap from "react-use-scroll-snap";
 
 function App() {
+  const scrollRef = useRef(null);
+  useScrollSnap({ref:scrollRef,duration: 500, delay: 20});
   return (
-    <div>
+    <div ref={scrollRef}>
       <div className="snap-scroller-main">
         <HomeNew />
       </div>

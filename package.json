@@ -39,6 +39,8 @@
     "react-scroll": "^1.9.0",
     "react-slick": "^0.30.2",
     "react-swipeable": "^7.0.1",
+    "react-use-scroll-snap": "^1.0.0",
+    "scroll-snap": "^4.0.5",
     "scrolltrigger": "^1.0.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.11",
