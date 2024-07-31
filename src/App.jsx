@@ -35,9 +35,10 @@ import useScrollSnap from "react-use-scroll-snap";
 
 function App() {
   const scrollRef = useRef(null);
-  useScrollSnap({ref:scrollRef,duration: 500, delay: 20});
+  useScrollSnap({ref:scrollRef,duration: 100, delay: 10});
   return (
-    <div ref={scrollRef}>
+    <div>
+      <div ref={scrollRef}>
       <div className="snap-scroller-main">
         <HomeNew />
       </div>
@@ -50,6 +51,7 @@ function App() {
           <HeaderLamp title="Our Products" />
           <OurProducts />
         </div>
+      </div>
       </div>
       <div className="snap-scroller-main">
         <div className="lapscreencomp">
