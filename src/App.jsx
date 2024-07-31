@@ -37,7 +37,8 @@ function App() {
   const scrollRef = useRef(null);
   // useScrollSnap({ref:scrollRef,duration: 500, delay: 20});
   return (
-    <div ref={scrollRef}>
+    <div>
+      <div ref={scrollRef}>
       <div className="snap-scroller-main">
         <HomeNew />
       </div>
@@ -51,6 +52,7 @@ function App() {
           <AnimatedTitle titleText="Our Products" startY="-50%" endY="50%"/>
           <OurProducts />
         </div>
+      </div>
       </div>
       <div className="snap-scroller-main">
         <div className="lapscreencomp">

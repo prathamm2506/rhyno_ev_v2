@@ -108,7 +108,7 @@ function Rotate() {
     <div className='section' ref={targetRef}>
       <div className="flex gap-5 max-md:flex-col max-md:gap-0 container1 px-10">
         <div className="flex flex-col w-7/12 max-md:ml-0 max-md:w-full">
-          <div className="flex flex-col grow px-5 mt-7 text-white max-md:mt-10 max-md:max-w-full">
+          <div className="flex flex-col h-[80vh] px-5 mt-7 text-white max-md:mt-10 max-md:max-w-full">
             <div className="text-4xl font-extralight leading-[50px] tracking-[12.3px] max-md:max-w-full">
               WHAT MAKES <br /> <div className='flex flex-row gap-5'> RHYNO <div className='-rotate-12'><span className='awesome-rhyno'>Awesome ?</span></div></div>
             </div>

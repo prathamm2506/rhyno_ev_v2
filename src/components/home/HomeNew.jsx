@@ -27,7 +27,7 @@ function HomeNew() {
         src={images[currentIndex]}
         className="object-cover absolute inset-0 size-full"
       />
-      <div className="flex relative justify-between mt-80 w-full max-w-[1219px] max-md:flex-wrap max-md:mt-72 max-md:max-w-full">
+      <div className="flex relative justify-between mt-96 w-full max-w-[1219px] max-md:flex-wrap max-md:mt-72 max-md:max-w-full">
         <div className="flex flex-col gap-2">
         <a href="" className="text-3xl p-0"><i class="fa-brands fa-instagram"></i></a>
         <a href="" className="text-2xl p-0"><i class="fa-brands fa-facebook"></i></a>
