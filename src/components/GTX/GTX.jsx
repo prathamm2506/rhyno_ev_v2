@@ -64,7 +64,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import IMG from '../../assets/GTX.png';
-import HeaderLamp from '../HeaderLamp/HeaderLamp';
+import HeaderLamp from '../AnimatedTitle/AnimatedTitle';
 import './GTX.css';
 
 const GTX = () => {
@@ -77,10 +77,10 @@ const GTX = () => {
 
     return (
         <div className="gtx-container">
-            {/* <h3 className="header">More thrills. Per second.</h3> */}
-            {/* <div className="header"> */}
+            {/* <h3 className="header">More thrills. Per second.</h3>
+            <div className="header">
                 <HeaderLamp title="More Thrills. Per Second." />
-            {/* </div> */}
+            </div> */}
             <div className="gtx-content">
                 <div className="gtx-details">
                     <div className="badge">All New</div>

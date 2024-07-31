@@ -23,7 +23,7 @@ import OurProductTitle from "./components/OurProductTitle/OurProductTitle";
 import OurProducts from "./components/OurProducts/OurProducts";
 import GTX from "./components/GTX/GTX";
 import Aboutus from "./components/Aboutus/Aboutus";
-import HeaderLamp from "./components/HeaderLamp/HeaderLamp";
+import AnimatedTitle from "./components/AnimatedTitle/AnimatedTitle";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -35,19 +35,20 @@ import useScrollSnap from "react-use-scroll-snap";
 
 function App() {
   const scrollRef = useRef(null);
-  useScrollSnap({ref:scrollRef,duration: 500, delay: 20});
+  // useScrollSnap({ref:scrollRef,duration: 500, delay: 20});
   return (
     <div ref={scrollRef}>
       <div className="snap-scroller-main">
         <HomeNew />
       </div>
       <div className="snap-scroller-main">
+        <AnimatedTitle titleText="More Thrills Per Second" startY="-8%" endY="170%" />
         <GTX />
       </div>
       <div className="snap-scroller-main">
         <div className="megadivmain h-screen">
           {/* <h1 id="ourProducts">Products</h1> */}
-          <HeaderLamp title="Our Products" />
+          <AnimatedTitle titleText="Our Products" startY="-50%" endY="50%"/>
           <OurProducts />
         </div>
       </div>
