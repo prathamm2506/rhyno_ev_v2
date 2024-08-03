@@ -32,10 +32,10 @@
 .prodContainer {
     display: flex;
     flex-direction: row;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     background-color: var(--black);
-    margin: 2rem 0;
+    padding: 12vh 0 0vh 0;
 }
 
 .vertical-menu {
@@ -83,7 +83,7 @@
 /* carousel */
 .carousel {
     flex-grow: 1;
-    height: 85vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -91,6 +91,7 @@
     overflow: hidden;
     position: relative;
     background-color: var(--black);
+    margin-top: -4rem;
 }
 
 .carousel .list {
@@ -408,6 +409,7 @@
 .carousel.showDetail .list .item:nth-child(2) .detail .specifications div {
     text-align: center;
     flex-shrink: 0;
+    /* border-right: 1px solid #666; */
 }
 
 .carousel.showDetail .list .item:nth-child(2) .detail .specifications div p:nth-child(1) {
@@ -584,7 +586,7 @@
 
 @media screen and (max-width: 991px) {
     .prodContainer {
-        height: 70%;
+        /* height: 70%; */
     }
 
     .vertical-menu {
@@ -634,7 +636,7 @@
 
 @media screen and (max-width: 767px) {
     .prodContainer {
-        height: 70%;
+        /* height: 70%; */
     }
 
     .vertical-menu {
@@ -652,7 +654,7 @@
     }
 
     .carousel {
-        height: 600px;
+        /* height: 600px; */
     }
 
     .carousel .list .item {

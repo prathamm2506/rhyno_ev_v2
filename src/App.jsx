@@ -35,24 +35,30 @@ import useScrollSnap from "react-use-scroll-snap";
 
 function App() {
   const scrollRef = useRef(null);
-  // useScrollSnap({ref:scrollRef,duration: 500, delay: 20});
+  useScrollSnap({ ref: scrollRef, duration: 0.3, delay: 0.1});
   return (
     <div>
       <div ref={scrollRef}>
-      <div className="snap-scroller-main">
-        <HomeNew />
-      </div>
-      <div className="snap-scroller-main">
-        <AnimatedTitle titleText="More Thrills Per Second" startY="-8%" endY="170%" />
-        <GTX />
-      </div>
-      <div className="snap-scroller-main">
-        <div className="megadivmain h-screen">
-          {/* <h1 id="ourProducts">Products</h1> */}
-          <AnimatedTitle titleText="Our Products" startY="-50%" endY="50%"/>
-          <OurProducts />
+        <div className="snap-scroller-main">
+          <HomeNew />
         </div>
-      </div>
+        <div className="snap-scroller-main">
+          <AnimatedTitle titleText="More Thrills Per Second" startY="-180%" endY="470%" />
+        </div>
+        <div className="snap-scroller-main">
+          {/* <AnimatedTitle titleText="More Thrills Per Second" startY="-8%" endY="170%" /> */}
+          <GTX />
+        </div>
+        <div className="snap-scroller-main">
+          <AnimatedTitle titleText="Our Products" startY="-180%" endY="430%" />
+        </div>
+        <div className="snap-scroller-main">
+          <div className="megadivmain h-screen">
+            {/* <h1 id="ourProducts">Products</h1> */}
+            {/* <AnimatedTitle titleText="Our Products" startY="-100%" endY="70%" /> */}
+            <OurProducts />
+          </div>
+        </div>
       </div>
       <div className="snap-scroller-main">
         <div className="lapscreencomp">

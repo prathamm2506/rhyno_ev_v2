@@ -11,18 +11,22 @@ const AnimatedTitle = ({ startY, endY, titleText }) => {
   useEffect(() => {
     gsap.fromTo(
       titleRef.current,
-      { fontSize: '7vw', y: `${startY}` },
       {
-        fontSize: '4.5vw',
+        fontSize: '8vw',
+        y: `${startY}`,
+        textShadow: '16px 16px 32px rgba(0, 0, 0, 0.8)',
+      },
+      {
+        fontSize: '5.5vw',
         y: `${endY}`,
         textShadow: '8px 8px 16px rgba(0, 0, 0, 0.8)',
         ease: 'none',
         scrollTrigger: {
           trigger: titleRef.current,
           // markers: true,
-          start: `top 60%`,
-          end: `bottom 30%`,
-          scrub: 1,
+          start: 'top 60%',
+          end: 'bottom 30%',
+          scrub: 2,
         },
       }
     );
@@ -30,7 +34,13 @@ const AnimatedTitle = ({ startY, endY, titleText }) => {
 
   return (
     <div className="animated-title-container">
-      <div className="blurry-gradient"></div>
+      <div className="drips">
+        <div className="drip"></div>
+        <div className="drip"></div>
+        <div className="drip"></div>
+        <div className="drip"></div>
+        <div className="drip"></div>
+      </div>
       <h1 ref={titleRef} className="titleText">
         {titleText}
       </h1>
