@@ -1,11 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Img1 from '../../assets/webp/Product1.svg';
-import Img2 from '../../assets/webp/Product2.svg';
-import Img3 from '../../assets/webp/product3.svg';
-import rightArrow from '../../assets/webp/right-arrow.svg';
-import leftArrow from '../../assets/webp/left-arrow.svg';
+import Img1 from '../../assets/webp/Product1.webp';
+import Img2 from '../../assets/webp/Product2.webp';
+import Img3 from '../../assets/webp/product3.webp';
+// import rightArrow from './right-arrow1.svg';
+// import leftArrow from './left-arrow1.svg';
+import { IoIosArrowDropleft } from "react-icons/io";
 import './OurProducts.css';
+
+const leftArrow = `data:image/svg+xml;base64,${btoa('<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M2.117 12l7.527-6.235-.644-.765-9 7.521 9 7.479.645-.764-7.529-6.236h21.884v-1h-21.883z"/></svg>')}`;
+const rightArrow = `data:image/svg+xml;base64,${btoa('<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>')}`;
 
 const OurProducts = () => {
     const carouselRef = useRef(null);
@@ -45,7 +49,7 @@ const OurProducts = () => {
             setIsAnimating(false);
             carouselRef.current.style.pointerEvents = 'auto';
             carouselRef.current.classList.remove('carousel-moving');
-        }, 2000); 
+        }, 2000);
     };
 
     const handleMouseMove = (e) => {
@@ -92,6 +96,52 @@ const OurProducts = () => {
         });
     }, []);
 
+
+    
+    const componentRef = useRef(null);
+    const hasRun = useRef(false); // Track if the effect has already run
+
+    useEffect(() => {
+        const handleEnter = () => {
+            showSlider('prev');
+            setTimeout(() => {
+                showSlider('prev');
+                setTimeout(() => {
+                    showSlider('prev');
+                    setTimeout(() => {
+                        showSlider('next');
+                    }, 2000);
+                }, 2000);
+            }, 2000);
+        };
+
+        // Intersection Observer callback
+        const handleIntersection = (entries) => {
+            const [entry] = entries;
+            if (entry.isIntersecting && !hasRun.current) {
+                handleEnter();
+                hasRun.current = true;
+            }
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, {
+            threshold: 0.9, //  visiblity
+        });
+
+        const component = componentRef.current;
+        if (component) {
+            observer.observe(component);
+        }
+
+        return () => {
+            if (component) {
+                observer.unobserve(component);
+            }
+        };
+    }, []);
+
+
+
     useEffect(() => {
         const activeItem = menuItemRefs.current[currentIndex];
         const highlightBar = document.querySelector('.highlight-bar');
@@ -101,7 +151,7 @@ const OurProducts = () => {
     }, [currentIndex]);
 
     return (
-        <div className="prodContainer">
+        <div className="prodContainer" ref={componentRef}>
             <div className="vertical-menu">
                 {['GTX', 'GTX MAX', 'GTX LITE'].map((item, index) => (
                     <div
@@ -110,7 +160,7 @@ const OurProducts = () => {
                         onClick={() => setCurrentIndex(index)}
                         ref={el => menuItemRefs.current[index] = el}
                     >
-                        {item} 
+                        {item}
                     </div>
                 ))}
                 <div className="highlight-bar"></div>
@@ -119,12 +169,14 @@ const OurProducts = () => {
                 <div className="list" ref={listRef}>
                     {products.map((product, index) => (
                         <div className="item" key={index}>
-                            <img src={product.image} alt={product.topic} />
-                            <div className="introduce">
-                                <div className="topic">{product.topic}</div>
-                                <div className="des">{product.description}</div>
-                                <button className="seeMore">SEE MORE &#8599;</button>
-                            </div>
+                                <img src={product.image} alt={product.topic} />
+                            {/* <div className="intro-container"> */}
+                                <div className="introduce">
+                                    <div className="topic">{product.topic}</div>
+                                    <div className="des">{product.description}</div>
+                                    <button className="seeMore">SEE MORE &#8599;</button>
+                                </div>
+                            {/* </div> */}
                             <div className="detail">
                                 <div className="title">{product.detailTitle}</div>
                                 <div className="des">{product.detailDescription}</div>

@@ -66,6 +66,8 @@ import { useNavigate } from 'react-router-dom';
 import IMG from '../../assets/GTX.png';
 import HeaderLamp from '../AnimatedTitle/AnimatedTitle';
 import './GTX.css';
+import { IoIosArrowDropright } from "react-icons/io";
+
 
 const GTX = () => {
     const navigate = useNavigate();
@@ -83,15 +85,16 @@ const GTX = () => {
             </div> */}
             <div className="gtx-content">
                 <div className="gtx-details">
-                    <div className="badge">All New</div>
-                    <h2 className="title">GTX</h2>
+                    <div className="headerText">MORE THRILLS<br/> PER SECOND</div>
+                    <div className="badge">ALL NEW</div>
+                    <h2 className="title">RHYNO</h2>
                     <p className="description">
                         Our digital display keeps you informed with real-time range and fault indicators.
                         So you can enjoy your ride without anxiety about the remaining range.
                     </p>
-                    <div className="price">Starting at <span>Rs. 102,220/-</span></div>
+                    {/* <div className="price">Starting at <span>Rs. 102,220/-</span></div> */}
                     <div className="buttons">
-                        <button className="book-now"><a href="https://wa.me/9023987528" className="book-now-link" target='_blank'>Book Now</a></button>
+                        <button className="book-now"><a href="https://wa.me/9023987528" className="book-now-link" target='_blank'>Book Now</a><IoIosArrowDropright size="20px"/></button>
                         <button className="learn-more" onClick={handleLearnMoreClick}>Learn more</button>
                     </div>
                 </div>

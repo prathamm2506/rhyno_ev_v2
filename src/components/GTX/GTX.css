@@ -215,9 +215,10 @@
     height: 100vh;
     background-color: #252525;
     color: #fff;
-    padding: 3rem 2rem 3rem 5rem;
+    padding: 3rem 5rem 3rem 8rem;
     text-align: center;
     margin: 5rem auto;
+    font-family: var(--poppins);
 }
 
 
@@ -236,16 +237,26 @@
     flex-direction: column;
 }
 
+.headerText {
+    font-size: 3.3vw;
+    font-weight: 400;
+    /* color: #888; */
+    text-align: left;
+    margin-bottom: 10vh;
+    line-height: 1.1;
+}
+
 .badge {
-    background-color: #888;
-    padding: 10px 20px;
+    background-color: #d0d0d0;
+    color: black;
+    padding: 10px 25px;
     border-radius: 5px;
     display: block;
     width: max-content;
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 500;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.3rem;
 }
 
 .title {
@@ -253,12 +264,16 @@
     font-weight: bold;
     margin: 10px 0;
     text-align: left;
+    letter-spacing: 0.3rem;
+
 }
 
 .description {
     margin-bottom: 20px;
     text-align: left;
     text-align: justify;
+    font-size: 1em;
+    color: #888;
 }
 
 .price {
@@ -274,6 +289,7 @@
 
 .buttons {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
     flex-wrap: wrap;
 }
@@ -292,12 +308,18 @@
 }
 
 .book-now {
+    display: flex;
+    gap: 1em;
+    align-items: center;
     background-color: var(--yellow);
     border: none;
     color: #000;
     font-size: 1rem;
-    padding: 10px 20px;
+    margin: 3vh 0 0;
+    padding: 3px 8PX;
     font-weight: 600;
+    width:fit-content;
+    letter-spacing: 0.2em;
 }
 
 .book-now:hover {
@@ -321,14 +343,22 @@
     /* color: var(--white); */
     /* text-align: center;
     display: inline-block; */
+    width:fit-content;
     position: relative;
+    border: none;
+    outline: none;
+}
+
+.learn-more:focus {
+    border: none;
+    outline: none;
 }
 
 .learn-more::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 20%;
+    bottom: -10%;
     width: 0;
     height: 0.5px;
     background-color: #fff;
@@ -351,7 +381,8 @@
 }
 
 .gtx-image {
-    width: 62%;
+    /* width: 62%; */
+    width: 67%;
     object-fit: contain;
     z-index: 1;
 }
