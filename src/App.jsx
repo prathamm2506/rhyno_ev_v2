@@ -35,7 +35,7 @@ import useScrollSnap from "react-use-scroll-snap";
 
 function App() {
   const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 0.3, delay: 0.1});
+  // useScrollSnap({ ref: scrollRef, duration: 0.3, delay: 0.1});
   return (
     <div>
       <div ref={scrollRef}>

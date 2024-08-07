@@ -21,18 +21,18 @@ function HomeNew() {
   };
 
   return (
-    <div className="flex overflow-hidden relative flex-col items-center px-16 pt-20 mt-28 pb-10 min-h-[100vh] max-md:px-5">
+    <div className="flex overflow-hidden relative flex-col items-center px-16 pt-20 mt-24 pb-10 min-h-[80vh] max-md:px-5">
       <img
         loading="lazy"
         src={images[currentIndex]}
         className="object-cover absolute inset-0 size-full"
       />
       <div className="flex relative justify-between mt-96 w-full max-w-[1219px] max-md:flex-wrap max-md:mt-72 max-md:max-w-full">
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
         <a href="" className="text-3xl p-0"><i class="fa-brands fa-instagram"></i></a>
         <a href="" className="text-2xl p-0"><i class="fa-brands fa-facebook"></i></a>
         <a href="" className="text-2xl p-0"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
+        </div> */}
         {/* <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/c2bfe87e1e22ff0cdb4bd0bcd6d88649d8b8626892878d588b902923151c9b92?"
