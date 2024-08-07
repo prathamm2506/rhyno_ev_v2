@@ -170,8 +170,9 @@
 .awesome-rhyno{
   font-family: "Carattere", cursive;
   letter-spacing: normal;
-  color: var(--yellow);
+  color: var(--light-grey);
   font-size: 5.5rem;
+  font-weight: 100;
   /* transform: rotate45deg; */
   rotate: 30deg;
   /* transform: translateY(-50%) rotateZ(-5deg) scale(1.5); */
