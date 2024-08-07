@@ -152,16 +152,16 @@
     transition: opacity 0.8s;
 }
 
-.carousel .list .item .introduce .title {
-    font-size: 1.7em;
+/* .carousel .list .item .introduce .title {
+    font-size: 1.5em;
     font-weight: 400;
     line-height: 1em;
     position: absolute;
     top: -55%;
-}
+} */
 
 .carousel .list .item .introduce .topic {
-    font-size: 4.5em;
+    font-size: 3.9em;
     font-weight: 500;
     text-wrap: nowrap;
     margin: 2rem 0 1rem 0;
@@ -509,7 +509,7 @@
 #back {
     display: none;
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     border: none;
@@ -549,7 +549,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-10%, -50%);
-    transition: 1s;
+    transition: 1.5s;
 }
 
 .carousel.showDetail::before {

@@ -153,7 +153,7 @@ const OurProducts = () => {
     return (
         <div className="prodContainer" ref={componentRef}>
             <div className="vertical-menu">
-                {['GTX', 'GTX MAX', 'GTX LITE'].map((item, index) => (
+                {['RHYNO', `RHYNO MAX`, 'RHYNO LITE'].map((item, index) => (
                     <div
                         key={index}
                         className={`menu-item ${currentIndex === index ? 'active' : ''}`}
@@ -208,9 +208,9 @@ const OurProducts = () => {
 const products = [
     {
         image: `${Img1}`,
-        topic: 'GTX',
+        topic: 'RHYNO',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. This beast is ready to roar on the roads, providing an electrifying journey at every turn.',
-        detailTitle: 'GTX',
+        detailTitle: 'RHYNO',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. ',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -223,9 +223,9 @@ const products = [
     },
     {
         image: `${Img2}`,
-        topic: 'GTX MAX',
+        topic: 'RHYNO MAX',
         description: 'This Rhyno is tuned for long drives and no thrills. Perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge.',
-        detailTitle: 'GTX MAX',
+        detailTitle: 'RHYNO MAX',
         detailDescription: 'This Rhyno is tuned for long drives and no thrills. Like all other variants, this machine comes with a fire-safe advanced LFP battery and all the other benefits of owning a Rhyno, along with a perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge. While it may not provide a thrilling ride, it promises a dependable and unwavering presence on the long stretches.',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -238,9 +238,9 @@ const products = [
     },
     {
         image: `${Img3}`,
-        topic: 'GTX LITE',
+        topic: 'RHYNO LITE',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor',
-        detailTitle: 'GTX LITE',
+        detailTitle: 'RHYNO LITE',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn.',
         specifications: [
             { name: 'Battery', value: '1.8 Kwh' },
@@ -253,9 +253,9 @@ const products = [
     },
     {
         image: `${Img1}`,
-        topic: 'GTX',
+        topic: 'RHYNO',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. This beast is ready to roar on the roads, providing an electrifying journey at every turn.',
-        detailTitle: 'GTX',
+        detailTitle: 'RHYNO',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. ',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -268,9 +268,9 @@ const products = [
     },
     {
         image: `${Img2}`,
-        topic: 'GTX MAX',
+        topic: 'RHYNO MAX',
         description: 'This Rhyno is tuned for long drives and no thrills. Perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge.',
-        detailTitle: 'GTX MAX',
+        detailTitle: 'RHYNO MAX',
         detailDescription: 'This Rhyno is tuned for long drives and no thrills. Like all other variants, this machine comes with a fire-safe advanced LFP battery and all the other benefits of owning a Rhyno, along with a perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge. While it may not provide a thrilling ride, it promises a dependable and unwavering presence on the long stretches.',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -283,9 +283,9 @@ const products = [
     },
     {
         image: `${Img3}`,
-        topic: 'GTX LITE',
+        topic: 'RHYNO LITE',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor',
-        detailTitle: 'GTX LITE',
+        detailTitle: 'RHYNO LITE',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn.',
         specifications: [
             { name: 'Battery', value: '1.8 Kwh' },
