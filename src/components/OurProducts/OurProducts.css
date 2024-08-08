@@ -576,6 +576,8 @@
 
     .carousel .list .item:nth-child(2) .introduce .topic {
         font-size: 4em;
+        text-wrap: wrap;
+        line-height: 1.1;
     }
 
     .carousel .list .item img {
@@ -597,7 +599,7 @@
     }
 
     .vertical-menu {
-        width: 40px;
+        width: 50px;
         margin-left: 3rem;
         margin-right: 1.5rem;
     }
@@ -607,7 +609,7 @@
     }
 
     .highlight-bar {
-        width: 2px;
+        width: 2.5px;
     }
 
     .carousel .list .item {
@@ -647,17 +649,17 @@
     }
 
     .vertical-menu {
-        width: 30px;
+        width: 35px;
         margin-left: 1.5rem;
-    }
+    }    
 
     .menu-item {
         font-size: 16px;
     }
 
     .highlight-bar {
-        width: 2px;
-        right: -4px;
+        /* width: 2px; */
+        right: -2px;
     }
 
     .carousel {
