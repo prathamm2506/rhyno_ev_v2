@@ -84,24 +84,18 @@ const ContactForm = () => {
           <div className="flex justify-center mt-8 space-x-4">
             {/* Placeholder for Icons */}
             <div className="bg-gray-800 p-2 rounded-full">
-              <img
-                src="icon1.png"
-                alt="Icon 1"
-                className="w-6 h-6 object-contain"
+              <i 
+                className="fa-brands fa-instagram w-6 h-6 flex justify-center items-center text-2xl"
               />
             </div>
             <div className="bg-gray-800 p-2 rounded-full">
-              <img
-                src="icon2.png"
-                alt="Icon 2"
-                className="w-6 h-6 object-contain"
+            <i 
+                className="fa-brands fa-facebook w-6 h-6 flex justify-center items-center text-2xl"
               />
             </div>
             <div className="bg-gray-800 p-2 rounded-full">
-              <img
-                src="icon3.png"
-                alt="Icon 3"
-                className="w-6 h-6 object-contain"
+            <i 
+                className="fa-brands fa-x-twitter w-6 h-6 flex justify-center items-center text-2xl"
               />
             </div>
           </div>

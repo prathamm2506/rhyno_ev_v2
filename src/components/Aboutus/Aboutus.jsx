@@ -12,44 +12,48 @@ const Aboutus = () => {
     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between p-8 lg:p-16 space-y-8 lg:space-y-0 bg-white text-black">
       <div className="lg:w-7/12 space-y-4">
         <h1 className="text-4xl font-bold tracking-wide">ABOUT US</h1>
-        <p className="text-lg leading-relaxed">
-          Established In 2019 By An Automotive Engineer With A Vision For
-          Sustainable And Robust Mobility Solutions, RHYNO EV Is Not Just A
-          Company; It's A Collective Effort Of A Dynamic Team Of Young
-          Individuals Passionately Driving Innovation In The Electric Vehicle
-          Industry. We Believe In Engineering Solutions That Solve Problems.
+        <p className="text-lg leading-relaxed text-justify">
+        Established in 2019 by an automotive engineer with a vision for sustainable and robust mobility solutions, Rhyno EV is not just a company; it's a collective effort of a dynamic team of young individuals passionately driving innovation in the electric vehicle industry. We believe in engineering solutions that solve problems.
+
         </p>
-        <p className="text-lg leading-relaxed">
-          With Our First Product, We've Taken A Bold Step To Create Something
-          More Than Just A Vehicle; It's A Unique Experience Of Elegance,
-          Comfort, And Style, Addressing The Pitfalls Of Conventional Electric
-          Scooters. Our Design Prioritizes Safety, Eliminating Concerns Of Fires
-          And Ensuring A Longer Battery Lifespan With Our Battery Technology.
-          Perfectly Suited For Fleet Operators, Especially In Tourist-Centric
-          Locations Like Goa, Our Rugged Yet Aesthetically Appealing Scooters
-          Are Engineered For Longevity And Reliability. Join Us As We Pioneer A
-          New Era In Sustainable And Dependable Electric Transportation.
+        <p className="text-lg leading-relaxed text-justify">
+        With our first product, we've taken a bold step to create something more than just a vehicle; it's a unique experience of elegance, comfort, and style, addressing the pitfalls of conventional electric scooters. Our design prioritises safety, eliminating concerns of fires and ensuring a longer battery lifespan with our battery technology. Perfectly suited for fleet operators, especially in tourist-centric locations like Goa, our rugged yet aesthetically appealing scooters are engineered for longevity and reliability. Join us as we pioneer a new era in sustainable and dependable electric transportation.
+
         </p>
 
         <div className="space-y-4">
           <Accordion
-            title="Students Are 75%"
-            content="Students Are 75% More Likely To Enroll In A Degree Program That Offers Industry Micro-Credentials"
+            title="Reduced Emissions"
+            content="90% Reduction in Tailpipe Emissions Compared to Gasoline Vehicles."
             index={0}
             activeIndex={activeIndex}
             toggleAccordion={toggleAccordion}
           />
           <Accordion
-            title="85% Of Employers"
-            content="85% Of Employers Seek Graduates With Industry Micro-Credentials"
+            title="Lower Costs"
+            content="75% Lower Operating Costs Over the Vehicle's Lifetime. 75% Lower Fuel Costs Annually."
             index={1}
             activeIndex={activeIndex}
             toggleAccordion={toggleAccordion}
           />
           <Accordion
-            title="50% Of Agree"
-            content="50% Of Graduates Believe Industry Micro-Credentials Give Them A Competitive Advantage"
+            title="Customer Satisfaction"
+            content="88% of EV Owners Report Satisfaction with Their Purchase."
             index={2}
+            activeIndex={activeIndex}
+            toggleAccordion={toggleAccordion}
+          />
+          <Accordion
+            title="Faster Acceleration"
+            content="75% Faster Acceleration from 0-60 mph Compared to Average Gasoline Cars."
+            index={3}
+            activeIndex={activeIndex}
+            toggleAccordion={toggleAccordion}
+          />
+          <Accordion
+            title="Charging"
+            content="88% of Public Charging Stations Offer Free or Reduced Rates."
+            index={4}
             activeIndex={activeIndex}
             toggleAccordion={toggleAccordion}
           />
