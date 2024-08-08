@@ -1,11 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Img1 from '../../assets/webp/Product1.svg';
-import Img2 from '../../assets/webp/Product2.svg';
-import Img3 from '../../assets/webp/product3.svg';
-import rightArrow from '../../assets/webp/right-arrow.svg';
-import leftArrow from '../../assets/webp/left-arrow.svg';
+import Img1 from '../../assets/webp/Product1.webp';
+import Img2 from '../../assets/webp/Product2.webp';
+import Img3 from '../../assets/webp/product3.webp';
+// import rightArrow from './right-arrow1.svg';
+// import leftArrow from './left-arrow1.svg';
+import { IoIosArrowDropleft } from "react-icons/io";
 import './OurProducts.css';
+
+const leftArrow = `data:image/svg+xml;base64,${btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#000000" d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z" data-name="Left"/></svg>')}`;
+const rightArrow = `data:image/svg+xml;base64,${btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><path style="fill:#000000" d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z" data-name="Right"/></svg>')}`;
 
 const OurProducts = () => {
     const carouselRef = useRef(null);
@@ -45,7 +49,7 @@ const OurProducts = () => {
             setIsAnimating(false);
             carouselRef.current.style.pointerEvents = 'auto';
             carouselRef.current.classList.remove('carousel-moving');
-        }, 2000); 
+        }, 2000);
     };
 
     const handleMouseMove = (e) => {
@@ -92,6 +96,52 @@ const OurProducts = () => {
         });
     }, []);
 
+
+
+    const componentRef = useRef(null);
+    const hasRun = useRef(false); // Track if the effect has already run
+
+    useEffect(() => {
+        const handleEnter = () => {
+            showSlider('prev');
+            setTimeout(() => {
+                showSlider('prev');
+                setTimeout(() => {
+                    showSlider('prev');
+                    setTimeout(() => {
+                        showSlider('next');
+                    }, 2000);
+                }, 2000);
+            }, 2000);
+        };
+
+        // Intersection Observer callback
+        const handleIntersection = (entries) => {
+            const [entry] = entries;
+            if (entry.isIntersecting && !hasRun.current) {
+                handleEnter();
+                hasRun.current = true;
+            }
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, {
+            threshold: 0.9, //  visiblity
+        });
+
+        const component = componentRef.current;
+        if (component) {
+            observer.observe(component);
+        }
+
+        return () => {
+            if (component) {
+                observer.unobserve(component);
+            }
+        };
+    }, []);
+
+
+
     useEffect(() => {
         const activeItem = menuItemRefs.current[currentIndex];
         const highlightBar = document.querySelector('.highlight-bar');
@@ -101,16 +151,16 @@ const OurProducts = () => {
     }, [currentIndex]);
 
     return (
-        <div className="prodContainer">
+        <div className="prodContainer" ref={componentRef}>
             <div className="vertical-menu">
-                {['GTX', 'GTX MAX', 'GTX LITE'].map((item, index) => (
+                {['RHYNO', `RHYNO MAX`, 'RHYNO LITE'].map((item, index) => (
                     <div
                         key={index}
                         className={`menu-item ${currentIndex === index ? 'active' : ''}`}
                         onClick={() => setCurrentIndex(index)}
                         ref={el => menuItemRefs.current[index] = el}
                     >
-                        {item} 
+                        {item}
                     </div>
                 ))}
                 <div className="highlight-bar"></div>
@@ -119,12 +169,14 @@ const OurProducts = () => {
                 <div className="list" ref={listRef}>
                     {products.map((product, index) => (
                         <div className="item" key={index}>
-                            <img src={product.image} alt={product.topic} />
-                            <div className="introduce">
-                                <div className="topic">{product.topic}</div>
-                                <div className="des">{product.description}</div>
-                                <button className="seeMore">SEE MORE &#8599;</button>
-                            </div>
+                                <img src={product.image} alt={product.topic} />
+                            {/* <div className="intro-container"> */}
+                                <div className="introduce">
+                                    <div className="topic">{product.topic}</div>
+                                    <div className="des">{product.description}</div>
+                                    <button className="seeMore">SEE MORE &#8599;</button>
+                                </div>
+                            {/* </div> */}
                             <div className="detail">
                                 <div className="title">{product.detailTitle}</div>
                                 <div className="des">{product.detailDescription}</div>
@@ -156,9 +208,9 @@ const OurProducts = () => {
 const products = [
     {
         image: `${Img1}`,
-        topic: 'GTX',
+        topic: 'RHYNO',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. This beast is ready to roar on the roads, providing an electrifying journey at every turn.',
-        detailTitle: 'GTX',
+        detailTitle: 'RHYNO',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. ',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -171,9 +223,9 @@ const products = [
     },
     {
         image: `${Img2}`,
-        topic: 'GTX MAX',
+        topic: 'RHYNO MAX',
         description: 'This Rhyno is tuned for long drives and no thrills. Perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge.',
-        detailTitle: 'GTX MAX',
+        detailTitle: 'RHYNO MAX',
         detailDescription: 'This Rhyno is tuned for long drives and no thrills. Like all other variants, this machine comes with a fire-safe advanced LFP battery and all the other benefits of owning a Rhyno, along with a perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge. While it may not provide a thrilling ride, it promises a dependable and unwavering presence on the long stretches.',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -186,9 +238,9 @@ const products = [
     },
     {
         image: `${Img3}`,
-        topic: 'GTX LITE',
+        topic: 'RHYNO LITE',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor',
-        detailTitle: 'GTX LITE',
+        detailTitle: 'RHYNO LITE',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn.',
         specifications: [
             { name: 'Battery', value: '1.8 Kwh' },
@@ -201,9 +253,9 @@ const products = [
     },
     {
         image: `${Img1}`,
-        topic: 'GTX',
+        topic: 'RHYNO',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. This beast is ready to roar on the roads, providing an electrifying journey at every turn.',
-        detailTitle: 'GTX',
+        detailTitle: 'RHYNO',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. ',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -216,9 +268,9 @@ const products = [
     },
     {
         image: `${Img2}`,
-        topic: 'GTX MAX',
+        topic: 'RHYNO MAX',
         description: 'This Rhyno is tuned for long drives and no thrills. Perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge.',
-        detailTitle: 'GTX MAX',
+        detailTitle: 'RHYNO MAX',
         detailDescription: 'This Rhyno is tuned for long drives and no thrills. Like all other variants, this machine comes with a fire-safe advanced LFP battery and all the other benefits of owning a Rhyno, along with a perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge. While it may not provide a thrilling ride, it promises a dependable and unwavering presence on the long stretches.',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
@@ -231,9 +283,9 @@ const products = [
     },
     {
         image: `${Img3}`,
-        topic: 'GTX LITE',
+        topic: 'RHYNO LITE',
         description: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor',
-        detailTitle: 'GTX LITE',
+        detailTitle: 'RHYNO LITE',
         detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn.',
         specifications: [
             { name: 'Battery', value: '1.8 Kwh' },

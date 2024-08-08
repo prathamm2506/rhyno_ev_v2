@@ -34,13 +34,13 @@ const AnimatedTitle = ({ startY, endY, titleText }) => {
 
   return (
     <div className="animated-title-container">
-      <div className="drips">
+      {/* <div className="drips">
         <div className="drip"></div>
         <div className="drip"></div>
         <div className="drip"></div>
         <div className="drip"></div>
         <div className="drip"></div>
-      </div>
+      </div> */}
       <h1 ref={titleRef} className="titleText">
         {titleText}
       </h1>

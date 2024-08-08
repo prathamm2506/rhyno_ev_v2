@@ -43,20 +43,20 @@ function App() {
         <div className="snap-scroller-main">
           <HomeNew />
         </div>
-        <div className="snap-scroller-main">
+        {/* <div className="snap-scroller-main">
           <AnimatedTitle titleText="More Thrills Per Second" startY="-180%" endY="470%" />
-        </div>
+        </div> */}
         <div className="snap-scroller-main">
-          {/* <AnimatedTitle titleText="More Thrills Per Second" startY="-8%" endY="170%" /> */}
+          {/* <AnimatedTitle titleText="More Thrills Per Second" startY="0%" endY="170%" /> */}
           <GTX />
         </div>
-        <div className="snap-scroller-main">
+        {/* <div className="snap-scroller-main">
           <AnimatedTitle titleText="Our Products" startY="-180%" endY="430%" />
-        </div>
+        </div> */}
         <div className="snap-scroller-main">
           <div className="megadivmain h-screen">
             {/* <h1 id="ourProducts">Products</h1> */}
-            {/* <AnimatedTitle titleText="Our Products" startY="-100%" endY="70%" /> */}
+            {/* <AnimatedTitle titleText="Our Products" startY="-50%" endY="50%" /> */}
             <OurProducts />
           </div>
         </div>
