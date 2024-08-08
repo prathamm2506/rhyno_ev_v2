@@ -32,6 +32,7 @@ import Numbers from "./components/numbers/Numbers";
 import Rotate from "./components/twistycarousal/Rotate";
 import HomeNew from "./components/home/HomeNew";
 import useScrollSnap from "react-use-scroll-snap";
+import ContactPage from "./components/ContactNew/ContactPage";
 
 function App() {
   const scrollRef = useRef(null);
@@ -70,9 +71,8 @@ function App() {
           <ResponsiveCards />
         </div>
       </div>
-      <div className="snap-scroller-main">
-        <Aboutus />
-      </div>
+      {/* <ContactPage/> */}
+      <Aboutus/>
     </div>
   );
 }
