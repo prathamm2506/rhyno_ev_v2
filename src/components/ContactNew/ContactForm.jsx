@@ -1,142 +1,13 @@
-// import React from "react";
-// import img1 from '../../assets/contact.png'
-// import './ContactForm.css'
-
-// const ContactForm = () => {
-//   return (
-//     <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white bgimg">
-//       <div className="container mx-auto flex flex-col md:flex-row items-center">
-//         {/* Left Side - Form */}
-//         <div className="w-full md:w-1/2 px-8 md:px-16 py-12 bg-black bg-opacity-50 shadow-lg">
-//           <form className="space-y-6">
-//             <div>
-//               <label
-//                 htmlFor="name"
-//                 className="block text-sm font-medium text-gray-300"
-//               >
-//                 Your Name
-//               </label>
-//               <input
-//                 type="text"
-//                 id="name"
-//                 name="name"
-//                 className="mt-1 block w-full px-3 py-2 bg-transparent border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
-//                 placeholder="Your Name"
-//               />
-//             </div>
-
-//             <div>
-//               <label
-//                 htmlFor="email"
-//                 className="block text-sm font-medium text-gray-300"
-//               >
-//                 E-mail
-//               </label>
-//               <input
-//                 type="email"
-//                 id="email"
-//                 name="email"
-//                 className="mt-1 block w-full px-3 py-2 bg-transparent border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
-//                 placeholder="E-mail"
-//               />
-//             </div>
-
-//             <div>
-//               <label
-//                 htmlFor="phone"
-//                 className="block text-sm font-medium text-gray-300"
-//               >
-//                 Phone Number
-//               </label>
-//               <input
-//                 type="text"
-//                 id="phone"
-//                 name="phone"
-//                 className="mt-1 block w-full px-3 py-2 bg-transparent border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
-//                 placeholder="Phone Number"
-//               />
-//             </div>
-
-//             <div>
-//               <label
-//                 htmlFor="message"
-//                 className="block text-sm font-medium text-gray-300"
-//               >
-//                 Message
-//               </label>
-//               <textarea
-//                 id="message"
-//                 name="message"
-//                 rows="4"
-//                 className="mt-1 block w-full px-3 py-2 bg-transparent border border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"
-//                 placeholder="Message"
-//               ></textarea>
-//             </div>
-
-//             <button
-//               type="submit"
-//               className="w-full px-4 py-2 bg-yellow-500 text-black font-semibold rounded-md shadow hover:bg-yellow-600 transition duration-300"
-//             >
-//               Submit
-//             </button>
-//           </form>
-
-//           <div className="flex justify-center mt-8 space-x-4">
-//             {/* Icons - Replace with actual icons as needed */}
-//             <div className="bg-gray-800 p-2 rounded-full">
-//               <img
-//                 src="icon1.png"
-//                 alt="Icon 1"
-//                 className="w-6 h-6 object-contain"
-//               />
-//             </div>
-//             <div className="bg-gray-800 p-2 rounded-full">
-//               <img
-//                 src="icon2.png"
-//                 alt="Icon 2"
-//                 className="w-6 h-6 object-contain"
-//               />
-//             </div>
-//             <div className="bg-gray-800 p-2 rounded-full">
-//               <img
-//                 src="icon3.png"
-//                 alt="Icon 3"
-//                 className="w-6 h-6 object-contain"
-//               />
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Right Side - Image and Text */}
-//         <div className="w-full md:w-1/2 relative">
-//           <div className="relative flex items-center justify-center h-full">
-//             <div className="text-center">
-//               <p className="text-yellow-400 font-semibold mb-2">
-//                 WRITE TO IN CASE OF ANY QUERY
-//               </p>
-//               <h1 className="text-4xl font-bold">
-//                 CONTACT <span className="text-yellow-500">US</span>
-//               </h1>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ContactForm;
-
 import React from "react";
 import './ContactForm.css'
 import img1 from '../../assets/contact.png'
 
 const ContactForm = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen text-white">
-      <div className="container mx-auto flex flex-col md:flex-row items-stretch h-screen w-full">
+    <div className="flex items-center justify-center min-h-screen text-white ">
+      <div className="flex flex-col md:flex-row h-screen w-full">
         {/* Left Side - Form */}
-        <div className="w-full md:w-1/2 px-8 md:px-16 py-12 bg-black bg-opacity-70 shadow-lg flex flex-col justify-between h-full">
+        <div className="w-full md:w-1/2 px-8 md:px-16 py-28 bg-black bg-opacity-70 flex flex-col justify-between">
           <form className="space-y-6">
             <div className="relative">
               <input
@@ -237,7 +108,7 @@ const ContactForm = () => {
         </div>
 
         {/* Right Side - Image and Text */}
-        <div className="w-full md:w-1/2 relative">
+        <div className="hidden md:block w-full md:w-1/2 relative">
           <img
             src={img1}
             alt="Background"

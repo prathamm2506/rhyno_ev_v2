@@ -13,19 +13,19 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
 
   
-  const sendEmail = (e) => {
-    e.preventDefault();
+//   const sendEmail = (e) => {
+//     e.preventDefault();
 
-    emailjs.sendForm('service_r6tppud', 'template_syhmdrq', form.current, 'dlfvxaLtJUSBW3FmH')
-    e.target.reset()
-    setLoading(true);
+//     emailjs.sendForm('service_r6tppud', 'template_syhmdrq', form.current, 'dlfvxaLtJUSBW3FmH')
+//     e.target.reset()
+//     setLoading(true);
 
-    // Simulate a loading state for 2 seconds
-    setTimeout(() => {
-      setLoading(false);
-      navigate("/SE03");
-    }, 2000);
-  };
+//     // Simulate a loading state for 2 seconds
+//     setTimeout(() => {
+//       setLoading(false);
+//       navigate("/SE03");
+//     }, 2000);
+//   };
 
   const handleClick = () => {
     window.scrollTo(0, 0);
@@ -33,7 +33,7 @@ const ContactForm = () => {
 
     return (
         <div className="footer-container">
-            <div className="contact-section">
+            {/* <div className="contact-section">
                 <div className="form-container">
                     <h2 className="heading">Write to us in case of any query</h2>
                     <form className="form" onSubmit={sendEmail} ref={form}>
@@ -48,7 +48,7 @@ const ContactForm = () => {
                         <button type="submit" className="button">Submit</button>
                     </form>
                 </div>
-            </div>
+            </div> */}
             <footer className="footer">
                 <div className="footer-content">
                     <div className="logo-contact">

@@ -2,3 +2,7 @@
     background-image: url('../../assets/contact.png');
     background-size: contain;
 }
+*{
+    margin: 0;
+    padding: 0;
+}
