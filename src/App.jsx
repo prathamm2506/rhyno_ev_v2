@@ -33,6 +33,7 @@ import Rotate from "./components/twistycarousal/Rotate";
 import HomeNew from "./components/home/HomeNew";
 import useScrollSnap from "react-use-scroll-snap";
 import ContactPage from "./components/ContactNew/ContactPage";
+import ContactForm from "./components/ContactNew/ContactForm";
 
 function App() {
   const scrollRef = useRef(null);
@@ -73,6 +74,7 @@ function App() {
       </div>
       {/* <ContactPage/> */}
       <Aboutus/>
+      <ContactForm/>
     </div>
   );
 }
