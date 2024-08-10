@@ -10,7 +10,7 @@ const Aboutus = () => {
 
   return (
     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between p-8 lg:p-16 space-y-8 lg:space-y-0 bg-white text-black">
-      <div className="lg:w-7/12 pl-10 space-y-4">
+      <div className="lg:w-7/12 lg:pl-10 space-y-4 md:pl-0">
         <h1 className="text-4xl font-bold tracking-wide">ABOUT US</h1>
         <p className="text-lg leading-relaxed text-justify">
           Established in 2019 by an automotive engineer with a vision for sustainable and robust mobility solutions, Rhyno EV is not just a company; it's a collective effort of a dynamic team of young individuals passionately driving innovation in the electric vehicle industry. We believe in engineering solutions that solve problems.
@@ -48,7 +48,7 @@ const Aboutus = () => {
         <img
           src={img1}
           alt="Electric Scooter"
-          className="max-w-md h-auto shadow-lg"
+          className="lg:max-w-md h-auto shadow-lg"
         />
       </div>
     </div>
