@@ -134,6 +134,10 @@
     border-bottom: 2px solid var(--black);
 }
 
+.border-class2{
+    border-bottom: 2px solid var(--white);
+}
+
 .outline-class{
     outline: transparent;
 }
