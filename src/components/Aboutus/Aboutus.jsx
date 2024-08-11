@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import img1 from '../../assets/about.png';
+import './Aboutus.css';
 
 const Aboutus = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -69,10 +70,11 @@ const Accordion = ({ title, content, index, activeIndex, toggleAccordion }) => {
   }, [isActive]);
 
   return (
-    <div>
+    <div className="border-class">
       <button
-        className="flex justify-between items-center w-full py-3 text-lg font-semibold text-left"
+        className="flex justify-between items-center w-full py-3 text-lg font-semibold text-left focus:outline-none"
         onClick={() => toggleAccordion(index)}
+        style={{ outline: 'none' }} // Inline style to ensure no outline
       >
         <span>{title}</span>
         <span>{isActive ? '-' : '+'}</span>
