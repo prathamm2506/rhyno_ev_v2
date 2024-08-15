@@ -34,6 +34,8 @@ import HomeNew from "./components/home/HomeNew";
 import useScrollSnap from "react-use-scroll-snap";
 import ContactPage from "./components/ContactNew/ContactPage";
 import ContactForm from "./components/ContactNew/ContactForm";
+import SpecificationsTable from "./components/compare/SpecificationsTable";
+import FAQ from "./components/faq/Faq";
 
 function App() {
   const scrollRef = useRef(null);

@@ -3,9 +3,9 @@ import React from 'react'
 const Careers = () => {
   return (
     <div>
-      <div className="ap-maindiv">
+      <div className="ap-maindiv bg-white text-black">
         <div className="ap-textdiv">
-          <h1>Careers</h1>
+          <h1 className='font-bold'>Careers</h1>
           <p>
           Established in 2019 by an automotive engineer with a vision for sustainable and robust mobility solutions, RHYNO EV is not just a company; it's a collective effort of a dynamic team of young individuals passionately driving innovation in the electric vehicle industry. We believe in engineering solutions that solve problems.
           </p>

@@ -19,6 +19,8 @@ import PrivacyPolicy from './routes/PrivacyPolicy.jsx';
 import CareersPage from './routes/CareersPage.jsx';
 import ContactForm from './components/ContactForm/ContactForm.jsx';
 import FooterNew from './components/footer/FooterNew.jsx';
+import FAQ from './components/faq/Faq.jsx';
+import Faqs from './routes/Faqs.jsx';
 
 
 const Root = () => {
@@ -48,6 +50,7 @@ const Root = () => {
             <Route path='/Rentals' element={<Rentals />} />
             <Route path='/Privacy' element={<PrivacyPolicy />} />
             <Route path='/Careers' element={<CareersPage />} />
+            <Route path='/FAQ' element={<Faqs />} />
           </Routes>
           <ContactForm />
           {/* <Footer /> */}
