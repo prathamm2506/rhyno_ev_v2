@@ -90,7 +90,7 @@ const OurProducts = () => {
     };
 
     useEffect(() => {
-        const seeMoreButtons = carouselRef.current.querySelectorAll('.seeMore');
+        const seeMoreButtons = carouselRef.current.querySelectorAll('.seeMoreBtn');
         seeMoreButtons.forEach((button) => {
             button.onclick = handleSeeMoreClick;
         });
@@ -171,13 +171,13 @@ const OurProducts = () => {
                         <div className="item" key={index}>
                                 <img src={product.image} alt={product.topic} />
                             {/* <div className="intro-container"> */}
-                                <div className="introduce">
+                                <div className="introductionText">
                                     <div className="topic">{product.topic}</div>
                                     <div className="des">{product.description}</div>
-                                    <button className="seeMore">SEE MORE &#8599;</button>
+                                    <button className="seeMoreBtn">SEE MORE &#8599;</button>
                                 </div>
                             {/* </div> */}
-                            <div className="detail">
+                            <div className="productDetail">
                                 <div className="title">{product.detailTitle}</div>
                                 <div className="des">{product.detailDescription}</div>
                                 <div className="specifications">

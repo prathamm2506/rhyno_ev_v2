@@ -53,7 +53,7 @@ const Modelpage_L1 = ({startState}) => {
         setIsDisabled(false);
         setActiveButton(null); // Reset active button after animation
         setButtonTransform({}); // Reset transform after animation
-      }, 2500); 
+      }, 2000); 
     }
   };
 

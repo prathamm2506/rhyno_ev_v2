@@ -23,7 +23,7 @@
 .rhyno-text {
   position: absolute;
   margin: 0 auto;
-  top: -50%;
+  top: 5%;
   font-size: 13vw;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.3); /* Initial color (lightly visible) */
@@ -34,8 +34,8 @@
 }
 
 @keyframes slideDownText {
-  to {
-    top: 5%; /* Final position */
+  from {
+    top: -50%; /* Final position */
   }
 }
 
@@ -62,10 +62,10 @@
 
 .itemMD.next {
   z-index: 3;
-  animation: showContent 2.5s forwards;
+  animation: showNextItem 2.5s forwards;
 }
 
-@keyframes showContent {
+@keyframes showNextItem {
   from {
     clip-path: circle(0% at 50% 50%);
   }
@@ -118,7 +118,6 @@
   outline: none;
 }
 
-
 @keyframes showButton {
   to {
     opacity: 1; 
@@ -132,14 +131,6 @@
   transform: translateY(20px);
   animation: showButton 1s 2.8s forwards;
 }
-
-
-/* @keyframes showButton {
-  to {
-    opacity: 1; 
-    transform: translateY(0);
-  }
-} */
 
 .color-buttons button:active {
   transform: scale(0.85) !important;
@@ -155,7 +146,6 @@
   pointer-events: none;
 }
 
-
 /* Add animation to the button when clicked */
 .animate-button {
   animation: moveButtonToCenter 0.3s forwards;
@@ -167,5 +157,53 @@
     top: 50%;
     left: 50%;
   }
+}
 
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .rhyno-text {
+    font-size: 15vw;
+    top: 8%;
+  }
+
+  .imageMD img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .color-buttons button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rhyno-text {
+    font-size: 18vw;
+    top: 20%;
+  }
+
+  .color-buttons button {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rhyno-text {
+    font-size: 22vw;
+  }
+
+  .color-buttons button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .color-buttons {
+    margin: 1.5rem 0;
+  }
+
+  .carouselMD {
+    /* padding-bottom: 20px; */
+  }
 }
