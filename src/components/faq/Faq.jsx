@@ -2,24 +2,52 @@ import React, { useState, useRef } from 'react';
 
 const faqData = [
     {
-        question: "What does LOREM mean?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (complete text)"
+        question: "Why is Rhyno the way it is?",
+        answer: "Rhyno is designed to deliver an extraordinary riding experience. Its unique design prioritises comfort and style, while the full metal body ensures durability and a rugged performance. The focus on rider comfort is evident in the ergonomic design of the seat and handlebars, while the stylish aesthetics enhance the overall appeal of the vehicle.The full metal body not only provides exceptional durability but also contributes to a stable and secure ride, making Rhyno suitable for various terrains and conditions."
     },
     {
-        question: "Where can I edit my billing and shipping address?",
-        answer: "You can edit your billing and shipping address from your account settings."
+        question: "Where can I purchase your electric scooter?",
+        answer: "You can either pre-book online or visit the nearest dealership in your city. Currently available in cities Ahmedabad and Gandhinagar. For more info give us a call. "
     },
     {
-        question: "Can I change the displayed currency?",
-        answer: "Yes, you can change the displayed currency in the preferences."
+        question: "Do you offer financing options?",
+        answer: "Yes, we do have finance options for you to buy RHYNO at your convenience. Our partners are Bajaj Finserv and LoanTap."
     },
     {
-        question: "Do I have the right to return an item?",
-        answer: "Yes, you have the right to return an item within 30 days of purchase."
+        question: "Can I remove the battery to charge at home?",
+        answer: "No, the battery in RHYNO is fixed under the floor. Although, you can directly charge RHYNO from your home socket. "
     },
     {
-        question: "Do you accept orders via Phone or E-mail?",
-        answer: "We accept orders through both Phone and E-mail."
+        question: "Will it catch fire?",
+        answer: "Our batteries are as cool as you driving a RHYNO! No, our battery works on LFP chemistry and it comes with smart BMS which makes it impossible to break fire in any conditions! When do I need to replace the battery?"
+    },
+    {
+        question: "Does the scooter have any storage compartments?",
+        answer: "Yes, RHYNO comes with 25 litres of storage. "
+    },
+    {
+        question: "What safety features does the scooter have?",
+        answer: "Wider tyres give you the confidence of not falling or slipping through cornering/ wet roads. All the electricals are routed in such a way that there is no possibility for short circuit. RHYNO comes with an IOT device which can track your vehicle and monitors it. "
+    },
+    {
+        question: "What is covered under the warranty?",
+        answer: "There is 1 year warranty on all electricals including motor.3 years of warranty on the battery."
+    },
+    {
+        question: "What should I do if my scooter breaks down?",
+        answer: "You just need to call the nearest dealership and that's pretty much our trained mechanics will be there to resolve any problem. Or you can take it to your local mechanic, as RHYNO is so simple to repair that even your mechanic guy can resolve it."
+    },
+    {
+        question: "Can I use the scooter for off-roading?",
+        answer: "Yes, for uneven roads, mild muddy and sandy terrains, RHYNO  can get you where you want to be.  "
+    },
+    {
+        question: "Is battery water proof?",
+        answer: "Battery comes with IP67 rated, so your monsoons drive are worryless.  "
+    },
+    {
+        question: "Do Rhyno users need a driving licence and insurance for it? ",
+        answer: "Yes, as RHYNO comes with RTO registration it is mandatory to follow government rules. "
     },
 ];
 
