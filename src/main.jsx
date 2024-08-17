@@ -17,7 +17,8 @@ import SE03LITE from './routes/SE03LITE.jsx'
 import Rentals from './routes/Rentals.jsx';
 import PrivacyPolicy from './routes/PrivacyPolicy.jsx';
 import CareersPage from './routes/CareersPage.jsx';
-import ContactForm from './components/ContactForm/ContactForm.jsx';
+import ContactFormTop from "./components/ContactNew/ContactForm.jsx";
+import ContactFormBottom from './components/ContactForm/ContactForm.jsx';
 import FooterNew from './components/footer/FooterNew.jsx';
 import FAQ from './components/faq/Faq.jsx';
 import Faqs from './routes/Faqs.jsx';
@@ -52,7 +53,8 @@ const Root = () => {
             <Route path='/Careers' element={<CareersPage />} />
             <Route path='/FAQ' element={<Faqs />} />
           </Routes>
-          <ContactForm />
+          <ContactFormTop />
+          <ContactFormBottom />
           {/* <Footer /> */}
           {/* <FooterNew /> */}
           <BackToTop />

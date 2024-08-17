@@ -76,7 +76,7 @@ function App() {
       </div>
       {/* <ContactPage/> */}
       <Aboutus/>
-      <ContactForm/>
+      {/* <ContactForm/> */}
     </div>
   );
 }
