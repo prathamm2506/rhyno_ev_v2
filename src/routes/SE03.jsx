@@ -1,4 +1,6 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Prodland from '../components/prodland/Prodland';
 import Spec from '../components/specs/Specs';
 import ColorPicker from '../components/colorpicker/ColorPicker';
@@ -75,6 +77,16 @@ const SE03 = () => {
     { specification: 'Max range (@full speed)', value: '60 km' },
     { specification: 'Other key benefits', value: 'Fire-safe Battery Range prediction Comfortable ride Stable and safe' },
   ];
+
+  const { state } = useLocation();
+
+  useEffect(() => {
+      if (state?.scrollToTop) {
+          // Scroll to top of the page without triggering the scroll-based animations
+          document.documentElement.scrollTop = 0;  // For modern browsers
+          document.body.scrollTop = 0;  // For older browsers
+      }
+  }, [state]);
   
 
 

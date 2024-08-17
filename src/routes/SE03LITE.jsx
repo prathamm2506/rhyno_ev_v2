@@ -20,6 +20,8 @@ import Img12 from '../assets/bf.png'
 import Modelpage_L1 from '../components/Modelpage_L1/Modelpage_L1';
 import Modelpage_L2 from '../components/Modelpage_L2/Modelpage_L2';
 import Modelpage_L3 from '../components/Modelpage_L3/Modelpage_L3';
+import Modelpage_L4 from '../components/Modelpage_L4/Modelpage_L4';
+
 
 const SE03LITE = () => {
   // const mainImgsByColor = {
@@ -90,6 +92,7 @@ const SE03LITE = () => {
       <Modelpage_L1 startState={2} />
       <Modelpage_L2 />
       <Modelpage_L3 specifications={rhynoSpecLite} />
+      <Modelpage_L4 />
       
       {/* <Spec w="1500W" tops="55" range="100" battery="1.8" imges={Img12} /> */}
     </div>

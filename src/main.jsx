@@ -42,7 +42,7 @@ const Root = () => {
           <Routes>
             <Route path='/' element={<App />} />
             <Route path='*' element={<Navigate to="/" />} />
-            <Route path='/SE03' element={<SE03/>}/>
+            <Route path='/SE03' element={<SE03 />}/>
             <Route path='/SE03MAX' element={<SE03MAX/>}/>
             <Route path='/SE03LITE' element={<SE03LITE/>}/>
             <Route path='/Compare' element={<Compare />} />

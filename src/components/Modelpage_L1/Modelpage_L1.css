@@ -30,7 +30,7 @@
   text-transform: uppercase;
   z-index: 16;
   transition: color 0.3s ease;
-  animation: slideDownText 1.5s ease-out forwards;
+  animation: slideDownText 1.5s 0.5s ease-out forwards;
 }
 
 @keyframes slideDownText {

@@ -20,6 +20,8 @@ import Img12 from '../assets/bf.png'
 import Modelpage_L1 from '../components/Modelpage_L1/Modelpage_L1';
 import Modelpage_L2 from '../components/Modelpage_L2/Modelpage_L2';
 import Modelpage_L3 from '../components/Modelpage_L3/Modelpage_L3';
+import Modelpage_L4 from '../components/Modelpage_L4/Modelpage_L4';
+
 
 const SE03MAX = () => {
   // const mainImgsByColor = {
@@ -90,6 +92,7 @@ const SE03MAX = () => {
       <Modelpage_L1 startState={1} />
       <Modelpage_L2 />
       <Modelpage_L3 specifications={rhynoSpecMax} />
+      <Modelpage_L4 />
 
       {/* <Spec w="2000W" tops="65" range="120" battery="2.7" imges={Img12} /> */}
     </div>
