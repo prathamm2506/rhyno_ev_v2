@@ -23,20 +23,26 @@
 .rhyno-text {
   position: absolute;
   margin: 0 auto;
-  top: -50%;
+  top: -10%;
+  opacity: 0;
   font-size: 13vw;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.3); /* Initial color (lightly visible) */
   text-transform: uppercase;
   z-index: 16;
-  opacity: 0;
+  /* opacity: 0; */
+  /* transition: opacity 0.5s ease; */
   transition: color 0.3s ease;
   animation: slideDownText 1s 0.5s ease-out forwards;
 }
 
 @keyframes slideDownText {
+  from {
+    top: -50%; 
+    opacity: 0;
+  }
   to {
-    top: 5%; /* Final position */
+    top: 7%; 
     opacity: 1;
   }
 }
@@ -167,7 +173,17 @@
 @media (max-width: 1024px) {
   .rhyno-text {
     font-size: 15vw;
-    top: 8%;
+  }
+
+  @keyframes slideDownText {
+    from {
+      top: -50%; 
+      opacity: 0;
+    }
+    to {
+      top: 15%; 
+      opacity: 1;
+    }
   }
 
   .imageMD img {
@@ -196,6 +212,17 @@
 @media (max-width: 480px) {
   .rhyno-text {
     font-size: 22vw;
+  }
+
+  @keyframes slideDownText {
+    from {
+      top: -50%;
+      opacity: 0;
+    }
+    to {
+      top: 20%;
+      opacity: 1;
+    }
   }
 
   .color-buttons button {

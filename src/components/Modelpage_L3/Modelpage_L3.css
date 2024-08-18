@@ -66,12 +66,29 @@
 }
 
 @media (max-width: 768px) {
+  .tableMD {
+    width: 95%;
+  }
+
   .table-containerMD .MuiTableCell-root {
-    padding: 12px;
+    padding: 14px;
     font-size: 0.9em;
   }
 
   .spec-cellMD {
     font-size: 0.9em;
+  }
+
+  .table-containerMD .MuiTableRow-root:hover .data-cellMD {
+    font-size: initial;
+    transition: none;
+    border: none;
+  }
+  
+  .table-containerMD .MuiTableRow-root:hover .spec-cellMD {
+    font-weight: initial;
+    font-size: initial;
+    transition: none;
+    border: none;
   }
 }
