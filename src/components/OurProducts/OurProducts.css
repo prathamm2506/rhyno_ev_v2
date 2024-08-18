@@ -746,12 +746,12 @@
     }
 
     .carousel .list .item:nth-child(2) .introductionText {
-        width: 60%;
-        font-size: 1.5em;
+        width: 57%;
+        font-size: 1.1em;
     }
 
     .carousel .list .item .introductionText .des {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 
     .carousel .list .item:nth-child(2) .introductionText .topic {
@@ -767,7 +767,7 @@
     }
 
     .carousel.showDetail .list .item:nth-child(2) .productDetail .des {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.3;
     }
 
@@ -790,7 +790,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     /* .carousel {
         height: 400px;
     } */
@@ -820,7 +820,7 @@
 
     .carousel .list .item:nth-child(2) .introductionText .des {
         height: 110px;
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.4;
     }
 
@@ -829,7 +829,7 @@
     }
 
     .carousel.showDetail .list .item:nth-child(2) .productDetail .des {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.2;
     }
 
