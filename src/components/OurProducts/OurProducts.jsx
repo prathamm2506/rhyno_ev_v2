@@ -90,14 +90,12 @@ const OurProducts = () => {
                 const scrollListener = () => {
                     if (window.scrollY === 0) {
                         window.removeEventListener('scroll', scrollListener);
-                        resolve();  // Resolve the promise once scroll has finished
+                        resolve();
                     }
                 };
-    
-                // Scroll to the top smoothly
+
                 window.scrollTo(0, 0);
-    
-                // Add the scroll event listener
+
                 window.addEventListener('scroll', scrollListener);
             });
         };
