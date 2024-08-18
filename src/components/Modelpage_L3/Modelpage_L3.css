@@ -54,13 +54,15 @@
   background-color: #F9ED32;
   color: #000000;
   border: 1px solid black;
+  font-size: 1.12rem;
+  transition: font-size 0.3s ease;
 }
 
 .table-containerMD .MuiTableRow-root:hover .spec-cellMD {
   font-weight: bold;
-  /* background-color: #F9ED32; */
-  /* color: #000000; */
   border: 1px solid black;
+  font-size: 1.12rem;
+  transition: font-size 0.3s ease;
 }
 
 @media (max-width: 768px) {

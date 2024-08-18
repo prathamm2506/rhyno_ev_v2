@@ -85,9 +85,29 @@ const OurProducts = () => {
     };
 
     const handleCheckout = (to) => {
-        window.scrollTo(0, 0);
-        navigate(to);
+        const scrollToTop = () => {
+            return new Promise((resolve) => {
+                const scrollListener = () => {
+                    if (window.scrollY === 0) {
+                        window.removeEventListener('scroll', scrollListener);
+                        resolve();  // Resolve the promise once scroll has finished
+                    }
+                };
+    
+                // Scroll to the top smoothly
+                window.scrollTo(0, 0);
+    
+                // Add the scroll event listener
+                window.addEventListener('scroll', scrollListener);
+            });
+        };
+    
+        scrollToTop().then(() => {
+            // Navigate to the new page after scrolling to the top
+            navigate(to);
+        });
     };
+    
 
     useEffect(() => {
         const seeMoreButtons = carouselRef.current.querySelectorAll('.seeMoreBtn');
@@ -189,7 +209,7 @@ const OurProducts = () => {
                                     ))}
                                 </div>
                                 <div className="checkout">
-                                    <button onClick={() => handleCheckout(products.nevigatTo)}>CHECKOUT</button>
+                                    <button onClick={() => handleCheckout(product.nevigatTo)}>CHECKOUT</button>
                                 </div>
                             </div>
                         </div>

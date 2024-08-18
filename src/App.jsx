@@ -36,7 +36,7 @@ import ContactPage from "./components/ContactNew/ContactPage";
 import ContactForm from "./components/ContactNew/ContactForm";
 import SpecificationsTable from "./components/compare/SpecificationsTable";
 import FAQ from "./components/faq/Faq";
-import SwiperSlider from "./components/swiperslider/SwiperSlider";
+// import SwiperSlider from "./components/swiperslider/SwiperSlider";
 
 function App() {
   const scrollRef = useRef(null);
