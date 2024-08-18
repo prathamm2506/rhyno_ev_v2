@@ -723,8 +723,13 @@
 
 
 @media screen and (max-width: 576px) {
+    .prodContainer {
+        height: 80%;
+    }
+
     .vertical-menu {
-        margin-left: 1rem;
+        margin-left: 0.3rem;
+        margin-right: 1rem;
     }
 
     .carousel .list .item .introductionText .seeMoreBtn {
@@ -736,15 +741,17 @@
     }
 
     .carousel .list .item img {
-        width: 60%;
+        width: 50%;
+        margin-right: -1.2rem;
     }
 
     .carousel .list .item:nth-child(2) .introductionText {
-        width: 40%;
+        width: 60%;
+        font-size: 1.5em;
     }
 
-    .carousel .list .item:nth-child(2) .introductionText .title {
-        font-size: 1.5em;
+    .carousel .list .item .introductionText .des {
+        font-size: 0.9rem;
     }
 
     .carousel .list .item:nth-child(2) .introductionText .topic {
@@ -756,12 +763,22 @@
     } */
 
     .carousel.showDetail .list .item:nth-child(2) .productDetail .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
-    /* .carousel.showDetail .list .item:nth-child(2) img  {
-        margin-top: -2rem;
-    } */
+    .carousel.showDetail .list .item:nth-child(2) .productDetail .des {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+
+    .carousel.showDetail .list .item:nth-child(2) .productDetail {
+        width: 62%;
+        margin: 0;
+    }
+
+    .carousel.showDetail .list .item:nth-child(2) img  {
+        right: 67%
+    }
 
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
         padding: 8px 12px;
@@ -780,14 +797,17 @@
 
     .carousel .list .item {
         font-size: 7px;
+        left: 10%;
     }
 
     .carousel .list .item img {
-        width: 60%;
+        width: 50%;
+        margin-right: -0rem;
     }
 
     .carousel .list .item:nth-child(2) .introductionText {
-        width: 40%;
+        width: 65%;
+        margin-left: -18%;
     }
 
     .carousel .list .item:nth-child(2) .introductionText .title {
@@ -799,15 +819,32 @@
     }
 
     .carousel .list .item:nth-child(2) .introductionText .des {
-        height: 80px;
+        height: 110px;
+        font-size: 15px;
+        line-height: 1.4;
     }
 
     .carousel.showDetail .list .item:nth-child(2) .productDetail .title {
         font-size: 1.8rem;
     }
 
+    .carousel.showDetail .list .item:nth-child(2) .productDetail .des {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    .carousel.showDetail .list .item:nth-child(2) .productDetail {
+        right: 10%;
+        width: 62%;
+        margin: 0;
+    }
+
+    .carousel.showDetail .list .item:nth-child(2) img  {
+        right: 72%
+    }
+
     .carousel .list .item .introductionText .seeMoreBtn {
-        font-size: x-small;
+        font-size: small;
     }
 
     .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
