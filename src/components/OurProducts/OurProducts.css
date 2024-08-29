@@ -749,7 +749,7 @@
 
 @media screen and (max-width: 576px) {
     .prodContainer {
-        height: 80%;
+        height: 95%;
     }
 
     .vertical-menu {
@@ -774,7 +774,7 @@
     .carousel .list .item:nth-child(2) .introductionText {
         width: 80%;
         font-size: 1.1em;
-        margin: 3rem 0 0 -2rem;
+        margin: 2rem 0 0 -2rem;
     }
 
     .carousel .list .item .introductionText .des {
@@ -835,7 +835,7 @@
     .carousel .list .item:nth-child(2) .introductionText {
         width: 85%;
         margin-left: -18%;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
     }
 
     .carousel .list .item:nth-child(2) .introductionText .title {
