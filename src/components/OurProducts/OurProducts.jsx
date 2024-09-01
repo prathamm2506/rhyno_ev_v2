@@ -207,17 +207,20 @@ const OurProducts = () => {
                                     ))}
                                 </div>
                                 <div className="checkout">
-                                    <button onClick={() => handleCheckout(product.nevigatTo)}>CHECKOUT</button>
+                                    <button className='buttonCh back' onClick={handleBackClick}>
+                                        See All &#8599;
+                                    </button>
+                                    <button className='buttonCh' onClick={() => handleCheckout(product.nevigatTo)}>CHECKOUT</button>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
-                <div className="arrows">
+                {/* <div className="arrows">
                     <button id="back" onClick={handleBackClick}>
                         See All &#8599;
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     );
