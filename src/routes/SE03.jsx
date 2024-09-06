@@ -23,6 +23,7 @@ import Modelpage_L1 from '../components/Modelpage_L1/Modelpage_L1';
 import Modelpage_L2 from '../components/Modelpage_L2/Modelpage_L2';
 import Modelpage_L3 from '../components/Modelpage_L3/Modelpage_L3';
 import Modelpage_L4 from '../components/Modelpage_L4/Modelpage_L4';
+import ContactForm from '../components/ContactNew/ContactForm';
 
 
 
@@ -108,7 +109,7 @@ const SE03 = () => {
       <Modelpage_L2 />
       <Modelpage_L3 specifications={rhynoSpec} />
       <Modelpage_L4 /> 
-
+      <ContactForm/>
 
       {/* <Spec 
         w="1500W" tops="55" range="150" battery="2.7" imges={Img12}

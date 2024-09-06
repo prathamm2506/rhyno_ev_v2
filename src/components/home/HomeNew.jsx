@@ -21,7 +21,7 @@ function HomeNew() {
   };
 
   return (
-    <div className="flex overflow-hidden relative flex-col items-center px-16 pt-20 mt-24 pb-10 min-h-[80vh] max-md:px-5">
+    <div className="flex overflow-hidden relative flex-col items-center px-16 pt-20 mt-20 pb-10 min-h-[80vh] max-md:px-5">
       <img
         loading="lazy"
         src={images[currentIndex]}

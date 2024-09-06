@@ -1,6 +1,7 @@
 import React from 'react'
 import About from '../components/about/About'
 import BuyNow from '../components/buynow/BuyNow'
+import ContactForm from '../components/ContactNew/ContactForm'
 
 const AboutUs = () => {
   return (
@@ -8,6 +9,7 @@ const AboutUs = () => {
       {/* <AboutPage/> */}
       <About/>
       <BuyNow/>
+      <ContactForm/>
     </div>
   )
 }

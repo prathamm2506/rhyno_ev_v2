@@ -1,22 +1,46 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import './ContactForm.css';
 import img1 from '../../assets/contact.png';
+import emailjs from 'emailjs-com'
+import { useNavigate } from "react-router-dom";
+
 
 const ContactForm = () => {
+  const form = useRef();
+
+ 
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_r6tppud', 'template_syhmdrq', form.current, 'dlfvxaLtJUSBW3FmH')
+    e.target.reset()
+    setLoading(true);
+
+    // Simulate a loading state for 2 seconds
+    setTimeout(() => {
+      setLoading(false);
+      navigate("/");
+    }, 2000);
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen text-white">
       <div className="flex flex-col md:flex-row h-screen w-full">
         {/* Left Side - Form */}
         <div className="w-full md:w-1/2 px-8 md:px-16 py-28 bg-black bg-opacity-70 flex flex-col justify-between">
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={sendEmail} ref={form}>
             <div className="relative border-class2">
               <input
                 type="text"
-                id="name"
                 name="name"
                 className="block w-full px-0.5 py-2 bg-transparent border-b-2 border-gray-600 text-gray-300 placeholder-transparent focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                 placeholder="Your Name"
                 style={{ outline: 'none' }} // Ensure no outline
+                required
               />
               <label
                 htmlFor="name"
@@ -29,11 +53,11 @@ const ContactForm = () => {
             <div className="relative border-class2">
               <input
                 type="email"
-                id="email"
                 name="email"
                 className="block w-full px-0.5 py-2 bg-transparent border-b-2 border-gray-600 text-gray-300 placeholder-transparent focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                 placeholder="E-mail"
                 style={{ outline: 'none' }} // Ensure no outline
+                required
               />
               <label
                 htmlFor="email"
@@ -46,10 +70,10 @@ const ContactForm = () => {
             <div className="relative border-class2">
               <input
                 type="text"
-                id="phone"
-                name="phone"
+                name="phno"
                 className="block w-full px-0.5 py-2 bg-transparent border-b-2 border-gray-600 text-gray-300 placeholder-transparent focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                 placeholder="Phone Number"
+                required
                 style={{ outline: 'none' }} // Ensure no outline
               />
               <label
@@ -62,12 +86,12 @@ const ContactForm = () => {
 
             <div className="relative border-class2">
               <textarea
-                id="message"
-                name="message"
+                name="msg"
                 rows="4"
                 className="block w-full px-0.5 py-2 bg-transparent border-b-2 border-gray-600 text-gray-300 placeholder-transparent focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                 placeholder="Message"
                 style={{ outline: 'none' }} // Ensure no outline
+                required
               ></textarea>
               <label
                 htmlFor="message"

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom/client'
+import ReactDOM from 'react-dom/client';
 import App from './App.jsx'
 import './index.css'
 import { BrowserRouter, Route, Routes, Navigate, useLocation } from 'react-router-dom';
@@ -24,14 +24,13 @@ import FAQ from './components/faq/Faq.jsx';
 import Faqs from './routes/Faqs.jsx';
 
 
-const Root = () => {
   // const [isLoading, setIsLoading] = useState(false);
 
   // const handleLoadingComplete = () => {
   //   setIsLoading(false);
   // };
 
-  return (
+  ReactDOM.createRoot(document.getElementById('root')).render (
     <BrowserRouter>
       {/* {isLoading ? (
         <PreLoader onComplete={handleLoadingComplete} />
@@ -53,7 +52,7 @@ const Root = () => {
             <Route path='/Careers' element={<CareersPage />} />
             <Route path='/FAQ' element={<Faqs />} />
           </Routes>
-          <ContactFormTop />
+          {/* <ContactFormTop /> */}
           <ContactFormBottom />
           {/* <Footer /> */}
           {/* <FooterNew /> */}
@@ -62,10 +61,3 @@ const Root = () => {
       {/* )} */}
     </BrowserRouter>
   );
-};
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-    <Root />
-  // </React.StrictMode>
-);
