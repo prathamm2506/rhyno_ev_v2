@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import IMG1 from "../../assets/home.png";
-import IMG2 from "../../assets/1.png"; // Add your other images here
-import IMG3 from "../../assets/2.png";
-import IMG4 from "../../assets/3.png";
+import IMG1 from "../../assets/home1.jpg";
+import IMG2 from "../../assets/home.png"; // Add your other images here
+import IMG3 from "../../assets/home2.jpg";
+import IMG4 from "../../assets/home3.jpg";
 
 function HomeNew() {
   const images = [IMG1, IMG2, IMG3, IMG4]; // Array of images
@@ -21,7 +21,7 @@ function HomeNew() {
   };
 
   return (
-    <div className="flex overflow-hidden relative flex-col items-center px-16 pt-20 mt-20 pb-10 min-h-[80vh] max-md:px-5">
+    <div className="flex overflow-hidden relative flex-col items-center px-16 pt-20 mt-20 pb-10 min-h-[90vh] max-md:px-5">
       <img
         loading="lazy"
         src={images[currentIndex]}
