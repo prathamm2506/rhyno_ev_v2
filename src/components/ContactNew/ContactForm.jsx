@@ -142,7 +142,7 @@ const ContactForm = () => {
                 WRITE TO US IN CASE OF ANY QUERY
               </p>
               <h1 className="text-4xl font-bold">
-                CONTACT <span className="text-yellow-500">US</span>
+              We’re  <span className="text-yellow-500">listening</span>
               </h1>
               <hr className="border-t-2 border-gray-500 my-4 w-16 mx-auto" />
             </div>

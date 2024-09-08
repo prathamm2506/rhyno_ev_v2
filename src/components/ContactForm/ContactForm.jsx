@@ -61,9 +61,7 @@ const ContactForm = () => {
                             <p className='email'><i class="fa-regular fa-envelope mr-2"></i> info@Rhyno.in</p>
                         </div>
                         <div className="address-container">
-                            <p>Rhyno Wheels Private Limited,
-                                UG Hostel Gate 2,<br /> Behind PDEU, Raisan,
-                                Gandhinagar, Gujarat
+                            <p>Rhyno Wheels Private Limited, 05, Jay Industrial Park, Nana Chiloda Ring Road Circle,  Muthiya, Ahmedabad, Gujarat, India. 382330.
                             </p>
                         </div>
                     </div>

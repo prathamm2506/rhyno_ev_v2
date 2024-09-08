@@ -215,9 +215,9 @@
     height: 100vh;
     background-color: #252525;
     color: #fff;
-    padding: 3rem 5rem 3rem 8rem;
+    padding: 0rem 5rem 3rem 8rem;
     text-align: center;
-    margin: 5rem auto;
+    margin: 3rem auto;
     font-family: var(--poppins);
 }
 
@@ -240,11 +240,11 @@
 }
 
 .headerText {
-    font-size: 3.3vw;
+    font-size: 3vw;
     font-weight: 400;
     /* color: #888; */
     text-align: left;
-    margin-bottom: 10vh;
+    margin-bottom: 8vh;
     line-height: 1.1;
 }
 

@@ -73,8 +73,7 @@ const GTX = () => {
     const navigate = useNavigate();
 
     const handleLearnMoreClick = () => {
-        navigate('/SE03');
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 1550);
     };
 
     return (
@@ -85,12 +84,11 @@ const GTX = () => {
             </div> */}
             <div className="gtx-content">
                 <div className="gtx-details">
-                    <div className="headerText">MORE THRILLS<br/> PER SECOND</div>
+                    <div className="headerText">The Thrilling Machine</div>
                     <div className="badge">ALL NEW</div>
-                    <h2 className="title">RHYNO</h2>
+                    <h2 className="title">RHYNO GTX Series</h2>
                     <p className="description">
-                        Our digital display keeps you informed with real-time range and fault indicators.
-                        So you can enjoy your ride without anxiety about the remaining range.
+                    For those who don’t like a boring scooter! Immerse yourself into a never-before-experience. Stand out from the crowd. 
                     </p>
                     {/* <div className="price">Starting at <span>Rs. 102,220/-</span></div> */}
                     <div className="buttons">

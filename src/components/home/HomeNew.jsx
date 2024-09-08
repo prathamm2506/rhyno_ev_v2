@@ -45,9 +45,9 @@ function HomeNew() {
           className="shrink-0 self-end mt-16 max-w-full aspect-[3.45] w-[119px] max-md:mt-10 cursor-pointer"
           onClick={handleNextClick}
         /> */}
-        <div className="flex flex-row gap-2 py-5">
-          <button onClick={handlePrevClick} className="text-3xl px-4 py-1 outline-none border-none bg-slate-400 hover:bg-slate-300 focus:outline-none focus:border-none"><i class="fa-solid fa-angle-left"></i></button>
-        <button onClick={handleNextClick} className="text-3xl px-4 py-1 outline-none border-none bg-slate-400 hover:bg-slate-300 focus:outline-none focus:border-none"><i class="fa-solid fa-angle-right"></i></button>
+        <div className="flex flex-row gap-2 py-5 justify-center items-center w-full">
+          <button onClick={handlePrevClick} className="text-3xl px-4 py-1 outline-none border-none bg-slate-600 hover:bg-slate-300 focus:outline-none focus:border-none"><i class="fa-solid fa-angle-left"></i></button>
+        <button onClick={handleNextClick} className="text-3xl px-4 py-1 outline-none border-none bg-slate-600 hover:bg-slate-300 focus:outline-none focus:border-none"><i class="fa-solid fa-angle-right"></i></button>
         </div>
       </div>
     </div>
