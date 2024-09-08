@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import IMG1 from "../../assets/home1.jpg";
-import IMG2 from "../../assets/home.png"; // Add your other images here
-import IMG3 from "../../assets/home2.jpg";
-import IMG4 from "../../assets/home3.jpg";
+import IMG1 from "../../assets/home.png";
+import IMG2 from "../../assets/home2.jpg"; // Add your other images here
+import IMG3 from "../../assets/home3.jpg";
+import IMG4 from "../../assets/home2.jpg";
 
 function HomeNew() {
   const images = [IMG1, IMG2, IMG3, IMG4]; // Array of images
