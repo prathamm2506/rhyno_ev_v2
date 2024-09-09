@@ -90,8 +90,8 @@ const SE03MAX = () => {
         maxSpeed={maxSpeed}
       /> */}
 
-      <Modelpage_L1 startState={1} />
       <Modelpage_L2 />
+      <Modelpage_L1 startState={1} />
       <Modelpage_L3 specifications={rhynoSpecMax} />
       <Modelpage_L4 />
       <ContactForm/>

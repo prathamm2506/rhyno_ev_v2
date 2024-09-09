@@ -90,8 +90,8 @@ const SE03LITE = () => {
         maxSpeed={maxSpeed}
       /> */}
 
-      <Modelpage_L1 startState={2} />
       <Modelpage_L2 />
+      <Modelpage_L1 startState={2} />
       <Modelpage_L3 specifications={rhynoSpecLite} />
       <Modelpage_L4 />
       <ContactForm/>

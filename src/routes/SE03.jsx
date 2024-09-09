@@ -105,8 +105,8 @@ const SE03 = () => {
         maxSpeed={maxSpeed}
       /> */}
 
-      <Modelpage_L1 startState={3} />
       <Modelpage_L2 />
+      <Modelpage_L1 startState={3} />
       <Modelpage_L3 specifications={rhynoSpec} />
       <Modelpage_L4 /> 
       <ContactForm/>

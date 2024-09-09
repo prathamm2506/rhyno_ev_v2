@@ -13,7 +13,7 @@ const Modelpage_L2 = () => {
   };
 
   useEffect(() => {
-    const thresholdValue = window.innerWidth <= 768 ? 0.3 : 0.87;
+    const thresholdValue = window.innerWidth <= 768 ? 0 : 0;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -39,7 +39,7 @@ const Modelpage_L2 = () => {
     <div className={"gtx-containerMD"} ref={componentRef}>
       <div className="gtx-text-section">
         <h1 className={`${isVisible ? 'visible' : ''}`}>Let’s Elevate Your Ride Experience with Rhyno Where Superiority Meets Comfort</h1>
-        <h2 className={`gtx-title ${isVisible ? 'glow' : ''}`}>GTX</h2>
+        <h2 className={`gtx-title ${isVisible ? 'glow' : ''}`}>Rhyno GTX Series</h2>
         <div className={`info-section ${isVisible ? 'visible' : ''}`} onClick={toggleShowMore}>
           <p>Indulge in the perfect harmony of power and range with this Rhyno</p>
           {showMore ? <FaChevronUp className="chevron-icon" /> : <FaChevronDown className="chevron-icon" />}
