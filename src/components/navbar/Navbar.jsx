@@ -88,7 +88,7 @@ const Navbar = () => {
         </li>
         <li><Link to="/Compare" onClick={() => { closeNav(); handleClick(); }}>Compare</Link></li>
         <li><Link to='/AboutUs' onClick={() => { closeNav(); handleClick(); }}>About Us</Link></li>
-        <li><Link to='/ContactUs' onClick={() => { closeNav(); handleClick(); }}>Contact Us</Link></li>
+        <li><Link to='/Contact-us' onClick={() => { closeNav(); handleClick(); }}>Contact Us</Link></li>
       </ul>
       <button className="search-icon btn btn-nav" id="searchIcon"><a href="https://wa.me/9023987528" target='_blank'> Order Now </a></button>
       <i className="fas fa-bars navOpenBtn" onClick={openNav} id="nav-toggler"></i>

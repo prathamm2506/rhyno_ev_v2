@@ -50,7 +50,7 @@ import Faqs from './routes/Faqs.jsx';
             <Route path='/Rentals' element={<Rentals />} />
             <Route path='/Privacy' element={<PrivacyPolicy />} />
             <Route path='/Careers' element={<CareersPage />} />
-            <Route path='/FAQ' element={<Faqs />} />
+            <Route path='/Contact-us' element={<Faqs />} />
           </Routes>
           {/* <ContactFormTop /> */}
           <ContactFormBottom />

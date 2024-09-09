@@ -68,9 +68,9 @@ const ContactForm = () => {
                     <div className="company-links">
                         <p>Company</p>
                         <ul className="link-list">
-                            <li><Link to="/FAQ" className="link" onClick={handleClick}>FAQ</Link></li>
+                            <li><Link to="/Contact-us" className="link" onClick={handleClick}>Contact US</Link></li>
                             <li><Link to="/Careers" className="link" onClick={handleClick}>Careers</Link></li>
-                            <li><Link to="/ContactUs" className="link" onClick={handleClick}>Contact Us</Link></li>
+                            {/* <li><Link to="/ContactUs" className="link" onClick={handleClick}>Contact Us</Link></li> */}
                             <li><Link to="/Privacy" className="link" onClick={handleClick}>Privacy Policy</Link></li>
                             <li><Link to="/Rentals" className="link" onClick={handleClick}>Rentals</Link></li>
                         </ul>
