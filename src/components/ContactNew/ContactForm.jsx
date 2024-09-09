@@ -1,23 +1,19 @@
 import React, { useRef, useState } from "react";
 import './ContactForm.css';
 import img1 from '../../assets/contact.png';
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
 import { useNavigate } from "react-router-dom";
-
 
 const ContactForm = () => {
   const form = useRef();
-
- 
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
-  
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_r6tppud', 'template_syhmdrq', form.current, 'dlfvxaLtJUSBW3FmH')
-    e.target.reset()
+    emailjs.sendForm('service_r6tppud', 'template_syhmdrq', form.current, 'dlfvxaLtJUSBW3FmH');
+    e.target.reset();
     setLoading(true);
 
     // Simulate a loading state for 2 seconds
@@ -33,13 +29,14 @@ const ContactForm = () => {
         {/* Left Side - Form */}
         <div className="w-full md:w-1/2 px-8 md:px-16 py-28 bg-black bg-opacity-70 flex flex-col justify-between">
           <form className="space-y-6" onSubmit={sendEmail} ref={form}>
+            {/* Existing input fields */}
             <div className="relative border-class2">
               <input
                 type="text"
                 name="name"
                 className="block w-full px-0.5 py-2 bg-transparent border-b-2 border-gray-600 text-gray-300 placeholder-transparent focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                 placeholder="Your Name"
-                style={{ outline: 'none' }} // Ensure no outline
+                style={{ outline: 'none' }}
                 required
               />
               <label
@@ -56,7 +53,7 @@ const ContactForm = () => {
                 name="email"
                 className="block w-full px-0.5 py-2 bg-transparent border-b-2 border-gray-600 text-gray-300 placeholder-transparent focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                 placeholder="E-mail"
-                style={{ outline: 'none' }} // Ensure no outline
+                style={{ outline: 'none' }}
                 required
               />
               <label
@@ -74,7 +71,7 @@ const ContactForm = () => {
                 className="block w-full px-0.5 py-2 bg-transparent border-b-2 border-gray-600 text-gray-300 placeholder-transparent focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                 placeholder="Phone Number"
                 required
-                style={{ outline: 'none' }} // Ensure no outline
+                style={{ outline: 'none' }}
               />
               <label
                 htmlFor="phone"
@@ -84,13 +81,58 @@ const ContactForm = () => {
               </label>
             </div>
 
+            {/* Radio Button Group */}
+            <div className="flex items-center space-x-4">
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="option"
+                  value="productenquiry"
+                  className="mr-2"
+                  required
+                />
+                Product Enquiry
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="option"
+                  value="Dealership"
+                  className="mr-2"
+                  required
+                />
+                Dealership
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="option"
+                  value="Rentals"
+                  className="mr-2"
+                  required
+                />
+                Rentals
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="option"
+                  value="Investment"
+                  className="mr-2"
+                  required
+                />
+                Investment
+              </label>
+            </div>
+
+            {/* Textarea */}
             <div className="relative border-class2">
               <textarea
                 name="msg"
                 rows="4"
                 className="block w-full px-0.5 py-2 bg-transparent border-b-2 border-gray-600 text-gray-300 placeholder-transparent focus:outline-none focus:ring-0 focus:border-yellow-500 peer"
                 placeholder="Message"
-                style={{ outline: 'none' }} // Ensure no outline
+                style={{ outline: 'none' }}
                 required
               ></textarea>
               <label
@@ -112,17 +154,17 @@ const ContactForm = () => {
           <div className="flex justify-center mt-8 space-x-4">
             {/* Placeholder for Icons */}
             <div className="bg-gray-800 p-2 rounded-full">
-              <i 
+              <i
                 className="fa-brands fa-instagram w-6 h-6 flex justify-center items-center text-2xl"
               />
             </div>
             <div className="bg-gray-800 p-2 rounded-full">
-            <i 
+              <i
                 className="fa-brands fa-facebook w-6 h-6 flex justify-center items-center text-2xl"
               />
             </div>
             <div className="bg-gray-800 p-2 rounded-full">
-            <i 
+              <i
                 className="fa-brands fa-x-twitter w-6 h-6 flex justify-center items-center text-2xl"
               />
             </div>
@@ -142,7 +184,7 @@ const ContactForm = () => {
                 WRITE TO US IN CASE OF ANY QUERY
               </p>
               <h1 className="text-4xl font-bold">
-              We’re  <span className="text-yellow-500">listening</span>
+                We’re <span className="text-yellow-500">listening</span>
               </h1>
               <hr className="border-t-2 border-gray-500 my-4 w-16 mx-auto" />
             </div>
