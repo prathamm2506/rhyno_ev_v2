@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Img1 from '../../assets/webp/Product1.webp';
-import Img2 from '../../assets/webp/Product2.webp';
-import Img3 from '../../assets/webp/product3.webp';
+import Img1 from '../../assets/h1.png';
+import Img2 from '../../assets/h2.png';
+import Img3 from '../../assets/h3.png';
 // import rightArrow from './right-arrow1.svg';
 // import leftArrow from './left-arrow1.svg';
 import { IoIosArrowDropleft } from "react-icons/io";
