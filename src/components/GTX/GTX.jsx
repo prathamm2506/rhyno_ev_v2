@@ -88,7 +88,7 @@ const GTX = () => {
                     <div className="badge">ALL NEW</div>
                     <h2 className="title">RHYNO GTX Series</h2>
                     <p className="description">
-                    For those who don’t like a boring scooter! Immerse yourself into a never-before-experience. Stand out from the crowd. 
+                    For those who don’t like a boring scooter! Immerse yourself into a never-before-experience. Stand out from the crowd. Now
                     </p>
                     {/* <div className="price">Starting at <span>Rs. 102,220/-</span></div> */}
                     <div className="buttons">

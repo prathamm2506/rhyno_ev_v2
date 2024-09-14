@@ -262,7 +262,7 @@
 }
 
 .title {
-    font-size: 5rem;
+    font-size: var(--medium);
     font-weight: bold;
     margin: 10px 0;
     text-align: left;
