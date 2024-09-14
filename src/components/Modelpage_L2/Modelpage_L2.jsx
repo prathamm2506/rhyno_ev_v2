@@ -38,7 +38,7 @@ const Modelpage_L2 = () => {
   return (
     <div className={"gtx-containerMD"} ref={componentRef}>
       <div className="gtx-text-section">
-        <h1 className={`${isVisible ? 'visible' : ''}`}>Let’s Elevate Your Ride Experience with Rhyno Where Superiority Meets Comfort</h1>
+        {/* <h1 className={`${isVisible ? 'visible' : ''}`}>Let’s Elevate Your Ride Experience with Rhyno Where Superiority Meets Comfort</h1> */}
         <h2 className={`gtx-title ${isVisible ? 'glow' : ''}`}>Rhyno GTX Series</h2>
         <div className={`info-section ${isVisible ? 'visible' : ''}`} onClick={toggleShowMore}>
           <p>Indulge in the perfect harmony of power and range with this Rhyno</p>
