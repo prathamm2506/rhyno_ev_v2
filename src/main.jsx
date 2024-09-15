@@ -22,6 +22,8 @@ import ContactFormBottom from './components/ContactForm/ContactForm.jsx';
 import FooterNew from './components/footer/FooterNew.jsx';
 import FAQ from './components/faq/Faq.jsx';
 import Faqs from './routes/Faqs.jsx';
+import Refund from './routes/Refund.jsx';
+import Terms from './routes/Terms.jsx';
 
 
   // const [isLoading, setIsLoading] = useState(false);
@@ -51,6 +53,8 @@ import Faqs from './routes/Faqs.jsx';
             <Route path='/Privacy' element={<PrivacyPolicy />} />
             <Route path='/Careers' element={<CareersPage />} />
             <Route path='/Contact-us' element={<Faqs />} />
+            <Route path='/Refund' element={<Refund />} />
+            <Route path='/Terms' element={<Terms />} />
           </Routes>
           {/* <ContactFormTop /> */}
           <ContactFormBottom />

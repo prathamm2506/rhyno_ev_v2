@@ -37,10 +37,15 @@ import ContactForm from "./components/ContactNew/ContactForm";
 import SpecificationsTable from "./components/compare/SpecificationsTable";
 import FAQ from "./components/faq/Faq";
 import SwiperSlider from "./components/swiperslider/SwiperSlider";
+import Formmain from "./components/popupform/Formmain";
 // import SwiperSlider from "./components/swiperslider/SwiperSlider";
 
 function App() {
   const scrollRef = useRef(null);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const openForm = () => setIsFormOpen(true);
+  const closeForm = () => setIsFormOpen(false);
   // useScrollSnap({ ref: scrollRef, duration: 0.3, delay: 0.1});
   return (
     <div>
@@ -80,6 +85,16 @@ function App() {
       <Aboutus/>
       {/* <ContactForm/> */}
       <ContactForm/>
+      {/* <div className="flex justify-center items-center h-screen">
+      <button 
+        onClick={openForm} 
+        className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition-colors"
+      >
+        Open Contact Form
+      </button>
+      <Formmain isOpen={isFormOpen} onClose={closeForm} />
+    </div> */}
+    <Formmain/>
     </div>
   );
 }

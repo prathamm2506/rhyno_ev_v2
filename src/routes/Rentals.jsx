@@ -16,6 +16,7 @@
 // export default Rentals
 import React, { useState, useRef, useEffect } from 'react';
 import img1 from '../assets/about.png';
+import { Link } from 'react-router-dom';
 // import './Aboutus.css';
 
 const Rentals = () => {
@@ -35,8 +36,8 @@ const Rentals = () => {
         <p className="text-lg leading-relaxed text-justify">
         We're also offering hourly rentals at PDEU, Gandhinagar. Just download our app and book your ride.
         </p>
-        <p className="text-lg leading-relaxed text-justify">Want to bring Rhyno to your campus? Write us to request a Rhyno hourly rental service.
-        Want to start your own rental business? Contact us to become a partner through the franchise today!
+        <p className="text-lg leading-relaxed text-justify">Want to bring Rhyno to your campus? <Link className='text-gray-400' to="/Contact-us">Write us</Link>  to request a Rhyno hourly rental service.
+        Want to start your own rental business? <Link className='text-gray-400' to="/Contact-us">Contact us</Link> to become a partner through the franchise today!
         </p>
 
         {/* <div className="space-y-4">

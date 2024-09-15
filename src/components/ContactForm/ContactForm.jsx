@@ -73,8 +73,8 @@ const ContactForm = () => {
                             {/* <li><Link to="/ContactUs" className="link" onClick={handleClick}>Contact Us</Link></li> */}
                             <li><Link to="/Privacy" className="link" onClick={handleClick}>Privacy Policy</Link></li>
                             <li><Link to="/Rentals" className="link" onClick={handleClick}>Rentals</Link></li>
-                            <li><Link to="/Rentals" className="link" onClick={handleClick}>Refund Policy</Link></li>
-                            <li><Link to="/Rentals" className="link" onClick={handleClick}>Terms of Service</Link></li>
+                            <li><Link to="/Refund" className="link" onClick={handleClick}>Refund Policy</Link></li>
+                            <li><Link to="/Terms" className="link" onClick={handleClick}>Terms of Service</Link></li>
                             <li><Link to="/Rentals" className="link" onClick={handleClick}>Media</Link></li>
                         </ul>
                     </div>
