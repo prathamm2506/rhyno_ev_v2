@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 import emailjs from 'emailjs-com';
-
+import './Formmain.css'
 const Formmain = () => {
   const form = useRef();
   const navigate = useNavigate();
@@ -31,14 +31,36 @@ const Formmain = () => {
       .catch(error => console.error('Email sending error:', error));
   };
 
+  const customSelectStyles = {
+    control: (provided) => ({
+      ...provided,
+      backgroundColor: 'black',
+      color: 'white',
+      borderColor: 'gray',
+    }),
+    singleValue: (provided) => ({
+      ...provided,
+      color: 'white',
+    }),
+    menu: (provided) => ({
+      ...provided,
+      backgroundColor: 'black',
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isFocused ? '#333' : 'black',
+      color: 'white',
+    }),
+  };
+
   return (
-    <div className="flex items-center justify-center w-full min-h-screen bg-gray-800 p-4">
+    <div>
       {/* Button to show the form */}
       <button
         onClick={() => setFormVisible(true)}
-        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+        className="search-icon btn btn-nav" id="searchIcon"
       >
-        Show Form
+        Order Now
       </button>
 
       {loading && (
@@ -50,9 +72,9 @@ const Formmain = () => {
       {/* Conditionally render the form as a popup */}
       {isFormVisible && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="relative bg-white rounded-lg shadow-lg w-full max-w-4xl p-8">
+          <div className="relative bg-black rounded-lg shadow-lg w-full max-w-4xl p-8">
             <form ref={form} onSubmit={sendEmail} className="space-y-4">
-              <h1 className="text-2xl font-bold text-gray-800">Get Details</h1>
+              <h1 className="text-2xl font-bold text-white">Get Details</h1>
 
               <div className="flex space-x-4">
                 <input
@@ -60,14 +82,14 @@ const Formmain = () => {
                   type="text"
                   placeholder="First Name"
                   required
-                  className="w-1/2 p-2 border border-gray-300 rounded-md"
+                  className="w-1/2 p-2 bg-black text-white borderbottommainform"
                 />
                 <input
                   name="lastname"
                   type="text"
                   placeholder="Last Name"
                   required
-                  className="w-1/2 p-2 border border-gray-300 rounded-md"
+                  className="w-1/2 p-2 borderbottommainform bg-black text-white"
                 />
               </div>
 
@@ -77,7 +99,7 @@ const Formmain = () => {
                   type="email"
                   placeholder="Email"
                   required
-                  className="w-full p-2 border border-gray-300 rounded-md"
+                  className="w-full p-2 borderbottommainform bg-black text-white"
                 />
               </div>
 
@@ -86,6 +108,7 @@ const Formmain = () => {
                 placeholder="Choose Model"
                 required
                 name="model"
+                styles={customSelectStyles}
                 className="w-full"
               />
 
@@ -95,13 +118,13 @@ const Formmain = () => {
                   cols="30"
                   rows="5"
                   placeholder="Enter company description"
-                  className="w-full p-2 border border-gray-300 rounded-md"
+                  className="w-full p-2 borderbottommainform bg-black text-white"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md"
+                className="w-full py-2 text-black bg-[#F9ED32] hover:bg-[#f4e027] rounded-md"
               >
                 Submit
               </button>
@@ -110,7 +133,7 @@ const Formmain = () => {
             {/* Close button */}
             <button
               onClick={() => setFormVisible(false)}
-              className="absolute top-4 right-4 text-black text-2xl font-bold z-50"
+              className="absolute top-4 right-4 text-white text-2xl font-bold z-50"
             >
               &times;
             </button>
