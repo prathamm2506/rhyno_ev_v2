@@ -38,6 +38,7 @@ import SpecificationsTable from "./components/compare/SpecificationsTable";
 import FAQ from "./components/faq/Faq";
 import SwiperSlider from "./components/swiperslider/SwiperSlider";
 import Formmain from "./components/popupform/Formmain";
+import TestimonialCard from "./components/testimonialcard/TestimonialCard";
 // import SwiperSlider from "./components/swiperslider/SwiperSlider";
 
 function App() {
@@ -83,6 +84,8 @@ function App() {
       </div>
       {/* <ContactPage/> */}
       <Aboutus/>
+      
+    <TestimonialCard/>
       {/* <ContactForm/> */}
       <ContactForm/>
       {/* <div className="flex justify-center items-center h-screen">
@@ -94,7 +97,7 @@ function App() {
       </button>
       <Formmain isOpen={isFormOpen} onClose={closeForm} />
     </div> */}
-    <Formmain/>
+    {/* <Formmain/> */}
     </div>
   );
 }
