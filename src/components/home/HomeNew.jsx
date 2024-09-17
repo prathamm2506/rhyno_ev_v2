@@ -14,7 +14,7 @@ function HomeNew() {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 10000); // 10 seconds
+    }, 3000); // 10 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, [images.length]);

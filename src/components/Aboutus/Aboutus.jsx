@@ -1,8 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import img1 from '../../assets/about.png';
 import './Aboutus.css';
+import { Link } from 'react-router-dom';
 
 const Aboutus = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -16,9 +20,6 @@ const Aboutus = () => {
         <p className="text-lg leading-relaxed text-justify">
         Rhyno is built different. We have made it super easy to repair and maintain. Our commitment extends beyond engineering reliable vehicles. With Rhyno, you get one one-week service commitment that ensures a peaceful ownership experience. We care about your time. Our people know how to fix your Rhyno quickly. Our dedicated technical team stands ready to assist, ensuring a hassle-free experience for every dealer and fleet partner.
         </p>
-        {/* <p className="text-lg leading-relaxed text-justify">
-          With our first product, we've taken a bold step to create something more than just a vehicle; it's a unique experience of elegance, comfort, and style, addressing the pitfalls of conventional electric scooters. Our design prioritises safety, eliminating concerns of fires and ensuring a longer battery lifespan with our battery technology. Perfectly suited for fleet operators, especially in tourist-centric locations like Goa, our rugged yet aesthetically appealing scooters are engineered for longevity and reliability. Join us as we pioneer a new era in sustainable and dependable electric transportation.
-        </p> */}
 
         <div className="space-y-4">
           <Accordion
@@ -30,18 +31,31 @@ const Aboutus = () => {
           />
           <Accordion
             title="What if you don’t deliver on your commitment?"
-            content="Running a sane, sustainable business is part of our commitment to you. We are not in the circus of valuations and hyper-expansion. We chose to go slow and profitable. Your satisfaction will lead us to more sales through referrals. "
+            content="Running a sane, sustainable business is part of our commitment to you. We are not in the circus of valuations and hyper-expansion. We chose to go slow and profitable. Your satisfaction will lead us to more sales through referrals."
             index={1}
             activeIndex={activeIndex}
             toggleAccordion={toggleAccordion}
           />
           <Accordion
             title="Can a local mechanic repair my Rhyno?"
-            content="Yes. Even you can! We’ve got you covered with a comprehensive service and repair manual. Additionally, our YouTube channel has all the tutorial videos about service and repairs. "
+            content="Yes. Even you can! We’ve got you covered with a comprehensive service and repair manual. Additionally, our YouTube channel has all the tutorial videos about service and repairs."
             index={3}
             activeIndex={activeIndex}
             toggleAccordion={toggleAccordion}
           />
+        </div>
+
+        {/* Buttons Row */}
+        <div className="flex justify-between space-x-4 mt-8">
+        <Link to="/Contact-us" onClick={() => { handleClick(); }}><button className="btnabout">
+            Book a Test Ride
+          </button></Link>
+          <Link to="/Contact-us" onClick={() => { handleClick(); }}><button className="btnabout">
+            Rent For a Week
+          </button></Link>
+          <Link to="/Contact-us" onClick={() => { handleClick(); }}><button className="btnabout">
+            Apply For Dealership
+          </button></Link>
         </div>
       </div>
 
