@@ -120,18 +120,18 @@ const OurProducts = () => {
     const hasRun = useRef(false); // Track if the effect has already run
 
     useEffect(() => {
-        const handleEnter = () => {
-            showSlider('prev');
-            setTimeout(() => {
-                showSlider('prev');
-                setTimeout(() => {
-                    showSlider('prev');
-                    setTimeout(() => {
-                        showSlider('next');
-                    }, 2000);
-                }, 2000);
-            }, 2000);
-        };
+        // const handleEnter = () => {
+        //     showSlider('prev');
+        //     setTimeout(() => {
+        //         showSlider('prev');
+        //         setTimeout(() => {
+        //             showSlider('prev');
+        //             setTimeout(() => {
+        //                 showSlider('next');
+        //             }, 2000);
+        //         }, 2000);
+        //     }, 2000);
+        // };
 
         // Intersection Observer callback
         const handleIntersection = (entries) => {

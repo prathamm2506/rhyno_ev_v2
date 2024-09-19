@@ -14,13 +14,15 @@ const Aboutus = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between p-8 lg:p-16 space-y-8 lg:space-y-0 bg-white text-black">
-      <div className="lg:w-7/12 lg:pl-10 space-y-4 md:pl-0">
-        <h1 className="text-4xl font-bold tracking-wide">Our Service Commitment</h1>
-        <p className="text-lg leading-relaxed text-justify">
-        Rhyno is built different. We have made it super easy to repair and maintain. Our commitment extends beyond engineering reliable vehicles. With Rhyno, you get one one-week service commitment that ensures a peaceful ownership experience. We care about your time. Our people know how to fix your Rhyno quickly. Our dedicated technical team stands ready to assist, ensuring a hassle-free experience for every dealer and fleet partner.
+    <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between p-6 md:p-8 lg:p-16 space-y-8 lg:space-y-0 bg-white text-black">
+      {/* Text Content Section */}
+      <div className="w-full lg:w-7/12 space-y-4 md:pl-0">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide">Our Service Commitment</h1>
+        <p className="text-base md:text-lg leading-relaxed text-justify">
+          Rhyno is built different. We have made it super easy to repair and maintain. Our commitment extends beyond engineering reliable vehicles. With Rhyno, you get one one-week service commitment that ensures a peaceful ownership experience. We care about your time. Our people know how to fix your Rhyno quickly. Our dedicated technical team stands ready to assist, ensuring a hassle-free experience for every dealer and fleet partner.
         </p>
 
+        {/* Accordion Section */}
         <div className="space-y-4">
           <Accordion
             title="What is one-week service commitment?"
@@ -39,31 +41,38 @@ const Aboutus = () => {
           <Accordion
             title="Can a local mechanic repair my Rhyno?"
             content="Yes. Even you can! We’ve got you covered with a comprehensive service and repair manual. Additionally, our YouTube channel has all the tutorial videos about service and repairs."
-            index={3}
+            index={2}
             activeIndex={activeIndex}
             toggleAccordion={toggleAccordion}
           />
         </div>
 
-        {/* Buttons Row */}
-        <div className="flex justify-between space-x-4 mt-8">
-        <Link to="/Contact-us" onClick={() => { handleClick(); }}><button className="btnabout">
-            Book a Test Ride
-          </button></Link>
-          <Link to="/Contact-us" onClick={() => { handleClick(); }}><button className="btnabout">
-            Rent For a Week
-          </button></Link>
-          <Link to="/Contact-us" onClick={() => { handleClick(); }}><button className="btnabout">
-            Apply For Dealership
-          </button></Link>
+        {/* Buttons Section */}
+        <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 mt-8">
+          <Link to="/Contact-us" onClick={handleClick}>
+            <button className="btnabout w-full lg:w-auto">
+              Book a Test Ride
+            </button>
+          </Link>
+          <Link to="/Contact-us" onClick={handleClick}>
+            <button className="btnabout w-full lg:w-auto">
+              Rent For a Week
+            </button>
+          </Link>
+          <Link to="/Contact-us" onClick={handleClick}>
+            <button className="btnabout w-full lg:w-auto">
+              Apply For Dealership
+            </button>
+          </Link>
         </div>
       </div>
 
-      <div className="lg:w-4/12 flex justify-center md:w-full">
+      {/* Image Section */}
+      <div className="w-full lg:w-4/12 flex justify-center">
         <img
           src={img1}
           alt="Electric Scooter"
-          className="lg:max-w-md h-auto shadow-lg"
+          className="w-full lg:max-w-md h-auto shadow-lg"
         />
       </div>
     </div>
@@ -86,9 +95,8 @@ const Accordion = ({ title, content, index, activeIndex, toggleAccordion }) => {
   return (
     <div className="border-class">
       <button
-        className="flex justify-between items-center w-full py-3 text-lg font-semibold text-left focus:outline-none"
+        className="flex justify-between items-center w-full py-3 text-base md:text-lg font-semibold text-left focus:outline-none"
         onClick={() => toggleAccordion(index)}
-        style={{ outline: 'none' }} // Inline style to ensure no outline
       >
         <span>{title}</span>
         <span>{isActive ? '-' : '+'}</span>
@@ -96,7 +104,7 @@ const Accordion = ({ title, content, index, activeIndex, toggleAccordion }) => {
       <div
         ref={contentRef}
         style={{ height }}
-        className="overflow-hidden transition-height duration-300 ease-in-out"
+        className="overflow-hidden transition-all duration-300 ease-in-out"
       >
         <div className="pb-3 text-black">
           {content}
