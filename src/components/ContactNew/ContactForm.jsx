@@ -27,7 +27,7 @@ const ContactForm = () => {
     <div className="flex flex-col md:flex-row min-h-screen text-white">
       {/* Left Side - Form */}
       <div className="w-full md:w-1/2 px-4 md:px-8 py-6 md:py-28 bg-black bg-opacity-70 flex flex-col justify-between">
-        <form className="space-y-6" onSubmit={sendEmail} ref={form}>
+        <form className="space-y-6 px-3" onSubmit={sendEmail} ref={form}>
           {/* Existing input fields */}
           <div className="relative border-class2">
             <input
