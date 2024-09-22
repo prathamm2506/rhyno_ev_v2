@@ -37,29 +37,29 @@ function HomeNew() {
       <img
         loading="lazy"
         src={images[currentIndex]}
-        className="w-full h-full absolute inset-0"
+        className="w-full h-full object-cover absolute inset-0"
         alt="slideshow"
-        style={{ objectFit: "fill", maxHeight: "95vh", objectPosition: "top" }}
+        style={{ objectPosition: "center" }}
       />
 
       {/* Navigation Arrows */}
-      <div className="absolute inset-0 flex justify-between items-center px-8">
-        {/* Previous button - Vertically centered on the left */}
+      <div className="absolute inset-0 flex justify-between items-center px-4 md:px-8">
+        {/* Previous button */}
         <button
           onClick={handlePrevClick}
-          className="text-3xl px-4 py-2 outline-none border-none bg-slate-600 hover:bg-slate-300 focus:outline-none focus:border-none"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.4)", borderRadius: "50%" }}
+          className="text-2xl md:text-3xl px-4 py-2 bg-slate-600 hover:bg-slate-300 text-white rounded-full"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
         >
-          <i className="fa-solid fa-angle-left text-white"></i>
+          <i className="fa-solid fa-angle-left"></i>
         </button>
 
-        {/* Next button - Vertically centered on the right */}
+        {/* Next button */}
         <button
           onClick={handleNextClick}
-          className="text-3xl px-4 py-2 outline-none border-none bg-slate-600 hover:bg-slate-300 focus:outline-none focus:border-none"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.4)", borderRadius: "50%" }}
+          className="text-2xl md:text-3xl px-4 py-2 bg-slate-600 hover:bg-slate-300 text-white rounded-full"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
         >
-          <i className="fa-solid fa-angle-right text-white"></i>
+          <i className="fa-solid fa-angle-right"></i>
         </button>
       </div>
     </div>
