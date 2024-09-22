@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import img1 from '../../assets/t1.png';
+import './TestimonialCard.css';
+
 
 const testimonials = [
   {
@@ -43,48 +45,38 @@ const TestimonialCard = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="py-24 pb-40 bg-white h-full">
+    <div className="testimonial-container">
       {/* Heading */}
-      <h1 className="text-3xl lg:text-5xl font-bold text-center mb-20 text-black">
-        Tips by Our Customers
-      </h1>
+      <h1 className="testimonial-heading">Tips by Our Customers</h1>
 
       {/* Testimonial Section */}
-      <div className="relative flex flex-col lg:flex-row items-center lg:items-start lg:justify-between bg-white shadow-lg rounded-xl p-6 lg:p-8 gap-6 lg:gap-10 max-w-5xl mx-auto h-[450px]">
+      <div className="testimonial-card">
         {/* Text Content */}
-        <div className="lg:w-1/2 text-center lg:text-left">
-          <h2 className="text-xl lg:text-4xl font-bold mb-6 lg:mb-8 text-black text-left">
+        <div className="testimonial-content">
+          <h2 className="testimonial-title">
             {currentTestimonial.title}
           </h2>
-          <p className="text-black text-xl text-left mb-6 lg:mb-8 leading-relaxed">
+          <p className="testimonial-description">
             {currentTestimonial.description}
           </p>
-          <div className="text-left">
-            <h3 className="text-lg font-semibold text-black">
-              {currentTestimonial.name}
-            </h3>
-            <p className="text-sm text-gray-500">{currentTestimonial.position}</p>
+          <div className="testimonial-author">
+            <h3>{currentTestimonial.name}</h3>
+            <p>{currentTestimonial.position}</p>
           </div>
         </div>
 
         {/* Image Section */}
-        <div className="relative lg:w-1/2 lg:pl-6 overflow-visible">
-          <div className="relative">
-            <img
-              className="w-full h-[500px] object-cover rounded-2xl shadow-md -translate-y-14"
-              src={currentTestimonial.image}
-              alt="Testimonial"
-            />
-            {/* Next Button */}
-            
-          </div>
+        <div className="testimonial-image">
+          <img
+            src={currentTestimonial.image}
+            alt="Testimonial"
+          />
         </div>
-        <button
-              onClick={handleNext}
-              className="absolute bottom-10 left-full transform -translate-x-1/2 bg-black text-white rounded-full w-24 h-14 flex items-center justify-center text-lg"
-            >
-              Next &rarr;
-            </button>
+
+        {/* Next Button */}
+        <button onClick={handleNext} className="testimonial-button">
+          Next &rarr;
+        </button>
       </div>
     </div>
   );
