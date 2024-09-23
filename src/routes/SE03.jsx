@@ -24,6 +24,7 @@ import Modelpage_L2 from '../components/Modelpage_L2/Modelpage_L2';
 import Modelpage_L3 from '../components/Modelpage_L3/Modelpage_L3';
 import Modelpage_L4 from '../components/Modelpage_L4/Modelpage_L4';
 import ContactForm from '../components/ContactNew/ContactForm';
+import VehicleStats from '../components/stats/VehicleStats';
 
 
 
@@ -80,6 +81,7 @@ const SE03 = () => {
   ];
 
   const { state } = useLocation();
+  
 
   useEffect(() => {
       if (state?.scrollToTop) {

@@ -2,11 +2,18 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Modelpage_L2.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Image from "../../assets/rf.png";
+import VehicleStats from "../stats/VehicleStats";
 
 const Modelpage_L2 = () => {
   const [showMore, setShowMore] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const componentRef = useRef(null);
+
+  const stats = [
+    { label: 'Power',  progress: 70 },
+    { label: 'Speed', progress: 60 },
+    { label: 'Range', progress: 80 },
+  ];
 
   const toggleShowMore = () => {
     setShowMore(!showMore);
@@ -52,14 +59,16 @@ const Modelpage_L2 = () => {
           </div>
         )}
         <hr className={`${isVisible ? 'visible' : ''}`} />
-        <div className={`gtx-features ${isVisible ? 'animate-features' : ''}`}>
+        {/* <div className={`gtx-features ${isVisible ? 'animate-features' : ''}`}>
           <div><strong>Power:</strong> Elevate your journey with</div>
           <div><strong>Comfort:</strong> Indulge in comfort, revel in stability, and embrace safety.</div>
           <div><strong>Battery:</strong> kWh illuminates sustainability in small packages.</div>
           <div><strong>Speed:</strong> Experience the thrill with Max speed soaring at kmph.</div>
           <div><strong>Range:</strong> Unleash freedom with ranges stretching to an electrifying km.</div>
           <div><strong>Charge:</strong> Revitalize your ride with swift 4-hour (12A) charge.</div>
-        </div>
+        </div> */}
+
+        <VehicleStats stats={stats}/>
       </div>
       <div className={`gtx-image-section ${isVisible ? 'headlight-on' : ''}`}>
         <img src={Image} alt="Rhyno GTX" className={`bike-image ${isVisible ? 'headlight-on' : ''}`} />
