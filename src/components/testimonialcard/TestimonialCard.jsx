@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import img1 from '../../assets/t1.png';
 import './TestimonialCard.css';
 
-
 const testimonials = [
   {
     id: 1,

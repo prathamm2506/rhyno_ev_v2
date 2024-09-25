@@ -16,7 +16,7 @@ const VehicleStats = ({ stats }) => (
               <div className="flex flex-col grow shrink-0 rounded-3xl basis-0 w-[500px] items-end">
                 <div className="flex flex-col justify-center items-start px-2 py-1 rounded-3xl bg-gray-700 w-full">
                   <div
-                    className="flex shrink-0 rounded-3xl h-[21px] bg-yellow-400"
+                    className="flex shrink-0 rounded-3xl h-[14px] bg-yellow-400" // Slimmer bar height
                     style={{ width: `${stat.progress}%` }} // Dynamic width based on stat.progress
                   />
                 </div>

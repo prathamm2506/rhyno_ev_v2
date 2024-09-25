@@ -1,14 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import IMG from '../../assets/GTX.png';
 import { IoIosArrowDropright } from "react-icons/io";
+import IMG from '../../assets/GTX.png';
 import './GTX.css';
 
 const GTX = () => {
-    const navigate = useNavigate();
-
     const handleLearnMoreClick = () => {
-        window.scrollTo(0, 1650);
+        const section = document.getElementById('learnmore');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     return (
@@ -35,6 +35,7 @@ const GTX = () => {
                     <img className="gtx-image" src={IMG} alt="GTX Series" />
                 </div>
             </div>
+
         </div>
     );
 };

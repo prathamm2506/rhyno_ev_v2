@@ -39,7 +39,7 @@ function HomeNew() {
         src={images[currentIndex]}
         className="w-full h-full object-cover absolute inset-0"
         alt="slideshow"
-        style={{ objectPosition: "center" }}
+        style={{ objectPosition: "center", objectFit: "cover" }}
       />
 
       {/* Navigation Arrows */}

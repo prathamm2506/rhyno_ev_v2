@@ -169,7 +169,7 @@ const OurProducts = () => {
     }, [currentIndex]);
 
     return (
-        <div className="prodContainer" ref={componentRef}>
+        <div className="prodContainer" ref={componentRef} id='learnmore'>
             <div className="vertical-menu">
                 {['RHYNO', `RHYNO MAX`, 'RHYNO LITE'].map((item, index) => (
                     <div

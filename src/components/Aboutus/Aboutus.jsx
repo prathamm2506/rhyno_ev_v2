@@ -14,16 +14,16 @@ const Aboutus = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between p-6 md:p-8 lg:p-16 space-y-8 lg:space-y-0 bg-white text-black">
+    <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between p-6 md:p-8 lg:p-16 space-y-12 lg:space-y-0 bg-white text-black">
       {/* Text Content Section */}
-      <div className="w-full lg:w-7/12 space-y-4 md:pl-0">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide">Our Service Commitment</h1>
+      <div className="w-full lg:w-7/12 space-y-6 md:pl-0">
+        <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold tracking-wide">Our Service Commitment</h1>
         <p className="text-base md:text-lg leading-relaxed text-justify">
           Rhyno is built different. We have made it super easy to repair and maintain. Our commitment extends beyond engineering reliable vehicles. With Rhyno, you get one one-week service commitment that ensures a peaceful ownership experience. We care about your time. Our people know how to fix your Rhyno quickly. Our dedicated technical team stands ready to assist, ensuring a hassle-free experience for every dealer and fleet partner.
         </p>
 
         {/* Accordion Section */}
-        <div className="space-y-4">
+        <div className="space-y-6">
           <Accordion
             title="What is one-week service commitment?"
             content="Due to OEM negligence regarding service, many folks like you have had a hard time. But not you. We value your time. We have engineered Rhyno for simplicity. Even complex repairs such as battery or motor are resolved in seven working days."
@@ -50,17 +50,17 @@ const Aboutus = () => {
         {/* Buttons Section */}
         <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0 mt-8">
           <Link to="/Contact-us" onClick={handleClick}>
-            <button className="btnabout w-full lg:w-auto">
+            <button className="btnabout w-full lg:w-auto text-sm">
               Book a Test Ride
             </button>
           </Link>
           <Link to="/Contact-us" onClick={handleClick}>
-            <button className="btnabout w-full lg:w-auto">
+            <button className="btnabout w-full lg:w-auto text-sm">
               Rent For a Week
             </button>
           </Link>
           <Link to="/Contact-us" onClick={handleClick}>
-            <button className="btnabout w-full lg:w-auto">
+            <button className="btnabout w-full lg:w-auto text-sm">
               Apply For Dealership
             </button>
           </Link>

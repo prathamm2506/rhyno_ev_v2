@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 95vh; /* Adjust height to shift elements up */
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -23,15 +23,13 @@
 .rhyno-text {
   position: absolute;
   margin: 0 auto;
-  top: -10%;
+  top: 0; /* Shifted up */
   opacity: 0;
-  font-size: 13vw;
+  font-size: 10vw; /* Reduced size */
   font-weight: bold;
   color: rgba(255, 255, 255, 0.3); /* Initial color (lightly visible) */
   text-transform: uppercase;
   z-index: 16;
-  /* opacity: 0; */
-  /* transition: opacity 0.5s ease; */
   transition: color 0.3s ease;
   animation: slideDownText 1s 0.5s ease-out forwards;
 }
@@ -42,7 +40,7 @@
     opacity: 0;
   }
   to {
-    top: 7%; 
+    top: 5%; /* Shift down slightly */
     opacity: 1;
   }
 }
@@ -86,7 +84,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20vh;
+  margin-top: 10vh; /* Reduced margin to shift up */
+  margin-bottom: 8vh; /* Increased margin below the image to create space */
 }
 
 .imageMD img {
@@ -107,17 +106,18 @@
 
 .color-buttons {
   position: absolute;
-  bottom: 20px;
+  bottom: 5%; /* Shifted up */
   display: flex;
   justify-content: center;
   width: 100%;
+  padding-bottom: 30px; /* Add padding to create space above dots */
 }
 
 .color-buttons button {
   border: none;
   width: 40px;
   height: 40px;
-  margin: 5px;
+  margin: 10px; /* Increased margin for more vertical spacing */
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -137,7 +137,7 @@
   z-index: 15;
   opacity: 0;
   padding: 5px 5px 0;
-  margin-bottom: -0.7%;
+  margin-bottom: 0; /* Reduced margin to shift up */
   transform: translateY(20px);
   animation: showButton 1s 2.8s forwards;
 }
@@ -172,7 +172,7 @@
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .rhyno-text {
-    font-size: 15vw;
+    font-size: 12vw; /* Reduced size for smaller screens */
   }
 
   @keyframes slideDownText {
@@ -181,7 +181,7 @@
       opacity: 0;
     }
     to {
-      top: 15%; 
+      top: 10%; /* Adjusted for responsiveness */
       opacity: 1;
     }
   }
@@ -199,8 +199,8 @@
 
 @media (max-width: 768px) {
   .rhyno-text {
-    font-size: 18vw;
-    top: 20%;
+    font-size: 15vw;
+    top: 10%; /* Adjusted for smaller screens */
   }
 
   .color-buttons button {
@@ -211,7 +211,7 @@
 
 @media (max-width: 480px) {
   .rhyno-text {
-    font-size: 22vw;
+    font-size: 18vw;
   }
 
   @keyframes slideDownText {
@@ -220,7 +220,7 @@
       opacity: 0;
     }
     to {
-      top: 20%;
+      top: 15%; /* Shifted down less for smaller screens */
       opacity: 1;
     }
   }
