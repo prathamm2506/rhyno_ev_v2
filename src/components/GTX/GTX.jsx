@@ -15,9 +15,9 @@ const GTX = () => {
         <div className="gtx-container">
             <div className="gtx-content">
                 <div className="gtx-details">
-                    <div className="headerText">The Thrilling Machine</div>
+                    <h1 className="headerText">The Thrilling Machine</h1>
                     <div className="badge">ALL NEW</div>
-                    <h2 className="title">RHYNO GTX Series</h2>
+                    <h1 className="title">RHYNO GTX Series</h1>
                     <p className="description">
                         For those who don’t like a boring scooter! Immerse yourself into a never-before-experience. Stand out from the crowd. Now
                     </p>

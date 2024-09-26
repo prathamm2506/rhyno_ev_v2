@@ -190,14 +190,14 @@ const OurProducts = () => {
                             <img src={product.image} alt={product.topic} />
                             {/* <div className="intro-container"> */}
                             <div className="introductionText">
-                                <div className="topic">{product.topic}</div>
-                                <div className="des">{product.description}</div>
+                                <h1 className="topic">{product.topic}</h1>
+                                <p className="des">{product.description}</p>
                                 <button className="seeMoreBtn">SEE MORE &#8599;</button>
                             </div>
                             {/* </div> */}
                             <div className="productDetail">
-                                <div className="title">{product.detailTitle}</div>
-                                <div className="des">{product.detailDescription}</div>
+                                <h1 className="title">{product.detailTitle}</h1>
+                                <p className="des">{product.detailDescription}</p>
                                 <div className="specifications">
                                     {product.specifications.map((spec, index) => (
                                         <div key={index}>
