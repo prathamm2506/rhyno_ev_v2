@@ -1,9 +1,15 @@
 import React from 'react'
 // import './Privacy.css'
+import { Helmet } from 'react-helmet';
+
 
 const Terms = () => {
   return (
     <div>
+      <Helmet>
+        <title>Careers</title>
+        <meta name="description" content="Careers at Rhyno EV Private Limited" />
+      </Helmet>
       <div className="bg-white text-black mt-20 p-10">
         <div className='w-4/5 mx-auto py-10'>
           <h1 className='text-5xl'>Terms of Services</h1>

@@ -1,9 +1,15 @@
 import React from 'react'
 // import './Privacy.css'
+import { Helmet } from 'react-helmet';
+
 
 const Refund = () => {
   return (
     <div>
+      <Helmet>
+        <title>Refund</title>
+        <meta name="description" content="Refund policies at Rhyno EV Private Limited" />
+      </Helmet>
       <div className="bg-white text-black mt-20 p-10">
         <div className='w-4/5 mx-auto py-10'>
           <h1 className='text-5xl'>Refund Policy</h1>

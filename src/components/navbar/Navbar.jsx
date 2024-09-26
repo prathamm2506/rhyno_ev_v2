@@ -85,9 +85,14 @@ const Navbar = () => {
                 SE03 LITE
               </Link>
             </li>
+            <li>
+              <Link to="/Compare" onClick={() => { closeNav(); handleClick(); }}>
+                Compare
+              </Link>
+            </li>
           </ul>
         </li>
-        <li><Link to="/Compare" onClick={() => { closeNav(); handleClick(); }}>Compare</Link></li>
+        <li><Link to="/Rentals" onClick={() => { closeNav(); handleClick(); }}>Rentals</Link></li>
         <li><Link to='/AboutUs' onClick={() => { closeNav(); handleClick(); }}>About Us</Link></li>
         <li><Link to='/Contact-us' onClick={() => { closeNav(); handleClick(); }}>Contact Us</Link></li>
       </ul>

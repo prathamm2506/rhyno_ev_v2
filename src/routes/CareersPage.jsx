@@ -16,6 +16,8 @@
 // export default CareersPage
 
 import React, { useState, useRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+
 import img1 from '../assets/about.png';
 // import './Aboutus.css';
 
@@ -29,6 +31,10 @@ const CareersPage = () => {
   return (
     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between p-8 lg:p-16 space-y-8 lg:space-y-0 bg-white text-black mt-20">
       <div className="lg:w-7/12 lg:pl-10 space-y-4 md:pl-0">
+      <Helmet>
+        <title>Careers</title>
+        <meta name="description" content="Careers at Rhyno EV Private Limited" />
+      </Helmet>
         <h1 className="text-4xl font-bold tracking-wide">Careers</h1>
         <p className="text-lg leading-relaxed text-justify">
         Electric mobility runs in our veins. Engineering is our driving force. We are young and passionate enthusiasts working together to bring a revolution in India and the world. Through our dedication, effort, and excellence, we are thriving and achieving great success. 
