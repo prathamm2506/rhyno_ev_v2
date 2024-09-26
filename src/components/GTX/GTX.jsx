@@ -2,6 +2,8 @@ import React from 'react';
 import { IoIosArrowDropright } from "react-icons/io";
 import IMG from '../../assets/GTX.png';
 import './GTX.css';
+import Formmain from '../popupform/Formmain';
+import Formmain2 from '../popupform/Formmain2';
 
 const GTX = () => {
     const handleLearnMoreClick = () => {
@@ -22,12 +24,13 @@ const GTX = () => {
                         For those who don’t like a boring scooter! Immerse yourself into a never-before-experience. Stand out from the crowd. Now
                     </p>
                     <div className="buttons">
-                        <button className="book-now">
+                        {/* <button className="book-now">
                             <a href="https://wa.me/9023987528" className="book-now-link" target='_blank' rel="noopener noreferrer">
                                 Book Now
                             </a>
                             <IoIosArrowDropright size="20px" />
-                        </button>
+                        </button> */}
+                        <Formmain2/>
                         <button className="learn-more" onClick={handleLearnMoreClick}>Learn more</button>
                     </div>
                 </div>

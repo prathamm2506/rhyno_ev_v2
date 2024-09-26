@@ -97,7 +97,7 @@ const Navbar = () => {
         <li><Link to='/Contact-us' onClick={() => { closeNav(); handleClick(); }}>Contact Us</Link></li>
       </ul>
       {/* <button className="search-icon btn btn-nav" id="searchIcon"><a href="https://wa.me/9023987528" target='_blank'> Order Now </a></button> */}
-      <Formmain/>
+      <Formmain />
       <i className="fas fa-bars navOpenBtn" onClick={openNav} id="nav-toggler"></i>
     </nav>
   );
