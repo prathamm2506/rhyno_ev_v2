@@ -11,8 +11,8 @@ const Faqs = () => {
         <title>FAQ</title>
         <meta name="description" content="About Rhyno EV Private Limited" />
       </Helmet>
-      <FAQ/>
       <ContactUs/>
+      <FAQ/>
     </div>
   )
 }

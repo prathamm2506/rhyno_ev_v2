@@ -4,7 +4,7 @@ import Select from "react-select";
 import emailjs from 'emailjs-com';
 import './Formmain.css';
 
-const Formmain = () => {
+const Formmain2 = () => {
   const form = useRef();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -68,7 +68,7 @@ const Formmain = () => {
       {/* Button to show the form */}
       <button
         onClick={() => setFormVisible(true)}
-        className="search-icon btn btn-nav" id="searchIcon"
+        className="book-now"
       >
         Order Now
       </button>
@@ -173,4 +173,4 @@ const Formmain = () => {
   );
 };
 
-export default Formmain;
+export default Formmain2;

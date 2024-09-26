@@ -28,7 +28,7 @@ function ContactUs() {
   };
 
   return (
-    <div className="max-w-xl mx-auto my-10 p-4">
+    <div className="max-w-xl mx-auto p-4 mt-24">
       <h2 className="text-3xl font-semibold text-center mb-4 text-gray-600">Contact Us</h2>
       <p className="text-center text-gray-600 mb-8">Any question or remarks? Just write us a message!</p>
       
