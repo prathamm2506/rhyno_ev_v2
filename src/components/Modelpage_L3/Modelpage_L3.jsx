@@ -18,7 +18,7 @@ const Modelpage_L3 = () => {
   ];
 
   return (
-    <div className="table" style={{ paddingTop: '100px', paddingBottom: '50px' }}>
+    <div className="table" style={{ paddingTop: '10px', paddingBottom: '50px' }}>
       <TableContainer component={Paper}>
         <Table aria-label="model specifications table" className="table-container">
           <TableHead>

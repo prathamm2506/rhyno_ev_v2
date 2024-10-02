@@ -10,7 +10,7 @@ const Modelpage_L2 = () => {
   const componentRef = useRef(null);
 
   const stats = [
-    { label: 'Power',  progress: 70 },
+    { label: 'Power', progress: 70 },
     { label: 'Speed', progress: 60 },
     { label: 'Range', progress: 80 },
   ];
@@ -43,9 +43,8 @@ const Modelpage_L2 = () => {
   }, []);
 
   return (
-    <div className={"gtx-containerMD"} ref={componentRef}>
+    <div className="gtx-containerMD" ref={componentRef}>
       <div className="gtx-text-section">
-        {/* <h1 className={`${isVisible ? 'visible' : ''}`}>Let’s Elevate Your Ride Experience with Rhyno Where Superiority Meets Comfort</h1> */}
         <h2 className={`gtx-title ${isVisible ? 'glow' : ''}`}>Rhyno GTX Series</h2>
         <div className={`info-section ${isVisible ? 'visible' : ''}`} onClick={toggleShowMore}>
           <p>Indulge in the perfect harmony of power and range with this Rhyno</p>
@@ -59,19 +58,11 @@ const Modelpage_L2 = () => {
           </div>
         )}
         <hr className={`${isVisible ? 'visible' : ''}`} />
-        {/* <div className={`gtx-features ${isVisible ? 'animate-features' : ''}`}>
-          <div><strong>Power:</strong> Elevate your journey with</div>
-          <div><strong>Comfort:</strong> Indulge in comfort, revel in stability, and embrace safety.</div>
-          <div><strong>Battery:</strong> kWh illuminates sustainability in small packages.</div>
-          <div><strong>Speed:</strong> Experience the thrill with Max speed soaring at kmph.</div>
-          <div><strong>Range:</strong> Unleash freedom with ranges stretching to an electrifying km.</div>
-          <div><strong>Charge:</strong> Revitalize your ride with swift 4-hour (12A) charge.</div>
-        </div> */}
-
-        <VehicleStats stats={stats}/>
+        <VehicleStats stats={stats} />
       </div>
-      <div className={`gtx-image-section ${isVisible ? 'headlight-on' : ''}`}>
-        <img src={Image} alt="Rhyno GTX" className={`bike-image ${isVisible ? 'headlight-on' : ''}`} />
+
+      <div className="gtx-image-section">
+        <img src={Image} alt="Rhyno GTX" className="bike-image" />
       </div>
     </div>
   );

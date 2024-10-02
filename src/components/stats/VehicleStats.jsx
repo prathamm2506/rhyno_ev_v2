@@ -1,7 +1,7 @@
 import React from 'react';
 
 const VehicleStats = ({ stats }) => (
-  <section className="max-w-[800px]">
+  <section className="max-w-[700px]">
     <div className="flex gap-5 max-md:flex-col">
       {/* Stats labels and progress bars */}
       <div className="flex flex-col w-[73%] max-md:ml-0 max-md:w-full">
@@ -13,7 +13,7 @@ const VehicleStats = ({ stats }) => (
                 {stat.label}
               </div>
               {/* Progress Bar */}
-              <div className="flex flex-col grow shrink-0 rounded-3xl basis-0 w-[500px] items-end">
+              <div className="flex flex-col grow shrink-0 rounded-3xl basis-0 w-[300px] items-end"> {/* Reduced width */}
                 <div className="flex flex-col justify-center items-start px-2 py-1 rounded-3xl bg-gray-700 w-full">
                   <div
                     className="flex shrink-0 rounded-3xl h-[14px] bg-yellow-400" // Slimmer bar height

@@ -208,7 +208,7 @@ const OurProducts = () => {
                                 </div>
                                 <div className="checkout">
                                     <button className='buttonCh back' onClick={handleBackClick}>
-                                        See All &#8599;
+                                        Back &#8592;
                                     </button>
                                     <button className='buttonCh' onClick={() => handleCheckout(product.nevigatTo)}>CHECKOUT</button>
                                 </div>

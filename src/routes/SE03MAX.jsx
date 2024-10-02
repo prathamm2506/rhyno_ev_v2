@@ -98,6 +98,7 @@ const SE03MAX = () => {
 
       <Modelpage_L2 />
       <Modelpage_L1 startState={1} />
+      <h1 className='se03-heading'>Vehicle Specification</h1>
       <Modelpage_L3 specifications={rhynoSpecMax} />
       <Modelpage_L4 />
       <ContactForm/>

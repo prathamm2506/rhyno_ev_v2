@@ -98,6 +98,7 @@ const SE03LITE = () => {
 
       <Modelpage_L2 />
       <Modelpage_L1 startState={2} />
+      <h1 className='se03-heading'>Vehicle Specification</h1>
       <Modelpage_L3 specifications={rhynoSpecLite} />
       <Modelpage_L4 />
       <ContactForm/>

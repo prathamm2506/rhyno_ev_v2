@@ -115,6 +115,7 @@ const SE03 = () => {
 
       <Modelpage_L2 />
       <Modelpage_L1 startState={3} />
+      <h1 className='se03-heading'>Vehicle Specification</h1>
       <Modelpage_L3 specifications={rhynoSpec} />
       <Modelpage_L4 /> 
       <ContactForm/>
