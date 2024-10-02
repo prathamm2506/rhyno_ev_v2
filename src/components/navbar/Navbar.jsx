@@ -58,11 +58,11 @@ const Navbar = () => {
   return (
     <nav className={`nav ${isSearchOpen ? 'openSearch' : ''} ${isNavOpen ? 'openNav' : ''}`}>
       <Link to="/">
-        <img src={Logo} alt="" className="logo" onClick={closeNav} />
+        <img src={Logo} alt="" className="logo" onClick={() => { closeNav(); handleClick(); }} />
       </Link>
       <ul className="nav-linksss">
         <i className="fa-solid fa-xmark navCloseBtn" onClick={closeNav} id="nav-toggler"></i>
-        <li><Link to="/" onClick={closeNav}>Home</Link></li>
+        <li><Link to="/" onClick={() => { closeNav(); handleClick(); }}>Home</Link></li>
         <li
           className="dropdown-wrapper"
           onMouseEnter={toggleProducts}
