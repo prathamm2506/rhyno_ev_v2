@@ -2,6 +2,7 @@ import React from 'react';
 import { IoIosArrowDropright } from "react-icons/io";
 import Formmain2 from '../popupform/Formmain2';
 import './GTX.css';
+import Formmain from '../popupform/Formmain';
 
 const GTX = () => {
     const handleLearnMoreClick = () => {

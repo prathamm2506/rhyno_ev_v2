@@ -17,11 +17,16 @@ const Formmain2 = () => {
   ];
 
   const cityOptions = [
-    { label: "New York", value: "new-york" },
-    { label: "Los Angeles", value: "los-angeles" },
-    { label: "Chicago", value: "chicago" },
-    { label: "Houston", value: "houston" },
-    { label: "Phoenix", value: "phoenix" },
+    { label: "Mumbai", value: "mumbai" },
+    { label: "Delhi", value: "delhi" },
+    { label: "Bengaluru", value: "bengaluru" },
+    { label: "Hyderabad", value: "hyderabad" },
+    { label: "Chennai", value: "chennai" },
+    { label: "Kolkata", value: "kolkata" },
+    { label: "Pune", value: "pune" },
+    { label: "Ahmedabad", value: "ahmedabad" },
+    { label: "Surat", value: "surat" },
+    { label: "Jaipur", value: "jaipur" },
     // Add more cities as needed
   ];
 
@@ -44,22 +49,24 @@ const Formmain2 = () => {
   const customSelectStyles = {
     control: (provided) => ({
       ...provided,
-      backgroundColor: 'black',
-      color: 'white',
+      backgroundColor: 'white', // Form background color white
+      color: 'black', // Text color black
       borderColor: 'gray',
+      textAlign: 'left',
     }),
     singleValue: (provided) => ({
       ...provided,
-      color: 'white',
+      color: 'black',
+      textAlign: 'left',
     }),
     menu: (provided) => ({
       ...provided,
-      backgroundColor: 'black',
+      backgroundColor: 'white', // Dropdown menu background white
     }),
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isFocused ? '#333' : 'black',
-      color: 'white',
+      backgroundColor: state.isFocused ? '#f0f0f0' : 'white',
+      color: 'black',
     }),
   };
 
@@ -68,7 +75,7 @@ const Formmain2 = () => {
       {/* Button to show the form */}
       <button
         onClick={() => setFormVisible(true)}
-        className="book-now"
+        className="book-now" id="searchIcon"
       >
         Order Now
       </button>
@@ -81,10 +88,13 @@ const Formmain2 = () => {
 
       {/* Conditionally render the form as a popup */}
       {isFormVisible && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="relative bg-black rounded-lg shadow-lg w-full max-w-xl p-8">
-            <form ref={form} onSubmit={sendEmail} className="space-y-6"> {/* Increased vertical spacing */}
-              <h1 className="text-2xl font-bold text-white">Book Now</h1>
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+          style={{ marginTop: '80px' }}  // Adjust this to match your navbar height
+        >
+          <div className="relative bg-white rounded-lg shadow-lg w-full max-w-xl p-8 z-60"> {/* Form background color white */}
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
+              <h1 className="text-2xl text-black text-left">Book Now</h1> {/* Heading in black */}
 
               <div className="flex space-x-4">
                 <input
@@ -92,14 +102,14 @@ const Formmain2 = () => {
                   type="text"
                   placeholder="First Name"
                   required
-                  className="w-1/2 p-2 bg-black text-white borderbottommainform"
+                  className="w-1/2 p-2 bg-white text-black text-left borderbottommainform"
                 />
                 <input
                   name="lastname"
                   type="text"
                   placeholder="Last Name"
                   required
-                  className="w-1/2 p-2 borderbottommainform bg-black text-white"
+                  className="w-1/2 p-2 bg-white text-black text-left borderbottommainform"
                 />
               </div>
 
@@ -109,7 +119,7 @@ const Formmain2 = () => {
                   type="tel"
                   placeholder="Phone Number"
                   required
-                  className="w-full p-2 borderbottommainform bg-black text-white"
+                  className="w-full p-2 bg-white text-black text-left borderbottommainform"
                 />
               </div>
 
@@ -119,7 +129,7 @@ const Formmain2 = () => {
                   type="email"
                   placeholder="Email"
                   required
-                  className="w-full p-2 borderbottommainform bg-black text-white"
+                  className="w-full p-2 bg-white text-black text-left borderbottommainform"
                 />
               </div>
 
@@ -147,7 +157,7 @@ const Formmain2 = () => {
                   cols="30"
                   rows="5"
                   placeholder="Describe your message here"
-                  className="w-full p-2 borderbottommainform bg-black text-white"
+                  className="w-full p-2 bg-white text-black text-left borderbottommainform"
                 ></textarea>
               </div>
 
@@ -162,7 +172,7 @@ const Formmain2 = () => {
             {/* Close button */}
             <button
               onClick={() => setFormVisible(false)}
-              className="absolute top-4 right-4 text-white text-2xl font-bold z-50"
+              className="absolute top-4 right-4 text-black text-2xl font-bold z-50"
             >
               &times;
             </button>

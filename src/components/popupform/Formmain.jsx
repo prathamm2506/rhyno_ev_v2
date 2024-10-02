@@ -17,11 +17,16 @@ const Formmain = () => {
   ];
 
   const cityOptions = [
-    { label: "New York", value: "new-york" },
-    { label: "Los Angeles", value: "los-angeles" },
-    { label: "Chicago", value: "chicago" },
-    { label: "Houston", value: "houston" },
-    { label: "Phoenix", value: "phoenix" },
+    { label: "Mumbai", value: "mumbai" },
+    { label: "Delhi", value: "delhi" },
+    { label: "Bengaluru", value: "bengaluru" },
+    { label: "Hyderabad", value: "hyderabad" },
+    { label: "Chennai", value: "chennai" },
+    { label: "Kolkata", value: "kolkata" },
+    { label: "Pune", value: "pune" },
+    { label: "Ahmedabad", value: "ahmedabad" },
+    { label: "Surat", value: "surat" },
+    { label: "Jaipur", value: "jaipur" },
     // Add more cities as needed
   ];
 
@@ -44,22 +49,22 @@ const Formmain = () => {
   const customSelectStyles = {
     control: (provided) => ({
       ...provided,
-      backgroundColor: 'black',
-      color: 'white',
+      backgroundColor: 'white', // Changed to white
+      color: 'black',
       borderColor: 'gray',
     }),
     singleValue: (provided) => ({
       ...provided,
-      color: 'white',
+      color: 'black', // Changed to black
     }),
     menu: (provided) => ({
       ...provided,
-      backgroundColor: 'black',
+      backgroundColor: 'white', // Changed to white
     }),
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isFocused ? '#333' : 'black',
-      color: 'white',
+      backgroundColor: state.isFocused ? '#f0f0f0' : 'white', // Focus effect
+      color: 'black', // Changed to black
     }),
   };
 
@@ -82,9 +87,9 @@ const Formmain = () => {
       {/* Conditionally render the form as a popup */}
       {isFormVisible && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="relative bg-black rounded-lg shadow-lg w-full max-w-xl p-8">
-            <form ref={form} onSubmit={sendEmail} className="space-y-6"> {/* Increased vertical spacing */}
-              <h1 className="text-2xl font-bold text-white">Book Now</h1>
+          <div className="relative bg-white rounded-lg shadow-lg w-full max-w-xl p-8"> 
+            <form ref={form} onSubmit={sendEmail} className="space-y-6"> 
+              <h1 className="text-2xl font-bold text-black">Book Now</h1> 
 
               <div className="flex space-x-4">
                 <input
@@ -92,14 +97,14 @@ const Formmain = () => {
                   type="text"
                   placeholder="First Name"
                   required
-                  className="w-1/2 p-2 bg-black text-white borderbottommainform"
+                  className="w-1/2 p-2 bg-white text-black borderbottommainform" 
                 />
                 <input
                   name="lastname"
                   type="text"
                   placeholder="Last Name"
                   required
-                  className="w-1/2 p-2 borderbottommainform bg-black text-white"
+                  className="w-1/2 p-2 bg-white text-black borderbottommainform" 
                 />
               </div>
 
@@ -109,7 +114,7 @@ const Formmain = () => {
                   type="tel"
                   placeholder="Phone Number"
                   required
-                  className="w-full p-2 borderbottommainform bg-black text-white"
+                  className="w-full p-2 bg-white text-black borderbottommainform" 
                 />
               </div>
 
@@ -119,7 +124,7 @@ const Formmain = () => {
                   type="email"
                   placeholder="Email"
                   required
-                  className="w-full p-2 borderbottommainform bg-black text-white"
+                  className="w-full p-2 bg-white text-black borderbottommainform" 
                 />
               </div>
 
@@ -147,7 +152,7 @@ const Formmain = () => {
                   cols="30"
                   rows="5"
                   placeholder="Describe your message here"
-                  className="w-full p-2 borderbottommainform bg-black text-white"
+                  className="w-full p-2 bg-white text-black borderbottommainform" 
                 ></textarea>
               </div>
 
@@ -162,7 +167,7 @@ const Formmain = () => {
             {/* Close button */}
             <button
               onClick={() => setFormVisible(false)}
-              className="absolute top-4 right-4 text-white text-2xl font-bold z-50"
+              className="absolute top-4 right-4 text-black text-2xl font-bold z-50" 
             >
               &times;
             </button>
