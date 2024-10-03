@@ -10,6 +10,7 @@ const PrivacyPolicy = () => {
     <div>
       <Helmet>
         <title>Privacy Policy</title>
+        <link rel="canonical" />
         <meta name="description" content="Privacy Policies at Rhyno EV Private Limited" />
       </Helmet>
       <Privacy/>

@@ -33,6 +33,7 @@ const CareersPage = () => {
       <div className="lg:w-7/12 lg:pl-10 space-y-4 md:pl-0">
       <Helmet>
         <title>Careers</title>
+        <link rel="canonical" />
         <meta name="description" content="Careers at Rhyno EV Private Limited" />
       </Helmet>
         <h1 className="text-4xl font-bold tracking-wide">Careers</h1>

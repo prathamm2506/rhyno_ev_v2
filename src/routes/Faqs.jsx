@@ -9,6 +9,7 @@ const Faqs = () => {
     <div className='bg-white'>
       <Helmet>
         <title>FAQ</title>
+        <link rel="canonical" />
         <meta name="description" content="About Rhyno EV Private Limited" />
       </Helmet>
       <ContactUs/>

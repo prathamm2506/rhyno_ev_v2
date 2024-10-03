@@ -10,6 +10,7 @@ const ContactUs = () => {
     <div>
       <Helmet>
         <title>Contact US</title>
+        <link rel="canonical" />
         <meta name="description" content="Contact Us for Rhyno EV Private Limited" />
       </Helmet>
       <Contact/>

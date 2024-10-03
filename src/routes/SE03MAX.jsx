@@ -84,6 +84,7 @@ const SE03MAX = () => {
       <Helmet>
         <title>SE03 MAX</title>
         <meta name="description" content="Know more about SE03 Max" />
+        <link rel="canonical" />
       </Helmet>
       {/* <Prodland/> */}
       {/* <Model_L1

@@ -32,6 +32,7 @@ const Rentals = () => {
     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between p-8 lg:p-16 space-y-8 lg:space-y-0 bg-white text-black mt-20">
       <Helmet>
         <title>Rentals</title>
+        <link rel="canonical" />
         <meta name="description" content="Rental schemes at Rhyno EV Private Limited" />
       </Helmet>
       <div className="lg:w-7/12 lg:pl-10 space-y-4 md:pl-0">

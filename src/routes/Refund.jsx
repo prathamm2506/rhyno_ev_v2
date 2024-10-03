@@ -9,6 +9,7 @@ const Refund = () => {
       <Helmet>
         <title>Refund</title>
         <meta name="description" content="Refund policies at Rhyno EV Private Limited" />
+        <link rel="canonical" />
       </Helmet>
       <div className="bg-white text-black mt-20 p-10">
         <div className='w-4/5 mx-auto py-10'>
