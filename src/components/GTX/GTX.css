@@ -9,7 +9,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: row; /* Default layout for laptop screens: Horizontal layout */
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -47,7 +47,7 @@
     margin-bottom: 1.5rem;
     letter-spacing: 0.1rem;
     display: inline-block;
-    width: max-content; /* Default behavior for laptop and larger screens */
+    width: max-content; /* Max-content width for all screens */
 }
 
 .title {
@@ -65,6 +65,7 @@
 
 .buttons {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
 }
 
@@ -118,10 +119,10 @@
 /* Responsive adjustments */
 @media (max-width: 992px) {
     .gtx-container {
-        flex-direction: column; /* Stack the content vertically for tablets */
-        height: auto; /* Allow content to expand naturally */
+        flex-direction: column;
+        height: auto;
         padding: 1.5rem;
-        position: static; /* Remove absolute positioning on image */
+        position: static;
     }
 
     .gtx-details {
@@ -132,20 +133,22 @@
 
     .gtx-image-container {
         width: 100%;
-        height: auto; /* Let the image resize based on content */
+        height: auto;
         margin-top: 1rem;
-        position: static; /* Image will no longer be positioned absolutely */
+        position: static;
     }
 
     .gtx-image {
-        object-fit: contain; /* Ensure the image is fully visible without being cut off */
+        object-fit: contain;
     }
 
     .buttons {
         justify-content: center;
     }
+
     .badge {
-        width: 100%; /* Full width for tablet screens */
+        margin-left: auto;
+        margin-right: auto; /* Center badge on tablet screens */
     }
 }
 
@@ -163,7 +166,12 @@
     }
 
     .gtx-image-container {
-        height: auto; /* Ensure image takes the necessary height */
+        height: auto;
+    }
+
+    .badge {
+        margin-left: auto;
+        margin-right: auto; /* Center badge on smaller screens */
     }
 }
 
@@ -171,7 +179,7 @@
     .gtx-container {
         flex-direction: column;
         padding: 1rem;
-        height: auto; /* Allow flexibility on small screens */
+        height: auto;
     }
 
     .title {
@@ -185,10 +193,18 @@
     .gtx-image-container {
         width: 100%;
         height: auto;
-        margin-top: 1rem; /* Add space between text and image */
+        margin-top: 1rem;
     }
 
     .gtx-image {
-        object-fit: contain; /* Ensure the image fits within the container without overflow */
+        object-fit: contain;
+    }
+
+    .badge {
+        margin-left: auto;
+        margin-right: auto; /* Center badge on mobile screens */
+    }
+    .buttons {
+        flex-direction: column;
     }
 }
