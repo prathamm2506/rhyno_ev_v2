@@ -8,7 +8,7 @@
 .custom-top-section {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .custom-video-container {

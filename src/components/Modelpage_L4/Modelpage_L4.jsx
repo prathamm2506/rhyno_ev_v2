@@ -10,29 +10,29 @@ const Modelpage_L4 = () => {
                     <iframe 
                         width="100%" 
                         height="450"  
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        src="https://www.youtube.com/embed/HKfZifYO2w4?si=lJUhU-RDkrJ4Bleb" 
                         title="YouTube video 1" 
                         frameBorder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowFullScreen
                     ></iframe>
-                    <p className="custom-description-text">
+                    {/* <p className="custom-description-text">
                         LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.
-                    </p>
+                    </p> */}
                 </div>
                 <div className="custom-video-container">
                     <iframe 
                         width="100%" 
                         height="450"  
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+                        src="https://www.youtube.com/embed/-41dJi_UPlc?si=UoTh3nD-TmClWH1G" 
                         title="YouTube video 2" 
                         frameBorder="0" 
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                         allowFullScreen
                     ></iframe>
-                    <p className="custom-description-text">
+                    {/* <p className="custom-description-text">
                         LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.
-                    </p>
+                    </p> */}
                 </div>
             </div>
             <div className="custom-bike-row">

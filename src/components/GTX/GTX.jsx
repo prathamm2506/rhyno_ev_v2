@@ -32,7 +32,7 @@ const GTX = () => {
                 </div>
             </div>
             <div className="gtx-image-container">
-                <img className="gtx-image" src="https://i.ibb.co/g7t4W6f/thrilling-machine-section.png" alt="GTX Series" />
+                <img className="gtx-image" src="https://i.ibb.co/kq00DbT/thrilling-machine-section.png" alt="GTX Series" />
             </div>
         </div>
     );
