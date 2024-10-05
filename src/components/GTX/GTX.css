@@ -50,14 +50,14 @@
     width: max-content; /* Max-content width for all screens */
 }
 
-.title {
+.title11 {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: bold;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
 
-.description {
+.description11 {
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     color: var(--text-color);
     margin-bottom: 2rem;
@@ -99,7 +99,7 @@
     object-fit: cover;
 }
 
-.ordernow {
+.ordernowmain {
     padding: 10px 20px;
     background-color: var(--yellow);
     color: black;
@@ -111,7 +111,7 @@
     transition: all 0.3s ease;
 }
 
-.ordernow:hover {
+.ordernowmain:hover {
     background-color: var(--yellow-hover);
     color: white;
 }
