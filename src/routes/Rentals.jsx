@@ -36,7 +36,7 @@ const Rentals = () => {
         <meta name="description" content="Rental schemes at Rhyno EV Private Limited" />
       </Helmet>
       <div className="lg:w-7/12 lg:pl-10 space-y-4 md:pl-0">
-        <h1 className="text-4xl font-bold tracking-wide">Rentals</h1>
+        <h1 className="text-4xl font-bold tracking-wide text-black">Rentals</h1>
         <p className="text-lg leading-relaxed text-justify">
         Our flexible rental plans let you experience the thrill for a week or a month. Stop by one of our dealerships to get your ride today!
         </p>

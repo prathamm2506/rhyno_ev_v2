@@ -63,9 +63,9 @@ function FAQ() {
         <div className='bg-white'>
         <div className="max-w-3xl mx-auto mt-10 mb-10 p-4">
             <h2 className="text-3xl font-semibold text-center mb-4 text-gray-600">Frequently Asked Questions</h2>
-            <p className="text-center text-gray-600 mb-6">Everything you need to know about the product and billing.</p>
+            <p className="text-center text-gray-600 mb-6">Don’t want to wait for your answers? Check out the FAQ below!</p>
             {faqData.map((faq, index) => (
-                <div key={index} className="mb-4 border-b">
+                <div key={index} className="mb-4 border-b borderbottommainform">
                     <button
                         onClick={() => toggleFAQ(index)}
                         className="w-full flex justify-between items-center py-3 text-left text-lg font-medium text-gray-700 focus:outline-none"

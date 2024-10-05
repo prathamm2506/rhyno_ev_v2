@@ -7,7 +7,7 @@ const PageNotFound = () => {
   return (
     <div>
       <Helmet>
-        <title>Contact US</title>
+        <title>404 Not Found</title>
         <link rel="canonical" />
         <meta name="description" content="Contact Us for Rhyno EV Private Limited" />
       </Helmet>

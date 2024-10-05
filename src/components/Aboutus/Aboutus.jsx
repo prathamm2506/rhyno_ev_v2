@@ -17,7 +17,7 @@ const Aboutus = () => {
     <div className="flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-between p-6 md:p-8 lg:p-16 space-y-12 lg:space-y-0 bg-white text-black">
       {/* Text Content Section */}
       <div className="w-full lg:w-7/12 space-y-6 md:pl-0">
-        <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold tracking-wide">Our Service Commitment</h1>
+        <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold tracking-wide text-black">Our Service Commitment</h1>
         <p className="text-base md:text-lg leading-relaxed text-justify">
           Rhyno is built different. We have made it super easy to repair and maintain. Our commitment extends beyond engineering reliable vehicles. With Rhyno, you get one one-week service commitment that ensures a peaceful ownership experience. We care about your time. Our people know how to fix your Rhyno quickly. Our dedicated technical team stands ready to assist, ensuring a hassle-free experience for every dealer and fleet partner.
         </p>

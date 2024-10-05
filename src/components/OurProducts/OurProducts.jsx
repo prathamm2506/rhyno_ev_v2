@@ -190,13 +190,13 @@ const OurProducts = () => {
                             <img src={product.image} alt={product.topic} />
                             {/* <div className="intro-container"> */}
                             <div className="introductionText">
-                                <h1 className="topic">{product.topic}</h1>
+                                <h1 className="topic text-black">{product.topic}</h1>
                                 <p className="des">{product.description}</p>
                                 <button className="seeMoreBtn">SEE MORE &#8599;</button>
                             </div>
                             {/* </div> */}
                             <div className="productDetail">
-                                <h1 className="title">{product.detailTitle}</h1>
+                                <h1 className="title text-black">{product.detailTitle}</h1>
                                 <p className="des">{product.detailDescription}</p>
                                 <div className="specifications">
                                     {product.specifications.map((spec, index) => (
@@ -230,9 +230,9 @@ const products = [
     {
         image: `${Img1}`,
         topic: 'RHYNO',
-        description: 'Indulge in the perfect harmony of power and range with this Rhyno. This beast is ready to roar on the roads, providing an electrifying journey at every turn.',
+        description: 'The most affordable and durable electric scooter in India with a modest range and power. ',
         detailTitle: 'RHYNO',
-        detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. ',
+        detailDescription: 'With a strong road presence, this machine is a sheer experience of elegance and style. It’s for the city and beyond. Let it turn heads and express your unique style wherever you go. It’s more than just transportation, it’s an investment in safety, comfort, and adventure.',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
             { name: 'Warranty', value: '3 Years' },
@@ -245,9 +245,9 @@ const products = [
     {
         image: `${Img2}`,
         topic: 'RHYNO MAX',
-        description: 'This Rhyno is tuned for long drives and no thrills. Perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge.',
+        description: 'This long-range electric scooter is tweaked for commercial users: performance, durability and reliability at its peak.',
         detailTitle: 'RHYNO MAX',
-        detailDescription: 'This Rhyno is tuned for long drives and no thrills. Like all other variants, this machine comes with a fire-safe advanced LFP battery and all the other benefits of owning a Rhyno, along with a perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge. While it may not provide a thrilling ride, it promises a dependable and unwavering presence on the long stretches.',
+        detailDescription: 'We have engineered this rhyno to meet your commercial needs, but there is more to the story! With its strong road presence, Rhyno isn\'t just a vehicle, it\'s the chauffeur for your business. Think of it as your branding on wheels. Sit back and let Rhyno scream your commitment to sustainability! It\'s not just a purchase, it’s an investment for your brand!',
         specifications: [
             { name: 'Battery', value: '2.7 Kwh' },
             { name: 'Warranty', value: '3 Years' },
@@ -260,9 +260,9 @@ const products = [
     {
         image: `${Img3}`,
         topic: 'RHYNO LITE',
-        description: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor',
+        description: 'This affordable electric scooter is perfect for your daily commute with a style. With 100 kilometers of range and a safer battery.  ',
         detailTitle: 'RHYNO LITE',
-        detailDescription: 'Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn.',
+        detailDescription: 'Experience the perfect blend of style, comfort, and safety with this Rhyno, all at an affordable price. It’s optimized for smaller cities, for shorter distances while delivering maximum convenience and performance.',
         specifications: [
             { name: 'Battery', value: '1.8 Kwh' },
             { name: 'Warranty', value: '3 Years' },

@@ -18,6 +18,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import img1 from '../assets/about.png';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 // import './Aboutus.css';
 
 const Aboutus = () => {
@@ -35,14 +36,14 @@ const Aboutus = () => {
         <meta name="description" content="About Us for Rhyno EV Private Limited" />
       </Helmet>
       <div className="lg:w-7/12 lg:pl-10 space-y-4 md:pl-0">
-        <h1 className="text-4xl font-bold tracking-wide">About US</h1>
+        <h1 className="text-4xl font-bold tracking-wide text-black">About US</h1>
         <p className="text-lg leading-relaxed text-justify">
         It’s not “yet another EV startup” in the EV race. Vishal Kishan, the founder of Rhyno, wanted to start EV rental service originally. He soon found out there lies a bigger problem with the product gap. There was an absence of reliable, affordable, and robust electric scooters. That’s how Rhyno was born. Hailing from his automotive engineering background, Rhyno is his passion project more than a business. Unlike others, we are not in a hurry to earn a quick buck. We have spent the right amount of time and resources to build what is needed; a reliable vehicle.
         </p>
         <p className="text-lg leading-relaxed text-justify">
         With our first product, we've taken a bold step to create something more than just a two-wheeler; it's a sheer experience of elegance, comfort, and style. We emphasize safety and longer service life. So, worry not, about the fire or replacing the battery. We understand your concerns.
         </p>
-        <p className="text-lg leading-relaxed text-justify">As per our original vision, we've introduced a Rhyno rental service. Discover more by clicking here.
+        <p className="text-lg leading-relaxed text-justify">As per our original vision, we've introduced a Rhyno rental service. Discover more by <Link className='text-gray-400' to="/Rentals">clicking here</Link>.
         </p>
 
         {/* <div className="space-y-4">

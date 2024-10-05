@@ -36,7 +36,7 @@ const CareersPage = () => {
         <link rel="canonical" />
         <meta name="description" content="Careers at Rhyno EV Private Limited" />
       </Helmet>
-        <h1 className="text-4xl font-bold tracking-wide">Careers</h1>
+        <h1 className="text-4xl font-bold tracking-wide text-black">Careers</h1>
         <p className="text-lg leading-relaxed text-justify">
         Electric mobility runs in our veins. Engineering is our driving force. We are young and passionate enthusiasts working together to bring a revolution in India and the world. Through our dedication, effort, and excellence, we are thriving and achieving great success. 
         </p>

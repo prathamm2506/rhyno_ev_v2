@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Rhyno EV Private Limited",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "05, Jay Industrial Park, Nana Chiloda Ring Road Circle",
+    "addressLocality": "Muthiya, Ahmedabad",
+    "addressRegion": "Gujarat",
+    "postalCode": "382330",
+    "addressCountry": "India"
+  },
+  "telephone": "+91 9023987528"
+}
+</script>

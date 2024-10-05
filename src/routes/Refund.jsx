@@ -13,7 +13,7 @@ const Refund = () => {
       </Helmet>
       <div className="bg-white text-black mt-20 p-10">
         <div className='w-4/5 mx-auto py-10'>
-          <h1 className='text-5xl'>Refund Policy</h1>
+          <h1 className='text-5xl text-black'>Refund Policy</h1>
           <p className='text-lg leading-relaxed text-justify mt-10'>
           Established in 2019 by an automotive engineer with a vision for sustainable and robust mobility solutions, RHYNO EV is not just a company; it's a collective effort of a dynamic team of young individuals passionately driving innovation in the electric vehicle industry. We believe in engineering solutions that solve problems.
           </p>
