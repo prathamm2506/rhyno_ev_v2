@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
 import './Modelpage_L1.css';
-import IMG1 from '../../assets/webp/product4.png';
-import IMG2 from '../../assets/webp/product5.png';
-import IMG3 from '../../assets/webp/product6.png';
-import IMG4 from '../../assets/webp/product7.png';
-import IMG5 from '../../assets/webp/product8.webp';
-import IMG6 from '../../assets/webp/Product1.webp';
-import IMG7 from '../../assets/webp/Product2.webp';
-import IMG8 from '../../assets/webp/product3.webp';
-import IMG9 from '../../assets/webp/2.png';
-import IMG10 from '../../assets/webp/3.png';
+import IMG1 from '../../assets/yellow.webp';
+import IMG2 from '../../assets/brown.webp';
+import IMG3 from '../../assets/pink.webp';
+import IMG4 from '../../assets/white.webp';
+import IMG5 from '../../assets/darkblue.webp';
+import IMG6 from '../../assets/silver.webp';
+import IMG7 from '../../assets/black.webp';
+import IMG8 from '../../assets/lightblue.webp';
+import IMG9 from '../../assets/red.webp';
+import IMG10 from '../../assets/violet.webp';
 
 const Modelpage_L1 = ({startState}) => {
   const items = [
-    { backgroundColor: '#9c4d2f', image: `${IMG1}` },
-    { backgroundColor: '#060608', image: `${IMG2}` },
-    { backgroundColor: '#103db2', image: `${IMG3}` },
-    { backgroundColor: '#630b12', image: `${IMG4}` },
-    { backgroundColor: '#6b7280', image: `${IMG1}` },
-    { backgroundColor: '#dfa3c3', image: `${IMG2}` },
-    { backgroundColor: '#321c33', image: `${IMG3}` },
-    { backgroundColor: '#291f1d', image: `${IMG4}` },
-    { backgroundColor: '#f5bfaf', image: `${IMG1}` },
-    { backgroundColor: '#7eb63d', image: `${IMG2}` },
+    { backgroundColor: '#d7c387', image: `${IMG1}` },
+    { backgroundColor: '#a08467', image: `${IMG2}` },
+    { backgroundColor: '#7e5070', image: `${IMG3}` },
+    { backgroundColor: '#deddd6', image: `${IMG4}` },
+    { backgroundColor: '#6471b9', image: `${IMG5}` },
+    { backgroundColor: '#737373', image: `${IMG6}` },
+    { backgroundColor: '#282424', image: `${IMG7}` },
+    { backgroundColor: '#83afc7', image: `${IMG8}` },
+    { backgroundColor: '#7c3433', image: `${IMG9}` },
+    { backgroundColor: '#886ba7', image: `${IMG10}` },
   ];
 
   const [currentItem, setCurrentItem] = useState(startState);
