@@ -30,7 +30,7 @@ const SwiperSlider = () => {
             <div className="profile-details77">
               {/* <img src="images/profile/profile1.jpg" alt="" /> */}
               <div className="name-job77">
-              <h3 className="name77">LPF Battery</h3>
+              <h3 className="name77">Long Lasting Battery</h3>
                 <p className="job77">Advanced Lithium Iron Phosphate (LFP) batteries and an Active Balancing Smart Battery Management System (Active BMS) makes your Rhyno super safe, long lasting and reliable. This battery is engineered for India’s tough climatic conditions, delivering unmatched safety, durability and performance.</p>
               </div>
             </div>
