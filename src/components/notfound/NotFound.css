@@ -1,0 +1,115 @@
+.container1900 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    left: 6vmin;
+    text-align: center;
+  }
+  
+  .cog-wheel11900, .cog-wheel21900 {
+    transform: scale(0.7);
+  }
+  
+  .cog11900, .cog21900 {
+    width: 40vmin;
+    height: 40vmin;
+    border-radius: 50%;
+    border: 6vmin solid #f3c623;
+    position: relative;
+  }
+  
+  .cog21900 {
+    border: 6vmin solid #4f8a8b;
+  }
+  
+  .top1900, .down1900, .left1900, .right1900, .left-top1900, .left-down1900, .right-top1900, .right-down1900 {
+    width: 10vmin;
+    height: 10vmin;
+    background-color: #f3c623;
+    position: absolute;
+  }
+  
+  .cog21900 .top1900, .cog21900 .down1900, .cog21900 .left1900, .cog21900 .right1900, .cog21900 .left-top1900, .cog21900 .left-down1900, .cog21900 .right-top1900, .cog21900 .right-down1900 {
+    background-color: #4f8a8b;
+  }
+  
+  .top1900 {
+    top: -14vmin;
+    left: 9vmin;
+  }
+  
+  .down1900 {
+    bottom: -14vmin;
+    left: 9vmin;
+  }
+  
+  .left1900 {
+    left: -14vmin;
+    top: 9vmin;
+  }
+  
+  .right1900 {
+    right: -14vmin;
+    top: 9vmin;
+  }
+  
+  .left-top1900 {
+    transform: rotateZ(-45deg);
+    left: -8vmin;
+    top: -8vmin;
+  }
+  
+  .left-down1900 {
+    transform: rotateZ(45deg);
+    left: -8vmin;
+    top: 25vmin;
+  }
+  
+  .right-top1900 {
+    transform: rotateZ(45deg);
+    right: -8vmin;
+    top: -8vmin;
+  }
+  
+  .right-down1900 {
+    transform: rotateZ(-45deg);
+    right: -8vmin;
+    top: 25vmin;
+  }
+  
+  .cog21900 {
+    position: relative;
+    left: -10.2vmin;
+    bottom: 10vmin;
+  }
+  
+  h1 {
+    color: #ffffff;
+  }
+  
+  .first-four1900 {
+    position: relative;
+    left: 6vmin;
+    font-size: 40vmin;
+  }
+  
+  .second-four1900 {
+    position: relative;
+    right: 18vmin;
+    z-index: -1;
+    font-size: 40vmin;
+  }
+  
+  .wrong-para1900 {
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    bottom: 15vmin;
+    padding: 3vmin 12vmin 3vmin 3vmin;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  

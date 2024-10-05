@@ -203,3 +203,16 @@ body {
   font-size: var(--heading);
   margin-top: 3rem;
 }
+
+.aspect-ratio-main{
+  aspect-ratio: 16/9;
+}
+
+@media (max-width:768px) {
+  .aspect-ratio-main{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+  }
+}

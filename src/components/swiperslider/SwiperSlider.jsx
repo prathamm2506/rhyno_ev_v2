@@ -20,6 +20,8 @@ const SwiperSlider = () => {
   };
 
   return (
+    <div>
+      <h1 className="se03-heading">What Makes Rhyno <span className='awesome-rhyno'>Awesome ?</span></h1>
     <div className="container77">
       <div className="slide-container77" ref={sliderRef}>
         <div className="card-wrapper77">
@@ -95,6 +97,7 @@ const SwiperSlider = () => {
       <div className="swiper-button-next77 swiper-navBtn77" onClick={handleNext}>
         &gt;
       </div>
+    </div>
     </div>
   );
 };

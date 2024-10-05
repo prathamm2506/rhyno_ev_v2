@@ -36,7 +36,7 @@ const Modelpage_L4 = () => {
                 </div>
             </div>
             <div className="custom-bike-row">
-                <img src={Img9} alt="Row of Bikes" className="custom-bike-image" />
+                <img src="https://i.ibb.co/s5ngXN0/rhyno-prodcut-section-multi-vehicle.jpg" alt="Row of Bikes" className="custom-bike-image" />
             </div>
         </div>
     );

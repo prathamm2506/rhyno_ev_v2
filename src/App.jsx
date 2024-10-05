@@ -39,6 +39,7 @@ import FAQ from "./components/faq/Faq";
 import SwiperSlider from "./components/swiperslider/SwiperSlider";
 import Formmain from "./components/popupform/Formmain";
 import TestimonialCard from "./components/testimonialcard/TestimonialCard";
+import NotFound from "./components/notfound/NotFound";
 // import SwiperSlider from "./components/swiperslider/SwiperSlider";
 
 function App() {
