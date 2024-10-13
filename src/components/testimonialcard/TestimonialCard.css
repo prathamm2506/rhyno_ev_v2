@@ -1,7 +1,7 @@
 .testimonial-container {
-  padding: 5% 4% 10rem; /* Padding from the top and bottom */
+  padding: 5% 4% 10rem;
   background-color: white;
-  height: 100%; /* Ensure everything fits within 100vh */
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,7 @@
   font-size: 48px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 4rem; /* Increased margin for vertical spacing */
+  margin-bottom: 4rem;
   color: black;
 }
 
@@ -24,14 +24,14 @@
   background-color: white;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  padding: 40px; /* Increased padding */
+  padding: 40px;
   max-width: 900px;
-  width: 100%; /* Ensure full width for responsive screens */
+  width: 100%;
   margin: 0 auto;
   gap: 4rem;
-  min-height: 400px; /* Increased height */
+  min-height: 400px;
   position: relative;
-  overflow: visible; /* Allow image to overflow outside the container */
+  overflow: visible;
 }
 
 .testimonial-content {
@@ -43,22 +43,22 @@
 .testimonial-title {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 30px; /* Increased vertical space */
+  margin-bottom: 30px;
   color: black;
 }
 
 .testimonial-description {
   font-size: 18px;
   color: black;
-  margin-bottom: 30px; /* Increased space between description and author */
-  line-height: 1.8; /* Adjusted line height for readability */
+  margin-bottom: 30px;
+  line-height: 1.8;
 }
 
 .testimonial-author h3 {
   font-size: 20px;
   font-weight: 600;
   color: black;
-  margin-bottom: 10px; /* Added margin */
+  margin-bottom: 10px;
 }
 
 .testimonial-author p {
@@ -69,18 +69,18 @@
 .testimonial-image {
   flex: 1;
   position: relative;
-  z-index: 0; /* Ensure image is behind the content */
+  z-index: 0;
 }
 
 .testimonial-image img {
-  width: 90%;
+  width: 80%;
   height: 500px;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   position: absolute;
-  top: -250px; /* Extend image outside the container */
-  right: -30px;
+  top: -250px;
+  right: -0px;
   left: auto;
 }
 
@@ -102,11 +102,87 @@
   border: none;
 }
 
-/* Responsive Styles */
+/* Responsive Styles for screens between 1600px and 1280px */
+@media (max-width: 1600px) {
+  .testimonial-card {
+    max-width: 1000px;
+    gap: 3rem;
+    padding: 30px;
+  }
+
+  .testimonial-title {
+    font-size: 30px;
+  }
+
+  .testimonial-description {
+    font-size: 17px;
+  }
+
+  .testimonial-image img {
+    height: 450px;
+    top: -230px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .testimonial-card {
+    max-width: 900px;
+    gap: 2.5rem;
+    padding: 25px;
+  }
+
+  .testimonial-title {
+    font-size: 28px;
+  }
+
+  .testimonial-description {
+    font-size: 16px;
+  }
+
+  .testimonial-image img {
+    height: 420px;
+    top: -220px;
+  }
+
+  .testimonial-button {
+    width: 90px;
+    height: 38px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .testimonial-card {
+    max-width: 800px;
+    gap: 2rem;
+    padding: 20px;
+  }
+
+  .testimonial-title {
+    font-size: 26px;
+  }
+
+  .testimonial-description {
+    font-size: 15px;
+  }
+
+  .testimonial-image img {
+    height: 400px;
+    top: -200px;
+  }
+
+  .testimonial-button {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+/* Existing mobile responsive styles */
 @media (max-width: 768px) {
   .testimonial-card {
       flex-direction: column;
-      padding: 20px; /* Adjusted padding for smaller screens */
+      padding: 20px;
   }
 
   .testimonial-image img {
@@ -114,7 +190,7 @@
       top: 0;
       bottom: 0;
       right: 0;
-      width: 300px;
+      width: 250px;
       height: 300px;
   }
 
@@ -136,6 +212,6 @@
 
   .testimonial-heading {
       font-size: 36px;
-      margin-bottom: 2rem; /* Reduced margin for smaller screens */
+      margin-bottom: 2rem;
   }
 }

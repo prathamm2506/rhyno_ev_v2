@@ -216,3 +216,34 @@ body {
     
   }
 }
+.button-container1800 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button-container1800 a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+}
+
+.button-container1800 a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+@media (max-width:1000px) {
+  .button-container1800{
+    flex-direction: column;
+    justify-content: center;
+  }
+}

@@ -47,6 +47,16 @@ const Rentals = () => {
         Want to start your own rental business? <Link className='text-gray-400' to="/Contact-us">Contact us</Link> to become a partner through the franchise today!
         </p>
 
+        <div class="button-container1800">
+  <a href="https://apps.apple.com/in/app/id1234567890" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/512px-App_Store_%28iOS%29.svg.png" alt="App Store"/>
+    <span>Download on the App Store</span>
+  </a>
+  <a href="https://play.google.com/store/apps/details?id=com.example.app" target="_blank">
+    <img src="https://i1.wp.com/9to5google.com/wp-content/uploads/sites/4/2022/07/current-google-play-icon.jpg?ssl=1" alt="Google Play"/>
+    <span>Get It On Google Play</span>
+  </a>
+</div>
         {/* <div className="space-y-4">
           <Accordion
             title="What is one-week service commitment?"
@@ -83,40 +93,40 @@ const Rentals = () => {
   );
 };
 
-const Accordion = ({ title, content, index, activeIndex, toggleAccordion }) => {
-  const isActive = index === activeIndex;
-  const contentRef = useRef(null);
-  const [height, setHeight] = useState(0);
+// const Accordion = ({ title, content, index, activeIndex, toggleAccordion }) => {
+//   const isActive = index === activeIndex;
+//   const contentRef = useRef(null);
+//   const [height, setHeight] = useState(0);
 
-  useEffect(() => {
-    if (isActive) {
-      setHeight(contentRef.current.scrollHeight);
-    } else {
-      setHeight(0);
-    }
-  }, [isActive]);
+//   useEffect(() => {
+//     if (isActive) {
+//       setHeight(contentRef.current.scrollHeight);
+//     } else {
+//       setHeight(0);
+//     }
+//   }, [isActive]);
 
-  return (
-    <div className="border-class">
-      <button
-        className="flex justify-between items-center w-full py-3 text-lg font-semibold text-left focus:outline-none"
-        onClick={() => toggleAccordion(index)}
-        style={{ outline: 'none' }} // Inline style to ensure no outline
-      >
-        <span>{title}</span>
-        <span>{isActive ? '-' : '+'}</span>
-      </button>
-      <div
-        ref={contentRef}
-        style={{ height }}
-        className="overflow-hidden transition-height duration-300 ease-in-out"
-      >
-        <div className="pb-3 text-black">
-          {content}
-        </div>
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="border-class">
+//       <button
+//         className="flex justify-between items-center w-full py-3 text-lg font-semibold text-left focus:outline-none"
+//         onClick={() => toggleAccordion(index)}
+//         style={{ outline: 'none' }} // Inline style to ensure no outline
+//       >
+//         <span>{title}</span>
+//         <span>{isActive ? '-' : '+'}</span>
+//       </button>
+//       <div
+//         ref={contentRef}
+//         style={{ height }}
+//         className="overflow-hidden transition-height duration-300 ease-in-out"
+//       >
+//         <div className="pb-3 text-black">
+//           {content}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default Rentals;

@@ -6,7 +6,7 @@ const Modelpage_L4 = () => {
     return (
         <div className="custom-bike-layout">
             <div className="custom-top-section">
-                <div className="custom-video-container">
+                <div className="custom-video-container p-12">
                     <iframe 
                         width="100%" 
                         height="450"  
@@ -20,7 +20,7 @@ const Modelpage_L4 = () => {
                         LOREM IPSUM IS SIMPLY DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.
                     </p> */}
                 </div>
-                <div className="custom-video-container">
+                <div className="custom-video-container p-12">
                     <iframe 
                         width="100%" 
                         height="450"  
