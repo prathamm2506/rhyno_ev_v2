@@ -49,22 +49,23 @@ const Formmain = () => {
   const customSelectStyles = {
     control: (provided) => ({
       ...provided,
-      backgroundColor: 'white', // Changed to white
+      backgroundColor: 'white',
       color: 'black',
       borderColor: 'gray',
+      minHeight: '40px', // Adjust height
     }),
     singleValue: (provided) => ({
       ...provided,
-      color: 'black', // Changed to black
+      color: 'black',
     }),
     menu: (provided) => ({
       ...provided,
-      backgroundColor: 'white', // Changed to white
+      backgroundColor: 'white',
     }),
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isFocused ? '#f0f0f0' : 'white', // Focus effect
-      color: 'black', // Changed to black
+      backgroundColor: state.isFocused ? '#f0f0f0' : 'white',
+      color: 'black',
     }),
   };
 
@@ -87,24 +88,24 @@ const Formmain = () => {
       {/* Conditionally render the form as a popup */}
       {isFormVisible && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="relative bg-white rounded-lg shadow-lg w-full max-w-xl p-8"> 
-            <form ref={form} onSubmit={sendEmail} className="space-y-6"> 
-              <h1 className="text-2xl font-bold text-black">Book Now</h1> 
+          <div className="relative bg-white rounded-lg shadow-lg w-full max-w-lg p-6 md:p-8"> 
+            <form ref={form} onSubmit={sendEmail} className="space-y-4"> 
+              <h1 className="text-xl md:text-2xl font-bold text-black">Book Now</h1> 
 
-              <div className="flex space-x-4">
+              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                 <input
                   name="firstname"
                   type="text"
                   placeholder="First Name"
                   required
-                  className="w-1/2 p-2 bg-white text-black borderbottommainform" 
+                  className="w-full md:w-1/2 p-2 bg-white text-black border border-gray-300 rounded" 
                 />
                 <input
                   name="lastname"
                   type="text"
                   placeholder="Last Name"
                   required
-                  className="w-1/2 p-2 bg-white text-black borderbottommainform" 
+                  className="w-full md:w-1/2 p-2 bg-white text-black border border-gray-300 rounded" 
                 />
               </div>
 
@@ -114,7 +115,7 @@ const Formmain = () => {
                   type="tel"
                   placeholder="Phone Number"
                   required
-                  className="w-full p-2 bg-white text-black borderbottommainform" 
+                  className="w-full p-2 bg-white text-black border border-gray-300 rounded" 
                 />
               </div>
 
@@ -124,7 +125,7 @@ const Formmain = () => {
                   type="email"
                   placeholder="Email"
                   required
-                  className="w-full p-2 bg-white text-black borderbottommainform" 
+                  className="w-full p-2 bg-white text-black border border-gray-300 rounded" 
                 />
               </div>
 
@@ -146,13 +147,13 @@ const Formmain = () => {
                 className="w-full"
               />
 
-              <div className="mt-4">
+              <div>
                 <textarea
                   name="message"
                   cols="30"
-                  rows="5"
+                  rows="3" // Reduce height of the textarea
                   placeholder="Describe your message here"
-                  className="w-full p-2 bg-white text-black borderbottommainform" 
+                  className="w-full p-2 bg-white text-black border border-gray-300 rounded" 
                 ></textarea>
               </div>
 
